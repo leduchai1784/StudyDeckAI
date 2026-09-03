@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Onboarding Survey - StudyDeck AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "surface-variant": "#e3dfff",
+                        "primary": "#3525cd",
+                        "primary-fixed": "#e2dfff",
+                        "surface-dim": "#dad6ff",
+                        "tertiary-container": "#885500",
+                        "inverse-primary": "#c3c0ff",
+                        "surface-container-high": "#e9e5ff",
+                        "on-surface-variant": "#464555",
+                        "surface-tint": "#4d44e3",
+                        "on-background": "#181445",
+                        "secondary-fixed-dim": "#bac5f0",
+                        "on-secondary-fixed-variant": "#3a456a",
+                        "secondary-fixed": "#dbe1ff",
+                        "inverse-surface": "#2d2a5b",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f3eeff",
+                        "error": "#ba1a1a",
+                        "surface": "#fcf8ff",
+                        "tertiary-fixed": "#ffddb8",
+                        "on-primary-fixed": "#0f0069",
+                        "on-tertiary-container": "#ffd4a4",
+                        "on-secondary-fixed": "#0d1a3c",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#4f5a80",
+                        "outline-variant": "#c7c4d8",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-bright": "#fcf8ff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#2a1700",
+                        "secondary": "#525d83",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "tertiary": "#684000",
+                        "surface-container": "#efebff",
+                        "outline": "#777587",
+                        "surface-container-highest": "#e3dfff",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "secondary-container": "#c8d3ff",
+                        "background": "#fcf8ff",
+                        "on-surface": "#181445",
+                        "on-error": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f2ff",
+                        "on-primary-container": "#dad7ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "md": "24px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "display-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "title-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .option-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .option-card.selected {
+            border-color: #3525cd;
+            background-color: #f3eeff;
+            box-shadow: 0 4px 20px rgba(53, 37, 205, 0.15);
+            transform: translateY(-4px);
+        }
+        .option-card.selected .material-symbols-outlined {
+            color: #3525cd;
+            font-variation-settings: 'FILL' 1;
+        }
+        .option-card:hover:not(.selected) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-color: #c7c4d8;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Progress Indicator (Linear / Transactional) -->
+<div class="w-full h-2 bg-surface-container-high">
+<div class="h-full bg-primary-container w-1/4 rounded-r-full transition-all duration-500"></div>
+</div>
+<!-- Main Content Area -->
+<main class="flex-grow flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop py-lg w-full max-w-[600px] mx-auto">
+<!-- Brand Logo -->
+<div class="mb-lg w-full flex justify-center">
+<img alt="StudyDeck AI Logo" class="h-16 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzWFcxUfie3ohFJ7u060EUJu4Ies-ioRFEvaRd0HAiYMGrizY64S6VOnq7BxUfYK65EFOM0QH3Ff9SpGTe9j5F8Dm3JX2-2YPkf8nXXdjpBqp3wpXBm-KeVz7waYy7hI0dZbP773ca48jn_8LSAvXPK7TASdhIfKjnQiGk93apXimyH-T7O3HCZoUnQzcHR8WWvHJIeIow9zUuwKCZTf_7njZcDM1OkEU-CBE5yndjFcpWonPGI8PW_2EDt6fSmMZAoi8">
+</div>
+<!-- Headline -->
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-center text-on-background mb-md">
+            Bạn muốn học tiếng Anh để làm gì?
+        </h1>
+<p class="text-body-md font-body-md text-on-surface-variant text-center mb-lg">
+            Chọn mục tiêu chính để StudyDeck có thể cá nhân hóa lộ trình học cho bạn.
+        </p>
+<!-- Options Grid (Bento-style list) -->
+<div class="w-full flex flex-col gap-sm" id="survey-options">
+<!-- Option 1: Du lịch & Khám phá -->
+<button class="option-card w-full text-left bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex items-center gap-md group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" data-value="travel">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-headline-md" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<div class="flex-grow">
+<h3 class="text-title-lg font-title-lg text-on-surface group-hover:text-primary transition-colors">Du lịch &amp; Khám phá</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">Tự tin giao tiếp khi đi nước ngoài</p>
+</div>
+</button>
+<!-- Option 2: Thăng tiến công việc -->
+<button class="option-card w-full text-left bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex items-center gap-md group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" data-value="career">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-headline-md" data-icon="work">work</span>
+</div>
+<div class="flex-grow">
+<h3 class="text-title-lg font-title-lg text-on-surface group-hover:text-primary transition-colors">Thăng tiến công việc</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">Mở rộng cơ hội nghề nghiệp toàn cầu</p>
+</div>
+</button>
+<!-- Option 3: Luyện thi (IELTS/TOEIC) -->
+<button class="option-card w-full text-left bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex items-center gap-md group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" data-value="exam">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-headline-md" data-icon="school">school</span>
+</div>
+<div class="flex-grow">
+<h3 class="text-title-lg font-title-lg text-on-surface group-hover:text-primary transition-colors">Luyện thi (IELTS/TOEIC)</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">Đạt điểm mục tiêu với lộ trình chuẩn</p>
+</div>
+<!-- AI Badge for Exam Prep -->
+<div class="hidden md:flex items-center bg-tertiary-fixed px-sm py-xs rounded-full gap-xs shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-label-sm" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-label-sm font-label-sm text-on-tertiary-fixed">Đề xuất</span>
+</div>
+</button>
+<!-- Option 4: Giao tiếp hằng ngày -->
+<button class="option-card w-full text-left bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex items-center gap-md group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" data-value="daily">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-headline-md" data-icon="forum">forum</span>
+</div>
+<div class="flex-grow">
+<h3 class="text-title-lg font-title-lg text-on-surface group-hover:text-primary transition-colors">Giao tiếp hằng ngày</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">Nói tiếng Anh trôi chảy, tự nhiên</p>
+</div>
+</button>
+<!-- Option 5: Sở thích cá nhân -->
+<button class="option-card w-full text-left bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex items-center gap-md group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" data-value="hobby">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-headline-md" data-icon="favorite">favorite</span>
+</div>
+<div class="flex-grow">
+<h3 class="text-title-lg font-title-lg text-on-surface group-hover:text-primary transition-colors">Sở thích cá nhân</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">Xem phim, đọc sách, nghe nhạc</p>
+</div>
+</button>
+</div>
+</main>
+<!-- Bottom Sticky Action Bar -->
+<div class="sticky bottom-0 w-full bg-surface/90 backdrop-blur-md border-t border-surface-container px-margin-mobile py-md md:px-margin-desktop md:py-md z-10">
+<div class="max-w-[600px] mx-auto flex gap-sm">
+<button class="hidden md:flex h-14 px-md items-center justify-center rounded-xl border border-outline-variant text-on-surface-variant hover:bg-surface-container-high transition-colors text-label-md font-label-md">
+                Quay lại
+            </button>
+<button class="flex-grow h-14 bg-surface-container-highest text-outline rounded-xl text-title-lg font-title-lg font-bold transition-all duration-300 flex items-center justify-center gap-sm shadow-sm disabled:cursor-not-allowed" disabled="" id="continue-btn">
+                Tiếp tục
+                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.option-card');
+            const continueBtn = document.getElementById('continue-btn');
+            let selectedValue = null;
+
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    // Remove selected class from all
+                    cards.forEach(c => c.classList.remove('selected'));
+                    
+                    // Add selected class to clicked
+                    card.classList.add('selected');
+                    selectedValue = card.dataset.value;
+
+                    // Enable continue button and style it primary
+                    continueBtn.disabled = false;
+                    continueBtn.classList.remove('bg-surface-container-highest', 'text-outline');
+                    continueBtn.classList.add('bg-primary-container', 'text-on-primary', 'hover:bg-surface-tint', 'shadow-md', 'hover:shadow-lg', 'transform', 'hover:-translate-y-1');
+                });
+            });
+        });
+    </script>
+</body></html>

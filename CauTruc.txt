@@ -1,0 +1,196 @@
+studydeckai/
+CẤU TRÚC THƯ MỤC FLUTTER — 3 TARGET DÙNG CHUNG 1 CODEBASE:
+  1) Mobile app (Android/iOS)     -> lib/main_mobile.dart
+  2) Web app người dùng (PWA)     -> lib/main_web.dart
+  3) Web Admin quản trị           -> lib/main_admin.dart
+Cả 3 dùng chung core/ + models/ + services/ + features/ + shared/,
+khác nhau ở entry point và bộ route/layout được nạp (responsive cho web).
+
+StudyDeckAI
+│
+├── android/
+├── ios/
+├── web/                              # scaffold Flutter Web dùng chung (index.html, manifest.json, icons)
+│   ├── index.html
+│   ├── manifest.json
+│   └── icons/
+│
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   ├── animations/                   # Lottie: ăn mừng Level up / giữ Streak
+│   ├── audio/                        # audio Listening, phát âm mẫu AI Speaking
+│   └── fonts/                        # Be Vietnam Pro: Regular/Medium/SemiBold/Bold
+│
+├── lib/
+│   │
+│   ├── main_mobile.dart              # entry point: user Mobile (Android/iOS)
+│   ├── main_web.dart                 # entry point: user Web (PWA, responsive)
+│   ├── main_admin.dart               # entry point: Web Admin (chỉ build riêng, không vào bundle mobile)
+│   │
+│   ├── app/
+│   │   ├── app.dart                  # widget App gốc, nhận flavor (mobile/web/admin) để chọn theme+router
+│   │   ├── routes/
+│   │   │   ├── app_router.dart            # go_router dùng chung, path-based cho Web, deep link cho Mobile
+│   │   │   ├── user_routes.dart           # route riêng của app Học viên (mobile + web)
+│   │   │   ├── admin_routes.dart          # route riêng của Web Admin
+│   │   │   └── route_names.dart
+│   │   ├── theme.dart                # theme dùng chung; breakpoint riêng cho web (desktop/tablet)
+│   │   └── config/
+│   │       ├── env_dev.dart
+│   │       └── env_prod.dart
+│   │
+│   ├── core/
+│   │   ├── constants/
+│   │   ├── enums/                    # QuestionType, ActivityType, RecommendationType... khớp ENUM CSDL
+│   │   ├── errors/
+│   │   ├── di/
+│   │   │   └── service_locator.dart       # get_it — khởi tạo service/repository dùng chung 3 target
+│   │   ├── network/
+│   │   │   ├── api_client.dart
+│   │   │   ├── api_endpoints.dart
+│   │   │   └── interceptors/
+│   │   │       ├── auth_interceptor.dart       # đính JWT + auto refresh token
+│   │   │       └── error_interceptor.dart
+│   │   ├── storage/
+│   │   │   └── local_cache.dart           # Hive/Drift (mobile) — IndexedDB tương ứng khi build Web
+│   │   ├── utils/
+│   │   ├── platform/
+│   │   │   └── platform_helper.dart       # kIsWeb check, điều hướng UI khác biệt mobile/web khi cần
+│   │   └── widgets/
+│   │
+│   ├── models/                       # 20 model khớp 17+4 bảng CSDL (bao gồm module Premium/Gamification)
+│   │   ├── user.dart
+│   │   ├── course.dart
+│   │   ├── lesson.dart
+│   │   ├── vocabulary.dart
+│   │   ├── deck.dart
+│   │   ├── flashcard.dart
+│   │   ├── quiz.dart
+│   │   ├── question.dart
+│   │   ├── quiz_result.dart
+│   │   ├── quiz_answer.dart
+│   │   ├── document.dart
+│   │   ├── document_chunk.dart
+│   │   ├── writing_submission.dart
+│   │   ├── reading_passage.dart
+│   │   ├── listening_exercise.dart
+│   │   ├── learning_log.dart
+│   │   ├── recommendation.dart
+│   │   ├── subscription.dart
+│   │   ├── user_level.dart
+│   │   └── badge.dart
+│   │
+│   ├── services/                     # gọi API thô, 1-1 với nhóm endpoint Backend, dùng chung 3 target
+│   │   ├── auth_service.dart
+│   │   ├── learning_service.dart
+│   │   ├── vocabulary_service.dart
+│   │   ├── flashcard_service.dart         # deck + flashcard + payload SM-2
+│   │   ├── quiz_service.dart
+│   │   ├── ai_tutor_service.dart
+│   │   ├── speaking_service.dart
+│   │   ├── writing_service.dart
+│   │   ├── listening_service.dart
+│   │   ├── reading_service.dart
+│   │   ├── document_service.dart          # RAG: upload + hỏi đáp
+│   │   ├── recommendation_service.dart
+│   │   ├── subscription_service.dart
+│   │   ├── gamification_service.dart      # level/badge/leaderboard
+│   │   └── admin/
+│   │       ├── admin_user_service.dart
+│   │       ├── admin_content_service.dart
+│   │       └── admin_stats_service.dart
+│   │
+│   ├── features/                     # dùng chung Mobile + Web người dùng (responsive theo shared/responsive/)
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── login/
+│   │   │   ├── register/
+│   │   │   └── forgot_password/
+│   │   │
+│   │   ├── onboarding/               # có thể ẩn trên Web, chỉ hiện trên Mobile lần đầu cài app
+│   │   ├── placement_test/           # AI Initial Assessment
+│   │   │   └── screens/ widgets/ models/ providers/
+│   │   │
+│   │   ├── home/                     # Trang chủ — 5 khối nội dung động (Mục tiêu, Tiếp tục học, Cần ôn...)
+│   │   ├── learning/                 # Danh sách/chi tiết khóa học, bài học
+│   │   ├── vocabulary/               # kho từ vựng + "Chi tiết từ vựng/chủ điểm ngữ pháp"
+│   │   │
+│   │   ├── flashcard/                # Deck, ôn tập, tạo thẻ, kết quả
+│   │   │   ├── screens/
+│   │   │   │   ├── deck_list_screen.dart
+│   │   │   │   ├── deck_detail_screen.dart
+│   │   │   │   ├── flashcard_review_screen.dart
+│   │   │   │   ├── create_flashcard_screen.dart
+│   │   │   │   └── review_result_screen.dart
+│   │   │   ├── widgets/ models/ providers/
+│   │   │
+│   │   ├── quiz/
+│   │   ├── listening/
+│   │   ├── speaking/                 # trên Web: ghi âm qua MediaRecorder API (package record hỗ trợ Web)
+│   │   ├── reading/
+│   │   ├── writing/
+│   │   ├── ai_tutor/
+│   │   │
+│   │   ├── documents/                # RAG phía học viên
+│   │   │   ├── screens/
+│   │   │   │   ├── document_list_screen.dart
+│   │   │   │   ├── upload_document_screen.dart   # Web: drag & drop file
+│   │   │   │   └── document_qna_screen.dart
+│   │   │   ├── widgets/ models/ providers/
+│   │   │
+│   │   ├── progress/                 # Thống kê/Đề xuất học tập
+│   │   ├── notifications/
+│   │   │
+│   │   ├── subscription/             # Paywall, chọn gói, quản lý gói
+│   │   ├── gamification/             # Level up, Huy hiệu, Bảng xếp hạng
+│   │   ├── goals/                    # Đặt mục tiêu học tập hàng ngày
+│   │   ├── search/                   # Tìm kiếm toàn cục
+│   │   ├── referral/                 # Mời bạn bè
+│   │   ├── downloads/                # Tải xuống ngoại tuyến — ẩn hoàn toàn khi build Web
+│   │   ├── support/                  # Trợ giúp/FAQ + Gửi phản hồi
+│   │   │
+│   │   └── profile/                  # Hồ sơ + Cài đặt
+│   │
+│   ├── admin/                        # CHỈ build vào main_admin.dart, không vào bundle Mobile/Web người dùng
+│   │   ├── auth/                     # đăng nhập Admin riêng
+│   │   ├── dashboard/
+│   │   ├── users/
+│   │   ├── lessons/
+│   │   ├── vocabulary/
+│   │   ├── questions/
+│   │   ├── reading_listening/        # quản lý bài đọc/nghe
+│   │   ├── content_moderation/       # kiểm duyệt nội dung AI sinh trước khi công khai
+│   │   ├── ai/
+│   │   └── statistics/
+│   │
+│   └── shared/
+│       ├── widgets/                  # widget dùng chung, tự responsive theo constraints
+│       ├── layouts/
+│       │   ├── mobile_scaffold.dart       # Bottom Navigation 5 tab
+│       │   ├── web_user_scaffold.dart     # Sidebar/Topbar cho Web người dùng (desktop/tablet)
+│       │   └── admin_scaffold.dart        # Sidebar quản trị cho Web Admin
+│       └── responsive/
+│           ├── breakpoints.dart           # mobile / tablet / desktop
+│           └── responsive_builder.dart
+│
+├── test/
+│   ├── unit/                         # auth, chấm điểm Quiz, thuật toán SM-2 (SRS mục 6.5 yêu cầu)
+│   └── widget/
+│
+├── pubspec.yaml
+└── README.md
+
+
+GHI CHÚ TRIỂN KHAI 3 TARGET:
+- Build Mobile:      flutter build apk --target=lib/main_mobile.dart
+                      flutter build ios --target=lib/main_mobile.dart
+- Build Web người dùng: flutter build web --target=lib/main_web.dart --output=build/web-user
+- Build Web Admin:      flutter build web --target=lib/main_admin.dart --output=build/web-admin
+  (2 bản Web build ra 2 thư mục riêng, deploy lên 2 domain/subdomain khác nhau,
+   ví dụ app.studydeck.ai và admin.studydeck.ai)
+- lib/admin/ tuyệt đối không import vào main_mobile.dart / main_web.dart để tránh
+  lộ code quản trị vào app công khai và giảm dung lượng bundle không cần thiết.
+- features/ được viết responsive (dùng shared/responsive/) để tái sử dụng gần như
+  100% giữa Mobile và Web người dùng, chỉ khác nhau ở shared/layouts/ (Bottom Nav
+  vs Sidebar/Topbar) và một số tương tác đặc thù nền tảng (ghi âm, chọn file...).

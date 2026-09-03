@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>StudyDeck AI - Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#525d83",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "secondary-container": "#c8d3ff",
+                        "surface-container-highest": "#e3dfff",
+                        "primary-fixed": "#e2dfff",
+                        "background": "#fcf8ff",
+                        "outline-variant": "#c7c4d8",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#181445",
+                        "inverse-on-surface": "#f3eeff",
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-error-container": "#93000a",
+                        "surface": "#fcf8ff",
+                        "tertiary": "#684000",
+                        "on-primary-container": "#dad7ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#4f5a80",
+                        "inverse-surface": "#2d2a5b",
+                        "surface-container-low": "#f6f2ff",
+                        "outline": "#777587",
+                        "on-secondary-fixed-variant": "#3a456a",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dad6ff",
+                        "tertiary-container": "#885500",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#464555",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "primary": "#3525cd",
+                        "surface-bright": "#fcf8ff",
+                        "surface-container-high": "#e9e5ff",
+                        "primary-container": "#4f46e5",
+                        "surface-tint": "#4d44e3",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "secondary-fixed-dim": "#bac5f0",
+                        "on-primary-fixed": "#0f0069",
+                        "surface-variant": "#e3dfff",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "secondary-fixed": "#dbe1ff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#ffd4a4",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#efebff",
+                        "on-secondary-fixed": "#0d1a3c",
+                        "inverse-primary": "#c3c0ff",
+                        "tertiary-fixed": "#ffddb8",
+                        "on-surface": "#181445"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "xs": "4px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "base": "8px",
+                        "lg": "48px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "title-lg": ["Be Vietnam Pro"],
+                        "headline-md": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "display-lg": ["Be Vietnam Pro"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #F9FAFB 0%, #E0E7FF 100%);
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen">
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col relative overflow-hidden gradient-bg">
+<!-- Background Accents -->
+<div class="absolute top-[-10%] left-[-10%] w-64 h-64 bg-primary-fixed rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-80 h-80 bg-secondary-fixed rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+<!-- Content Container -->
+<div class="flex-1 flex flex-col justify-between p-margin-mobile relative z-10 max-w-md mx-auto w-full">
+<!-- Top Section: Logo & Intro -->
+<div class="flex flex-col items-center pt-lg mt-8">
+<img alt="StudyDeck AI Logo" class="w-48 mb-6 float-animation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUJ1NtaERoM_-p-mRWHxgMQoh-KucX8ATqXgWBtmUMZnLRsO--Et8btfEzd-dj0nsyuioUQQsxSV-EQvdRLYyZTQ6XtRHvYXP_aRlmWuomj9nTilnaxqkLsas4sJdtbCpHxPDYYb-ZyG8e5W68Nat-vX3PR8T28A0Dp9r867MqPW1s8KxoG-xIh1SNbNnKvwlEvqNt46xy16v0CIX9ymSsxSpV4j99V7rU0qKjgrzVZiNK2sPunEuYuO_BwCNT2szEgLA">
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile text-center text-on-surface mb-2">
+                    Học tiếng Anh thông minh với AI
+                </h1>
+<p class="text-body-md font-body-md text-on-surface-variant text-center px-4">
+                    Nâng cao kỹ năng với phương pháp học tập được cá nhân hóa và sự hỗ trợ của trí tuệ nhân tạo.
+                </p>
+</div>
+<!-- Middle Section: Features Carousel / Bento -->
+<div class="flex flex-col gap-base my-8 relative">
+<!-- Feature 1: AI Tutor -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/20 flex items-center gap-4 relative overflow-hidden group hover:shadow-[0_8px_25px_rgba(0,0,0,0.1)] transition-shadow duration-300">
+<div class="absolute top-0 right-0 p-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">arrow_back_ios_new</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface">AI Tutor 24/7</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">Sửa lỗi và giải thích ngữ pháp tức thì.</p>
+</div>
+</div>
+<!-- Feature 2: Flashcards -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/20 flex items-center gap-4 relative overflow-hidden hover:shadow-[0_8px_25px_rgba(0,0,0,0.1)] transition-shadow duration-300 -mt-2">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 flex items-center justify-center flex-shrink-0 text-secondary">
+<span class="material-symbols-outlined">style</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface">Flashcards Thông Minh</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">Học từ vựng hiệu quả với lặp lại ngắt quãng.</p>
+</div>
+</div>
+<!-- Feature 3: Personalization -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/20 flex items-center gap-4 relative overflow-hidden hover:shadow-[0_8px_25px_rgba(0,0,0,0.1)] transition-shadow duration-300 -mt-2">
+<div class="absolute top-0 right-0 p-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">arrow_back_ios_new</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed/30 flex items-center justify-center flex-shrink-0 text-tertiary">
+<span class="material-symbols-outlined">tune</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface">Cá Nhân Hóa</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">Lộ trình học tối ưu dựa trên năng lực của bạn.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Section: CTAs -->
+<div class="flex flex-col gap-4 pb-lg">
+<button class="w-full bg-primary-container text-on-primary rounded-full py-4 text-title-lg font-title-lg font-bold shadow-md hover:shadow-lg transition-all duration-200 active:scale-95">
+                    Bắt đầu ngay
+                </button>
+<button class="w-full bg-transparent text-primary border border-primary-fixed-dim rounded-full py-4 text-title-lg font-title-lg font-bold hover:bg-primary-fixed/20 transition-colors duration-200 active:scale-95">
+                    Tôi đã có tài khoản
+                </button>
+</div>
+</div>
+</main>
+
+
+</body></html>

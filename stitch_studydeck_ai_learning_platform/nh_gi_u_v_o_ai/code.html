@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Đánh giá trình độ ban đầu - StudyDeck AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary": "#525d83",
+            "on-tertiary-fixed-variant": "#653e00",
+            "secondary-container": "#c8d3ff",
+            "surface-container-highest": "#e3dfff",
+            "primary-fixed": "#e2dfff",
+            "background": "#fcf8ff",
+            "outline-variant": "#c7c4d8",
+            "error": "#ba1a1a",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#181445",
+            "inverse-on-surface": "#f3eeff",
+            "on-tertiary-fixed": "#2a1700",
+            "on-error-container": "#93000a",
+            "surface": "#fcf8ff",
+            "tertiary": "#684000",
+            "on-primary-container": "#dad7ff",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#4f5a80",
+            "inverse-surface": "#2d2a5b",
+            "surface-container-low": "#f6f2ff",
+            "outline": "#777587",
+            "on-secondary-fixed-variant": "#3a456a",
+            "on-error": "#ffffff",
+            "surface-dim": "#dad6ff",
+            "tertiary-container": "#885500",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#464555",
+            "tertiary-fixed-dim": "#ffb95f",
+            "primary": "#3525cd",
+            "surface-bright": "#fcf8ff",
+            "surface-container-high": "#e9e5ff",
+            "primary-container": "#4f46e5",
+            "surface-tint": "#4d44e3",
+            "primary-fixed-dim": "#c3c0ff",
+            "secondary-fixed-dim": "#bac5f0",
+            "on-primary-fixed": "#0f0069",
+            "surface-variant": "#e3dfff",
+            "on-primary-fixed-variant": "#3323cc",
+            "secondary-fixed": "#dbe1ff",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#ffd4a4",
+            "on-primary": "#ffffff",
+            "surface-container": "#efebff",
+            "on-secondary-fixed": "#0d1a3c",
+            "inverse-primary": "#c3c0ff",
+            "tertiary-fixed": "#ffddb8",
+            "on-surface": "#181445"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "16px",
+            "xs": "4px",
+            "margin-desktop": "40px",
+            "gutter": "24px",
+            "md": "24px",
+            "xl": "80px",
+            "base": "8px",
+            "lg": "48px",
+            "sm": "12px"
+          },
+          "fontFamily": {
+            "title-lg": ["Be Vietnam Pro"],
+            "headline-md": ["Be Vietnam Pro"],
+            "headline-lg-mobile": ["Be Vietnam Pro"],
+            "body-lg": ["Be Vietnam Pro"],
+            "body-md": ["Be Vietnam Pro"],
+            "display-lg": ["Be Vietnam Pro"],
+            "label-md": ["Be Vietnam Pro"],
+            "label-sm": ["Be Vietnam Pro"],
+            "headline-lg": ["Be Vietnam Pro"]
+          },
+          "fontSize": {
+            "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen text-on-background flex flex-col items-center justify-center p-margin-mobile md:p-margin-desktop overflow-hidden relative">
+<!-- Abstract Ambient Decor to suggest Growth & Intelligence -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden z-0 flex items-center justify-center">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-fixed-dim/30 rounded-full blur-[80px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-tertiary-fixed-dim/20 rounded-full blur-[100px]"></div>
+</div>
+<!-- Deck Metaphor Container -->
+<div class="relative z-10 w-full max-w-md mt-12 md:mt-0 flex flex-col items-center">
+<!-- Background Card (Deck Layer 1) -->
+<div class="w-11/12 h-32 bg-surface-container shadow-[0_4px_20px_rgba(0,0,0,0.05)] rounded-xl absolute -top-8 -z-10 opacity-60 transform scale-95 border border-outline-variant/30"></div>
+<!-- Background Card (Deck Layer 2) -->
+<div class="w-[96%] h-32 bg-surface-container-lowest shadow-[0_4px_20px_rgba(0,0,0,0.08)] rounded-xl absolute -top-4 -z-10 opacity-80 transform scale-[0.98] border border-outline-variant/20"></div>
+<!-- Main Study Card (Hero) -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.12)] p-6 md:p-8 flex flex-col items-center text-center relative overflow-hidden border border-tertiary-fixed-dim/40 transition-transform duration-300 hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] hover:-translate-y-1">
+<!-- AI Sparkle Motif in Top Right -->
+<div class="absolute top-4 right-4 text-tertiary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">temp_preferences_custom</span>
+</div>
+<!-- AI Avatar / Illustration -->
+<div class="mb-8 flex justify-center w-full"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZQzhRp8pxrD-9pkMBQ0LOizxdd3-w3aIxQ4Nqd3sk9i0JcytdyIHr2Qhgmfcv8RElc-H8-U9MChSOqUvYbug8z4BvOST5c-3EGHVhI11qf6cAkskK4qcy3nQ5cXU3llcwRoeJigqJRtP9pPXs9b8Gbs_0IHxRed0CzH5WqFDeP88RiByjRF9is6BqAP8Egc0_K9uJAB-aA0XGCMRDoONOC3UGavQo1v7Q8V52v2BPEA8qjxeYl9_n7rUzvupePoo-NEk" alt="StudyDeck AI Logo" class="w-40 h-auto object-contain"></div>
+<!-- Header -->
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-on-background mb-4">
+        Đánh giá trình độ ban đầu
+      </h1>
+<!-- Content -->
+<p class="text-body-md font-body-md text-on-surface-variant mb-8 max-w-[280px]">
+        Hãy dành 5 phút để AI hiểu rõ trình độ của bạn và thiết kế lộ trình học riêng biệt.
+      </p>
+<!-- Action Button -->
+<button class="w-full py-4 px-6 bg-tertiary-fixed-dim hover:bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-xl text-title-lg font-title-lg shadow-md transition-all duration-200 flex items-center justify-center gap-2 group active:scale-95">
+<span class="">Bắt đầu bài test</span>
+<span class="material-symbols-outlined transition-transform duration-200 group-hover:translate-x-1" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</button>
+<!-- Safe exit / Skip option (Optional context for onboarding) -->
+<button class="mt-4 text-label-md font-label-md text-outline hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-primary/5">
+        Để sau
+      </button>
+</div>
+</div>
+
+
+</body></html>

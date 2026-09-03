@@ -1,0 +1,199 @@
+<!DOCTYPE html><html class="light" lang="en" style="width: 399px; height: 710px; overflow: hidden; position: relative;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>StudyDeck AI - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#525d83",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "secondary-container": "#c8d3ff",
+                        "surface-container-highest": "#e3dfff",
+                        "primary-fixed": "#e2dfff",
+                        "background": "#fcf8ff",
+                        "outline-variant": "#c7c4d8",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#181445",
+                        "inverse-on-surface": "#f3eeff",
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-error-container": "#93000a",
+                        "surface": "#fcf8ff",
+                        "tertiary": "#684000",
+                        "on-primary-container": "#dad7ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#4f5a80",
+                        "inverse-surface": "#2d2a5b",
+                        "surface-container-low": "#f6f2ff",
+                        "outline": "#777587",
+                        "on-secondary-fixed-variant": "#3a456a",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dad6ff",
+                        "tertiary-container": "#885500",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#464555",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "primary": "#3525cd",
+                        "surface-bright": "#fcf8ff",
+                        "surface-container-high": "#e9e5ff",
+                        "primary-container": "#4f46e5",
+                        "surface-tint": "#4d44e3",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "secondary-fixed-dim": "#bac5f0",
+                        "on-primary-fixed": "#0f0069",
+                        "surface-variant": "#e3dfff",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "secondary-fixed": "#dbe1ff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#ffd4a4",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#efebff",
+                        "on-secondary-fixed": "#0d1a3c",
+                        "inverse-primary": "#c3c0ff",
+                        "tertiary-fixed": "#ffddb8",
+                        "on-surface": "#181445"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "xs": "4px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "base": "8px",
+                        "lg": "48px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "title-lg": ["Be Vietnam Pro"],
+                        "headline-md": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "display-lg": ["Be Vietnam Pro"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface min-h-screen flex items-center justify-center p-margin-mobile md:p-margin-desktop text-on-surface">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-xl p-6 md:p-8 shadow-[0_4px_20px_rgba(0,0,0,0.15)] relative overflow-hidden">
+<!-- Header -->
+<div class="flex flex-col items-center mb-8">
+<img alt="StudyDeck AI Logo" class="h-12 w-auto mb-6 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyw5jkkWk_r2ri7wXVHtdUbjfY-_Bev5pasip40g2c6xBfjqUTf1Ik8gTqtnclVC-pOoqzonWqgvnXKy9E4VF_rWqGC0KTgmgGoRP10vcGDP4VpRzPjD9Oh_lAoEvEnWprJiqlL3ztusEG7dfuKa1s63ulZZE9WRb-KUEab4I5WfN_Ftdc1jHJb6TXBFSmLGnYi4rho1sRtNIjyrVZkFltrRwtyvcMdBzoJSDiRQuLsrZb5qyEUV5bBrCBn7-uTHrzMPU">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface text-center">Chào mừng quay trở lại</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 text-center">Đăng nhập để tiếp tục học tập cùng AI.</p>
+</div>
+<!-- Form -->
+<form action="#" class="space-y-6" method="POST">
+<!-- Email/Username -->
+<div>
+<label class="block font-label-md text-label-md text-[#1E1B4B] mb-2" for="email">Email / Tên đăng nhập</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline-variant">mail</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 border border-[#D1D5DB] rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary font-body-md text-body-md transition-colors" id="email" name="email" placeholder="Nhập email hoặc tên đăng nhập" required="" type="email">
+</div>
+</div>
+<!-- Password -->
+<div>
+<div class="flex items-center justify-between mb-2">
+<label class="block font-label-md text-label-md text-[#1E1B4B]" for="password">Mật khẩu</label>
+<a class="font-label-sm text-label-sm text-primary hover:text-primary-container transition-colors" href="#">Quên mật khẩu?</a>
+</div>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline-variant">lock</span>
+</div>
+<input class="block w-full pl-10 pr-10 py-3 border border-[#D1D5DB] rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary font-body-md text-body-md transition-colors" id="password" name="password" placeholder="Nhập mật khẩu" required="" type="password">
+<button class="absolute inset-y-0 right-0 pr-3 flex items-center text-outline-variant hover:text-primary focus:outline-none" onclick="togglePassword()" type="button">
+<span class="material-symbols-outlined" id="visibility-icon">visibility_off</span>
+</button>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-primary-container text-on-primary hover:bg-surface-tint focus:ring-4 focus:outline-none focus:ring-primary-fixed-dim font-label-md text-label-md rounded-lg px-5 py-3.5 text-center flex items-center justify-center gap-2 transition-all duration-200 hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:-translate-y-1" type="submit">
+<span class="">Đăng nhập</span>
+<span class="material-symbols-outlined text-[20px]">login</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="mt-8 flex items-center justify-between">
+<hr class="w-full border-outline-variant">
+<span class="p-2 font-label-sm text-label-sm text-outline-variant whitespace-nowrap">Hoặc đăng nhập bằng</span>
+<hr class="w-full border-outline-variant">
+</div>
+<!-- Social Login -->
+<div class="mt-6 grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 px-4 py-2.5 border border-[#D1D5DB] rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-low focus:ring-2 focus:ring-outline-variant transition-colors" type="button">
+<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="font-label-md text-label-md">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 px-4 py-2.5 border border-[#D1D5DB] rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-low focus:ring-2 focus:ring-outline-variant transition-colors" type="button">
+<svg aria-hidden="true" class="w-5 h-5 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+<span class="font-label-md text-label-md">Facebook</span>
+</button>
+</div>
+<!-- Sign Up Link -->
+<p class="mt-8 text-center font-body-md text-body-md text-on-surface-variant">
+            Chưa có tài khoản? <a class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors" href="#">Đăng ký ngay</a>
+</p>
+</div>
+<script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const visibilityIcon = document.getElementById('visibility-icon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                visibilityIcon.textContent = 'visibility';
+            } else {
+                passwordInput.type = 'password';
+                visibilityIcon.textContent = 'visibility_off';
+            }
+        }
+    </script>
+
+
+</body></html>

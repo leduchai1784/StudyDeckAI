@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>StudyDeck AI - Onboarding Step 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "surface-variant": "#e3dfff",
+                        "primary": "#3525cd",
+                        "primary-fixed": "#e2dfff",
+                        "surface-dim": "#dad6ff",
+                        "tertiary-container": "#885500",
+                        "inverse-primary": "#c3c0ff",
+                        "surface-container-high": "#e9e5ff",
+                        "on-surface-variant": "#464555",
+                        "surface-tint": "#4d44e3",
+                        "on-background": "#181445",
+                        "secondary-fixed-dim": "#bac5f0",
+                        "on-secondary-fixed-variant": "#3a456a",
+                        "secondary-fixed": "#dbe1ff",
+                        "inverse-surface": "#2d2a5b",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f3eeff",
+                        "error": "#ba1a1a",
+                        "surface": "#fcf8ff",
+                        "tertiary-fixed": "#ffddb8",
+                        "on-primary-fixed": "#0f0069",
+                        "on-tertiary-container": "#ffd4a4",
+                        "on-secondary-fixed": "#0d1a3c",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#4f5a80",
+                        "outline-variant": "#c7c4d8",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-bright": "#fcf8ff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#2a1700",
+                        "secondary": "#525d83",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "tertiary": "#684000",
+                        "surface-container": "#efebff",
+                        "outline": "#777587",
+                        "surface-container-highest": "#e3dfff",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "secondary-container": "#c8d3ff",
+                        "background": "#fcf8ff",
+                        "on-surface": "#181445",
+                        "on-error": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f2ff",
+                        "on-primary-container": "#dad7ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "md": "24px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "display-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "title-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #fcf8ff; /* bg-background */
+            color: #181445; /* text-on-background */
+            font-family: 'Be Vietnam Pro', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .option-card {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .option-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            background-color: #f6f2ff; /* bg-surface-container-low */
+        }
+
+        .option-card.selected {
+            border-color: #4f46e5; /* border-primary-container */
+            background-color: #efebff; /* bg-surface-container */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .option-card.selected .check-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .check-icon {
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        /* Ambient Background */
+        .ambient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            background: linear-gradient(135deg, #fcf8ff 0%, #e9e5ff 100%);
+        }
+        
+        .ambient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+        }
+        
+        .blob-1 {
+            top: -10%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background-color: #e2dfff; /* primary-fixed */
+        }
+        
+        .blob-2 {
+            bottom: -20%;
+            right: -10%;
+            width: 60vw;
+            height: 60vw;
+            background-color: #ffddb8; /* tertiary-fixed */
+        }
+    </style>
+</head>
+<body>
+<!-- Ambient Background -->
+<div class="ambient-bg">
+<div class="ambient-blob blob-1"></div>
+<div class="ambient-blob blob-2"></div>
+</div>
+<!-- Onboarding Container -->
+<main class="flex-1 flex flex-col max-w-2xl w-full mx-auto px-margin-mobile md:px-margin-desktop py-lg relative z-10">
+<!-- Header (Logo & Progress) -->
+<header class="flex flex-col gap-md mb-xl">
+<div class="flex justify-between items-center">
+<button aria-label="Go back" class="text-secondary hover:text-primary transition-colors flex items-center gap-2 p-2 -ml-2 rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back</span>
+</button>
+<img alt="StudyDeck AI Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRSh6Ym4M0nPYJj7MBDIw-YwFRrG7TmEnaHCPJXd5KuycwfpB3aFCeKk2oEP75vrJe2zijQyth6II3wMDcFphQR0MBX8t2OY3ruW6HRa9URbIjQSTdtqNcwpbyE3-lodJJer5R9Ao_vPZWvLHYky2FD-4Dx9LyF1BdTKDu_ElfD5tbvErndwzq5-YZHxpsEP5JvikkPr4kZb95WHXkAqhOQuvBevYjDOLawmfQRSIZDCaqGqazApcGNHFve6A0les7lMA">
+<div class="w-10"></div> <!-- Spacer for centering -->
+</div>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-sm mt-4">
+<div class="flex justify-between items-center text-label-sm font-label-sm text-secondary">
+<span>Step 2 of 4</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden relative">
+<div class="absolute top-0 left-0 h-full bg-primary-container rounded-full transition-all duration-500 ease-out" style="width: 50%;"></div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<div class="flex flex-col flex-1 pb-xl">
+<!-- Headline -->
+<div class="mb-lg text-center md:text-left">
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-on-background mb-sm">
+                    Trình độ tiếng Anh của bạn ở mức nào?
+                </h1>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                    Giúp chúng tôi điều chỉnh lộ trình học tập phù hợp nhất với bạn.
+                </p>
+</div>
+<!-- Options Stack -->
+<div class="flex flex-col gap-4">
+<!-- Option 1 -->
+<div class="option-card bg-surface rounded-xl p-md flex items-center justify-between shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant" onclick="selectOption(this)">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-size: 24px;">psychology_alt</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface mb-1">Mới bắt đầu hoàn toàn</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Chưa từng học hoặc quên gần hết.</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center check-container">
+<span class="material-symbols-outlined check-icon text-primary-container" style="font-size: 18px; font-weight: bold;">check</span>
+</div>
+</div>
+<!-- Option 2 -->
+<div class="option-card bg-surface rounded-xl p-md flex items-center justify-between shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant" onclick="selectOption(this)">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-size: 24px;">translate</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface mb-1">Biết một vài từ cơ bản</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Có thể hiểu những câu rất đơn giản.</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center check-container">
+<span class="material-symbols-outlined check-icon text-primary-container" style="font-size: 18px; font-weight: bold;">check</span>
+</div>
+</div>
+<!-- Option 3 -->
+<div class="option-card bg-surface rounded-xl p-md flex items-center justify-between shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant" onclick="selectOption(this)">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-size: 24px;">forum</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface mb-1">Giao tiếp được câu đơn giản</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Hiểu và phản hồi được trong tình huống quen thuộc.</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center check-container">
+<span class="material-symbols-outlined check-icon text-primary-container" style="font-size: 18px; font-weight: bold;">check</span>
+</div>
+</div>
+<!-- Option 4 -->
+<div class="option-card bg-surface rounded-xl p-md flex items-center justify-between shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant" onclick="selectOption(this)">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-size: 24px;">public</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface mb-1">Tự tin nói nhiều chủ đề</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Sử dụng tiếng Anh khá linh hoạt và trôi chảy.</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center check-container">
+<span class="material-symbols-outlined check-icon text-primary-container" style="font-size: 18px; font-weight: bold;">check</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Action -->
+<div class="fixed bottom-0 left-0 w-full p-margin-mobile md:p-md bg-surface/80 backdrop-blur-md border-t border-surface-variant z-20 flex justify-center">
+<div class="w-full max-w-2xl">
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary font-title-lg text-title-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 flex justify-center items-center gap-2">
+                    Tiếp tục
+                    <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Spacer for sticky footer -->
+<div class="h-24"></div>
+</main>
+<script>
+        function selectOption(element) {
+            // Remove selected class from all options
+            document.querySelectorAll('.option-card').forEach(card => {
+                card.classList.remove('selected');
+                card.querySelector('.check-container').classList.remove('border-primary-container', 'bg-white');
+                card.querySelector('.check-container').classList.add('border-outline-variant');
+            });
+            
+            // Add selected class to clicked option
+            element.classList.add('selected');
+            const checkContainer = element.querySelector('.check-container');
+            checkContainer.classList.remove('border-outline-variant');
+            checkContainer.classList.add('border-primary-container', 'bg-white');
+        }
+    </script>
+</body></html>
