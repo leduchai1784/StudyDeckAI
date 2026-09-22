@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../app/theme.dart';
+import '../../../../shared/widgets/studydeck_logo_header.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -25,18 +26,23 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   void _handleRegister() {
-    context.go('/placement-test');
+    final fromSurvey = GoRouterState.of(context).uri.queryParameters['fromSurvey'] == 'true';
+    if (fromSurvey) {
+      context.go('/survey-start');
+    } else {
+      context.go('/');
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.surface,
+      backgroundColor: AppTheme.brandBackground,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppTheme.onSurface),
+          icon: const Icon(Icons.arrow_back_ios_new, size: 20, color: AppTheme.brandTextPrimary),
           onPressed: () => context.pop(),
         ),
       ),
@@ -49,34 +55,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: Container(
                 padding: const EdgeInsets.all(24.0),
                 decoration: BoxDecoration(
-                  color: AppTheme.surfaceContainerLowest,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.08),
-                      blurRadius: 24,
-                      offset: const Offset(0, 8),
-                    ),
-                  ],
-                  border: Border.all(color: AppTheme.outlineVariant.withValues(alpha: 0.3)),
+                  color: AppTheme.brandSurface,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: AppTheme.brandBorder),
                 ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Center(
-                      child: Container(
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: AppTheme.primaryContainer.withValues(alpha: 0.1),
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(
-                          Icons.person_add_outlined,
-                          size: 40,
-                          color: AppTheme.primaryContainer,
-                        ),
-                      ),
+                    const Center(
+                      child: StudyDeckHeaderBadge(iconSize: 32),
                     ),
                     const SizedBox(height: 16),
                     Text(
@@ -85,7 +73,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
-                            color: AppTheme.onSurface,
+                            color: AppTheme.brandTextPrimary,
                           ),
                     ),
                     const SizedBox(height: 6),
@@ -93,71 +81,116 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       'Bắt đầu hành trình chinh phục tiếng Anh cùng AI.',
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            color: AppTheme.onSurfaceVariant,
+                            color: AppTheme.brandTextSecondary,
                           ),
                     ),
                     const SizedBox(height: 24),
 
                     // Full Name
-                    Text('Họ và tên', style: Theme.of(context).textTheme.labelLarge),
+                    Text(
+                      'Họ và tên',
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                            fontWeight: FontWeight.w600,
+                            color: AppTheme.brandTextPrimary,
+                          ),
+                    ),
                     const SizedBox(height: 8),
                     TextField(
                       controller: _nameController,
                       decoration: InputDecoration(
                         hintText: 'Nhập họ và tên của bạn',
-                        prefixIcon: const Icon(Icons.person_outline, color: AppTheme.outline),
+                        hintStyle: const TextStyle(color: AppTheme.brandTextMuted),
+                        prefixIcon: const Icon(Icons.person_outline, color: AppTheme.brandTextMuted),
                         filled: true,
-                        fillColor: AppTheme.surfaceContainerLowest,
+                        fillColor: AppTheme.brandSurface,
                         contentPadding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: const BorderSide(color: AppTheme.outlineVariant),
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(color: AppTheme.brandBorder),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(color: AppTheme.brandBorder),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(color: AppTheme.brandPrimary, width: 1.5),
                         ),
                       ),
                     ),
                     const SizedBox(height: 16),
 
                     // Email
-                    Text('Email', style: Theme.of(context).textTheme.labelLarge),
+                    Text(
+                      'Email',
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                            fontWeight: FontWeight.w600,
+                            color: AppTheme.brandTextPrimary,
+                          ),
+                    ),
                     const SizedBox(height: 8),
                     TextField(
                       controller: _emailController,
                       decoration: InputDecoration(
                         hintText: 'Nhập địa chỉ email',
-                        prefixIcon: const Icon(Icons.email_outlined, color: AppTheme.outline),
+                        hintStyle: const TextStyle(color: AppTheme.brandTextMuted),
+                        prefixIcon: const Icon(Icons.email_outlined, color: AppTheme.brandTextMuted),
                         filled: true,
-                        fillColor: AppTheme.surfaceContainerLowest,
+                        fillColor: AppTheme.brandSurface,
                         contentPadding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: const BorderSide(color: AppTheme.outlineVariant),
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(color: AppTheme.brandBorder),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(color: AppTheme.brandBorder),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(color: AppTheme.brandPrimary, width: 1.5),
                         ),
                       ),
                     ),
                     const SizedBox(height: 16),
 
                     // Password
-                    Text('Mật khẩu', style: Theme.of(context).textTheme.labelLarge),
+                    Text(
+                      'Mật khẩu',
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                            fontWeight: FontWeight.w600,
+                            color: AppTheme.brandTextPrimary,
+                          ),
+                    ),
                     const SizedBox(height: 8),
                     TextField(
                       controller: _passwordController,
                       obscureText: _obscurePassword,
                       decoration: InputDecoration(
                         hintText: 'Nhập mật khẩu (tối thiểu 8 ký tự)',
-                        prefixIcon: const Icon(Icons.lock_outline, color: AppTheme.outline),
+                        hintStyle: const TextStyle(color: AppTheme.brandTextMuted),
+                        prefixIcon: const Icon(Icons.lock_outline, color: AppTheme.brandTextMuted),
                         suffixIcon: IconButton(
                           icon: Icon(
                             _obscurePassword ? Icons.visibility_off_outlined : Icons.visibility_outlined,
-                            color: AppTheme.outline,
+                            color: AppTheme.brandTextMuted,
                           ),
                           onPressed: () => setState(() => _obscurePassword = !_obscurePassword),
                         ),
                         filled: true,
-                        fillColor: AppTheme.surfaceContainerLowest,
+                        fillColor: AppTheme.brandSurface,
                         contentPadding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: const BorderSide(color: AppTheme.outlineVariant),
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(color: AppTheme.brandBorder),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(color: AppTheme.brandBorder),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(color: AppTheme.brandPrimary, width: 1.5),
                         ),
                       ),
                     ),
@@ -169,12 +202,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         Checkbox(
                           value: _agreeTerms,
                           onChanged: (val) => setState(() => _agreeTerms = val ?? true),
-                          activeColor: AppTheme.primary,
+                          activeColor: AppTheme.brandPrimary,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
                         ),
                         Expanded(
                           child: Text(
                             'Tôi đồng ý với Điều khoản dịch vụ và Chính sách bảo mật.',
-                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontSize: 13),
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                  fontSize: 13,
+                                  color: AppTheme.brandTextSecondary,
+                                ),
                           ),
                         ),
                       ],
@@ -185,12 +222,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ElevatedButton(
                       onPressed: _handleRegister,
                       style: ElevatedButton.styleFrom(
+                        backgroundColor: AppTheme.brandPrimary,
+                        foregroundColor: Colors.white,
+                        elevation: 0,
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(8),
                         ),
                       ),
-                      child: const Text('Đăng ký & Bắt đầu khảo sát'),
+                      child: const Text(
+                        'Đăng ký & Bắt đầu khảo sát',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
                     const SizedBox(height: 20),
 
@@ -198,13 +241,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Đã có tài khoản? ', style: Theme.of(context).textTheme.bodyMedium),
+                        Text(
+                          'Đã có tài khoản? ',
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                color: AppTheme.brandTextSecondary,
+                              ),
+                        ),
                         GestureDetector(
                           onTap: () => context.push('/login'),
                           child: Text(
                             'Đăng nhập ngay',
                             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                  color: AppTheme.primary,
+                                  color: AppTheme.brandPrimary,
                                   fontWeight: FontWeight.bold,
                                 ),
                           ),

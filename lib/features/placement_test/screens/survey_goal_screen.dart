@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../../app/theme.dart';
+import '../../../services/survey_service.dart';
+import '../../../shared/widgets/survey_progress_header.dart';
 
 class SurveyGoalScreen extends StatefulWidget {
   const SurveyGoalScreen({super.key});
@@ -9,40 +12,53 @@ class SurveyGoalScreen extends StatefulWidget {
 }
 
 class _SurveyGoalScreenState extends State<SurveyGoalScreen> {
-  int _selectedIndex = 0;
+  final SurveyService _surveyService = SurveyService();
 
   final List<Map<String, dynamic>> _goals = [
     {
-      'icon': Icons.flight,
-      'title': 'Du lịch & Khám phá',
-      'subtitle': 'Tự tin giao tiếp khi đi nước ngoài',
+      'title': 'Cơ hội nghề nghiệp & Thăng tiến',
+      'subtitle': 'Phỏng vấn, giao tiếp công sở, email, đàm phán',
+      'icon': Icons.work_outline,
+      'emoji': '💼',
     },
     {
-      'icon': Icons.business_center_outlined,
-      'title': 'Thăng tiến công việc',
-      'subtitle': 'Mở rộng cơ hội nghề nghiệp toàn cầu',
-    },
-    {
+      'title': 'Luyện thi chứng chỉ quốc tế',
+      'subtitle': 'IELTS, TOEIC, TOEFL, VSTEP',
       'icon': Icons.school_outlined,
-      'title': 'Luyện thi (IELTS/TOEIC)',
-      'subtitle': 'Đạt điểm mục tiêu với lộ trình chuẩn',
+      'emoji': '🎓',
     },
     {
+      'title': 'Du lịch & Định cư nước ngoài',
+      'subtitle': 'Tự tin giao tiếp tại sân bay, khách sạn, nhà hàng',
+      'icon': Icons.flight_takeoff_outlined,
+      'emoji': '✈️',
+    },
+    {
+      'title': 'Giao tiếp hàng ngày trôi chảy',
+      'subtitle': 'Tự tin trò chuyện với bạn bè quốc tế, xem phim',
       'icon': Icons.chat_bubble_outline,
-      'title': 'Giao tiếp hằng ngày',
-      'subtitle': 'Nói tiếng Anh trôi chảy, tự nhiên',
+      'emoji': '💬',
     },
     {
-      'icon': Icons.favorite_border,
-      'title': 'Sở thích cá nhân',
-      'subtitle': 'Xem phim, đọc sách, nghe nhạc',
+      'title': 'Phát triển bản thân & Rèn luyện trí não',
+      'subtitle': 'Học thêm một ngôn ngữ để mở rộng tư duy',
+      'icon': Icons.psychology_outlined,
+      'emoji': '🧠',
     },
   ];
+
+  int _selectedIndex = 0;
+
+  void _onContinue() {
+    final selected = _goals[_selectedIndex];
+    _surveyService.setGoal(selected['title'] as String, selected['emoji'] as String);
+    context.push('/survey-level');
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFCF8FF),
+      backgroundColor: AppTheme.brandBackground,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -52,37 +68,8 @@ class _SurveyGoalScreenState extends State<SurveyGoalScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Top Brand Header & Progress (Image 2)
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(6),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF5A4FE3),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: const Icon(Icons.auto_awesome_motion, size: 18, color: Colors.white),
-                      ),
-                      const SizedBox(width: 8),
-                      const Text(
-                        'StudyDeck AI',
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF181445)),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 12),
-
-                  // Progress Bar 25% (Step 1/4)
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(999),
-                    child: const LinearProgressIndicator(
-                      value: 0.25,
-                      minHeight: 6,
-                      backgroundColor: Color(0xFFE9E5FF),
-                      valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF4F46E5)),
-                    ),
-                  ),
+                  // Unified Survey Progress Header (Step 1/4)
+                  const SurveyProgressHeader(currentStep: 1),
                   const SizedBox(height: 24),
 
                   // Title & Subtitle
@@ -92,7 +79,7 @@ class _SurveyGoalScreenState extends State<SurveyGoalScreen> {
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF181445),
+                      color: AppTheme.brandTextPrimary,
                       height: 1.25,
                     ),
                   ),
@@ -102,13 +89,13 @@ class _SurveyGoalScreenState extends State<SurveyGoalScreen> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 14,
-                      color: Color(0xFF464555),
+                      color: AppTheme.brandTextSecondary,
                       height: 1.35,
                     ),
                   ),
                   const SizedBox(height: 20),
 
-                  // 5 Options List (Image 2)
+                  // 5 Options List
                   Expanded(
                     child: ListView.separated(
                       itemCount: _goals.length,
@@ -119,25 +106,18 @@ class _SurveyGoalScreenState extends State<SurveyGoalScreen> {
 
                         return Container(
                           decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
+                            color: isSelected ? AppTheme.chipIndigoBg : AppTheme.brandSurface,
+                            borderRadius: BorderRadius.circular(12),
                             border: Border.all(
-                              color: isSelected ? const Color(0xFF4F46E5) : const Color(0xFFE3DFFF),
-                              width: isSelected ? 2 : 1,
+                              color: isSelected ? AppTheme.brandPrimary : AppTheme.brandBorder,
+                              width: isSelected ? 1.5 : 1,
                             ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withValues(alpha: 0.03),
-                                blurRadius: 10,
-                                offset: const Offset(0, 4),
-                              ),
-                            ],
                           ),
                           child: Material(
                             color: Colors.transparent,
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(12),
                             child: InkWell(
-                              borderRadius: BorderRadius.circular(16),
+                              borderRadius: BorderRadius.circular(12),
                               onTap: () {
                                 setState(() {
                                   _selectedIndex = index;
@@ -150,13 +130,13 @@ class _SurveyGoalScreenState extends State<SurveyGoalScreen> {
                                     Container(
                                       width: 44,
                                       height: 44,
-                                      decoration: const BoxDecoration(
-                                        color: Color(0xFFEFEBFF),
+                                      decoration: BoxDecoration(
+                                        color: isSelected ? AppTheme.brandSurface : AppTheme.chipIndigoBg,
                                         shape: BoxShape.circle,
                                       ),
                                       child: Icon(
                                         item['icon'] as IconData,
-                                        color: const Color(0xFF4F46E5),
+                                        color: AppTheme.brandPrimary,
                                         size: 22,
                                       ),
                                     ),
@@ -170,7 +150,7 @@ class _SurveyGoalScreenState extends State<SurveyGoalScreen> {
                                             style: const TextStyle(
                                               fontSize: 16,
                                               fontWeight: FontWeight.bold,
-                                              color: Color(0xFF181445),
+                                              color: AppTheme.brandTextPrimary,
                                             ),
                                           ),
                                           const SizedBox(height: 2),
@@ -178,7 +158,7 @@ class _SurveyGoalScreenState extends State<SurveyGoalScreen> {
                                             item['subtitle'] as String,
                                             style: const TextStyle(
                                               fontSize: 12,
-                                              color: Color(0xFF464555),
+                                              color: AppTheme.brandTextSecondary,
                                             ),
                                           ),
                                         ],
@@ -194,22 +174,20 @@ class _SurveyGoalScreenState extends State<SurveyGoalScreen> {
                     ),
                   ),
 
-                  // Bottom Button (Image 2)
+                  // Bottom Action Button
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 12.0),
                     child: SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {
-                          context.push('/survey-level');
-                        },
+                        onPressed: _onContinue,
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFE5E0FF),
-                          foregroundColor: const Color(0xFF3525CD),
+                          backgroundColor: AppTheme.brandPrimary,
+                          foregroundColor: Colors.white,
                           elevation: 0,
                           padding: const EdgeInsets.symmetric(vertical: 16),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(14),
+                            borderRadius: BorderRadius.circular(8),
                           ),
                         ),
                         child: const Row(
@@ -217,10 +195,10 @@ class _SurveyGoalScreenState extends State<SurveyGoalScreen> {
                           children: [
                             Text(
                               'Tiếp tục',
-                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF3525CD)),
+                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
                             ),
                             SizedBox(width: 8),
-                            Icon(Icons.arrow_forward, size: 20, color: Color(0xFF3525CD)),
+                            Icon(Icons.arrow_forward, size: 20, color: Colors.white),
                           ],
                         ),
                       ),

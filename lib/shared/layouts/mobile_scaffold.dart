@@ -3,55 +3,41 @@ import 'package:go_router/go_router.dart';
 import '../../app/theme.dart';
 
 class MobileScaffold extends StatelessWidget {
-  final Widget child;
+  final StatefulNavigationShell navigationShell;
 
-  const MobileScaffold({super.key, required this.child});
+  const MobileScaffold({
+    super.key,
+    required this.navigationShell,
+  });
 
-  int _calculateSelectedIndex(BuildContext context) {
-    final String location = GoRouterState.of(context).uri.path;
-    if (location == '/') return 0;
-    if (location.startsWith('/learning')) return 1;
-    if (location.startsWith('/flashcards')) return 2;
-    if (location.startsWith('/ai-tutor') || location.startsWith('/ai-intelligence')) return 3;
-    if (location.startsWith('/profile')) return 4;
-    return 0;
-  }
-
-  void _onItemTapped(int index, BuildContext context) {
-    switch (index) {
-      case 0:
-        context.go('/');
-        break;
-      case 1:
-        context.go('/learning');
-        break;
-      case 2:
-        context.go('/flashcards');
-        break;
-      case 3:
-        context.go('/ai-tutor');
-        break;
-      case 4:
-        context.go('/profile');
-        break;
-    }
+  void _onItemTapped(int index) {
+    navigationShell.goBranch(
+      index,
+      initialLocation: index == navigationShell.currentIndex,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    final selectedIndex = _calculateSelectedIndex(context);
-
     return Scaffold(
-      body: child,
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selectedIndex,
-        onTap: (index) => _onItemTapped(index, context),
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: AppTheme.primaryContainer,
-        unselectedItemColor: AppTheme.outline,
-        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
-        unselectedLabelStyle: const TextStyle(fontSize: 12),
-        items: const [
+      body: navigationShell,
+      bottomNavigationBar: Container(
+        decoration: const BoxDecoration(
+          border: Border(
+            top: BorderSide(color: AppTheme.brandBorder, width: 1.0),
+          ),
+        ),
+        child: BottomNavigationBar(
+          currentIndex: navigationShell.currentIndex,
+          onTap: _onItemTapped,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: AppTheme.brandSurface,
+          elevation: 0,
+          selectedItemColor: AppTheme.brandPrimary,
+          unselectedItemColor: AppTheme.brandTextMuted,
+          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 11),
+          unselectedLabelStyle: const TextStyle(fontSize: 11),
+          items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
             activeIcon: Icon(Icons.home),
@@ -63,14 +49,14 @@ class MobileScaffold extends StatelessWidget {
             label: 'Bài học',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.psychology_outlined, size: 26),
+            activeIcon: Icon(Icons.psychology, size: 26),
+            label: 'AI Tutor', // CENTER TAB (Index 2)
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.style_outlined),
             activeIcon: Icon(Icons.style),
             label: 'Bộ thẻ',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.psychology_outlined),
-            activeIcon: Icon(Icons.psychology),
-            label: 'AI Tutor',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
@@ -78,6 +64,7 @@ class MobileScaffold extends StatelessWidget {
             label: 'Hồ sơ',
           ),
         ],
+        ),
       ),
     );
   }

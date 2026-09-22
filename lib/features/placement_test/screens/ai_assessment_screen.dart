@@ -28,7 +28,7 @@ class _AiAssessmentScreenState extends State<AiAssessmentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.surface,
+      backgroundColor: AppTheme.brandBackground,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -41,12 +41,12 @@ class _AiAssessmentScreenState extends State<AiAssessmentScreen> {
                       children: [
                         Container(
                           padding: const EdgeInsets.all(24),
-                          decoration: BoxDecoration(
-                            color: AppTheme.primaryContainer.withValues(alpha: 0.1),
+                          decoration: const BoxDecoration(
+                            color: AppTheme.chipIndigoBg,
                             shape: BoxShape.circle,
                           ),
                           child: const CircularProgressIndicator(
-                            color: AppTheme.primaryContainer,
+                            color: AppTheme.brandPrimary,
                             strokeWidth: 3,
                           ),
                         ),
@@ -57,6 +57,7 @@ class _AiAssessmentScreenState extends State<AiAssessmentScreen> {
                           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
+                                color: AppTheme.brandTextPrimary,
                               ),
                         ),
                         const SizedBox(height: 8),
@@ -64,7 +65,7 @@ class _AiAssessmentScreenState extends State<AiAssessmentScreen> {
                           'Đang lập bản đồ tri thức và tối ưu hóa thuật toán lặp lại ngắt quãng (SM-2)...',
                           textAlign: TextAlign.center,
                           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                color: AppTheme.onSurfaceVariant,
+                                color: AppTheme.brandTextSecondary,
                               ),
                         ),
                       ],
@@ -78,14 +79,14 @@ class _AiAssessmentScreenState extends State<AiAssessmentScreen> {
                           child: Container(
                             padding: const EdgeInsets.all(16),
                             decoration: BoxDecoration(
-                              color: const Color(0xFFE8F5E9),
+                              color: AppTheme.tintGreenBg,
                               shape: BoxShape.circle,
-                              border: Border.all(color: const Color(0xFF81C784)),
+                              border: Border.all(color: AppTheme.brandSuccess.withValues(alpha: 0.4)),
                             ),
                             child: const Icon(
                               Icons.auto_awesome,
                               size: 48,
-                              color: Color(0xFF2E7D32),
+                              color: AppTheme.brandSuccess,
                             ),
                           ),
                         ),
@@ -96,7 +97,7 @@ class _AiAssessmentScreenState extends State<AiAssessmentScreen> {
                           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,
-                                color: AppTheme.onSurface,
+                                color: AppTheme.brandTextPrimary,
                               ),
                         ),
                         const SizedBox(height: 8),
@@ -104,7 +105,7 @@ class _AiAssessmentScreenState extends State<AiAssessmentScreen> {
                           'Dựa trên khảo sát, StudyDeck AI đã thiết kế riêng cho bạn:',
                           textAlign: TextAlign.center,
                           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                color: AppTheme.onSurfaceVariant,
+                                color: AppTheme.brandTextSecondary,
                               ),
                         ),
                         const SizedBox(height: 24),
@@ -113,16 +114,9 @@ class _AiAssessmentScreenState extends State<AiAssessmentScreen> {
                         Container(
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
-                            color: AppTheme.surfaceContainerLowest,
-                            borderRadius: BorderRadius.circular(16),
-                            border: Border.all(color: AppTheme.outlineVariant.withValues(alpha: 0.4)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withValues(alpha: 0.05),
-                                blurRadius: 16,
-                                offset: const Offset(0, 4),
-                              ),
-                            ],
+                            color: AppTheme.brandSurface,
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: AppTheme.brandBorder),
                           ),
                           child: Column(
                             children: [
@@ -130,21 +124,24 @@ class _AiAssessmentScreenState extends State<AiAssessmentScreen> {
                                 icon: Icons.workspace_premium,
                                 title: 'Trình độ khởi đầu',
                                 subtitle: 'B1 Intermediate - Tiếng Anh Giao Tiếp & Công Việc',
-                                color: AppTheme.primaryContainer,
+                                color: AppTheme.brandPrimary,
+                                bgColor: AppTheme.tintIndigoBg,
                               ),
-                              const Divider(height: 24, color: AppTheme.outlineVariant),
+                              const Divider(height: 24, color: AppTheme.brandBorder),
                               _buildResultRow(
                                 icon: Icons.timer,
                                 title: 'Mục tiêu hàng ngày',
                                 subtitle: '15 phút / ngày • 15 từ vựng mới & 1 bài tập AI',
-                                color: AppTheme.secondary,
+                                color: AppTheme.brandAccent,
+                                bgColor: AppTheme.tintAmberBg,
                               ),
-                              const Divider(height: 24, color: AppTheme.outlineVariant),
+                              const Divider(height: 24, color: AppTheme.brandBorder),
                               _buildResultRow(
                                 icon: Icons.psychology,
                                 title: 'Thuật toán ghi nhớ',
                                 subtitle: 'Tự động nhắc lịch ôn tập theo đường cong quên SuperMemo-2',
-                                color: AppTheme.tertiary,
+                                color: AppTheme.tintPurpleText,
+                                bgColor: AppTheme.tintPurpleBg,
                               ),
                             ],
                           ),
@@ -156,15 +153,18 @@ class _AiAssessmentScreenState extends State<AiAssessmentScreen> {
                         ElevatedButton(
                           onPressed: () => context.go('/login'),
                           style: ElevatedButton.styleFrom(
+                            backgroundColor: AppTheme.brandPrimary,
+                            foregroundColor: Colors.white,
+                            elevation: 0,
                             padding: const EdgeInsets.symmetric(vertical: 16),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(8),
                             ),
                           ),
                           child: const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text('Tiếp Tục Tới Đăng Nhập'),
+                              Text('Tiếp Tục Tới Đăng Nhập', style: TextStyle(fontWeight: FontWeight.bold)),
                               SizedBox(width: 8),
                               Icon(Icons.arrow_forward, size: 20),
                             ],
@@ -185,13 +185,14 @@ class _AiAssessmentScreenState extends State<AiAssessmentScreen> {
     required String title,
     required String subtitle,
     required Color color,
+    required Color bgColor,
   }) {
     return Row(
       children: [
         Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: color.withValues(alpha: 0.1),
+            color: bgColor,
             borderRadius: BorderRadius.circular(12),
           ),
           child: Icon(icon, color: color, size: 24),
@@ -203,12 +204,12 @@ class _AiAssessmentScreenState extends State<AiAssessmentScreen> {
             children: [
               Text(
                 title,
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: AppTheme.brandTextPrimary),
               ),
               const SizedBox(height: 2),
               Text(
                 subtitle,
-                style: const TextStyle(fontSize: 13, color: AppTheme.onSurfaceVariant),
+                style: const TextStyle(fontSize: 13, color: AppTheme.brandTextSecondary),
               ),
             ],
           ),

@@ -16,11 +16,35 @@ dependencies:
   shared_preferences: ^2.2.3
   flutter_riverpod: ^2.5.1
   google_fonts: ^6.2.1
+  supabase_flutter: ^2.8.0
+  image_picker: ^1.1.2
+  flutter_tts: ^4.2.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.1
+
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: false
+  image_path: "assets/images/app_logo_full.png"
+  web:
+    generate: true
+    image_path: "assets/images/app_logo_full.png"
+    background_color: "#FCF8FF"
+    theme_color: "#3525CD"
+
+flutter_native_splash:
+  color: "#F6F5FF"
+  image: "assets/images/app_logo_native_splash.png"
+  fullscreen: true
+  ios: false
+  android_12:
+    image: "assets/images/app_logo_native_splash.png"
+    color: "#F6F5FF"
 
 flutter:
   uses-material-design: true

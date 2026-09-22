@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../../app/theme.dart';
+import '../../../services/survey_service.dart';
+import '../../../shared/widgets/survey_progress_header.dart';
 
 class SurveyTimeScreen extends StatefulWidget {
   const SurveyTimeScreen({super.key});
@@ -9,35 +12,46 @@ class SurveyTimeScreen extends StatefulWidget {
 }
 
 class _SurveyTimeScreenState extends State<SurveyTimeScreen> {
-  int _selectedIndex = 2; // Default 15 phút/ngày as selected in Image 4
+  int _selectedIndex = 2; // Default 15 phút/ngày
+  final SurveyService _surveyService = SurveyService();
 
   final List<Map<String, dynamic>> _times = [
     {
       'icon': Icons.hourglass_empty_outlined,
+      'emoji': '⏱️',
       'title': '5 phút/ngày',
       'subtitle': 'Nhẹ nhàng',
     },
     {
       'icon': Icons.access_time_outlined,
+      'emoji': '⏱️',
       'title': '10 phút/ngày',
       'subtitle': 'Vừa sức',
     },
     {
       'icon': Icons.timer_outlined,
+      'emoji': '⏱️',
       'title': '15 phút/ngày',
       'subtitle': 'Nghiêm túc',
     },
     {
       'icon': Icons.alarm_outlined,
+      'emoji': '⏱️',
       'title': '30 phút/ngày',
       'subtitle': 'Cấp tốc',
     },
   ];
 
+  void _onContinue() {
+    final selected = _times[_selectedIndex];
+    _surveyService.setTime(selected['title'] as String, selected['emoji'] as String);
+    context.push('/survey-referral');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFCF8FF),
+      backgroundColor: AppTheme.brandBackground,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -47,88 +61,24 @@ class _SurveyTimeScreenState extends State<SurveyTimeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Back & Brand Header (Image 4)
-                  Stack(
-                    children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: IconButton(
-                          icon: const Icon(Icons.arrow_back, color: Color(0xFF181445)),
-                          onPressed: () => context.pop(),
-                        ),
-                      ),
-                      Center(
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(6),
-                              decoration: BoxDecoration(
-                                color: const Color(0xFF5A4FE3),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              child: const Icon(Icons.auto_awesome_motion, size: 18, color: Colors.white),
-                            ),
-                            const SizedBox(width: 8),
-                            const Text(
-                              'StudyDeck AI',
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF181445)),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 12),
+                  // Unified Survey Progress Header (Step 3/4 - 75%)
+                  const SurveyProgressHeader(currentStep: 3),
+                  const SizedBox(height: 24),
 
-                  // Header Progress Labels (LỘ TRÌNH HỌC TẬP | Bước 3/4)
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        'LỘ TRÌNH HỌC TẬP',
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF3525CD),
-                          letterSpacing: 0.5,
-                        ),
-                      ),
-                      Text(
-                        'Bước 3/4',
-                        style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                              color: const Color(0xFF525D83),
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 6),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(999),
-                    child: const LinearProgressIndicator(
-                      value: 0.75,
-                      minHeight: 6,
-                      backgroundColor: Color(0xFFE9E5FF),
-                      valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF4F46E5)),
-                    ),
-                  ),
-                  const SizedBox(height: 28),
-
-                  // Title (Image 4)
+                  // Title
                   const Text(
                     'Mỗi ngày bạn muốn dành\nbao nhiêu thời gian?',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF181445),
+                      color: AppTheme.brandTextPrimary,
                       height: 1.25,
                     ),
                   ),
                   const SizedBox(height: 28),
 
-                  // 4 Time Options List (Image 4)
+                  // 4 Time Options List
                   Expanded(
                     child: ListView.separated(
                       itemCount: _times.length,
@@ -139,25 +89,18 @@ class _SurveyTimeScreenState extends State<SurveyTimeScreen> {
 
                         return Container(
                           decoration: BoxDecoration(
-                            color: isSelected ? const Color(0xFFF0EEFF) : Colors.white,
-                            borderRadius: BorderRadius.circular(16),
+                            color: isSelected ? AppTheme.chipIndigoBg : AppTheme.brandSurface,
+                            borderRadius: BorderRadius.circular(12),
                             border: Border.all(
-                              color: isSelected ? const Color(0xFF3525CD) : const Color(0xFFE3DFFF),
-                              width: isSelected ? 2 : 1,
+                              color: isSelected ? AppTheme.brandPrimary : AppTheme.brandBorder,
+                              width: isSelected ? 1.5 : 1,
                             ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withValues(alpha: 0.03),
-                                blurRadius: 10,
-                                offset: const Offset(0, 4),
-                              ),
-                            ],
                           ),
                           child: Material(
                             color: Colors.transparent,
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(12),
                             child: InkWell(
-                              borderRadius: BorderRadius.circular(16),
+                              borderRadius: BorderRadius.circular(12),
                               onTap: () {
                                 setState(() {
                                   _selectedIndex = index;
@@ -170,13 +113,13 @@ class _SurveyTimeScreenState extends State<SurveyTimeScreen> {
                                     Container(
                                       width: 44,
                                       height: 44,
-                                      decoration: const BoxDecoration(
-                                        color: Color(0xFFEFEBFF),
-                                        borderRadius: BorderRadius.all(Radius.circular(12)),
+                                      decoration: BoxDecoration(
+                                        color: isSelected ? AppTheme.brandSurface : AppTheme.chipIndigoBg,
+                                        borderRadius: const BorderRadius.all(Radius.circular(12)),
                                       ),
                                       child: Icon(
                                         item['icon'] as IconData,
-                                        color: const Color(0xFF181445),
+                                        color: AppTheme.brandPrimary,
                                         size: 24,
                                       ),
                                     ),
@@ -190,7 +133,7 @@ class _SurveyTimeScreenState extends State<SurveyTimeScreen> {
                                             style: const TextStyle(
                                               fontSize: 18,
                                               fontWeight: FontWeight.bold,
-                                              color: Color(0xFF181445),
+                                              color: AppTheme.brandTextPrimary,
                                             ),
                                           ),
                                           const SizedBox(height: 2),
@@ -198,7 +141,7 @@ class _SurveyTimeScreenState extends State<SurveyTimeScreen> {
                                             item['subtitle'] as String,
                                             style: const TextStyle(
                                               fontSize: 13,
-                                              color: Color(0xFF464555),
+                                              color: AppTheme.brandTextSecondary,
                                             ),
                                           ),
                                         ],
@@ -211,7 +154,7 @@ class _SurveyTimeScreenState extends State<SurveyTimeScreen> {
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         border: Border.all(
-                                          color: isSelected ? const Color(0xFF3525CD) : const Color(0xFFC7C4D8),
+                                          color: isSelected ? AppTheme.brandPrimary : AppTheme.brandBorder,
                                           width: isSelected ? 6 : 2,
                                         ),
                                       ),
@@ -226,22 +169,20 @@ class _SurveyTimeScreenState extends State<SurveyTimeScreen> {
                     ),
                   ),
 
-                  // Bottom Button (Image 4)
+                  // Bottom Action Button
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 12.0),
                     child: SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {
-                          context.push('/survey-start');
-                        },
+                        onPressed: _onContinue,
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF3525CD),
+                          backgroundColor: AppTheme.brandPrimary,
                           foregroundColor: Colors.white,
-                          elevation: 2,
+                          elevation: 0,
                           padding: const EdgeInsets.symmetric(vertical: 16),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(14),
+                            borderRadius: BorderRadius.circular(8),
                           ),
                         ),
                         child: const Row(

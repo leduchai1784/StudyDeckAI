@@ -15,6 +15,11 @@ class RouteNames {
   static const String aiTutor = '/ai-tutor';
   static const String profile = '/profile';
 
+  // User Profile Extensions (NKS APIs)
+  static const String editProfile = '/edit-profile';
+  static const String changePassword = '/change-password';
+  static const String updateCccd = '/update-cccd';
+
   // Details
   static const String flashcardReview = '/flashcard-review';
   static const String createFlashcard = '/create-flashcard';

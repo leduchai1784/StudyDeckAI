@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../../app/theme.dart';
+import '../../../shared/widgets/studydeck_logo_header.dart';
 
 class SurveyStartingPointScreen extends StatelessWidget {
   const SurveyStartingPointScreen({super.key});
@@ -7,7 +9,7 @@ class SurveyStartingPointScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFCF8FF),
+      backgroundColor: AppTheme.brandBackground,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -17,82 +19,35 @@ class SurveyStartingPointScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Back & Brand Header (Image 5)
-                  Stack(
-                    children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: IconButton(
-                          icon: const Icon(Icons.arrow_back, color: Color(0xFF181445)),
-                          onPressed: () => context.pop(),
-                        ),
-                      ),
-                      Center(
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(6),
-                              decoration: BoxDecoration(
-                                color: const Color(0xFF5A4FE3),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              child: const Icon(Icons.auto_awesome_motion, size: 18, color: Colors.white),
-                            ),
-                            const SizedBox(width: 8),
-                            const Text(
-                              'StudyDeck AI',
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF181445)),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 12),
-
-                  // Header Progress Labels (BƯỚC 4/4 | Sắp hoàn thành!)
+                  // Top Bar: Unified Back Button & Brand Header Badge
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
-                        'BƯỚC 4/4',
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF3525CD),
-                          letterSpacing: 0.5,
-                        ),
+                      IconButton(
+                        icon: const Icon(Icons.arrow_back_ios_new, size: 20, color: AppTheme.brandTextPrimary),
+                        onPressed: () {
+                          if (context.canPop()) {
+                            context.pop();
+                          } else {
+                            context.go('/onboarding');
+                          }
+                        },
                       ),
-                      Text(
-                        'Sắp hoàn thành!',
-                        style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                              color: const Color(0xFF525D83),
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
+                      const Spacer(),
+                      const StudyDeckHeaderBadge(iconSize: 24),
+                      const Spacer(),
+                      const SizedBox(width: 48), // Balance spacing
                     ],
                   ),
-                  const SizedBox(height: 6),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(999),
-                    child: const LinearProgressIndicator(
-                      value: 1.0,
-                      minHeight: 6,
-                      backgroundColor: Color(0xFFE9E5FF),
-                      valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF3525CD)),
-                    ),
-                  ),
-                  const SizedBox(height: 28),
+                  const SizedBox(height: 14),
 
-                  // Headline & Subtitle (Image 5)
+                  // Heading
                   const Text(
-                    'Chọn điểm khởi đầu của\nbạn',
+                    'Bạn muốn bắt đầu\ntừ đâu?',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF181445),
+                      color: AppTheme.brandTextPrimary,
                       height: 1.25,
                     ),
                   ),
@@ -102,7 +57,7 @@ class SurveyStartingPointScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 14,
-                      color: Color(0xFF464555),
+                      color: AppTheme.brandTextSecondary,
                       height: 1.35,
                     ),
                   ),
@@ -113,16 +68,9 @@ class SurveyStartingPointScreen extends StatelessWidget {
                     width: double.infinity,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(16),
-                      border: Border.all(color: const Color(0xFFE3DFFF)),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.03),
-                          blurRadius: 10,
-                          offset: const Offset(0, 4),
-                        ),
-                      ],
+                      color: AppTheme.brandSurface,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: AppTheme.brandBorder),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,37 +79,46 @@ class SurveyStartingPointScreen extends StatelessWidget {
                           width: 48,
                           height: 48,
                           decoration: const BoxDecoration(
-                            color: Color(0xFFEFEBFF),
+                            color: AppTheme.chipIndigoBg,
                             shape: BoxShape.circle,
                           ),
-                          child: const Icon(Icons.school_outlined, color: Color(0xFF4F46E5), size: 26),
+                          child: const Icon(Icons.school_outlined, color: AppTheme.brandPrimary, size: 26),
                         ),
                         const SizedBox(height: 14),
                         const Text(
                           'Bắt đầu từ số 0',
-                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF181445)),
+                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppTheme.brandTextPrimary),
                         ),
                         const SizedBox(height: 6),
                         const Text(
                           'Tôi là người mới bắt đầu. Hãy đưa tôi vào bài học vỡ lòng đầu tiên.',
-                          style: TextStyle(fontSize: 13, color: Color(0xFF464555), height: 1.35),
+                          style: TextStyle(fontSize: 13, color: AppTheme.brandTextSecondary, height: 1.35),
                         ),
-                        const SizedBox(height: 12),
-                        GestureDetector(
-                          onTap: () => context.push('/ai-assessment'),
-                          child: const Row(
-                            children: [
-                              Text(
-                                'Bắt đầu ngay',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color(0xFF3525CD),
-                                ),
+                        const SizedBox(height: 16),
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            onPressed: () => context.go('/'),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: AppTheme.brandPrimary,
+                              foregroundColor: Colors.white,
+                              elevation: 0,
+                              padding: const EdgeInsets.symmetric(vertical: 14),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
                               ),
-                              SizedBox(width: 4),
-                              Icon(Icons.arrow_forward, size: 16, color: Color(0xFF3525CD)),
-                            ],
+                            ),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Bắt đầu ngay',
+                                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+                                ),
+                                SizedBox(width: 6),
+                                Icon(Icons.arrow_forward, size: 18, color: Colors.white),
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -169,7 +126,7 @@ class SurveyStartingPointScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
 
-                  // Option Card 2: Kiểm tra trình độ (Khuyên dùng - Yellow Border/Badge) (Image 5)
+                  // Option Card 2: Kiểm tra trình độ (Khuyên dùng)
                   Stack(
                     clipBehavior: Clip.none,
                     children: [
@@ -177,16 +134,9 @@ class SurveyStartingPointScreen extends StatelessWidget {
                         width: double.infinity,
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                          border: Border.all(color: const Color(0xFFF39C12), width: 2),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withValues(alpha: 0.04),
-                              blurRadius: 10,
-                              offset: const Offset(0, 4),
-                            ),
-                          ],
+                          color: AppTheme.brandSurface,
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: AppTheme.brandBorder),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -195,30 +145,30 @@ class SurveyStartingPointScreen extends StatelessWidget {
                               width: 48,
                               height: 48,
                               decoration: const BoxDecoration(
-                                color: Color(0xFFFEF9E7),
+                                color: AppTheme.chipIndigoBg,
                                 shape: BoxShape.circle,
                               ),
-                              child: const Icon(Icons.lightbulb_outline, color: Color(0xFFF39C12), size: 26),
+                              child: const Icon(Icons.lightbulb_outline, color: AppTheme.brandPrimary, size: 26),
                             ),
                             const SizedBox(height: 14),
                             const Text(
                               'Kiểm tra trình độ',
-                              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF181445)),
+                              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppTheme.brandTextPrimary),
                             ),
                             const SizedBox(height: 6),
                             const Text(
                               'Tôi đã có kiến thức nền tảng. Làm bài test nhanh 3 phút để StudyDeck AI xếp lớp phù hợp.',
-                              style: TextStyle(fontSize: 13, color: Color(0xFF464555), height: 1.35),
+                              style: TextStyle(fontSize: 13, color: AppTheme.brandTextSecondary, height: 1.35),
                             ),
                             const SizedBox(height: 16),
                             SizedBox(
                               width: double.infinity,
                               child: ElevatedButton(
-                                onPressed: () => context.push('/ai-assessment'),
+                                onPressed: () => context.push('/survey-goal'),
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color(0xFFF39C12),
+                                  backgroundColor: AppTheme.brandPrimary,
                                   foregroundColor: Colors.white,
-                                  elevation: 2,
+                                  elevation: 0,
                                   padding: const EdgeInsets.symmetric(vertical: 14),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(12),
@@ -248,9 +198,9 @@ class SurveyStartingPointScreen extends StatelessWidget {
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                           decoration: const BoxDecoration(
-                            color: Color(0xFFF39C12),
+                            color: AppTheme.brandPrimary,
                             borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(14),
+                              topRight: Radius.circular(12),
                               bottomLeft: Radius.circular(10),
                             ),
                           ),
@@ -271,12 +221,12 @@ class SurveyStartingPointScreen extends StatelessWidget {
 
                   // Bottom link: Bỏ qua bước này, tôi sẽ chọn sau
                   TextButton(
-                    onPressed: () => context.push('/ai-assessment'),
+                    onPressed: () => context.go('/'),
                     child: const Text(
                       'Bỏ qua bước này, tôi sẽ chọn sau',
                       style: TextStyle(
                         fontSize: 13,
-                        color: Color(0xFF464555),
+                        color: AppTheme.brandTextSecondary,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
