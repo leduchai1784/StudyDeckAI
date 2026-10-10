@@ -98,15 +98,15 @@ class _CourseListScreenState extends State<CourseListScreen> {
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(8),
                             borderSide: const BorderSide(color: Color(0xFFE2E8F0)),
                           ),
                           enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(8),
                             borderSide: const BorderSide(color: Color(0xFFE2E8F0)),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(8),
                             borderSide: const BorderSide(color: AppTheme.brandPrimary),
                           ),
                         ),
@@ -315,34 +315,35 @@ class _CourseListScreenState extends State<CourseListScreen> {
     );
   }
 
-  // 2. Reference Lesson Card (1..25)
+  // 2. Reference Lesson Card (1..25) - Kích thước cố định đồng bộ
   Widget _buildReferenceLessonCard(int number, GrammarLessonModel item, bool isCompleted) {
     return Material(
       color: Colors.white,
-      borderRadius: BorderRadius.circular(10),
+      borderRadius: BorderRadius.circular(12),
       child: InkWell(
         onTap: () async {
           await context.push('/grammar/lesson', extra: {'lessonId': item.id});
           _loadData();
         },
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(12),
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+          height: 68,
+          padding: const EdgeInsets.symmetric(horizontal: 14),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(12),
             border: Border.all(
               color: isCompleted ? const Color(0xFF86EFAC) : const Color(0xFFE2E8F0),
             ),
           ),
           child: Row(
             children: [
-              // Circle Number (1 to 25)
+              // Number Box (Form vuông bo 8px chuẩn THEME_STANDARDS)
               Container(
-                width: 32,
-                height: 32,
+                width: 34,
+                height: 34,
                 decoration: BoxDecoration(
                   color: isCompleted ? const Color(0xFFDCFCE7) : const Color(0xFFF1F5F9),
-                  shape: BoxShape.circle,
+                  borderRadius: BorderRadius.circular(8),
                 ),
                 child: Center(
                   child: Text(
@@ -358,19 +359,24 @@ class _CourseListScreenState extends State<CourseListScreen> {
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       item.title,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: AppTheme.brandTextPrimary,
                       ),
                     ),
-                    const SizedBox(height: 2),
+                    const SizedBox(height: 3),
                     Text(
                       '${item.questionCount} câu hỏi • ${item.durationMinutes} phút',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         fontSize: 11.5,
                         color: Color(0xFF64748B),
@@ -379,6 +385,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
                   ],
                 ),
               ),
+              const SizedBox(width: 8),
               if (isCompleted) ...[
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
@@ -412,7 +419,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
     );
   }
 
-  // 3. Advanced Lesson Card
+  // 3. Advanced Lesson Card - Kích thước cố định đồng bộ
   Widget _buildAdvancedLessonCard(GrammarLessonModel item, bool isCompleted) {
     return Material(
       color: Colors.white,
@@ -424,7 +431,8 @@ class _CourseListScreenState extends State<CourseListScreen> {
         },
         borderRadius: BorderRadius.circular(12),
         child: Container(
-          padding: const EdgeInsets.all(14),
+          height: 104,
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
@@ -432,7 +440,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
             ),
           ),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 width: 40,
@@ -448,6 +456,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
@@ -456,6 +465,8 @@ class _CourseListScreenState extends State<CourseListScreen> {
                         Expanded(
                           child: Text(
                             item.title,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               fontSize: 14.5,
                               fontWeight: FontWeight.bold,
@@ -463,6 +474,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
                             ),
                           ),
                         ),
+                        const SizedBox(width: 8),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                           decoration: BoxDecoration(
@@ -483,7 +495,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
                     const SizedBox(height: 4),
                     Text(
                       item.titleVi,
-                      maxLines: 2,
+                      maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 12, color: Color(0xFF64748B), height: 1.3),
                     ),

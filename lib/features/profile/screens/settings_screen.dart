@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../app/theme.dart';
 import '../../../services/auth_service.dart';
+import '../../../shared/widgets/app_back_button.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -197,6 +198,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Scaffold(
       backgroundColor: AppTheme.brandBackground,
       appBar: AppBar(
+        leading: const AppBackButton(),
         title: const Text('Cài Đặt Tài Khoản', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         backgroundColor: AppTheme.brandSurface,
         foregroundColor: AppTheme.brandTextPrimary,

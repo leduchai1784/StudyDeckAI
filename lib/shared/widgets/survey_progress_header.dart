@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../app/theme.dart';
 import 'studydeck_logo_header.dart';
+import 'app_back_button.dart';
 
 class SurveyProgressHeader extends StatelessWidget {
   final int currentStep;
@@ -24,8 +25,7 @@ class SurveyProgressHeader extends StatelessWidget {
         // Top Row: Back button + Centered StudyDeck AI Badge
         Row(
           children: [
-            IconButton(
-              icon: const Icon(Icons.arrow_back_ios_new, size: 20, color: AppTheme.brandTextPrimary),
+            AppBackButton(
               onPressed: onBack ??
                   () {
                     if (context.canPop()) {

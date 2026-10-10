@@ -1,0 +1,2957 @@
+[
+  {
+    "id": "d6d496c6-e0e0-4210-b460-7fed59c0644f",
+    "exercise_id": "buoc2-education",
+    "title": "Giáo dục",
+    "topic": {
+      "en": "Education",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Nhiều trẻ em vùng nông thôn vẫn chưa có cơ hội tiếp cận giáo dục chất lượng cao.",
+        "answer": "Many children in rural areas still lack access to quality education."
+      },
+      {
+        "vi": "Thành tích học thuật của học sinh phụ thuộc nhiều vào môi trường gia đình.",
+        "answer": "A student's academic achievement is greatly influenced by their home environment."
+      },
+      {
+        "vi": "Các trường tiên tiến luôn chú trọng phát triển tư duy phản biện cho học sinh.",
+        "answer": "Progressive schools always emphasise developing critical thinking skills in students."
+      },
+      {
+        "vi": "Giáo dục bắt buộc ở Việt Nam kéo dài đến hết cấp trung học cơ sở.",
+        "answer": "Compulsory education in Vietnam extends through the end of lower secondary school."
+      },
+      {
+        "vi": "Ngày càng nhiều học sinh tìm kiếm cơ hội giáo dục đại học ở nước ngoài.",
+        "answer": "More and more students are seeking higher education opportunities abroad."
+      },
+      {
+        "vi": "Chính phủ đang đầu tư mạnh vào đào tạo nghề để đáp ứng nhu cầu lao động.",
+        "answer": "The government is investing heavily in vocational training to meet labour demands."
+      },
+      {
+        "vi": "Trình độ học vấn của người dân tăng lên rõ rệt trong hai thập kỷ qua.",
+        "answer": "The educational attainment of the population has risen significantly over the past two decades."
+      },
+      {
+        "vi": "Trong thời đại số, học suốt đời không còn là lựa chọn mà là yêu cầu bắt buộc.",
+        "answer": "In the digital age, lifelong learning is no longer optional but a necessity."
+      },
+      {
+        "vi": "Phương pháp học thuộc lòng không giúp học sinh phát triển tư duy sáng tạo.",
+        "answer": "Rote learning does not help students develop creative thinking."
+      },
+      {
+        "vi": "Cô ấy giành được học bổng toàn phần để theo học chương trình thạc sĩ tại Anh.",
+        "answer": "She was awarded a full scholarship to pursue a master's degree in the UK."
+      },
+      {
+        "vi": "Kết quả học tập của cậu bé cải thiện đáng kể sau khi được gia sư kèm thêm.",
+        "answer": "The boy's academic performance improved significantly after receiving private tutoring."
+      },
+      {
+        "vi": "Học từ xa đã trở thành giải pháp phổ biến trong thời gian đại dịch.",
+        "answer": "Distance learning became a widely adopted solution during the pandemic."
+      },
+      {
+        "vi": "Số học sinh nhập học vào các trường đại học công lập tăng mạnh mỗi năm.",
+        "answer": "Student enrolment at public universities has risen sharply each year."
+      },
+      {
+        "vi": "Cải cách giáo dục là vấn đề được xã hội quan tâm và thảo luận sôi nổi.",
+        "answer": "Educational reform is a topic of great public interest and debate."
+      },
+      {
+        "vi": "Quá trình phát triển chương trình cần có sự tham gia của cả giáo viên lẫn chuyên gia.",
+        "answer": "Curriculum development requires the involvement of both teachers and experts."
+      },
+      {
+        "vi": "Tỷ lệ bỏ học ở các trường miền núi vẫn còn rất đáng lo ngại.",
+        "answer": "The drop-out rate in mountainous schools remains a serious concern."
+      },
+      {
+        "vi": "Lưu ban không phải lúc nào cũng là giải pháp tốt nhất cho học sinh yếu kém.",
+        "answer": "Grade repetition is not always the best solution for underperforming students."
+      },
+      {
+        "vi": "Việt Nam tự hào có tỷ lệ biết chữ thuộc hàng cao nhất khu vực Đông Nam Á.",
+        "answer": "Vietnam is proud of having one of the highest literacy rates in Southeast Asia."
+      },
+      {
+        "vi": "Tham gia hoạt động ngoại khoá giúp học sinh phát triển kỹ năng mềm và kết bạn.",
+        "answer": "Participating in extracurricular activities helps students develop soft skills and make friends."
+      },
+      {
+        "vi": "Học từ bạn bè trong nhóm thường hiệu quả hơn học một mình với sách giáo khoa.",
+        "answer": "Peer learning in groups is often more effective than studying alone with textbooks."
+      },
+      {
+        "vi": "Sự liêm chính học thuật là nền tảng của nền giáo dục tiến bộ và trung thực.",
+        "answer": "Academic integrity is the foundation of a progressive and honest education system."
+      },
+      {
+        "vi": "Mô hình học kết hợp đang dần thay thế các lớp học truyền thống thuần tuý.",
+        "answer": "The blended learning model is gradually replacing purely traditional classrooms."
+      },
+      {
+        "vi": "Nhiều chuyên gia phản đối việc quá phụ thuộc vào kiểm tra chuẩn hoá để đánh giá học sinh.",
+        "answer": "Many experts oppose over-reliance on standardised testing to evaluate students."
+      },
+      {
+        "vi": "Giáo viên cần xác định rõ kết quả học tập đầu ra trước khi thiết kế bài dạy.",
+        "answer": "Teachers need to clearly define learning outcomes before designing their lessons."
+      },
+      {
+        "vi": "Bất bình đẳng giáo dục giữa thành thị và nông thôn là thách thức dai dẳng ở nhiều quốc gia.",
+        "answer": "Educational inequality between urban and rural areas is a persistent challenge in many countries."
+      },
+      {
+        "vi": "Chính phủ cần tăng ngân sách cho giáo dục công lập để thu hẹp khoảng cách giữa trường điểm và trường thường.",
+        "answer": "The government needs to increase the budget for public education to narrow the gap between elite and ordinary schools."
+      },
+      {
+        "vi": "Nhiều phụ huynh cho con học thêm từ rất sớm vì lo sợ con thua kém bạn bè đồng trang lứa.",
+        "answer": "Many parents enrol their children in extra classes from a very young age for fear of them falling behind their peers."
+      },
+      {
+        "vi": "Kỹ năng tự học là yếu tố quyết định sự thành công của sinh viên đại học hơn bất kỳ yếu tố nào khác.",
+        "answer": "The ability to study independently is a more decisive factor in university students' success than any other element."
+      },
+      {
+        "vi": "Các trường quốc tế tại Việt Nam cung cấp chương trình học song ngữ giúp học sinh chuẩn bị tốt hơn cho môi trường toàn cầu.",
+        "answer": "International schools in Vietnam offer bilingual curricula that better prepare students for a global environment."
+      },
+      {
+        "vi": "Thiếu giáo viên có chuyên môn cao là rào cản lớn nhất trong việc nâng cao chất lượng giáo dục vùng sâu vùng xa.",
+        "answer": "A shortage of highly qualified teachers is the biggest obstacle to improving education quality in remote areas."
+      },
+      {
+        "vi": "Phương pháp giảng dạy lấy học sinh làm trung tâm đang dần thay thế mô hình giáo viên độc giảng truyền thống.",
+        "answer": "Student-centred teaching methods are gradually replacing the traditional teacher-led lecture model."
+      },
+      {
+        "vi": "Áp lực thi cử quá lớn khiến nhiều học sinh rơi vào trạng thái kiệt sức và mất đi niềm đam mê học tập.",
+        "answer": "Excessive exam pressure causes many students to experience burnout and lose their passion for learning."
+      },
+      {
+        "vi": "Việc tích hợp công nghệ vào lớp học đòi hỏi giáo viên phải liên tục cập nhật kỹ năng kỹ thuật số của mình.",
+        "answer": "Integrating technology into the classroom requires teachers to continually update their digital skills."
+      },
+      {
+        "vi": "Giáo dục STEM đang được ưu tiên phát triển nhằm đáp ứng nhu cầu nguồn nhân lực trong thời đại cách mạng công nghiệp 4.0.",
+        "answer": "STEM education is being prioritised to meet the demands for human resources in the era of the Fourth Industrial Revolution."
+      },
+      {
+        "vi": "Trẻ em được đọc sách nhiều từ nhỏ thường có vốn từ vựng phong phú và kỹ năng viết tốt hơn so với bạn đồng tuổi.",
+        "answer": "Children who read extensively from an early age tend to have a richer vocabulary and better writing skills than their peers."
+      },
+      {
+        "vi": "Sự tham gia của phụ huynh vào quá trình học tập của con cái có tác động tích cực rõ rệt đến kết quả học tập.",
+        "answer": "Parental involvement in children's learning has a clearly positive impact on academic outcomes."
+      },
+      {
+        "vi": "Các chương trình trao đổi sinh viên quốc tế giúp người học mở rộng tầm nhìn và phát triển kỹ năng giao tiếp liên văn hoá.",
+        "answer": "International student exchange programmes help learners broaden their horizons and develop intercultural communication skills."
+      },
+      {
+        "vi": "Hệ thống xếp hạng đại học toàn cầu có ảnh hưởng lớn đến quyết định chọn trường của sinh viên quốc tế.",
+        "answer": "Global university ranking systems have a significant influence on international students' choice of institution."
+      },
+      {
+        "vi": "Môi trường học tập an toàn và khuyến khích sáng tạo là điều kiện tiên quyết để học sinh phát huy hết tiềm năng.",
+        "answer": "A safe and creativity-encouraging learning environment is a prerequisite for students to reach their full potential."
+      },
+      {
+        "vi": "Giảng dạy kỹ năng quản lý tài chính cá nhân trong trường học sẽ giúp thế hệ trẻ độc lập hơn về mặt tài chính.",
+        "answer": "Teaching personal financial management skills at school will help the younger generation become more financially independent."
+      },
+      {
+        "vi": "Nội dung chương trình học quá nặng và ít thực tiễn là nguyên nhân khiến nhiều học sinh cảm thấy giáo dục không liên quan đến cuộc sống.",
+        "answer": "An overly heavy and insufficiently practical curriculum is the reason many students feel education is disconnected from real life."
+      },
+      {
+        "vi": "Phản hồi mang tính xây dựng từ giáo viên có giá trị hơn điểm số đơn thuần trong việc thúc đẩy tiến bộ của học sinh.",
+        "answer": "Constructive feedback from teachers is more valuable than grades alone in driving student progress."
+      },
+      {
+        "vi": "Trẻ em học được ngôn ngữ thứ hai dễ dàng hơn người lớn nhờ não bộ còn đang trong giai đoạn phát triển linh hoạt.",
+        "answer": "Children acquire a second language more easily than adults because their brains are still in a flexible developmental stage."
+      },
+      {
+        "vi": "Việc khuyến khích học sinh đặt câu hỏi và phản biện tư duy của giáo viên là dấu hiệu của một nền giáo dục tiến bộ.",
+        "answer": "Encouraging students to question and challenge their teacher's thinking is a hallmark of a progressive education system."
+      },
+      {
+        "vi": "Chất lượng giáo dục không chỉ được đo bằng tỷ lệ đỗ đại học mà còn bằng khả năng thích nghi của học sinh trong cuộc sống.",
+        "answer": "The quality of education is measured not only by university admission rates but also by students' ability to adapt to life."
+      }
+    ],
+    "is_published": true,
+    "order_index": 1,
+    "created_at": "2026-05-26T00:58:27.802326+00:00",
+    "updated_at": "2026-05-26T00:58:27.802326+00:00"
+  },
+  {
+    "id": "e79373a6-5164-44b6-929e-0130f1cb0c97",
+    "exercise_id": "buoc2-environment",
+    "title": "Môi trường",
+    "topic": {
+      "en": "Environment",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Khí thải carbon từ các nhà máy điện than đang làm trầm trọng thêm biến đổi khí hậu.",
+        "answer": "Carbon emissions from coal-fired power plants are worsening climate change."
+      },
+      {
+        "vi": "Đầu tư vào năng lượng tái tạo là bước đi cấp thiết để bảo vệ hành tinh.",
+        "answer": "Investing in renewable energy is an urgent step to protect the planet."
+      },
+      {
+        "vi": "Mất đa dạng sinh học đang diễn ra với tốc độ nhanh chưa từng thấy trong lịch sử.",
+        "answer": "Biodiversity loss is occurring at an unprecedented rate in history."
+      },
+      {
+        "vi": "Khí nhà kính từ hoạt động nông nghiệp chiếm một phần không nhỏ trong tổng lượng phát thải.",
+        "answer": "Greenhouse gas emissions from agricultural activities account for a significant share of total emissions."
+      },
+      {
+        "vi": "Nạn phá rừng ở Amazon đang đe doạ sự tồn tại của hàng nghìn loài sinh vật.",
+        "answer": "Deforestation in the Amazon is threatening the existence of thousands of species."
+      },
+      {
+        "vi": "Phát triển bền vững yêu cầu cân bằng giữa tăng trưởng kinh tế và bảo vệ môi trường.",
+        "answer": "Sustainable development requires a balance between economic growth and environmental protection."
+      },
+      {
+        "vi": "Dấu chân sinh thái của người dân ở các nước phát triển lớn hơn nhiều so với thế giới đang phát triển.",
+        "answer": "The ecological footprint of people in developed countries is far larger than in the developing world."
+      },
+      {
+        "vi": "Ô nhiễm không khí ở Hà Nội đang ở mức báo động, ảnh hưởng nghiêm trọng đến sức khoẻ người dân.",
+        "answer": "Air pollution in Hanoi has reached alarming levels, seriously affecting public health."
+      },
+      {
+        "vi": "Khan hiếm nước sạch đang là mối đe doạ lớn đối với an ninh lương thực toàn cầu.",
+        "answer": "Water scarcity poses a major threat to global food security."
+      },
+      {
+        "vi": "Thiên tai ngày càng xảy ra thường xuyên hơn và khốc liệt hơn do biến đổi khí hậu.",
+        "answer": "Natural disasters are occurring more frequently and with greater severity due to climate change."
+      },
+      {
+        "vi": "Phá huỷ môi trường sống của động vật hoang dã đang đẩy nhiều loài đến bờ vực tuyệt chủng.",
+        "answer": "Habitat destruction is pushing many wildlife species to the brink of extinction."
+      },
+      {
+        "vi": "Sự phụ thuộc vào nhiên liệu hoá thạch là nguyên nhân chính gây ra ô nhiễm toàn cầu.",
+        "answer": "Dependence on fossil fuels is the main cause of global pollution."
+      },
+      {
+        "vi": "Axit hoá đại dương do CO2 đang phá huỷ các rạn san hô trên toàn thế giới.",
+        "answer": "Ocean acidification caused by CO2 is destroying coral reefs around the world."
+      },
+      {
+        "vi": "Suy thoái môi trường ảnh hưởng trực tiếp đến chất lượng cuộc sống của hàng triệu người.",
+        "answer": "Environmental degradation directly affects the quality of life of millions of people."
+      },
+      {
+        "vi": "Mỗi người có thể giảm lượng khí thải carbon cá nhân bằng cách sử dụng phương tiện công cộng.",
+        "answer": "Each person can reduce their carbon footprint by using public transport."
+      },
+      {
+        "vi": "Quản lý rác thải hiệu quả đòi hỏi sự phối hợp chặt chẽ giữa chính quyền và người dân.",
+        "answer": "Effective waste management requires close cooperation between authorities and citizens."
+      },
+      {
+        "vi": "Xói mòn đất do mưa lớn và phá rừng làm giảm đáng kể năng suất nông nghiệp.",
+        "answer": "Soil erosion caused by heavy rainfall and deforestation significantly reduces agricultural productivity."
+      },
+      {
+        "vi": "Nhiều loài nguy cấp đang được nuôi dưỡng trong các trung tâm bảo tồn để tránh tuyệt chủng.",
+        "answer": "Many endangered species are being cared for in conservation centres to prevent extinction."
+      },
+      {
+        "vi": "Cơ sở hạ tầng xanh như công viên và mái nhà xanh giúp giảm nhiệt độ đô thị.",
+        "answer": "Green infrastructure such as parks and green roofs helps reduce urban temperatures."
+      },
+      {
+        "vi": "Hành động khí hậu cần được thực hiện ngay bây giờ, không thể chờ đến thế hệ sau.",
+        "answer": "Climate action must be taken now; it cannot be left to future generations."
+      },
+      {
+        "vi": "Chính sách không rác thải đang được nhiều thành phố lớn trên thế giới áp dụng thành công.",
+        "answer": "Zero-waste policies are being successfully implemented by many major cities around the world."
+      },
+      {
+        "vi": "Ô nhiễm biển do rác thải nhựa đang giết chết hàng triệu sinh vật biển mỗi năm.",
+        "answer": "Marine pollution from plastic waste is killing millions of marine organisms every year."
+      },
+      {
+        "vi": "Suy thoái đất nghiêm trọng đang biến nhiều vùng đất phì nhiêu thành sa mạc.",
+        "answer": "Severe land degradation is turning many fertile areas into desert."
+      },
+      {
+        "vi": "Sáng kiến không nhựa của một số siêu thị lớn đã nhận được sự ủng hộ rộng rãi.",
+        "answer": "The plastic-free initiative of several major supermarkets has received widespread support."
+      },
+      {
+        "vi": "Nỗ lực bảo tồn của các tổ chức quốc tế đã giúp nhiều loài thoát khỏi nguy cơ tuyệt chủng.",
+        "answer": "Conservation efforts by international organisations have helped many species escape the threat of extinction."
+      },
+      {
+        "vi": "Việc đốt rơm rạ sau mùa gặt là nguyên nhân gây ra những đợt ô nhiễm không khí nghiêm trọng ở các tỉnh đồng bằng.",
+        "answer": "The burning of rice straw after harvest is the cause of severe air pollution episodes in delta provinces."
+      },
+      {
+        "vi": "Các dự án năng lượng mặt trời mái nhà đang giúp nhiều hộ gia đình giảm đáng kể hoá đơn điện hàng tháng.",
+        "answer": "Rooftop solar energy projects are helping many households significantly reduce their monthly electricity bills."
+      },
+      {
+        "vi": "Tình trạng xâm nhập mặn ngày càng nghiêm trọng ở đồng bằng sông Cửu Long đang đe doạ an ninh lương thực của cả vùng.",
+        "answer": "Increasingly severe saltwater intrusion in the Mekong Delta is threatening the food security of the entire region."
+      },
+      {
+        "vi": "Thói quen dùng túi nhựa dùng một lần vẫn còn rất phổ biến dù đã có nhiều chiến dịch nâng cao nhận thức.",
+        "answer": "The habit of using single-use plastic bags remains widespread despite numerous awareness campaigns."
+      },
+      {
+        "vi": "Mực nước biển dâng do biến đổi khí hậu đặt ra mối đe doạ hiện hữu cho các quốc gia đảo nhỏ trên Thái Bình Dương.",
+        "answer": "Sea level rise due to climate change poses an existential threat to small island nations across the Pacific."
+      },
+      {
+        "vi": "Chính sách trợ giá cho năng lượng hoá thạch vô tình cản trở quá trình chuyển đổi sang năng lượng sạch.",
+        "answer": "Fossil fuel subsidies inadvertently hinder the transition to clean energy."
+      },
+      {
+        "vi": "Rừng ngập mặn ven biển đóng vai trò như tấm lá chắn tự nhiên bảo vệ bờ biển khỏi xói lở và bão lụt.",
+        "answer": "Coastal mangrove forests act as a natural barrier protecting shorelines from erosion and storm surges."
+      },
+      {
+        "vi": "Các thành phố thông minh đang ứng dụng cảm biến IoT để theo dõi chất lượng không khí theo thời gian thực.",
+        "answer": "Smart cities are deploying IoT sensors to monitor air quality in real time."
+      },
+      {
+        "vi": "Phong trào tiêu dùng có ý thức đang thúc đẩy người mua hàng lựa chọn sản phẩm có bao bì thân thiện với môi trường.",
+        "answer": "The conscious consumption movement is encouraging shoppers to choose products with environmentally friendly packaging."
+      },
+      {
+        "vi": "Thiệt hại kinh tế từ các thảm hoạ thiên nhiên ngày càng lớn, đòi hỏi các quốc gia phải đầu tư nhiều hơn vào hệ thống cảnh báo sớm.",
+        "answer": "The economic damage from natural disasters is growing, requiring countries to invest more in early warning systems."
+      },
+      {
+        "vi": "Ô nhiễm ánh sáng đô thị không chỉ ảnh hưởng đến giấc ngủ con người mà còn làm rối loạn hành vi của nhiều loài động vật ban đêm.",
+        "answer": "Urban light pollution not only affects human sleep but also disrupts the behaviour of many nocturnal animal species."
+      },
+      {
+        "vi": "Chuyển đổi sang nông nghiệp hữu cơ không chỉ bảo vệ đất mà còn giúp nông dân đạt giá bán cao hơn trên thị trường.",
+        "answer": "Switching to organic farming not only protects the soil but also helps farmers achieve higher market prices."
+      },
+      {
+        "vi": "Lượng rác thải điện tử toàn cầu đang tăng với tốc độ đáng báo động khi thiết bị công nghệ bị thay thế ngày càng nhanh.",
+        "answer": "Global e-waste is growing at an alarming rate as technology devices are replaced at an ever-increasing pace."
+      },
+      {
+        "vi": "Các hiệp định khí hậu quốc tế như COP thường vấp phải trở ngại khi các quốc gia bất đồng về mức độ cắt giảm khí thải.",
+        "answer": "International climate agreements such as COP often face obstacles when countries disagree on the extent of emissions reductions."
+      },
+      {
+        "vi": "Việc bảo tồn các tầng chứa nước ngầm là yếu tố sống còn đối với nguồn cung nước sạch cho các thành phố trong tương lai.",
+        "answer": "Preserving underground aquifers is a vital factor in securing clean water supply for cities in the future."
+      },
+      {
+        "vi": "Du lịch sinh thái có trách nhiệm đòi hỏi du khách phải tôn trọng hệ sinh thái địa phương và không để lại dấu vết.",
+        "answer": "Responsible eco-tourism requires visitors to respect local ecosystems and leave no trace behind."
+      },
+      {
+        "vi": "Sự tan chảy của các sông băng ở vùng cực đang làm gián đoạn các hệ thống dòng hải lưu vốn điều tiết khí hậu toàn cầu.",
+        "answer": "The melting of polar glaciers is disrupting ocean current systems that regulate the global climate."
+      },
+      {
+        "vi": "Các doanh nghiệp áp dụng mô hình kinh tế tuần hoàn có thể giảm đáng kể lượng chất thải sản xuất và chi phí nguyên liệu.",
+        "answer": "Businesses adopting a circular economy model can significantly reduce production waste and raw material costs."
+      },
+      {
+        "vi": "Ô nhiễm vi nhựa đã được phát hiện ngay cả trong nước uống đóng chai và không khí ở những vùng hẻo lánh nhất.",
+        "answer": "Microplastic pollution has been detected even in bottled drinking water and in the air of the most remote regions."
+      },
+      {
+        "vi": "Đầu tư vào hạ tầng xanh như mái nhà trồng cây và tường cây không chỉ làm đẹp đô thị mà còn giảm hiệu ứng đảo nhiệt.",
+        "answer": "Investing in green infrastructure such as planted rooftops and living walls not only beautifies cities but also reduces the heat island effect."
+      }
+    ],
+    "is_published": true,
+    "order_index": 2,
+    "created_at": "2026-05-26T00:58:28.022527+00:00",
+    "updated_at": "2026-05-26T00:58:28.022527+00:00"
+  },
+  {
+    "id": "fe489e6c-a580-4674-a848-dbce03e819dc",
+    "exercise_id": "buoc2-technology",
+    "title": "Công nghệ",
+    "topic": {
+      "en": "Technology",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Trí tuệ nhân tạo đang dần thay thế con người trong nhiều công việc lặp đi lặp lại.",
+        "answer": "Artificial intelligence is gradually replacing humans in many repetitive tasks."
+      },
+      {
+        "vi": "Khoảng cách kỹ thuật số giữa thành thị và nông thôn ngày càng trở nên rõ ràng hơn.",
+        "answer": "The digital divide between urban and rural areas is becoming increasingly apparent."
+      },
+      {
+        "vi": "Quyền riêng tư dữ liệu của người dùng đang bị đe doạ bởi các ứng dụng thu thập thông tin trái phép.",
+        "answer": "Users' data privacy is being threatened by apps that collect information illegally."
+      },
+      {
+        "vi": "Tự động hoá trong sản xuất đã giúp tăng năng suất nhưng đồng thời làm mất nhiều việc làm.",
+        "answer": "Automation in manufacturing has increased productivity but also eliminated many jobs."
+      },
+      {
+        "vi": "An ninh mạng trở thành ưu tiên hàng đầu của chính phủ trong thời đại số.",
+        "answer": "Cybersecurity has become a top government priority in the digital age."
+      },
+      {
+        "vi": "Học máy đang được ứng dụng rộng rãi trong y tế để chẩn đoán bệnh nhanh hơn và chính xác hơn.",
+        "answer": "Machine learning is being widely applied in healthcare to diagnose diseases faster and more accurately."
+      },
+      {
+        "vi": "Internet vạn vật kết nối mọi thiết bị trong gia đình, tạo nên ngôi nhà thông minh.",
+        "answer": "The internet of things connects every device in the home, creating a smart home."
+      },
+      {
+        "vi": "Điện toán đám mây cho phép các doanh nghiệp nhỏ tiếp cận hạ tầng công nghệ với chi phí thấp.",
+        "answer": "Cloud computing allows small businesses to access technology infrastructure at low cost."
+      },
+      {
+        "vi": "Mạng 5G sẽ tạo nền tảng cho sự phát triển của xe tự lái và thành phố thông minh.",
+        "answer": "The 5G network will lay the foundation for the development of self-driving cars and smart cities."
+      },
+      {
+        "vi": "Thương mại điện tử tại Việt Nam đã bùng nổ mạnh mẽ trong giai đoạn dịch bệnh.",
+        "answer": "E-commerce in Vietnam experienced a strong boom during the pandemic period."
+      },
+      {
+        "vi": "Thực tế ảo đang được ứng dụng trong giáo dục để tạo ra các trải nghiệm học tập sinh động.",
+        "answer": "Virtual reality is being used in education to create immersive learning experiences."
+      },
+      {
+        "vi": "Các nền tảng mạng xã hội có ảnh hưởng lớn đến nhận thức và hành vi của người trẻ.",
+        "answer": "Social media platforms have a major influence on the perceptions and behaviour of young people."
+      },
+      {
+        "vi": "Thuật toán của các mạng xã hội thường ưu tiên nội dung gây tranh cãi để tăng tương tác.",
+        "answer": "Social media algorithms often prioritise controversial content to increase engagement."
+      },
+      {
+        "vi": "Chuyển đổi số là yêu cầu sống còn đối với các doanh nghiệp muốn tồn tại trong thời đại mới.",
+        "answer": "Digital transformation is a survival requirement for businesses that want to thrive in the new era."
+      },
+      {
+        "vi": "Thành phố thông minh sử dụng dữ liệu để tối ưu hoá giao thông, năng lượng và dịch vụ công.",
+        "answer": "A smart city uses data to optimise traffic, energy, and public services."
+      },
+      {
+        "vi": "Công nghệ tái tạo như pin mặt trời ngày càng rẻ hơn và hiệu quả hơn.",
+        "answer": "Renewable technology such as solar panels is becoming cheaper and more efficient."
+      },
+      {
+        "vi": "Công nghệ đeo được như đồng hồ thông minh giúp người dùng theo dõi sức khoẻ mọi lúc.",
+        "answer": "Wearable technology such as smartwatches allows users to monitor their health at all times."
+      },
+      {
+        "vi": "Dữ liệu sinh trắc học như vân tay và khuôn mặt đang được dùng để xác thực danh tính.",
+        "answer": "Biometric data such as fingerprints and facial features are being used to verify identity."
+      },
+      {
+        "vi": "Thế hệ Z được coi là những người am hiểu công nghệ nhất trong lịch sử loài người.",
+        "answer": "Generation Z is considered the most tech-savvy generation in human history."
+      },
+      {
+        "vi": "Công nghệ chuỗi khối hứa hẹn mang lại tính minh bạch cho các giao dịch tài chính.",
+        "answer": "Blockchain technology promises to bring transparency to financial transactions."
+      },
+      {
+        "vi": "Làm việc từ xa đã trở thành xu hướng phổ biến và được nhiều người lao động ưa chuộng.",
+        "answer": "Remote working has become a widespread trend favoured by many employees."
+      },
+      {
+        "vi": "Nhiều công ty khởi nghiệp công nghệ tại Việt Nam đã thu hút hàng triệu đô la đầu tư nước ngoài.",
+        "answer": "Many tech startups in Vietnam have attracted millions of dollars in foreign investment."
+      },
+      {
+        "vi": "Hiểu biết kỹ thuật số cần được đưa vào chương trình giảng dạy từ cấp tiểu học.",
+        "answer": "Digital literacy should be incorporated into the curriculum from primary school level."
+      },
+      {
+        "vi": "Băng thông internet không ổn định gây khó khăn lớn cho việc học và làm việc trực tuyến.",
+        "answer": "Unstable internet bandwidth poses major difficulties for online learning and working."
+      },
+      {
+        "vi": "Kinh tế nền tảng đang thay đổi cách người tiêu dùng tiếp cận hàng hoá và dịch vụ.",
+        "answer": "The platform economy is changing the way consumers access goods and services."
+      },
+      {
+        "vi": "Trí tuệ nhân tạo tạo sinh đang thay đổi căn bản cách con người tiếp cận công việc sáng tạo và sản xuất nội dung.",
+        "answer": "Generative AI is fundamentally changing the way people approach creative work and content production."
+      },
+      {
+        "vi": "Sự phụ thuộc quá mức vào điện thoại thông minh đang làm giảm khả năng tập trung sâu và tư duy độc lập của người trẻ.",
+        "answer": "Excessive dependence on smartphones is reducing young people's capacity for deep concentration and independent thinking."
+      },
+      {
+        "vi": "Công nghệ nhận dạng khuôn mặt đang được triển khai rộng rãi nhưng đặt ra những lo ngại nghiêm trọng về quyền riêng tư.",
+        "answer": "Facial recognition technology is being widely deployed but raises serious concerns about privacy."
+      },
+      {
+        "vi": "Hệ sinh thái khởi nghiệp công nghệ tại Hà Nội và TP.HCM đang thu hút ngày càng nhiều vốn đầu tư mạo hiểm từ nước ngoài.",
+        "answer": "The technology startup ecosystems in Hanoi and Ho Chi Minh City are attracting increasing amounts of foreign venture capital."
+      },
+      {
+        "vi": "Sự bùng nổ của thương mại điện tử đặt ra áp lực lớn lên hệ thống logistics và giao hàng chặng cuối.",
+        "answer": "The boom in e-commerce is placing enormous pressure on logistics and last-mile delivery systems."
+      },
+      {
+        "vi": "Deepfake ngày càng tinh vi khiến việc xác minh tính xác thực của video và hình ảnh trực tuyến trở nên vô cùng khó khăn.",
+        "answer": "Increasingly sophisticated deepfakes make verifying the authenticity of online videos and images extremely difficult."
+      },
+      {
+        "vi": "Các hãng công nghệ lớn đang đối mặt với áp lực từ chính phủ các nước về việc chia sẻ dữ liệu và nộp thuế công bằng hơn.",
+        "answer": "Major tech companies are facing pressure from governments around the world to share data and pay fairer levels of tax."
+      },
+      {
+        "vi": "Điện toán lượng tử có thể phá vỡ các hệ thống mã hoá hiện tại, đòi hỏi phải phát triển các tiêu chuẩn bảo mật mới.",
+        "answer": "Quantum computing could break current encryption systems, requiring the development of new security standards."
+      },
+      {
+        "vi": "Ứng dụng y tế dựa trên AI giúp phát hiện sớm ung thư qua phân tích hình ảnh X-quang với độ chính xác cao hơn bác sĩ.",
+        "answer": "AI-based medical applications can detect cancer early through X-ray image analysis with greater accuracy than doctors."
+      },
+      {
+        "vi": "Sự phổ biến của mã QR đã thay thế nhiều quy trình giấy tờ thủ công, đặc biệt trong lĩnh vực thanh toán và y tế.",
+        "answer": "The widespread adoption of QR codes has replaced many manual paper-based processes, particularly in payments and healthcare."
+      },
+      {
+        "vi": "Cơn sốt tiền điện tử đã thu hút hàng triệu nhà đầu tư nhỏ lẻ dù rủi ro mất vốn rất cao do biến động giá mạnh.",
+        "answer": "The cryptocurrency craze has attracted millions of retail investors despite the very high risk of capital loss due to extreme price volatility."
+      },
+      {
+        "vi": "Các nền tảng học trực tuyến như Coursera và edX đang dân chủ hoá việc tiếp cận kiến thức từ các trường đại học hàng đầu thế giới.",
+        "answer": "Online learning platforms such as Coursera and edX are democratising access to knowledge from the world's leading universities."
+      },
+      {
+        "vi": "Điện thoại gập đang dần trở thành xu hướng thiết kế mới, dù giá thành vẫn còn là rào cản với đại đa số người dùng.",
+        "answer": "Foldable phones are gradually becoming a new design trend, although their price remains a barrier for the vast majority of users."
+      },
+      {
+        "vi": "Hệ thống giao thông thông minh sử dụng dữ liệu thời gian thực để tối ưu hoá luồng xe và giảm thiểu tắc nghẽn.",
+        "answer": "Intelligent transport systems use real-time data to optimise traffic flow and minimise congestion."
+      },
+      {
+        "vi": "Công nghệ in 3D đang cách mạng hoá ngành sản xuất y tế từ bộ phận giả đến mô hình phẫu thuật cá nhân hoá.",
+        "answer": "3D printing technology is revolutionising medical manufacturing, from prosthetics to personalised surgical models."
+      },
+      {
+        "vi": "Khoảng cách số giữa người có và không có internet ngày càng phản ánh rõ hơn sự bất bình đẳng kinh tế xã hội.",
+        "answer": "The digital divide between those with and without internet access increasingly mirrors wider socioeconomic inequality."
+      },
+      {
+        "vi": "Các chatbot AI đang được triển khai trong dịch vụ khách hàng để xử lý các yêu cầu đơn giản và giảm tải cho nhân viên.",
+        "answer": "AI chatbots are being deployed in customer service to handle simple queries and reduce the workload on human staff."
+      },
+      {
+        "vi": "Làn sóng tự động hoá trong sản xuất đang buộc người lao động phải nâng cao kỹ năng để thích ứng hoặc đối mặt với nguy cơ thất nghiệp.",
+        "answer": "The wave of automation in manufacturing is forcing workers to upskill in order to adapt or risk unemployment."
+      },
+      {
+        "vi": "Dữ liệu lớn đang giúp các doanh nghiệp đưa ra quyết định chính xác hơn dựa trên hành vi thực tế của khách hàng thay vì phỏng đoán.",
+        "answer": "Big data is enabling businesses to make more accurate decisions based on actual customer behaviour rather than guesswork."
+      },
+      {
+        "vi": "Sự phát triển của các thiết bị đeo thông minh đang thúc đẩy xu hướng tự theo dõi sức khoẻ và phòng ngừa bệnh tật chủ động.",
+        "answer": "The growth of smart wearable devices is driving the trend towards self-monitoring of health and proactive disease prevention."
+      }
+    ],
+    "is_published": true,
+    "order_index": 3,
+    "created_at": "2026-05-26T00:58:28.252877+00:00",
+    "updated_at": "2026-05-26T00:58:28.252877+00:00"
+  },
+  {
+    "id": "9138bb90-ccec-472a-837e-709c864c84af",
+    "exercise_id": "buoc2-health",
+    "title": "Sức khoẻ",
+    "topic": {
+      "en": "Health",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Các chính sách sức khoẻ cộng đồng đóng vai trò then chốt trong việc ngăn chặn dịch bệnh.",
+        "answer": "Public health policies play a key role in preventing epidemics."
+      },
+      {
+        "vi": "Sức khoẻ tâm thần của người trẻ đang bị ảnh hưởng nặng nề bởi áp lực học tập và mạng xã hội.",
+        "answer": "The mental health of young people is being severely affected by academic pressure and social media."
+      },
+      {
+        "vi": "Duy trì lối sống lành mạnh với chế độ ăn uống cân bằng và tập thể dục đều đặn giúp phòng ngừa nhiều bệnh.",
+        "answer": "Maintaining a healthy lifestyle with a balanced diet and regular exercise helps prevent many diseases."
+      },
+      {
+        "vi": "Đại dịch béo phì đang là thách thức y tế lớn ở nhiều quốc gia phát triển.",
+        "answer": "The obesity epidemic is a major health challenge in many developed countries."
+      },
+      {
+        "vi": "Đầu tư vào chăm sóc phòng ngừa giúp tiết kiệm chi phí y tế về lâu dài.",
+        "answer": "Investing in preventive care helps save healthcare costs in the long run."
+      },
+      {
+        "vi": "Bệnh mãn tính như tiểu đường và huyết áp cao đang gia tăng nhanh chóng ở Việt Nam.",
+        "answer": "Chronic diseases such as diabetes and high blood pressure are rising rapidly in Vietnam."
+      },
+      {
+        "vi": "Tiếp cận dịch vụ y tế chất lượng vẫn còn là vấn đề nan giải ở vùng sâu vùng xa.",
+        "answer": "Access to quality healthcare remains a difficult problem in remote areas."
+      },
+      {
+        "vi": "Tuổi thọ trung bình của người Việt Nam đã tăng đáng kể nhờ cải thiện điều kiện sống.",
+        "answer": "Life expectancy in Vietnam has increased significantly thanks to improved living conditions."
+      },
+      {
+        "vi": "Sức khoẻ thể chất tốt là nền tảng để mỗi người phát huy hết năng lực trong công việc.",
+        "answer": "Good physical wellbeing is the foundation for each person to perform at their full potential at work."
+      },
+      {
+        "vi": "Đột phá y học trong điều trị ung thư đã mang lại hy vọng cho hàng triệu bệnh nhân.",
+        "answer": "Medical breakthroughs in cancer treatment have brought hope to millions of patients."
+      },
+      {
+        "vi": "Lối sống ít vận động kết hợp với chế độ ăn nhiều đường là nguyên nhân hàng đầu của bệnh tiểu đường.",
+        "answer": "A sedentary lifestyle combined with a high-sugar diet is a leading cause of diabetes."
+      },
+      {
+        "vi": "Thiếu dinh dưỡng trong những năm đầu đời có thể ảnh hưởng vĩnh viễn đến sự phát triển của trẻ.",
+        "answer": "Nutritional deficiency in early childhood can permanently affect a child's development."
+      },
+      {
+        "vi": "Lạm dụng chất kích thích trong giới trẻ đang là vấn đề xã hội cần được giải quyết khẩn cấp.",
+        "answer": "Substance abuse among young people is a social problem that urgently needs to be addressed."
+      },
+      {
+        "vi": "Kỹ năng quản lý căng thẳng là điều mà nhiều chuyên gia khuyên mọi người cần học.",
+        "answer": "Stress management skills are something many experts recommend everyone should learn."
+      },
+      {
+        "vi": "Bệnh truyền nhiễm có thể lây lan với tốc độ kinh hoàng trong môi trường đông người.",
+        "answer": "Infectious diseases can spread at a terrifying speed in crowded environments."
+      },
+      {
+        "vi": "Chương trình tiêm chủng quốc gia đã góp phần loại trừ nhiều dịch bệnh nguy hiểm.",
+        "answer": "The national immunisation programme has helped eliminate many dangerous diseases."
+      },
+      {
+        "vi": "Thiếu ngủ kéo dài làm suy giảm hệ miễn dịch và tăng nguy cơ mắc nhiều bệnh nghiêm trọng.",
+        "answer": "Chronic sleep deprivation weakens the immune system and increases the risk of many serious illnesses."
+      },
+      {
+        "vi": "Thói quen ăn uống không lành mạnh hình thành từ nhỏ rất khó thay đổi khi trưởng thành.",
+        "answer": "Unhealthy dietary habits formed in childhood are very difficult to change in adulthood."
+      },
+      {
+        "vi": "Rủi ro nghề nghiệp của công nhân xây dựng cần được giảm thiểu thông qua thiết bị bảo hộ tốt.",
+        "answer": "Occupational hazards for construction workers need to be minimised through proper protective equipment."
+      },
+      {
+        "vi": "Chăm sóc giảm nhẹ giúp bệnh nhân giai đoạn cuối sống những ngày còn lại có phẩm giá.",
+        "answer": "Palliative care helps terminally ill patients live their remaining days with dignity."
+      },
+      {
+        "vi": "Chuẩn bị ứng phó dịch bệnh cần được đầu tư ngay cả khi chưa có dịch xảy ra.",
+        "answer": "Pandemic preparedness must be invested in even when no outbreak has yet occurred."
+      },
+      {
+        "vi": "Y tế từ xa giúp người dân ở vùng xa tiếp cận được với các bác sĩ chuyên khoa.",
+        "answer": "Telemedicine allows people in remote areas to access specialist doctors."
+      },
+      {
+        "vi": "Hệ thống y tế quá tải là vấn đề nhức nhối tại các bệnh viện lớn ở Việt Nam.",
+        "answer": "An overloaded healthcare system is a pressing problem at major hospitals in Vietnam."
+      },
+      {
+        "vi": "Phương pháp toàn diện trong y học nhìn nhận bệnh nhân như một con người chứ không chỉ là một ca bệnh.",
+        "answer": "A holistic approach in medicine views patients as whole persons, not just medical cases."
+      },
+      {
+        "vi": "Tỷ lệ tiêm chủng cao là điều kiện cần thiết để đạt được miễn dịch cộng đồng.",
+        "answer": "A high vaccination rate is a necessary condition for achieving herd immunity."
+      },
+      {
+        "vi": "Tình trạng thiếu ngủ mãn tính đang trở thành vấn đề sức khoẻ công cộng nghiêm trọng trong thời đại làm việc không giờ giấc.",
+        "answer": "Chronic sleep deprivation is becoming a serious public health issue in an era of around-the-clock working."
+      },
+      {
+        "vi": "Chi phí y tế tăng cao đang buộc nhiều gia đình phải đưa ra những lựa chọn khó khăn giữa chăm sóc sức khoẻ và nhu cầu thiết yếu khác.",
+        "answer": "Soaring healthcare costs are forcing many families to make difficult choices between medical care and other basic needs."
+      },
+      {
+        "vi": "Nghiên cứu y học chỉ ra rằng việc duy trì các mối quan hệ xã hội tích cực có tác động bảo vệ sức khoẻ tim mạch.",
+        "answer": "Medical research indicates that maintaining positive social relationships has a protective effect on cardiovascular health."
+      },
+      {
+        "vi": "Sức khoẻ tâm thần cần được đưa vào chương trình chăm sóc sức khoẻ cơ bản thay vì xem là vấn đề thứ yếu.",
+        "answer": "Mental health needs to be incorporated into basic healthcare programmes rather than being treated as a secondary concern."
+      },
+      {
+        "vi": "Làn sóng kháng kháng sinh đang đặt ra mối đe doạ nghiêm trọng cho y học hiện đại khi ngày càng nhiều vi khuẩn trở nên miễn nhiễm.",
+        "answer": "The wave of antibiotic resistance poses a serious threat to modern medicine as more and more bacteria become immune to treatment."
+      },
+      {
+        "vi": "Các chương trình sàng lọc ung thư cộng đồng giúp phát hiện bệnh sớm hơn và tăng đáng kể tỷ lệ điều trị thành công.",
+        "answer": "Community cancer screening programmes help detect the disease at an earlier stage and significantly increase treatment success rates."
+      },
+      {
+        "vi": "Tác động của ô nhiễm không khí lên sức khoẻ trẻ em nghiêm trọng hơn người lớn do phổi của trẻ vẫn đang phát triển.",
+        "answer": "The impact of air pollution on children's health is more severe than on adults because children's lungs are still developing."
+      },
+      {
+        "vi": "Mô hình bác sĩ gia đình đang được triển khai nhằm giảm tải cho các bệnh viện tuyến trung ương và tăng cường y tế cơ sở.",
+        "answer": "The family doctor model is being rolled out to reduce pressure on central hospitals and strengthen primary healthcare."
+      },
+      {
+        "vi": "Lối sống lành mạnh với chế độ ăn nhiều rau củ và ít thịt đỏ có liên quan rõ ràng đến nguy cơ ung thư đại tràng thấp hơn.",
+        "answer": "A healthy lifestyle with a diet rich in vegetables and low in red meat is clearly associated with a lower risk of colorectal cancer."
+      },
+      {
+        "vi": "Các đợt nắng nóng cực đoan ngày càng thường xuyên hơn đang gây ra các vấn đề sức khoẻ nghiêm trọng cho người cao tuổi và lao động ngoài trời.",
+        "answer": "Increasingly frequent extreme heatwaves are causing serious health problems for the elderly and outdoor workers."
+      },
+      {
+        "vi": "Việc sử dụng kháng sinh bừa bãi trong chăn nuôi đang góp phần đẩy nhanh quá trình hình thành vi khuẩn kháng thuốc.",
+        "answer": "The indiscriminate use of antibiotics in animal farming is contributing to the accelerated development of drug-resistant bacteria."
+      },
+      {
+        "vi": "Chính sách cấm hút thuốc nơi công cộng đã chứng minh hiệu quả trong việc giảm tỷ lệ mắc bệnh tim mạch và đột quỵ.",
+        "answer": "Public smoking bans have proven effective in reducing rates of cardiovascular disease and stroke."
+      },
+      {
+        "vi": "Trầm cảm sau sinh ảnh hưởng đến khoảng một phần năm các bà mẹ nhưng vẫn còn bị kỳ thị và chẩn đoán thiếu.",
+        "answer": "Postnatal depression affects around one in five mothers but remains stigmatised and under-diagnosed."
+      },
+      {
+        "vi": "Đầu tư vào sức khoẻ sinh sản và kế hoạch hoá gia đình mang lại lợi ích kinh tế xã hội lâu dài cho các quốc gia đang phát triển.",
+        "answer": "Investing in reproductive health and family planning yields long-term socioeconomic benefits for developing nations."
+      },
+      {
+        "vi": "Y học cá nhân hoá dựa trên dữ liệu gen hứa hẹn đưa ra phác đồ điều trị phù hợp với từng bệnh nhân cụ thể.",
+        "answer": "Personalised medicine based on genetic data promises to deliver treatment protocols tailored to each individual patient."
+      },
+      {
+        "vi": "Thiếu vận động thể chất ở trẻ em do xem màn hình quá nhiều đang làm tăng tỷ lệ béo phì ở độ tuổi học đường.",
+        "answer": "Physical inactivity in children due to excessive screen time is driving up obesity rates among school-age children."
+      },
+      {
+        "vi": "Các bệnh viện tư nhân cung cấp dịch vụ chất lượng cao nhưng chi phí vượt quá khả năng chi trả của phần lớn người lao động.",
+        "answer": "Private hospitals offer high-quality services but at costs that exceed the financial reach of most working people."
+      },
+      {
+        "vi": "Mô hình chăm sóc sức khoẻ toàn diện kết hợp điều trị thể chất và hỗ trợ tâm lý đang mang lại kết quả điều trị tốt hơn.",
+        "answer": "A comprehensive healthcare model combining physical treatment and psychological support is delivering better treatment outcomes."
+      },
+      {
+        "vi": "Phát triển vắc-xin nhanh chưa từng thấy trong đại dịch Covid-19 đã chứng minh khả năng của khoa học khi được đầu tư đúng mức.",
+        "answer": "The unprecedented speed of vaccine development during the Covid-19 pandemic demonstrated the power of science when adequately funded."
+      },
+      {
+        "vi": "Nghiện mạng xã hội đang được các chuyên gia tâm thần học nghiên cứu như một dạng rối loạn hành vi cần được can thiệp y tế.",
+        "answer": "Social media addiction is being studied by psychiatrists as a form of behavioural disorder requiring medical intervention."
+      }
+    ],
+    "is_published": true,
+    "order_index": 4,
+    "created_at": "2026-05-26T00:58:28.449588+00:00",
+    "updated_at": "2026-05-26T00:58:28.449588+00:00"
+  },
+  {
+    "id": "2b8bd26a-4a70-41fd-9e3b-6585cb995146",
+    "exercise_id": "buoc2-work",
+    "title": "Công việc",
+    "topic": {
+      "en": "Work",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Nhiều người trẻ ngày nay ưu tiên cân bằng công việc - cuộc sống hơn là mức lương cao.",
+        "answer": "Many young people today prioritise work-life balance over a high salary."
+      },
+      {
+        "vi": "Thị trường việc làm đang thay đổi nhanh chóng do tác động của tự động hoá và AI.",
+        "answer": "The job market is changing rapidly due to the impact of automation and AI."
+      },
+      {
+        "vi": "Thăng tiến nghề nghiệp không còn chỉ phụ thuộc vào thâm niên mà cần cả kỹ năng liên tục cập nhật.",
+        "answer": "Career advancement no longer depends solely on seniority but also on continuously updated skills."
+      },
+      {
+        "vi": "Đa dạng tại nơi làm việc không chỉ là vấn đề đạo đức mà còn mang lại lợi thế cạnh tranh.",
+        "answer": "Workplace diversity is not only an ethical issue but also provides a competitive advantage."
+      },
+      {
+        "vi": "Làm việc từ xa đòi hỏi kỷ luật bản thân cao hơn so với làm việc tại văn phòng.",
+        "answer": "Remote work requires a higher level of self-discipline compared to working in an office."
+      },
+      {
+        "vi": "Năng suất nhân viên tăng lên khi họ được làm việc trong môi trường linh hoạt và tôn trọng.",
+        "answer": "Employee productivity increases when they are able to work in a flexible and respectful environment."
+      },
+      {
+        "vi": "Thị trường lao động Việt Nam đang thiếu hụt trầm trọng nhân lực có kỹ năng kỹ thuật cao.",
+        "answer": "Vietnam's labour market is facing a serious shortage of highly skilled technical workers."
+      },
+      {
+        "vi": "Sự hài lòng trong công việc quan trọng không kém mức lương trong việc giữ chân nhân tài.",
+        "answer": "Job satisfaction is just as important as salary in retaining talented employees."
+      },
+      {
+        "vi": "Tinh thần khởi nghiệp đang được khuyến khích mạnh mẽ trong giới trẻ Việt Nam hiện nay.",
+        "answer": "Entrepreneurship is being strongly encouraged among young people in Vietnam today."
+      },
+      {
+        "vi": "Tăng mức lương tối thiểu là giải pháp giúp cải thiện đời sống của người lao động thu nhập thấp.",
+        "answer": "Raising the minimum wage is a solution that helps improve the lives of low-income workers."
+      },
+      {
+        "vi": "Thiếu hụt kỹ năng trong lĩnh vực công nghệ đang cản trở sự phát triển của nhiều doanh nghiệp.",
+        "answer": "Skill shortages in the technology sector are hindering the development of many businesses."
+      },
+      {
+        "vi": "Khoảng cách lương theo giới vẫn còn tồn tại ở hầu hết các ngành nghề dù đã có nhiều cải thiện.",
+        "answer": "The gender pay gap still exists in most industries despite many improvements."
+      },
+      {
+        "vi": "Làm việc linh hoạt về thời gian và địa điểm đang được nhiều công ty áp dụng để thu hút nhân tài.",
+        "answer": "Flexible working in terms of time and location is being adopted by many companies to attract talent."
+      },
+      {
+        "vi": "Kiệt sức vì công việc đang là vấn đề sức khoẻ nghiêm trọng mà nhiều nhân viên văn phòng phải đối mặt.",
+        "answer": "Burnout is a serious health issue that many office workers are facing."
+      },
+      {
+        "vi": "Tự động hoá lực lượng lao động đặt ra câu hỏi lớn về tương lai của hàng triệu việc làm phổ thông.",
+        "answer": "Workforce automation raises major questions about the future of millions of manual jobs."
+      },
+      {
+        "vi": "Công đoàn đóng vai trò quan trọng trong việc bảo vệ quyền lợi của người lao động.",
+        "answer": "Trade unions play an important role in protecting workers' rights."
+      },
+      {
+        "vi": "Công ty tốt luôn đầu tư vào phát triển chuyên môn cho nhân viên qua các khoá đào tạo định kỳ.",
+        "answer": "Good companies always invest in professional development for employees through regular training courses."
+      },
+      {
+        "vi": "Nhiều công nhân đối mặt với nguy cơ thôi việc do thừa nhân lực khi nhà máy tự động hoá dây chuyền.",
+        "answer": "Many workers face the risk of redundancy when factories automate their production lines."
+      },
+      {
+        "vi": "Tội phạm cổ cồn trắng như tham nhũng và gian lận tài chính gây thiệt hại lớn cho nền kinh tế.",
+        "answer": "White-collar crime such as corruption and financial fraud causes great damage to the economy."
+      },
+      {
+        "vi": "Kinh tế việc làm tự do mang lại sự linh hoạt nhưng thiếu đi sự ổn định và phúc lợi xã hội.",
+        "answer": "The gig economy offers flexibility but lacks stability and social benefits."
+      },
+      {
+        "vi": "Văn hoá doanh nghiệp tích cực là yếu tố then chốt để thu hút và giữ chân nhân tài giỏi.",
+        "answer": "A positive corporate culture is a key factor in attracting and retaining top talent."
+      },
+      {
+        "vi": "Bảo vệ sở hữu trí tuệ là nền tảng để khuyến khích sáng tạo và đổi mới trong kinh doanh.",
+        "answer": "Protecting intellectual property is the foundation for encouraging creativity and innovation in business."
+      },
+      {
+        "vi": "Thuê ngoài các dịch vụ không cốt lõi giúp doanh nghiệp tập trung nguồn lực vào thế mạnh chính.",
+        "answer": "Outsourcing non-core services allows businesses to focus resources on their core strengths."
+      },
+      {
+        "vi": "Đánh giá hiệu suất định kỳ giúp nhân viên biết mình cần cải thiện điều gì để phát triển.",
+        "answer": "Regular performance appraisals help employees understand what they need to improve to grow."
+      },
+      {
+        "vi": "An toàn lao động phải được đặt lên hàng đầu trong mọi hoạt động sản xuất và xây dựng.",
+        "answer": "Occupational safety must be the top priority in all manufacturing and construction activities."
+      },
+      {
+        "vi": "Xu hướng làm việc từ xa đã thúc đẩy nhiều người lao động di chuyển ra ngoại ô hoặc về quê, làm thay đổi cơ cấu dân số đô thị.",
+        "answer": "The remote working trend has prompted many workers to relocate to the suburbs or countryside, reshaping urban population structures."
+      },
+      {
+        "vi": "Phong trào 'quiet quitting' phản ánh sự thất vọng của người lao động khi cảm thấy công sức không được ghi nhận xứng đáng.",
+        "answer": "The 'quiet quitting' movement reflects workers' frustration at feeling their efforts are not being adequately recognised."
+      },
+      {
+        "vi": "Quản lý đa thế hệ là thách thức ngày càng phổ biến khi lực lượng lao động bao gồm cả Baby Boomers lẫn Gen Z.",
+        "answer": "Managing a multigenerational workforce is an increasingly common challenge when employees range from Baby Boomers to Generation Z."
+      },
+      {
+        "vi": "Các doanh nghiệp áp dụng tuần làm việc bốn ngày báo cáo năng suất tăng lên mà không làm giảm chất lượng đầu ra.",
+        "answer": "Businesses that have adopted a four-day working week report increased productivity without any reduction in output quality."
+      },
+      {
+        "vi": "Nền kinh tế sáng tạo ngày càng trở nên quan trọng khi các công việc đòi hỏi tư duy phê phán và kỹ năng sáng tạo khó bị tự động hoá.",
+        "answer": "The creative economy is becoming increasingly important as jobs requiring critical thinking and creative skills are difficult to automate."
+      },
+      {
+        "vi": "Phỏng vấn xin việc trực tuyến đã trở thành tiêu chuẩn mới, đòi hỏi ứng viên phải chuẩn bị kỹ năng trình bày qua màn hình.",
+        "answer": "Online job interviews have become the new standard, requiring candidates to prepare strong presentation skills via screen."
+      },
+      {
+        "vi": "Các công ty đa quốc gia đang điều chỉnh chính sách phúc lợi để thu hút nhân tài trong bối cảnh cạnh tranh nhân lực gay gắt toàn cầu.",
+        "answer": "Multinational companies are adjusting their benefits policies to attract talent amid intense global competition for skilled workers."
+      },
+      {
+        "vi": "Tình trạng 'brain drain' khiến nhiều chuyên gia giỏi rời bỏ Việt Nam để tìm kiếm cơ hội tốt hơn ở nước ngoài.",
+        "answer": "Brain drain is causing many highly skilled professionals to leave Vietnam in search of better opportunities abroad."
+      },
+      {
+        "vi": "Văn hoá làm việc độc hại trong một số công ty là nguyên nhân trực tiếp dẫn đến tỷ lệ nghỉ việc cao và giảm năng suất.",
+        "answer": "A toxic work culture in some companies is a direct cause of high staff turnover and declining productivity."
+      },
+      {
+        "vi": "Tự động hoá quy trình bằng robot (RPA) đang thay thế nhiều công việc văn phòng lặp đi lặp lại trong lĩnh vực tài chính và kế toán.",
+        "answer": "Robotic process automation (RPA) is replacing many repetitive office tasks in the fields of finance and accounting."
+      },
+      {
+        "vi": "Nhân viên có quyền tự chủ cao trong công việc thường có động lực làm việc tốt hơn và ít có ý định nghỉ việc hơn.",
+        "answer": "Employees with a high degree of autonomy at work tend to be more motivated and less likely to resign."
+      },
+      {
+        "vi": "Đàm phán lương là kỹ năng mềm quan trọng mà nhiều ứng viên Việt Nam vẫn còn chưa tự tin thực hiện.",
+        "answer": "Salary negotiation is an important soft skill that many Vietnamese job applicants still lack the confidence to carry out."
+      },
+      {
+        "vi": "Sự gia tăng của các nền tảng freelance như Upwork và Fiverr đang trao quyền cho người lao động trở thành doanh nhân độc lập.",
+        "answer": "The rise of freelance platforms such as Upwork and Fiverr is empowering workers to become independent entrepreneurs."
+      },
+      {
+        "vi": "Phúc lợi linh hoạt theo nhu cầu cá nhân đang trở thành xu hướng mà nhiều công ty lớn áp dụng để giữ chân nhân tài.",
+        "answer": "Personalised, flexible benefits packages are becoming a trend adopted by many large companies to retain top talent."
+      },
+      {
+        "vi": "Kỹ năng lãnh đạo trong thời đại số đòi hỏi sự kết hợp giữa năng lực kỹ thuật và trí tuệ cảm xúc cao.",
+        "answer": "Leadership skills in the digital age require a combination of technical competence and high emotional intelligence."
+      },
+      {
+        "vi": "Người lao động nhập cư đóng góp đáng kể vào tăng trưởng kinh tế nhưng thường phải đối mặt với rào cản ngôn ngữ và kỳ thị.",
+        "answer": "Migrant workers make a significant contribution to economic growth but frequently face language barriers and discrimination."
+      },
+      {
+        "vi": "Mô hình làm việc hybrid kết hợp văn phòng và làm việc từ xa đang trở thành chuẩn mực mới trong nhiều ngành nghề.",
+        "answer": "The hybrid working model combining office and remote work is becoming the new norm across many industries."
+      },
+      {
+        "vi": "Chương trình đào tạo nội bộ chất lượng cao là công cụ hiệu quả để doanh nghiệp phát triển nhân tài từ bên trong thay vì liên tục tuyển dụng bên ngoài.",
+        "answer": "High-quality internal training programmes are an effective tool for businesses to develop talent from within rather than constantly recruiting externally."
+      },
+      {
+        "vi": "Áp lực 'luôn kết nối' trong môi trường làm việc hiện đại đang xoá mờ ranh giới giữa công việc và cuộc sống cá nhân.",
+        "answer": "The pressure to be 'always connected' in the modern work environment is blurring the boundaries between work and personal life."
+      },
+      {
+        "vi": "Nhận thức về sức khoẻ tâm thần tại nơi làm việc đang được nhiều doanh nghiệp tiến bộ đưa vào chính sách nhân sự chính thức.",
+        "answer": "Awareness of mental health in the workplace is being incorporated into formal HR policies by many progressive companies."
+      }
+    ],
+    "is_published": true,
+    "order_index": 5,
+    "created_at": "2026-05-26T00:58:28.726764+00:00",
+    "updated_at": "2026-05-26T00:58:28.726764+00:00"
+  },
+  {
+    "id": "9b086285-a99e-404d-bf7d-769d8d5f86cd",
+    "exercise_id": "buoc2-travel",
+    "title": "Du lịch",
+    "topic": {
+      "en": "Travel",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Du lịch bền vững giúp bảo tồn thiên nhiên và đem lại lợi ích lâu dài cho cộng đồng địa phương.",
+        "answer": "Sustainable tourism helps preserve nature and brings long-term benefits to local communities."
+      },
+      {
+        "vi": "Du lịch quốc tế tạo cơ hội giao lưu văn hoá và xây dựng sự thấu hiểu giữa các dân tộc.",
+        "answer": "International travel creates opportunities for cultural exchange and builds mutual understanding between peoples."
+      },
+      {
+        "vi": "Quá tải du lịch đang phá huỷ cảnh quan và văn hoá của những điểm đến nổi tiếng như Hội An hay Vịnh Hạ Long.",
+        "answer": "Overtourism is destroying the landscape and culture of famous destinations such as Hoi An and Ha Long Bay."
+      },
+      {
+        "vi": "Du lịch tiết kiệm trở nên dễ dàng hơn nhờ các hãng bay giá rẻ và nền tảng đặt phòng trực tuyến.",
+        "answer": "Budget travel has become easier thanks to low-cost airlines and online booking platforms."
+      },
+      {
+        "vi": "Du lịch sinh thái không chỉ thân thiện với môi trường mà còn hỗ trợ sinh kế cho người dân bản địa.",
+        "answer": "Eco-tourism is not only environmentally friendly but also supports the livelihoods of local communities."
+      },
+      {
+        "vi": "Tour trọn gói tiện lợi cho người lần đầu đi du lịch nước ngoài vì mọi thứ đã được sắp xếp sẵn.",
+        "answer": "A package tour is convenient for first-time international travellers as everything is pre-arranged."
+      },
+      {
+        "vi": "Bộ Ngoại giao đã ban hành khuyến cáo du lịch khi tình hình an ninh tại khu vực này bất ổn.",
+        "answer": "The Ministry of Foreign Affairs issued a travel advisory when the security situation in the region became unstable."
+      },
+      {
+        "vi": "Phố cổ Hội An là một trong những điểm thu hút du lịch được yêu thích nhất tại Việt Nam.",
+        "answer": "Hoi An Ancient Town is one of the most popular tourist attractions in Vietnam."
+      },
+      {
+        "vi": "Quần thể di sản văn hoá Mỹ Sơn đang cần được bảo tồn khẩn cấp trước tác động của thời tiết.",
+        "answer": "The My Son heritage site urgently needs to be preserved against the effects of weather."
+      },
+      {
+        "vi": "Kỳ nghỉ ở nhà trở nên phổ biến hơn trong thời gian đại dịch khi mọi người không thể đi xa.",
+        "answer": "Staycations became more popular during the pandemic when people were unable to travel far."
+      },
+      {
+        "vi": "Mua bảo hiểm du lịch là việc làm khôn ngoan mà nhiều người Việt thường bỏ qua khi đi nước ngoài.",
+        "answer": "Purchasing travel insurance is a wise step that many Vietnamese people often overlook when going abroad."
+      },
+      {
+        "vi": "Du lịch ba lô qua các nước Đông Nam Á là trải nghiệm phổ biến của nhiều bạn trẻ Việt Nam.",
+        "answer": "Backpacking through Southeast Asian countries is a popular experience for many young Vietnamese."
+      },
+      {
+        "vi": "Việc Việt Nam miễn thị thực du lịch cho nhiều quốc gia đã giúp thu hút lượng khách quốc tế tăng mạnh.",
+        "answer": "Vietnam's visa-free policy for many countries has helped attract a significant increase in international visitors."
+      },
+      {
+        "vi": "Lệch múi giờ sau chuyến bay dài khiến nhiều người mất vài ngày để thích nghi với múi giờ mới.",
+        "answer": "Jet lag after a long flight causes many people to spend several days adjusting to the new time zone."
+      },
+      {
+        "vi": "Hoà nhập văn hoá là cách tốt nhất để hiểu sâu về con người và phong tục của một đất nước.",
+        "answer": "Cultural immersion is the best way to gain a deep understanding of a country's people and customs."
+      },
+      {
+        "vi": "Du lịch bằng tàu du lịch ngày càng được ưa chuộng nhưng bị chỉ trích vì tác động môi trường lớn.",
+        "answer": "Cruise ship travel is increasingly popular but faces criticism for its significant environmental impact."
+      },
+      {
+        "vi": "Nhiều phượt thủ thích khám phá những nơi ít người biết đến thay vì các điểm du lịch đông đúc.",
+        "answer": "Many travellers prefer exploring off-the-beaten-track destinations instead of crowded tourist spots."
+      },
+      {
+        "vi": "Lập lịch trình du lịch chi tiết giúp tận dụng tối đa thời gian và ngân sách của chuyến đi.",
+        "answer": "Planning a detailed travel itinerary helps maximise the time and budget of a trip."
+      },
+      {
+        "vi": "Du lịch một mình giúp nhiều người khám phá bản thân và xây dựng sự tự tin hơn.",
+        "answer": "Solo travel helps many people discover themselves and build greater self-confidence."
+      },
+      {
+        "vi": "Du lịch đại chúng mang lại doanh thu lớn nhưng thường để lại hậu quả môi trường nặng nề.",
+        "answer": "Mass tourism generates large revenues but often leaves a heavy environmental footprint."
+      },
+      {
+        "vi": "Lượng khách quốc tế đến Việt Nam đã phục hồi mạnh mẽ sau đại dịch Covid-19.",
+        "answer": "International arrivals to Vietnam have recovered strongly following the Covid-19 pandemic."
+      },
+      {
+        "vi": "Du lịch nội địa bùng nổ trong thời gian biên giới đóng cửa, giúp nhiều địa phương duy trì doanh thu.",
+        "answer": "Domestic tourism boomed during border closures, helping many localities maintain their revenue."
+      },
+      {
+        "vi": "Lệnh cấm du lịch được áp dụng đột ngột khiến hàng nghìn du khách bị mắc kẹt ở nước ngoài.",
+        "answer": "The travel ban was applied suddenly, leaving thousands of tourists stranded abroad."
+      },
+      {
+        "vi": "Doanh thu du lịch đóng góp đáng kể vào GDP của nhiều tỉnh thành ven biển.",
+        "answer": "Tourism revenue contributes significantly to the GDP of many coastal provinces."
+      },
+      {
+        "vi": "Du lịch có trách nhiệm có nghĩa là tôn trọng phong tục địa phương và không xả rác bừa bãi.",
+        "answer": "Responsible travel means respecting local customs and not littering carelessly."
+      },
+      {
+        "vi": "Hàng không giá rẻ đã mở ra cơ hội đi du lịch nước ngoài cho tầng lớp trung lưu tại các nước đang phát triển.",
+        "answer": "Low-cost airlines have opened up overseas travel opportunities for the middle class in developing countries."
+      },
+      {
+        "vi": "Du lịch y tế đang trở thành xu hướng khi nhiều người nước ngoài đến Việt Nam để tận dụng chi phí điều trị rẻ hơn.",
+        "answer": "Medical tourism is becoming a trend as many foreigners travel to Vietnam to take advantage of lower treatment costs."
+      },
+      {
+        "vi": "Nhiều điểm du lịch nổi tiếng buộc phải giới hạn số lượng khách tham quan mỗi ngày để bảo vệ di sản và môi trường.",
+        "answer": "Many famous tourist destinations have been forced to limit daily visitor numbers to protect their heritage and environment."
+      },
+      {
+        "vi": "Trải nghiệm du lịch đang ngày càng được cá nhân hoá nhờ các ứng dụng AI gợi ý lịch trình phù hợp với sở thích người dùng.",
+        "answer": "Travel experiences are becoming increasingly personalised thanks to AI applications that suggest itineraries suited to users' preferences."
+      },
+      {
+        "vi": "Người du lịch thuần chay ngày càng tìm kiếm các điểm đến và nhà hàng có thực đơn thân thiện với chế độ ăn của họ.",
+        "answer": "Vegan travellers are increasingly seeking destinations and restaurants with menus friendly to their dietary choices."
+      },
+      {
+        "vi": "Chênh lệch tiền tệ khiến một số quốc gia trở thành điểm đến cực kỳ hấp dẫn cho du khách đến từ các nước có đồng tiền mạnh.",
+        "answer": "Currency differences make some countries extremely attractive destinations for travellers from nations with strong currencies."
+      },
+      {
+        "vi": "Ô nhiễm nhựa tại các bãi biển nổi tiếng đang gây ra làn sóng phẫn nộ từ cả du khách lẫn cộng đồng địa phương.",
+        "answer": "Plastic pollution on famous beaches is causing a wave of outrage from both tourists and local communities."
+      },
+      {
+        "vi": "Sự bùng nổ của nền tảng cho thuê nhà ngắn hạn đã làm thay đổi căn bản thị trường lưu trú du lịch truyền thống.",
+        "answer": "The explosion of short-term rental platforms has fundamentally transformed the traditional tourist accommodation market."
+      },
+      {
+        "vi": "Nhiều du khách trẻ ưa thích trải nghiệm tình nguyện kết hợp với du lịch hơn là các tour nghỉ dưỡng thụ động.",
+        "answer": "Many young travellers prefer volunteer tourism experiences to passive resort holidays."
+      },
+      {
+        "vi": "Làn sóng du lịch 'slow travel' khuyến khích du khách ở lại một nơi lâu hơn để hiểu sâu hơn về văn hoá địa phương.",
+        "answer": "The 'slow travel' movement encourages tourists to stay in one place longer in order to gain a deeper understanding of local culture."
+      },
+      {
+        "vi": "Sự phục hồi của ngành hàng không sau đại dịch diễn ra nhanh hơn dự đoán nhờ nhu cầu du lịch bị dồn nén trong nhiều năm.",
+        "answer": "The aviation industry's recovery after the pandemic has been faster than expected due to pent-up travel demand built up over several years."
+      },
+      {
+        "vi": "Các điểm đến đang đầu tư vào cơ sở hạ tầng du lịch bền vững để đảm bảo lợi ích kinh tế lâu dài mà không gây hại môi trường.",
+        "answer": "Destinations are investing in sustainable tourism infrastructure to ensure long-term economic benefits without causing environmental harm."
+      },
+      {
+        "vi": "Thị thực điện tử và thủ tục nhập cảnh đơn giản hoá đóng vai trò quan trọng trong thu hút lượng khách quốc tế.",
+        "answer": "E-visas and simplified entry procedures play an important role in attracting international visitor numbers."
+      },
+      {
+        "vi": "Các lễ hội địa phương đang được quảng bá mạnh mẽ như sản phẩm du lịch độc đáo thu hút cả khách nội địa lẫn quốc tế.",
+        "answer": "Local festivals are being strongly promoted as unique tourism products attracting both domestic and international visitors."
+      },
+      {
+        "vi": "Du lịch hạng sang đang phát triển mạnh ở châu Á khi tầng lớp thượng lưu tìm kiếm những trải nghiệm độc đáo và được cá nhân hoá hoàn toàn.",
+        "answer": "Luxury travel is thriving in Asia as the wealthy seek entirely unique and fully personalised experiences."
+      },
+      {
+        "vi": "Nhận thức về lượng khí thải carbon từ các chuyến bay đang khiến một số du khách có ý thức chọn phương tiện thay thế.",
+        "answer": "Awareness of carbon emissions from flights is prompting some environmentally conscious travellers to choose alternative modes of transport."
+      },
+      {
+        "vi": "Các trang đánh giá du lịch trực tuyến đã trao quyền cho du khách nhưng đồng thời tạo áp lực lớn lên các cơ sở lưu trú.",
+        "answer": "Online travel review platforms have empowered tourists but simultaneously placed enormous pressure on accommodation providers."
+      },
+      {
+        "vi": "Thành phố Đà Nẵng đã thành công trong việc tái định vị mình từ điểm dừng chân thành điểm đến nghỉ dưỡng hàng đầu miền Trung.",
+        "answer": "Da Nang has succeeded in repositioning itself from a transit stop to a leading resort destination in central Vietnam."
+      },
+      {
+        "vi": "Trải nghiệm du lịch thực tế ảo đang được phát triển nhưng khó lòng thay thế được cảm giác đặt chân thực sự đến một vùng đất mới.",
+        "answer": "Virtual reality travel experiences are being developed but are unlikely to replace the feeling of actually setting foot in a new land."
+      },
+      {
+        "vi": "Những người làm việc từ xa có thể kết hợp công việc và du lịch như một 'digital nomad', sống ở nhiều quốc gia trong năm.",
+        "answer": "Remote workers can combine work and travel as digital nomads, living in multiple countries throughout the year."
+      }
+    ],
+    "is_published": true,
+    "order_index": 6,
+    "created_at": "2026-05-26T00:58:28.938958+00:00",
+    "updated_at": "2026-05-26T00:58:28.938958+00:00"
+  },
+  {
+    "id": "9aec3ca5-8038-4199-ab5f-14309b04b3ca",
+    "exercise_id": "buoc2-food",
+    "title": "Thực phẩm",
+    "topic": {
+      "en": "Food",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "An ninh lương thực toàn cầu đang bị đe doạ nghiêm trọng bởi biến đổi khí hậu và xung đột.",
+        "answer": "Global food security is being seriously threatened by climate change and conflict."
+      },
+      {
+        "vi": "Suy dinh dưỡng ở trẻ em dưới 5 tuổi vẫn còn là vấn đề nghiêm trọng ở nhiều vùng nghèo.",
+        "answer": "Malnutrition in children under 5 remains a serious problem in many impoverished areas."
+      },
+      {
+        "vi": "Nông nghiệp hữu cơ đang ngày càng được người tiêu dùng Việt Nam ưa chuộng dù giá thành cao hơn.",
+        "answer": "Organic farming is increasingly favoured by Vietnamese consumers despite its higher price."
+      },
+      {
+        "vi": "Lãng phí thực phẩm trong khi hàng triệu người đang đói là vấn đề đạo đức cần được giải quyết.",
+        "answer": "Food waste while millions of people are going hungry is an ethical issue that needs to be addressed."
+      },
+      {
+        "vi": "Thói quen ăn uống của người Việt Nam đang thay đổi theo hướng tiêu thụ nhiều thức ăn nhanh hơn.",
+        "answer": "The dietary habits of Vietnamese people are shifting towards greater consumption of fast food."
+      },
+      {
+        "vi": "Thức ăn chế biến sẵn tiện lợi nhưng chứa nhiều chất bảo quản và natri gây hại cho sức khoẻ.",
+        "answer": "Processed food is convenient but contains many preservatives and sodium that are harmful to health."
+      },
+      {
+        "vi": "Chế độ ăn dựa trên thực vật không chỉ tốt cho sức khoẻ mà còn giúp giảm thiểu khí thải nhà kính.",
+        "answer": "A plant-based diet is not only good for health but also helps reduce greenhouse gas emissions."
+      },
+      {
+        "vi": "Ngành công nghiệp thực phẩm cần được quản lý chặt chẽ hơn để bảo vệ sức khoẻ người tiêu dùng.",
+        "answer": "The food industry needs to be more tightly regulated to protect consumer health."
+      },
+      {
+        "vi": "Dán nhãn thực phẩm rõ ràng giúp người mua đưa ra lựa chọn thông minh và an toàn hơn.",
+        "answer": "Clear food labelling helps buyers make smarter and safer choices."
+      },
+      {
+        "vi": "Khủng hoảng đói ở vùng Sahel châu Phi đang khiến hàng triệu người cần viện trợ khẩn cấp.",
+        "answer": "The hunger crisis in the Sahel region of Africa is leaving millions of people in need of urgent aid."
+      },
+      {
+        "vi": "Truyền thống ẩm thực Việt Nam phong phú và đa dạng được UNESCO công nhận là di sản phi vật thể.",
+        "answer": "Vietnam's rich and diverse culinary tradition has been recognised by UNESCO as an intangible heritage."
+      },
+      {
+        "vi": "Việc sử dụng sinh vật biến đổi gen trong nông nghiệp vẫn còn gây tranh cãi về mặt an toàn và đạo đức.",
+        "answer": "The use of genetically modified organisms in agriculture remains controversial in terms of safety and ethics."
+      },
+      {
+        "vi": "Văn hoá thức ăn nhanh du nhập vào Việt Nam đang ảnh hưởng xấu đến thói quen ăn uống của giới trẻ.",
+        "answer": "The fast food culture introduced into Vietnam is having a negative impact on the eating habits of young people."
+      },
+      {
+        "vi": "Vệ sinh thực phẩm không đảm bảo là nguyên nhân của hàng nghìn ca ngộ độc thực phẩm mỗi năm.",
+        "answer": "Poor food hygiene is the cause of thousands of food poisoning cases every year."
+      },
+      {
+        "vi": "Kiểm soát lượng calo tiêu thụ hàng ngày là phương pháp đơn giản để duy trì cân nặng lý tưởng.",
+        "answer": "Controlling daily calorie intake is a simple method for maintaining an ideal weight."
+      },
+      {
+        "vi": "Việc con người phá vỡ chuỗi thức ăn tự nhiên có thể gây ra những hậu quả sinh thái khó lường.",
+        "answer": "Human disruption of the natural food chain can cause unpredictable ecological consequences."
+      },
+      {
+        "vi": "Lệnh cấm nhập khẩu thịt lợn từ một số nước được ban hành sau khi phát hiện dịch tả lợn châu Phi.",
+        "answer": "An import ban on pork from several countries was issued after the discovery of African swine fever."
+      },
+      {
+        "vi": "Nuôi trồng thuỷ sản là ngành kinh tế mũi nhọn của nhiều tỉnh ven biển miền Trung.",
+        "answer": "Aquaculture is the key economic sector of many coastal provinces in central Vietnam."
+      },
+      {
+        "vi": "Thức ăn đường phố Hà Nội nổi tiếng thế giới với vô số món ăn vừa ngon vừa rẻ.",
+        "answer": "Hanoi's street food is world-famous for its countless delicious and affordable dishes."
+      },
+      {
+        "vi": "Thiếu an toàn lương thực không chỉ xảy ra ở các nước nghèo mà còn ở nhiều vùng của các nước phát triển.",
+        "answer": "Food insecurity occurs not only in poor countries but also in many regions of developed nations."
+      },
+      {
+        "vi": "Trợ cấp nông nghiệp của các nước giàu khiến nông dân các nước đang phát triển khó cạnh tranh.",
+        "answer": "Agricultural subsidies in wealthy countries make it difficult for farmers in developing nations to compete."
+      },
+      {
+        "vi": "Chế độ ăn thuần chay đang trở nên phổ biến hơn ở Việt Nam, đặc biệt trong giới trẻ thành thị.",
+        "answer": "A vegan diet is becoming more popular in Vietnam, especially among urban young people."
+      },
+      {
+        "vi": "Sản xuất thực phẩm bền vững là thách thức lớn khi dân số thế giới tiếp tục tăng.",
+        "answer": "Sustainable food production is a major challenge as the world population continues to grow."
+      },
+      {
+        "vi": "Sở thích hương vị được hình thành từ nhỏ và chịu ảnh hưởng lớn từ văn hoá và gia đình.",
+        "answer": "Taste preferences are formed from childhood and are greatly influenced by culture and family."
+      },
+      {
+        "vi": "Dị ứng thực phẩm như dị ứng đậu phộng hay hải sản có thể gây nguy hiểm tính mạng nếu không xử lý kịp thời.",
+        "answer": "Food allergies such as peanut or seafood allergies can be life-threatening if not treated promptly."
+      },
+      {
+        "vi": "Phong trào 'farm to table' đang được nhiều nhà hàng cao cấp áp dụng để đảm bảo nguồn gốc thực phẩm minh bạch.",
+        "answer": "The 'farm to table' movement is being adopted by many upmarket restaurants to ensure transparent food sourcing."
+      },
+      {
+        "vi": "Sự gia tăng của các ứng dụng giao đồ ăn đã thay đổi thói quen ăn uống của người thành thị một cách sâu sắc.",
+        "answer": "The rise of food delivery apps has profoundly changed the eating habits of urban residents."
+      },
+      {
+        "vi": "Các chợ nông sản địa phương đang trở thành không gian cộng đồng quan trọng giúp người dân kết nối với nông dân và thực phẩm sạch.",
+        "answer": "Local farmers' markets are becoming important community spaces that help people connect with growers and fresh produce."
+      },
+      {
+        "vi": "Nhu cầu về thực phẩm chức năng tăng mạnh khi người tiêu dùng ngày càng quan tâm đến mối liên hệ giữa ăn uống và sức khoẻ.",
+        "answer": "Demand for functional foods is rising sharply as consumers become increasingly aware of the link between diet and health."
+      },
+      {
+        "vi": "Khủng hoảng chuỗi cung ứng thực phẩm do đại dịch đã phơi bày sự mong manh của hệ thống lương thực toàn cầu.",
+        "answer": "Food supply chain disruptions caused by the pandemic exposed the fragility of the global food system."
+      },
+      {
+        "vi": "Thịt nhân tạo được nuôi cấy từ tế bào gốc đang tiến gần hơn đến thị trường đại chúng và có thể thay đổi ngành chăn nuôi.",
+        "answer": "Lab-grown meat cultivated from stem cells is drawing closer to mass-market availability and could transform the livestock industry."
+      },
+      {
+        "vi": "Ăn chay không hoàn toàn hay còn gọi là 'flexitarian' đang trở thành xu hướng phổ biến ở người tiêu dùng có ý thức.",
+        "answer": "Flexitarianism — a mostly plant-based diet with occasional meat — is becoming popular among health and environmentally conscious consumers."
+      },
+      {
+        "vi": "Truyền thông xã hội đã biến nhiều món ăn bình dân thành hiện tượng toàn cầu và tạo ra làn sóng du lịch ẩm thực.",
+        "answer": "Social media has turned many humble dishes into global phenomena and sparked waves of culinary tourism."
+      },
+      {
+        "vi": "Sự khan hiếm nước đang đặt áp lực lên ngành nông nghiệp, buộc nông dân phải áp dụng kỹ thuật tưới tiêu tiết kiệm nước hơn.",
+        "answer": "Water scarcity is placing pressure on the agricultural sector, forcing farmers to adopt more water-efficient irrigation techniques."
+      },
+      {
+        "vi": "Hệ thống phân phối thực phẩm không công bằng khiến người nghèo ở cả nước giàu lẫn nước nghèo khó tiếp cận thực phẩm dinh dưỡng.",
+        "answer": "An inequitable food distribution system means that people living in poverty in both rich and poor countries struggle to access nutritious food."
+      },
+      {
+        "vi": "Văn hoá ẩm thực đường phố Hà Nội được tạp chí CNN Travel bình chọn là một trong những trải nghiệm ẩm thực tốt nhất châu Á.",
+        "answer": "Hanoi's street food culture was voted by CNN Travel as one of the best culinary experiences in Asia."
+      },
+      {
+        "vi": "Áp lực từ người tiêu dùng buộc nhiều chuỗi thức ăn nhanh phải bổ sung các lựa chọn lành mạnh hơn vào thực đơn.",
+        "answer": "Consumer pressure has forced many fast food chains to add healthier options to their menus."
+      },
+      {
+        "vi": "Ô nhiễm thực phẩm do tồn dư thuốc bảo vệ thực vật là mối lo ngại lớn đối với sức khoẻ người tiêu dùng tại Việt Nam.",
+        "answer": "Food contamination from pesticide residues is a major health concern for consumers in Vietnam."
+      },
+      {
+        "vi": "Ngành công nghiệp thuỷ sản Việt Nam đứng trước áp lực lớn từ các tiêu chuẩn về phát triển bền vững của thị trường EU.",
+        "answer": "Vietnam's seafood industry is under significant pressure from EU market sustainability standards."
+      },
+      {
+        "vi": "Các siêu thị đang thí nghiệm mô hình bán lẻ không bao bì nhựa để giảm lượng rác thải từ ngành thực phẩm.",
+        "answer": "Supermarkets are experimenting with plastic-free retail models to reduce waste generated by the food industry."
+      },
+      {
+        "vi": "Ẩm thực fusion kết hợp nguyên liệu và kỹ thuật nấu ăn từ nhiều nền văn hoá đang ngày càng được thực khách đón nhận.",
+        "answer": "Fusion cuisine combining ingredients and cooking techniques from multiple cultures is gaining increasing acceptance among diners."
+      },
+      {
+        "vi": "Lạm phát thực phẩm đang ảnh hưởng nặng nề đến các hộ gia đình thu nhập thấp vốn dành phần lớn ngân sách cho ăn uống.",
+        "answer": "Food inflation is hitting low-income households hardest, as they spend a large proportion of their budget on food."
+      },
+      {
+        "vi": "Công nghệ chuỗi khối đang được ứng dụng để truy xuất nguồn gốc thực phẩm từ trang trại đến bàn ăn một cách minh bạch.",
+        "answer": "Blockchain technology is being applied to trace food origins from farm to table in a transparent manner."
+      },
+      {
+        "vi": "Chế độ ăn Địa Trung Hải giàu dầu olive, cá và rau củ được các chuyên gia dinh dưỡng khuyến nghị rộng rãi nhất thế giới.",
+        "answer": "The Mediterranean diet, rich in olive oil, fish, and vegetables, is the most widely recommended diet by nutritionists worldwide."
+      },
+      {
+        "vi": "Sự bùng nổ của các chương trình nấu ăn truyền hình đã truyền cảm hứng cho hàng triệu người quan tâm hơn đến việc tự nấu ăn tại nhà.",
+        "answer": "The explosion of cooking programmes on television has inspired millions of people to take a greater interest in cooking at home."
+      }
+    ],
+    "is_published": true,
+    "order_index": 7,
+    "created_at": "2026-05-26T00:58:29.187276+00:00",
+    "updated_at": "2026-05-26T00:58:29.187276+00:00"
+  },
+  {
+    "id": "c55d865f-64f6-42c2-a959-d46e61539692",
+    "exercise_id": "buoc2-hobbies",
+    "title": "Sở thích",
+    "topic": {
+      "en": "Hobbies",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Hoạt động giải trí lành mạnh giúp giảm stress và cải thiện chất lượng cuộc sống đáng kể.",
+        "answer": "Healthy leisure activities help reduce stress and significantly improve quality of life."
+      },
+      {
+        "vi": "Thể thao giải trí như đạp xe và bơi lội ngày càng được nhiều người Việt Nam yêu thích.",
+        "answer": "Recreational sports such as cycling and swimming are becoming increasingly popular among Vietnamese people."
+      },
+      {
+        "vi": "Hội hoạ là kênh giải phóng sáng tạo tuyệt vời giúp nhiều người thoát khỏi áp lực hàng ngày.",
+        "answer": "Painting is a wonderful creative outlet that helps many people escape daily pressures."
+      },
+      {
+        "vi": "Nghiện trò chơi điện tử đang là vấn đề được nhiều phụ huynh và chuyên gia tâm lý lo ngại.",
+        "answer": "Gaming addiction is a concern for many parents and psychologists."
+      },
+      {
+        "vi": "Tham gia câu lạc bộ đọc sách giúp người ta không chỉ đọc nhiều hơn mà còn gặp gỡ bạn bè mới.",
+        "answer": "Joining a book club helps people not only read more but also meet new friends."
+      },
+      {
+        "vi": "Thiền định tỉnh thức đang trở thành xu hướng phổ biến để đối phó với cuộc sống bận rộn hiện đại.",
+        "answer": "Mindfulness is becoming a popular trend for coping with the demands of modern busy life."
+      },
+      {
+        "vi": "Hoạt động ngoài trời như leo núi và cắm trại đang thu hút ngày càng nhiều người trẻ Việt.",
+        "answer": "Outdoor pursuits such as hiking and camping are attracting more and more young Vietnamese people."
+      },
+      {
+        "vi": "Tham gia công việc tình nguyện giúp người trẻ phát triển kỹ năng mềm và cảm nhận ý nghĩa cuộc sống.",
+        "answer": "Participating in volunteer work helps young people develop soft skills and find meaning in life."
+      },
+      {
+        "vi": "Nghệ thuật biểu diễn như múa và kịch đang được đưa vào chương trình ngoại khoá ở nhiều trường.",
+        "answer": "Performing arts such as dance and theatre are being incorporated into extracurricular programmes at many schools."
+      },
+      {
+        "vi": "Xem liên tục nhiều tập phim vào cuối tuần là thói quen của nhiều người nhưng ảnh hưởng đến giấc ngủ.",
+        "answer": "Binge-watching multiple episodes of a series at the weekend is a common habit but can affect sleep."
+      },
+      {
+        "vi": "Nhiếp ảnh kỹ thuật số đã trở thành sở thích phổ biến nhờ điện thoại thông minh ngày càng tiên tiến.",
+        "answer": "Digital photography has become a popular hobby thanks to increasingly advanced smartphones."
+      },
+      {
+        "vi": "Trò chơi bàn cờ đang có sự phục hưng nhờ những người muốn thoát khỏi màn hình điện tử.",
+        "answer": "Board games are experiencing a revival thanks to people who want to escape their digital screens."
+      },
+      {
+        "vi": "Làm vườn không chỉ là thú vui mà còn mang lại nguồn rau sạch cho gia đình.",
+        "answer": "Gardening is not only an enjoyable pastime but also provides a source of fresh vegetables for the family."
+      },
+      {
+        "vi": "Viết blog du lịch đã trở thành nguồn thu nhập phụ hấp dẫn cho nhiều bạn trẻ có đam mê xê dịch.",
+        "answer": "Travel blogging has become an attractive side income for many young people with a passion for travel."
+      },
+      {
+        "vi": "Học nhạc cụ từ nhỏ giúp trẻ em cải thiện khả năng tập trung và kỷ luật bản thân.",
+        "answer": "Learning a musical instrument from a young age helps children improve their concentration and self-discipline."
+      },
+      {
+        "vi": "Võ thuật không chỉ rèn luyện thể lực mà còn dạy người học sự kiên nhẫn và tinh thần kỷ luật.",
+        "answer": "Martial arts not only build physical fitness but also teach practitioners patience and a disciplined spirit."
+      },
+      {
+        "vi": "Sưu tầm tem là sở thích giúp nhiều người tìm hiểu về lịch sử và địa lý thế giới một cách thú vị.",
+        "answer": "Stamp collecting is a hobby that helps many people learn about world history and geography in an enjoyable way."
+      },
+      {
+        "vi": "Tập yoga đều đặn mỗi sáng giúp cải thiện sự dẻo dai và giảm căng thẳng tâm lý hiệu quả.",
+        "answer": "Regular morning yoga practice helps improve flexibility and effectively reduces psychological stress."
+      },
+      {
+        "vi": "Phát triển kỹ năng nấu ăn không chỉ tiết kiệm chi phí mà còn giúp kiểm soát chất lượng bữa ăn.",
+        "answer": "Developing culinary skills not only saves money but also helps control the quality of meals."
+      },
+      {
+        "vi": "Sở thích mang tính xã hội như chơi thể thao nhóm giúp người ta kết nối và chống lại sự cô đơn.",
+        "answer": "Social hobbies such as team sports help people connect with others and combat loneliness."
+      },
+      {
+        "vi": "Thời gian sử dụng màn hình quá nhiều ở trẻ em được các chuyên gia y tế cảnh báo là có hại.",
+        "answer": "Excessive screen time in children is warned against by health experts as harmful."
+      },
+      {
+        "vi": "Dự án tự làm như tự sơn nhà hay làm đồ nội thất đang được nhiều gia đình trẻ yêu thích.",
+        "answer": "DIY projects such as painting one's own home or making furniture are popular among many young families."
+      },
+      {
+        "vi": "Đến thăm triển lãm nghệ thuật là cách thư giãn và mở mang nhận thức về thẩm mỹ và văn hoá.",
+        "answer": "Visiting an art exhibition is a relaxing way to broaden one's appreciation of aesthetics and culture."
+      },
+      {
+        "vi": "Thể thao thi đấu dạy cho người trẻ biết chấp nhận thất bại và tiếp tục nỗ lực cải thiện.",
+        "answer": "Competitive sport teaches young people to accept defeat and continue striving to improve."
+      },
+      {
+        "vi": "Quá nhiều giải trí thụ động như xem TV hay lướt mạng có thể khiến người ta cảm thấy trống rỗng.",
+        "answer": "Too much passive leisure such as watching TV or scrolling online can leave people feeling empty."
+      },
+      {
+        "vi": "Phong trào chạy marathon đang lan rộng ở Việt Nam với ngày càng nhiều giải chạy được tổ chức từ thành thị đến vùng núi.",
+        "answer": "The marathon running movement is spreading across Vietnam, with more and more races being organised from cities to mountainous areas."
+      },
+      {
+        "vi": "Sưu tầm đồ cổ đòi hỏi không chỉ đam mê mà còn cần kiến thức sâu về lịch sử và văn hoá để tránh mua phải hàng giả.",
+        "answer": "Antique collecting requires not only passion but also deep knowledge of history and culture to avoid purchasing fakes."
+      },
+      {
+        "vi": "Những người có sở thích sáng tạo như vẽ tranh hay làm gốm thường có khả năng phục hồi tâm lý tốt hơn sau các biến cố.",
+        "answer": "People with creative hobbies such as painting or pottery tend to have greater psychological resilience after setbacks."
+      },
+      {
+        "vi": "Cộng đồng cosplay tại Việt Nam ngày càng lớn mạnh với nhiều sự kiện quy mô thu hút hàng nghìn người tham gia.",
+        "answer": "The cosplay community in Vietnam is growing rapidly, with large-scale events attracting thousands of participants."
+      },
+      {
+        "vi": "Câu cá không chỉ là thú vui giải trí mà còn là liệu pháp giúp nhiều người thoát khỏi áp lực công việc và tìm lại sự bình yên.",
+        "answer": "Fishing is not only a recreational pastime but also a therapeutic activity helping many people escape work pressure and find inner calm."
+      },
+      {
+        "vi": "Học ngoại ngữ như một sở thích không chỉ mở ra cơ hội nghề nghiệp mà còn giúp người học hiểu sâu hơn về một nền văn hoá khác.",
+        "answer": "Learning a foreign language as a hobby not only opens up career opportunities but also gives the learner a deeper understanding of another culture."
+      },
+      {
+        "vi": "Nhiếp ảnh thiên nhiên đang là sở thích ngày càng phổ biến trong giới trẻ Việt Nam có ý thức bảo vệ môi trường.",
+        "answer": "Nature photography is an increasingly popular hobby among environmentally conscious young Vietnamese people."
+      },
+      {
+        "vi": "Cộng đồng game thủ Việt Nam đang phát triển mạnh mẽ, với nhiều tuyển thủ trẻ đạt thành tích ấn tượng trong các giải quốc tế.",
+        "answer": "Vietnam's gaming community is thriving, with many young players achieving impressive results in international tournaments."
+      },
+      {
+        "vi": "Làm đồ thủ công mỹ nghệ như đan lát hay khâu vá đang được người trẻ tái khám phá như một cách chữa lành tâm lý.",
+        "answer": "Handicrafts such as knitting and sewing are being rediscovered by young people as a form of mindful therapy."
+      },
+      {
+        "vi": "Podcast nghe sách là sở thích mới nổi giúp những người bận rộn vẫn có thể tiếp thu kiến thức trong lúc di chuyển.",
+        "answer": "Audiobook podcasts are an emerging hobby that enables busy people to absorb knowledge while commuting."
+      },
+      {
+        "vi": "Chăm sóc cây cảnh trong nhà đã trở thành xu hướng phổ biến đặc biệt sau đại dịch khi nhiều người tìm kiếm sự gắn kết với thiên nhiên.",
+        "answer": "Caring for indoor plants became a popular trend especially after the pandemic as many people sought a connection with nature."
+      },
+      {
+        "vi": "Nhảy đường phố và breakdance đang được giới trẻ đô thị đón nhận nhiệt tình như hình thức biểu đạt nghệ thuật cá nhân.",
+        "answer": "Street dance and breakdancing are being enthusiastically embraced by urban young people as a form of personal artistic expression."
+      },
+      {
+        "vi": "Viết nhật ký mỗi ngày giúp nhiều người xử lý cảm xúc, đặt mục tiêu rõ ràng hơn và nhìn lại quá trình trưởng thành của bản thân.",
+        "answer": "Writing in a daily journal helps many people process their emotions, set clearer goals, and reflect on their personal growth."
+      },
+      {
+        "vi": "Cộng đồng những người yêu thích phim hoạt hình anime tại Việt Nam không còn bị xem là thiểu số mà đã trở thành dòng chính.",
+        "answer": "The anime fan community in Vietnam is no longer considered a minority but has become a mainstream cultural phenomenon."
+      },
+      {
+        "vi": "Đi bộ đường dài trong rừng quốc gia là sở thích ngày càng được yêu thích khi người ta tìm cách thoát khỏi màn hình kỹ thuật số.",
+        "answer": "Hiking in national forests is an increasingly popular hobby as people seek to escape their digital screens."
+      },
+      {
+        "vi": "Học nấu ăn các món từ nhiều quốc gia khác nhau đang trở thành sở thích phổ biến của người thành thị trong thời đại toàn cầu hoá.",
+        "answer": "Learning to cook dishes from different countries is becoming a popular hobby among city dwellers in the age of globalisation."
+      },
+      {
+        "vi": "Sáng tác nhạc nghiệp dư nhờ phần mềm sản xuất âm nhạc giá rẻ đang trao quyền cho nhiều người trẻ biến ước mơ âm nhạc thành hiện thực.",
+        "answer": "Amateur music production using affordable software is empowering many young people to turn their musical dreams into reality."
+      },
+      {
+        "vi": "Tham gia các câu lạc bộ đọc sách không chỉ thúc đẩy thói quen đọc mà còn là cách tuyệt vời để mở rộng vòng kết nối xã hội.",
+        "answer": "Joining a book club not only promotes reading habits but is also a wonderful way to expand one's social network."
+      },
+      {
+        "vi": "Vẽ tranh số trên máy tính bảng đang thu hút nhiều người vì không cần mua vật liệu truyền thống nhưng vẫn tạo ra tác phẩm chất lượng.",
+        "answer": "Digital drawing on tablets is attracting many people because it requires no traditional art supplies yet still produces high-quality work."
+      },
+      {
+        "vi": "Nuôi thú cưng không chỉ mang lại niềm vui mà còn được chứng minh là giúp giảm huyết áp và cảm giác cô đơn.",
+        "answer": "Keeping pets not only brings joy but has also been proven to lower blood pressure and reduce feelings of loneliness."
+      }
+    ],
+    "is_published": true,
+    "order_index": 8,
+    "created_at": "2026-05-26T00:58:29.400284+00:00",
+    "updated_at": "2026-05-26T00:58:29.400284+00:00"
+  },
+  {
+    "id": "4f6790b4-cb1f-4622-8eae-487a16537022",
+    "exercise_id": "buoc2-family",
+    "title": "Gia đình",
+    "topic": {
+      "en": "Family",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Gia đình hạt nhân với hai thế hệ ngày càng phổ biến hơn ở các đô thị lớn của Việt Nam.",
+        "answer": "The nuclear family with two generations is becoming increasingly common in Vietnam's major cities."
+      },
+      {
+        "vi": "Gia đình đa thế hệ vẫn còn phổ biến ở nông thôn Việt Nam và mang lại sự gắn kết mạnh mẽ.",
+        "answer": "The extended family is still common in rural Vietnam and provides strong bonds."
+      },
+      {
+        "vi": "Trách nhiệm của cha mẹ không chỉ là nuôi ăn mặc mà còn phải quan tâm đến sức khoẻ tâm thần của con.",
+        "answer": "Parental responsibility is not just about providing food and clothing but also caring for children's mental health."
+      },
+      {
+        "vi": "Phương pháp nuôi dưỡng trẻ em khác nhau rõ rệt giữa các nền văn hoá phương Đông và phương Tây.",
+        "answer": "Child-rearing methods differ significantly between Eastern and Western cultures."
+      },
+      {
+        "vi": "Cạnh tranh giữa anh chị em có thể trở thành động lực tích cực nếu cha mẹ biết hướng dẫn đúng cách.",
+        "answer": "Sibling rivalry can become a positive motivator if parents know how to guide it properly."
+      },
+      {
+        "vi": "Chăm sóc người cao tuổi đang trở thành gánh nặng lớn trong bối cảnh già hoá dân số nhanh chóng.",
+        "answer": "Elderly care is becoming a major burden in the context of a rapidly ageing population."
+      },
+      {
+        "vi": "Gia đình đơn thân phải đối mặt với nhiều thách thức về tài chính và thời gian chăm sóc con cái.",
+        "answer": "Single-parent families face many challenges in terms of finances and time for childcare."
+      },
+      {
+        "vi": "Gắn kết gia đình là nền tảng giúp trẻ em phát triển lành mạnh về cảm xúc và nhân cách.",
+        "answer": "Family bonds are the foundation that helps children develop healthily in terms of emotion and character."
+      },
+      {
+        "vi": "Khoảng cách thế hệ trong gia đình thường nảy sinh xung quanh vấn đề sử dụng công nghệ và lối sống.",
+        "answer": "The generation gap in families often arises around issues of technology use and lifestyle."
+      },
+      {
+        "vi": "Bạo lực gia đình để lại vết thương tâm lý sâu sắc và khó lành cho những người trong cuộc.",
+        "answer": "Domestic violence leaves deep and long-lasting psychological wounds on those involved."
+      },
+      {
+        "vi": "Lòng hiếu thảo là giá trị cốt lõi trong văn hoá Việt Nam và được truyền dạy từ thế hệ này sang thế hệ khác.",
+        "answer": "Filial piety is a core value in Vietnamese culture and is passed down from generation to generation."
+      },
+      {
+        "vi": "Tỷ lệ sinh sản giảm mạnh ở nhiều nước châu Á đang tạo ra áp lực lớn cho hệ thống an sinh xã hội.",
+        "answer": "A sharp decline in fertility rates across many Asian countries is placing great pressure on social welfare systems."
+      },
+      {
+        "vi": "Giá trị gia đình truyền thống đang bị thách thức bởi lối sống hiện đại và chủ nghĩa cá nhân.",
+        "answer": "Traditional family values are being challenged by modern lifestyles and individualism."
+      },
+      {
+        "vi": "Ngày nay, người kiếm tiền chính trong gia đình không nhất thiết phải là người cha.",
+        "answer": "Today, the family breadwinner does not necessarily have to be the father."
+      },
+      {
+        "vi": "Nhận con nuôi là hành động nhân đạo cao đẹp, mang lại mái ấm cho trẻ em mồ côi.",
+        "answer": "Adoption is a noble humanitarian act that provides a home for orphaned children."
+      },
+      {
+        "vi": "Tỷ lệ ly hôn tăng cao ở Việt Nam trong thập kỷ qua phản ánh sự thay đổi trong quan niệm về hôn nhân.",
+        "answer": "The rising divorce rate in Vietnam over the past decade reflects changing attitudes towards marriage."
+      },
+      {
+        "vi": "Hôn nhân sắp xếp vẫn còn tồn tại ở một số cộng đồng dân tộc thiểu số tại Việt Nam.",
+        "answer": "Arranged marriage still exists in some ethnic minority communities in Vietnam."
+      },
+      {
+        "vi": "Vai trò giới trong gia đình đang thay đổi khi phụ nữ ngày càng tham gia nhiều hơn vào thị trường lao động.",
+        "answer": "Gender roles in the family are changing as women increasingly participate in the labour market."
+      },
+      {
+        "vi": "Xung đột công việc - gia đình là một trong những nguyên nhân chính gây ra stress ở người trưởng thành.",
+        "answer": "Work-family conflict is one of the main causes of stress in adults."
+      },
+      {
+        "vi": "Chính sách nghỉ thai sản của cha được nhiều nước áp dụng để khuyến khích bình đẳng giới trong gia đình.",
+        "answer": "Paternity leave policies are implemented in many countries to promote gender equality within the family."
+      },
+      {
+        "vi": "Chi phí chăm sóc trẻ em quá cao đang là rào cản lớn đối với các cặp vợ chồng trẻ ở thành phố.",
+        "answer": "The high cost of childcare is a major barrier for young couples in cities."
+      },
+      {
+        "vi": "Kế hoạch hoá gia đình trao quyền cho phụ nữ quyết định số con và khoảng cách sinh.",
+        "answer": "Family planning empowers women to decide on the number of children and the spacing between births."
+      },
+      {
+        "vi": "Thu nhập hộ gia đình ảnh hưởng trực tiếp đến cơ hội học tập và phát triển của trẻ em.",
+        "answer": "Household income directly affects the educational and developmental opportunities available to children."
+      },
+      {
+        "vi": "Nhà ở đa thế hệ phổ biến ở châu Á giúp giảm chi phí sinh hoạt và tăng cường sự gắn kết.",
+        "answer": "Multigenerational homes, common in Asia, help reduce living costs and strengthen family ties."
+      },
+      {
+        "vi": "Cơ động xã hội phụ thuộc nhiều vào chất lượng giáo dục và cơ hội mà mỗi gia đình có thể cung cấp cho con cái.",
+        "answer": "Social mobility depends greatly on the quality of education and opportunities that each family can provide for their children."
+      },
+      {
+        "vi": "Ông bà đóng vai trò không thể thiếu trong việc trông nom cháu tại các gia đình Việt Nam có cả hai vợ chồng đều đi làm.",
+        "answer": "Grandparents play an indispensable role in childcare in Vietnamese families where both parents are working."
+      },
+      {
+        "vi": "Sự thay đổi trong quan niệm hôn nhân khiến ngày càng nhiều người trẻ lựa chọn sống chung mà không kết hôn.",
+        "answer": "Changing attitudes towards marriage mean that more and more young people are choosing to cohabit without getting married."
+      },
+      {
+        "vi": "Chăm sóc cha mẹ già khi họ bệnh nặng là trách nhiệm được coi là thiêng liêng trong văn hoá Việt Nam.",
+        "answer": "Caring for ageing parents when they are seriously ill is a responsibility regarded as sacred in Vietnamese culture."
+      },
+      {
+        "vi": "Gia đình là nơi trẻ em học những bài học đầu tiên về sự trung thực, lòng tốt và tôn trọng người khác.",
+        "answer": "The family is where children learn their first lessons in honesty, kindness, and respect for others."
+      },
+      {
+        "vi": "Sự gia tăng của các gia đình đơn thân đặt ra nhu cầu cấp thiết về chính sách hỗ trợ nhà nước cho phụ huynh đơn thân.",
+        "answer": "The rise in single-parent families creates an urgent need for government support policies for single parents."
+      },
+      {
+        "vi": "Mạng xã hội đang thay đổi cách các gia đình giao tiếp và kết nối với nhau cả khi ở gần lẫn khi ở xa.",
+        "answer": "Social media is changing the way families communicate and connect with each other, both when close together and when far apart."
+      },
+      {
+        "vi": "Hội chứng con một ngày càng được nghiên cứu kỹ hơn khi nhiều quốc gia châu Á đối mặt với tỷ lệ sinh giảm mạnh.",
+        "answer": "Only-child syndrome is receiving increasing research attention as many Asian countries face a sharp decline in birth rates."
+      },
+      {
+        "vi": "Áp lực để con cái thành công theo tiêu chuẩn xã hội đôi khi khiến cha mẹ vô tình đặt gánh nặng tâm lý lên con.",
+        "answer": "The pressure for children to succeed according to social standards sometimes causes parents to unknowingly place a psychological burden on their children."
+      },
+      {
+        "vi": "Tỷ lệ sinh giảm ở Việt Nam phản ánh sự thay đổi trong thái độ của phụ nữ đối với hôn nhân và thiên chức làm mẹ.",
+        "answer": "The declining birth rate in Vietnam reflects a shift in women's attitudes towards marriage and motherhood."
+      },
+      {
+        "vi": "Chia sẻ công việc nhà đồng đều giữa các thành viên gia đình giúp giảm gánh nặng cho phụ nữ và xây dựng bình đẳng giới trong gia đình.",
+        "answer": "An equal share of household chores among family members helps reduce the burden on women and builds gender equality within the home."
+      },
+      {
+        "vi": "Trẻ em lớn lên trong môi trường gia đình ổn định về mặt cảm xúc thường có kết quả học tập và xã hội tốt hơn.",
+        "answer": "Children raised in an emotionally stable family environment tend to achieve better academic and social outcomes."
+      },
+      {
+        "vi": "Quyết định có con hay không ngày càng mang tính cá nhân hơn và ít bị ảnh hưởng bởi kỳ vọng xã hội và gia đình.",
+        "answer": "The decision whether or not to have children is increasingly personal and less influenced by social and family expectations."
+      },
+      {
+        "vi": "Thiếu thời gian chất lượng bên gia đình do áp lực công việc là vấn đề mà nhiều cha mẹ hiện đại phải vật lộn.",
+        "answer": "A lack of quality family time due to work pressure is an issue with which many modern parents struggle."
+      },
+      {
+        "vi": "Di cư lao động khiến nhiều gia đình nông thôn Việt Nam phải sống xa nhau trong thời gian dài, ảnh hưởng đến gắn kết gia đình.",
+        "answer": "Labour migration means many rural Vietnamese families have to live apart for extended periods, affecting family cohesion."
+      },
+      {
+        "vi": "Cha mẹ trực thăng quản lý con cái quá mức có thể cản trở sự phát triển tính tự lập và khả năng giải quyết vấn đề của trẻ.",
+        "answer": "Helicopter parents who over-manage their children can hinder the development of their independence and problem-solving abilities."
+      },
+      {
+        "vi": "Mô hình gia đình hạt nhân phương Tây đang dần được chấp nhận hơn ở đô thị Việt Nam dù gia đình mở rộng vẫn là lý tưởng.",
+        "answer": "The Western nuclear family model is becoming more accepted in urban Vietnam despite the extended family still being the cultural ideal."
+      },
+      {
+        "vi": "Trẻ em được nuôi dưỡng trong môi trường đa ngôn ngữ thường có lợi thế về nhận thức và khả năng thích nghi văn hoá.",
+        "answer": "Children raised in a multilingual environment often have cognitive advantages and greater cultural adaptability."
+      },
+      {
+        "vi": "Tuổi kết hôn trung bình ở Việt Nam đang tăng lên khi người trẻ ưu tiên học tập và sự nghiệp trước khi lập gia đình.",
+        "answer": "The average age of marriage in Vietnam is rising as young people prioritise education and career before starting a family."
+      },
+      {
+        "vi": "Sự đa dạng trong cấu trúc gia đình hiện đại đòi hỏi pháp luật phải thích nghi để bảo vệ quyền lợi của mọi thành viên.",
+        "answer": "The diversity of modern family structures requires the law to adapt to protect the rights of all members."
+      },
+      {
+        "vi": "Câu chuyện gia đình và truyền thống được truyền lại qua các thế hệ là nền tảng hình thành bản sắc cá nhân.",
+        "answer": "Family stories and traditions passed down through the generations are the foundation of personal identity."
+      }
+    ],
+    "is_published": true,
+    "order_index": 9,
+    "created_at": "2026-05-26T00:58:29.639252+00:00",
+    "updated_at": "2026-05-26T00:58:29.639252+00:00"
+  },
+  {
+    "id": "0d7fe20e-156d-438f-a70a-3d2d92546121",
+    "exercise_id": "buoc2-social-media",
+    "title": "Mạng xã hội",
+    "topic": {
+      "en": "Social Media",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Sức ảnh hưởng của mạng xã hội đến quyết định mua hàng của người tiêu dùng là rất đáng kể.",
+        "answer": "The influence of social media on consumer purchasing decisions is considerable."
+      },
+      {
+        "vi": "Cộng đồng trực tuyến có thể mang lại sự kết nối và hỗ trợ mạnh mẽ cho những người cô đơn.",
+        "answer": "Online communities can provide strong connection and support for people who feel lonely."
+      },
+      {
+        "vi": "Dấu vết kỹ thuật số mà chúng ta để lại trên mạng có thể ảnh hưởng đến cơ hội nghề nghiệp sau này.",
+        "answer": "The digital footprint we leave online can affect future career opportunities."
+      },
+      {
+        "vi": "Người tạo nội dung trên YouTube và TikTok đang trở thành nghề hái ra tiền ở Việt Nam.",
+        "answer": "Content creators on YouTube and TikTok are becoming a lucrative profession in Vietnam."
+      },
+      {
+        "vi": "Nội dung lan truyền trên mạng xã hội không phải lúc nào cũng chính xác và đáng tin cậy.",
+        "answer": "Viral content on social media is not always accurate and reliable."
+      },
+      {
+        "vi": "Bắt nạt trực tuyến gây ra những tổn thương tâm lý nghiêm trọng cho nạn nhân, đặc biệt là trẻ em.",
+        "answer": "Cyberbullying causes serious psychological harm to victims, especially children."
+      },
+      {
+        "vi": "Thuật toán mạng xã hội tạo ra buồng vang khiến người dùng chỉ tiếp xúc với quan điểm giống họ.",
+        "answer": "Social media algorithms create echo chambers that expose users only to views similar to their own."
+      },
+      {
+        "vi": "Marketing qua người nổi tiếng trên mạng đã trở thành công cụ quảng bá hiệu quả cho nhiều thương hiệu.",
+        "answer": "Influencer marketing on social media has become an effective promotional tool for many brands."
+      },
+      {
+        "vi": "Tin giả lan truyền nhanh hơn tin thật trên mạng xã hội và gây ra nhiều hệ luỵ nghiêm trọng.",
+        "answer": "Fake news spreads faster than real news on social media and causes many serious consequences."
+      },
+      {
+        "vi": "So sánh xã hội qua các hình ảnh được chỉnh sửa trên Instagram khiến nhiều người tự ti và bất hạnh.",
+        "answer": "Social comparison through edited images on Instagram makes many people feel insecure and unhappy."
+      },
+      {
+        "vi": "Nhiều người dùng không biết cách điều chỉnh cài đặt quyền riêng tư và vô tình chia sẻ thông tin cá nhân.",
+        "answer": "Many users do not know how to adjust their privacy settings and accidentally share personal information."
+      },
+      {
+        "vi": "Thiên kiến thuật toán có thể khiến một số nhóm người bị thiệt thòi trong tiếp cận thông tin và cơ hội.",
+        "answer": "Algorithm bias can disadvantage certain groups of people in their access to information and opportunities."
+      },
+      {
+        "vi": "Hoạt động xã hội trực tuyến đã giúp nhiều phong trào nhân quyền và môi trường lan rộng trên toàn cầu.",
+        "answer": "Online activism has helped many human rights and environmental movements spread globally."
+      },
+      {
+        "vi": "Nghiện màn hình ở trẻ nhỏ là nỗi lo lắng lớn của nhiều bậc phụ huynh trong thời đại số.",
+        "answer": "Screen addiction in young children is a major concern for many parents in the digital age."
+      },
+      {
+        "vi": "Chiến dịch hashtag #MeToo đã tạo ra làn sóng nhận thức toàn cầu về vấn đề quấy rối tình dục.",
+        "answer": "The #MeToo hashtag campaign created a global wave of awareness about sexual harassment."
+      },
+      {
+        "vi": "Nội dung do người dùng tạo đang dần thay thế nội dung truyền thông chuyên nghiệp trên nhiều nền tảng.",
+        "answer": "User-generated content is gradually replacing professionally produced media content on many platforms."
+      },
+      {
+        "vi": "Nhiều người lựa chọn cai nghiện kỹ thuật số vào cuối tuần để tìm lại sự bình yên trong tâm trí.",
+        "answer": "Many people choose to do a digital detox at the weekend to find peace of mind."
+      },
+      {
+        "vi": "Kiểm duyệt nền tảng của các mạng xã hội lớn đang gây ra tranh luận về ranh giới tự do ngôn luận.",
+        "answer": "Platform censorship by major social networks is sparking debate about the boundaries of free speech."
+      },
+      {
+        "vi": "Quy định về mạng xã hội cần phải theo kịp tốc độ phát triển công nghệ để bảo vệ người dùng.",
+        "answer": "Social media regulation must keep pace with the speed of technological development to protect users."
+      },
+      {
+        "vi": "Bong bóng lọc trên các nền tảng xã hội khiến người dùng ngày càng xa lạ với quan điểm đối lập.",
+        "answer": "The filter bubble on social platforms makes users increasingly unfamiliar with opposing viewpoints."
+      },
+      {
+        "vi": "Quấy rối trực tuyến nhắm vào phụ nữ và người thiểu số diễn ra phổ biến trên hầu hết các nền tảng.",
+        "answer": "Online harassment targeting women and minorities is prevalent across most platforms."
+      },
+      {
+        "vi": "Chủ đề thịnh hành trên Twitter có thể được tạo ra một cách giả tạo bởi các mạng lưới tài khoản ảo.",
+        "answer": "Trending topics on Twitter can be artificially manufactured by networks of fake accounts."
+      },
+      {
+        "vi": "Video ngắn trên TikTok đang cạnh tranh mạnh mẽ với các định dạng nội dung truyền thống.",
+        "answer": "Short-form video on TikTok is competing strongly with traditional content formats."
+      },
+      {
+        "vi": "Cai mạng xã hội trong một tuần giúp nhiều người cảm thấy bình tĩnh hơn và tập trung hơn vào cuộc sống thực.",
+        "answer": "Taking a social media detox for a week helps many people feel calmer and more focused on real life."
+      },
+      {
+        "vi": "Sức khoẻ kỹ thuật số là khái niệm mới nhắc nhở mọi người cần sử dụng công nghệ có ý thức hơn.",
+        "answer": "Digital wellbeing is a new concept reminding people to use technology more consciously."
+      },
+      {
+        "vi": "Nền kinh tế người sáng tạo nội dung đang phát triển mạnh khi ngày càng nhiều người kiếm sống bằng cách xây dựng thương hiệu cá nhân trực tuyến.",
+        "answer": "The creator economy is thriving as more and more people make a living by building their personal brand online."
+      },
+      {
+        "vi": "Sự bùng nổ của TikTok đã buộc các nền tảng cũ hơn như Instagram và YouTube phải thay đổi thuật toán và định dạng nội dung.",
+        "answer": "The rise of TikTok has forced older platforms such as Instagram and YouTube to change their algorithms and content formats."
+      },
+      {
+        "vi": "Các chính phủ trên thế giới đang tranh luận về cách quản lý mạng xã hội mà không vi phạm quyền tự do ngôn luận.",
+        "answer": "Governments around the world are debating how to regulate social media without infringing on freedom of expression."
+      },
+      {
+        "vi": "Hiện tượng FOMO (sợ bỏ lỡ) được khuếch đại bởi mạng xã hội khiến nhiều người không thể thoát khỏi vòng cuộn tin tức vô tận.",
+        "answer": "The fear of missing out (FOMO) amplified by social media makes many people unable to escape the endless scroll of their news feed."
+      },
+      {
+        "vi": "Các thương hiệu đang ngày càng phụ thuộc vào người dùng thực để tạo nội dung chân thực hơn là vào quảng cáo truyền thống.",
+        "answer": "Brands are becoming increasingly reliant on real users to create authentic content rather than on traditional advertising."
+      },
+      {
+        "vi": "Mạng xã hội đã trao tiếng nói cho những nhóm người trước đây bị gạt ra ngoài lề trong truyền thông chính thống.",
+        "answer": "Social media has given a voice to groups of people who were previously marginalised in mainstream media."
+      },
+      {
+        "vi": "Nội dung gây tranh cãi lan truyền nhanh hơn trên mạng vì thuật toán ưu tiên những gì gây phản ứng cảm xúc mạnh.",
+        "answer": "Controversial content spreads faster online because algorithms prioritise content that triggers strong emotional reactions."
+      },
+      {
+        "vi": "Hình ảnh lý tưởng hoá về cơ thể trên mạng xã hội đang làm trầm trọng thêm tình trạng rối loạn ăn uống ở người trẻ.",
+        "answer": "Idealised body images on social media are worsening eating disorders among young people."
+      },
+      {
+        "vi": "Các chiến dịch truyền thông xã hội vì mục đích xã hội đang ngày càng hiệu quả hơn trong việc huy động nguồn lực và thay đổi chính sách.",
+        "answer": "Social media campaigns for social causes are becoming increasingly effective at mobilising resources and driving policy change."
+      },
+      {
+        "vi": "Dữ liệu người dùng là 'dầu mỏ' của thời đại kỹ thuật số, và các nền tảng mạng xã hội là những người khai thác giàu có nhất.",
+        "answer": "User data is the oil of the digital age, and social media platforms are its wealthiest extractors."
+      },
+      {
+        "vi": "Tin tức giả mạo lan truyền trên mạng xã hội đòi hỏi người dùng phải phát triển kỹ năng tư duy phê phán và kiểm chứng thông tin.",
+        "answer": "The spread of fake news on social media requires users to develop critical thinking skills and fact-checking habits."
+      },
+      {
+        "vi": "Áp lực phải có cuộc sống đẹp đẽ để đăng lên mạng xã hội đang tạo ra chênh lệch nguy hiểm giữa bản thân thực và bản thân ảo.",
+        "answer": "The pressure to present a beautiful life for social media is creating a dangerous gap between one's real and online self."
+      },
+      {
+        "vi": "Mô hình kinh doanh dựa trên quảng cáo của các mạng xã hội tạo ra động lực giữ người dùng trên nền tảng càng lâu càng tốt.",
+        "answer": "The advertising-based business model of social networks creates an incentive to keep users on the platform for as long as possible."
+      },
+      {
+        "vi": "Tính năng ẩn danh trên mạng xã hội vừa bảo vệ người dùng dễ bị tổn thương vừa tạo điều kiện cho hành vi lạm dụng.",
+        "answer": "Anonymity features on social media both protect vulnerable users and create conditions for abusive behaviour."
+      },
+      {
+        "vi": "Đặc điểm của mạng xã hội là nội dung cảm xúc tiêu cực như tức giận và ghê sợ lan truyền nhanh hơn nhiều so với nội dung tích cực.",
+        "answer": "A characteristic of social media is that emotionally negative content such as anger and disgust spreads far more rapidly than positive content."
+      },
+      {
+        "vi": "Người nổi tiếng trực tuyến ngày nay có tầm ảnh hưởng đến quyết định của người tiêu dùng vượt trội so với người nổi tiếng truyền thống.",
+        "answer": "Online celebrities today have a greater influence on consumer decisions than traditional celebrities."
+      },
+      {
+        "vi": "Xu hướng livestream mua hàng đang bùng nổ ở châu Á, kết hợp giải trí với thương mại điện tử một cách độc đáo.",
+        "answer": "The live-streaming shopping trend is booming across Asia, combining entertainment and e-commerce in a unique way."
+      },
+      {
+        "vi": "Tác động của mạng xã hội đến bầu cử và chính trị ngày càng được chú ý hơn sau khi nhiều cuộc bầu cử chịu ảnh hưởng của thông tin sai lệch.",
+        "answer": "The impact of social media on elections and politics has received growing attention after several elections were influenced by misinformation."
+      },
+      {
+        "vi": "Nhiều trường học đang đưa giáo dục về an toàn trực tuyến vào chương trình để bảo vệ học sinh khỏi các nguy cơ trên mạng.",
+        "answer": "Many schools are incorporating online safety education into their curriculum to protect students from the dangers of the internet."
+      },
+      {
+        "vi": "Mạng xã hội đã tạo ra những cộng đồng toàn cầu mạnh mẽ xung quanh các sở thích và bản sắc chung, vượt qua biên giới địa lý.",
+        "answer": "Social media has created powerful global communities around shared interests and identities that transcend geographical borders."
+      }
+    ],
+    "is_published": true,
+    "order_index": 10,
+    "created_at": "2026-05-26T00:58:29.876053+00:00",
+    "updated_at": "2026-05-26T00:58:29.876053+00:00"
+  },
+  {
+    "id": "e62509e7-424d-435c-9a34-352608feb652",
+    "exercise_id": "buoc2-shopping",
+    "title": "Mua sắm",
+    "topic": {
+      "en": "Shopping",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Hành vi người tiêu dùng Việt Nam đang thay đổi mạnh theo hướng ưa chuộng mua sắm trực tuyến.",
+        "answer": "Vietnamese consumer behaviour is shifting strongly towards a preference for online shopping."
+      },
+      {
+        "vi": "Mua sắm bốc đồng dễ xảy ra khi người tiêu dùng bị kích thích bởi các chương trình khuyến mãi flash sale.",
+        "answer": "Impulse buying easily occurs when consumers are stimulated by flash sale promotions."
+      },
+      {
+        "vi": "Lòng trung thành với thương hiệu được xây dựng qua chất lượng nhất quán và dịch vụ khách hàng xuất sắc.",
+        "answer": "Brand loyalty is built through consistent quality and excellent customer service."
+      },
+      {
+        "vi": "Nhiều người dùng mua sắm để giải toả khi stress nhưng đây không phải là giải pháp lành mạnh lâu dài.",
+        "answer": "Many people use retail therapy to relieve stress, but this is not a healthy long-term solution."
+      },
+      {
+        "vi": "Tiêu dùng có đạo đức nghĩa là lựa chọn sản phẩm từ những thương hiệu cam kết bảo vệ môi trường.",
+        "answer": "Ethical consumerism means choosing products from brands committed to environmental protection."
+      },
+      {
+        "vi": "Sức mua của tầng lớp trung lưu Việt Nam tăng mạnh đang thúc đẩy tiêu dùng nội địa.",
+        "answer": "The rising purchasing power of Vietnam's middle class is driving domestic consumption."
+      },
+      {
+        "vi": "Đứt gãy chuỗi cung ứng toàn cầu trong đại dịch đã gây ra tình trạng thiếu hàng và tăng giá.",
+        "answer": "Global supply chain disruptions during the pandemic led to shortages of goods and price increases."
+      },
+      {
+        "vi": "Hàng giả không chỉ gây thiệt hại kinh tế mà còn có thể nguy hiểm đến sức khoẻ người tiêu dùng.",
+        "answer": "Counterfeit goods not only cause economic damage but can also be dangerous to consumer health."
+      },
+      {
+        "vi": "Chiến lược giảm giá sâu vào các dịp lễ tết là công cụ hiệu quả để kích cầu tiêu dùng.",
+        "answer": "Deep discount strategies during festive holidays are an effective tool to stimulate consumer demand."
+      },
+      {
+        "vi": "Nhu cầu tiêu thụ thương hiệu xa xỉ ở Việt Nam đang tăng mạnh theo sự phát triển kinh tế.",
+        "answer": "Demand for luxury brands in Vietnam is rising sharply alongside economic development."
+      },
+      {
+        "vi": "Sàn thương mại điện tử như Shopee và Lazada đang chiếm lĩnh thị trường bán lẻ Việt Nam.",
+        "answer": "Online marketplaces such as Shopee and Lazada are dominating the Vietnamese retail market."
+      },
+      {
+        "vi": "Black friday đã trở thành ngày mua sắm lớn nhất năm không chỉ ở Mỹ mà còn ở nhiều nơi trên thế giới.",
+        "answer": "Black Friday has become the biggest shopping day of the year not only in the US but also in many parts of the world."
+      },
+      {
+        "vi": "Đánh giá sản phẩm từ người dùng thực sự có tầm ảnh hưởng rất lớn đến quyết định của người mua hàng.",
+        "answer": "Product reviews from real users have a very significant influence on buyers' purchasing decisions."
+      },
+      {
+        "vi": "Quyền người tiêu dùng được pháp luật bảo vệ nhưng nhiều người chưa biết cách đòi quyền lợi chính đáng.",
+        "answer": "Consumer rights are protected by law, but many people do not know how to claim their legitimate entitlements."
+      },
+      {
+        "vi": "Thời trang nhanh giúp người tiêu dùng mặc đẹp với giá rẻ nhưng gây ra lượng rác thải khổng lồ.",
+        "answer": "Fast fashion allows consumers to dress stylishly at low cost but generates enormous amounts of waste."
+      },
+      {
+        "vi": "Thị trường hàng cũ đang bùng nổ khi ngày càng nhiều người muốn tiêu dùng bền vững hơn.",
+        "answer": "The second-hand market is booming as more and more people want to consume more sustainably."
+      },
+      {
+        "vi": "Mô hình đăng ký của Netflix và Spotify đã thay đổi cách người ta tiêu thụ nội dung giải trí.",
+        "answer": "The subscription model of Netflix and Spotify has transformed the way people consume entertainment content."
+      },
+      {
+        "vi": "Bão hoà thị trường điện thoại thông minh buộc các hãng phải liên tục đổi mới để thu hút người mua.",
+        "answer": "Market saturation in smartphones is forcing manufacturers to continuously innovate to attract buyers."
+      },
+      {
+        "vi": "Nhạy cảm về giá của người tiêu dùng Việt Nam vẫn còn cao, đặc biệt với các mặt hàng thiết yếu.",
+        "answer": "Vietnamese consumers' price sensitivity remains high, especially for essential goods."
+      },
+      {
+        "vi": "Nghiện mua sắm trực tuyến ngày càng phổ biến, đặc biệt sau khi các app mua hàng trở nên tiện lợi.",
+        "answer": "Online shopping addiction is increasingly prevalent, especially since shopping apps have become more convenient."
+      },
+      {
+        "vi": "Tiêu dùng xanh đang dần được người Việt Nam đón nhận qua việc chọn sản phẩm hữu cơ và bao bì tái chế.",
+        "answer": "Green consumerism is gradually being embraced by Vietnamese people through choosing organic products and recycled packaging."
+      },
+      {
+        "vi": "Đổi mới trong bán lẻ như cửa hàng không thu ngân đang được thử nghiệm ở một số thành phố lớn.",
+        "answer": "Retail innovations such as cashierless stores are being trialled in some major cities."
+      },
+      {
+        "vi": "Chính sách bảo hành rõ ràng và dài hạn là yếu tố giúp nhiều thương hiệu giữ chân khách hàng.",
+        "answer": "A clear and long-term warranty policy is a factor that helps many brands retain customers."
+      },
+      {
+        "vi": "Mô hình trả tiền theo lần dùng đang được áp dụng trong nhiều lĩnh vực từ xe đạp thuê đến phần mềm.",
+        "answer": "The pay-per-use model is being applied across many sectors from bicycle rental to software."
+      },
+      {
+        "vi": "Thương mại xuyên biên giới qua các sàn như Amazon giúp người Việt tiếp cận hàng hoá quốc tế dễ dàng hơn.",
+        "answer": "Cross-border trade through platforms like Amazon allows Vietnamese people to access international goods more easily."
+      },
+      {
+        "vi": "Các thương hiệu thời trang cao cấp đang mở rộng sang thị trường hàng tái chế và đã qua sử dụng để đáp ứng nhu cầu tiêu dùng bền vững.",
+        "answer": "Luxury fashion brands are expanding into the resale and pre-owned market to meet sustainable consumption demand."
+      },
+      {
+        "vi": "Chính sách hoàn trả linh hoạt là yếu tố quan trọng giúp người mua hàng trực tuyến tự tin hơn khi đặt mua sản phẩm chưa thấy trực tiếp.",
+        "answer": "A flexible returns policy is an important factor that gives online shoppers greater confidence when ordering products they have not seen in person."
+      },
+      {
+        "vi": "Phân tích dữ liệu hành vi mua sắm cho phép doanh nghiệp cá nhân hoá trải nghiệm mua hàng và tăng khả năng chuyển đổi.",
+        "answer": "Analysis of shopping behaviour data allows businesses to personalise the buying experience and increase conversion rates."
+      },
+      {
+        "vi": "Người tiêu dùng Gen Z đòi hỏi tính minh bạch cao từ các thương hiệu về nguồn gốc sản phẩm, điều kiện lao động và tác động môi trường.",
+        "answer": "Gen Z consumers demand high levels of transparency from brands regarding product origins, labour conditions, and environmental impact."
+      },
+      {
+        "vi": "Chương trình khách hàng thân thiết với điểm thưởng là công cụ hiệu quả để doanh nghiệp tăng tần suất mua hàng và giữ chân khách.",
+        "answer": "Loyalty programmes with reward points are an effective tool for businesses to increase purchase frequency and retain customers."
+      },
+      {
+        "vi": "Sự ra đời của phòng thử đồ ảo sử dụng AR giúp người mua hàng trực tuyến hình dung sản phẩm trên người trước khi đặt hàng.",
+        "answer": "The advent of virtual fitting rooms using augmented reality helps online shoppers visualise products on themselves before ordering."
+      },
+      {
+        "vi": "Việc mua sắm bốc đồng trong các phiên sale flash dễ dẫn đến hối tiếc sau mua và gia tăng tình trạng lãng phí.",
+        "answer": "Impulsive purchasing during flash sales easily leads to post-purchase regret and contributes to increased waste."
+      },
+      {
+        "vi": "Thuế nhập khẩu đối với hàng mua qua mạng từ nước ngoài đang được nhiều quốc gia tăng cường để bảo vệ nhà sản xuất trong nước.",
+        "answer": "Import duties on goods purchased online from abroad are being tightened by many countries to protect domestic manufacturers."
+      },
+      {
+        "vi": "Phong trào minimalism khuyến khích người tiêu dùng mua ít hơn nhưng chất lượng hơn, thay vì tích luỹ đồ đạc không cần thiết.",
+        "answer": "The minimalism movement encourages consumers to buy less but better quality, rather than accumulating unnecessary possessions."
+      },
+      {
+        "vi": "Sự gia tăng của cửa hàng trải nghiệm cho thấy bán lẻ vật lý vẫn có chỗ đứng khi tạo được những trải nghiệm mà mua online không có.",
+        "answer": "The rise of experiential stores shows that physical retail still has a place when it can create experiences that online shopping cannot offer."
+      },
+      {
+        "vi": "Quảng cáo cá nhân hoá dựa trên dữ liệu duyệt web của người dùng đang gây ra tranh luận về ranh giới giữa tiếp thị và xâm phạm quyền riêng tư.",
+        "answer": "Personalised advertising based on users' browsing data is sparking debate about the boundary between marketing and invasion of privacy."
+      },
+      {
+        "vi": "Ngành bán lẻ đang chuyển đổi mạnh mẽ sang mô hình omnichannel kết hợp trực tuyến và ngoại tuyến để phục vụ khách hàng tốt hơn.",
+        "answer": "The retail sector is making a strong shift towards an omnichannel model combining online and offline channels to better serve customers."
+      },
+      {
+        "vi": "Các nhà bán lẻ lớn đang ứng dụng AI để dự báo nhu cầu và quản lý kho hàng hiệu quả hơn, giảm thiểu tình trạng tồn kho hay hết hàng.",
+        "answer": "Major retailers are applying AI to forecast demand and manage inventory more efficiently, minimising overstock and out-of-stock situations."
+      },
+      {
+        "vi": "Xu hướng mua sắm có ý thức về môi trường đang tạo ra áp lực tích cực buộc các thương hiệu phải công khai chuỗi cung ứng của mình.",
+        "answer": "The trend towards environmentally conscious shopping is creating positive pressure for brands to make their supply chains public."
+      },
+      {
+        "vi": "Việc so sánh giá dễ dàng trên môi trường trực tuyến đã làm giảm đáng kể sức mạnh định giá của các nhà bán lẻ truyền thống.",
+        "answer": "The ease of price comparison online has significantly reduced the pricing power of traditional retailers."
+      },
+      {
+        "vi": "Thẻ tín dụng và dịch vụ mua trước trả sau đang thúc đẩy chi tiêu vượt mức thu nhập, đặc biệt trong giới trẻ.",
+        "answer": "Credit cards and buy-now-pay-later services are encouraging spending beyond income levels, particularly among young people."
+      },
+      {
+        "vi": "Mô hình kinh doanh trực tiếp đến người tiêu dùng (D2C) giúp thương hiệu kiểm soát trải nghiệm khách hàng và tăng biên lợi nhuận.",
+        "answer": "The direct-to-consumer (D2C) business model allows brands to control the customer experience and increase profit margins."
+      },
+      {
+        "vi": "Nền kinh tế cho thuê đang phát triển mạnh khi người tiêu dùng nhận ra rằng quyền sử dụng quan trọng hơn quyền sở hữu trong nhiều trường hợp.",
+        "answer": "The rental economy is thriving as consumers realise that the right to use something is more important than ownership in many situations."
+      },
+      {
+        "vi": "Việc tặng quà mang thông điệp có ý nghĩa ngày càng được ưa chuộng hơn so với quà đắt tiền nhưng thiếu tính cá nhân.",
+        "answer": "Giving gifts with meaningful messages is increasingly favoured over expensive but impersonal presents."
+      },
+      {
+        "vi": "Các sàn thương mại điện tử đang đầu tư mạnh vào công nghệ tìm kiếm bằng hình ảnh để giúp người dùng tìm sản phẩm dễ dàng hơn.",
+        "answer": "E-commerce platforms are investing heavily in visual search technology to help users find products more easily."
+      }
+    ],
+    "is_published": true,
+    "order_index": 11,
+    "created_at": "2026-05-26T00:58:30.113534+00:00",
+    "updated_at": "2026-05-26T00:58:30.113534+00:00"
+  },
+  {
+    "id": "978c8377-bbca-4d3a-80df-c01c5deabf2a",
+    "exercise_id": "buoc2-city-life",
+    "title": "Cuộc sống đô thị",
+    "topic": {
+      "en": "City Life",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Đô thị hoá tràn lan tại các vùng ven Hà Nội và TP.HCM đang tạo ra những khu dân cư thiếu tiện ích.",
+        "answer": "Urban sprawl on the outskirts of Hanoi and Ho Chi Minh City is creating residential areas that lack amenities."
+      },
+      {
+        "vi": "Nhà ở giá cả phải chăng ngày càng khan hiếm tại các thành phố lớn khiến nhiều người lao động phải thuê trọ xa trung tâm.",
+        "answer": "Affordable housing is becoming increasingly scarce in major cities, forcing many workers to rent far from the centre."
+      },
+      {
+        "vi": "Phát triển cơ sở hạ tầng giao thông là ưu tiên hàng đầu để giảm tình trạng ùn tắc tại Hà Nội.",
+        "answer": "Transport infrastructure development is the top priority for reducing congestion in Hanoi."
+      },
+      {
+        "vi": "Đầu tư vào phương tiện giao thông công cộng như metro là giải pháp lâu dài để giảm ùn tắc đô thị.",
+        "answer": "Investing in public transport such as the metro is a long-term solution for reducing urban congestion."
+      },
+      {
+        "vi": "Tắc nghẽn giao thông vào giờ cao điểm là vấn đề kinh niên ở Hà Nội và TP.HCM.",
+        "answer": "Traffic congestion during rush hour is a chronic problem in Hanoi and Ho Chi Minh City."
+      },
+      {
+        "vi": "Đô thị hoá nhanh chóng đang kéo theo nhiều vấn đề xã hội như thiếu trường học và bệnh viện.",
+        "answer": "Rapid urbanisation is bringing with it many social problems such as shortages of schools and hospitals."
+      },
+      {
+        "vi": "Tăng giá trị khu đô thị tại các quận trung tâm đang đẩy người nghèo ra khỏi nơi họ đã sống nhiều đời.",
+        "answer": "Gentrification in central districts is pushing the poor out of areas where they have lived for generations."
+      },
+      {
+        "vi": "Gắn kết xã hội trong các khu chung cư cao tầng thường kém hơn so với các khu phố truyền thống.",
+        "answer": "Social cohesion in high-rise apartment blocks is often weaker than in traditional neighbourhoods."
+      },
+      {
+        "vi": "Nghèo đô thị ẩn sau những toà nhà cao tầng là thực trạng mà nhiều thành phố đang phải đối mặt.",
+        "answer": "Urban poverty hidden behind high-rise buildings is a reality that many cities are confronting."
+      },
+      {
+        "vi": "Không gian xanh trong đô thị ngày càng bị thu hẹp để nhường chỗ cho các dự án bất động sản.",
+        "answer": "Green spaces in cities are increasingly being reduced to make way for real estate projects."
+      },
+      {
+        "vi": "Tội phạm đường phố tăng cao ở những khu vực đông dân nhưng thiếu ánh sáng và camera giám sát.",
+        "answer": "Street crime increases in densely populated areas that lack lighting and surveillance cameras."
+      },
+      {
+        "vi": "Ô nhiễm tiếng ồn từ công trường xây dựng và giao thông đang ảnh hưởng đến giấc ngủ của hàng triệu người.",
+        "answer": "Noise pollution from construction sites and traffic is affecting the sleep of millions of people."
+      },
+      {
+        "vi": "Công nghệ thông minh đang được ứng dụng để quản lý đèn đường và hệ thống thoát nước trong thành phố.",
+        "answer": "Smart technology is being applied to manage street lighting and drainage systems in cities."
+      },
+      {
+        "vi": "Quy hoạch đô thị thiếu tầm nhìn dài hạn là nguyên nhân dẫn đến nhiều vấn đề hạ tầng hiện nay.",
+        "answer": "Lack of long-term vision in city planning is the cause of many current infrastructure problems."
+      },
+      {
+        "vi": "Mật độ dân số cao ở các quận nội thành Hà Nội gây áp lực lớn lên hạ tầng y tế và giáo dục.",
+        "answer": "High population density in Hanoi's inner-city districts puts great pressure on healthcare and education infrastructure."
+      },
+      {
+        "vi": "Dân số vô gia cư tăng là hệ quả của sự kết hợp giữa giá nhà tăng cao và thu nhập thấp.",
+        "answer": "A rising homeless population is the consequence of the combination of soaring housing prices and low incomes."
+      },
+      {
+        "vi": "Bất bình đẳng xã hội giữa người giàu và người nghèo trong cùng một thành phố ngày càng lớn hơn.",
+        "answer": "Social inequality between the rich and the poor within the same city is growing ever wider."
+      },
+      {
+        "vi": "Trung tâm cộng đồng đóng vai trò quan trọng trong việc gắn kết cư dân các khu chung cư mới.",
+        "answer": "Community centres play an important role in bringing together residents of new apartment complexes."
+      },
+      {
+        "vi": "Đảo nhiệt đô thị khiến nhiệt độ ở trung tâm thành phố cao hơn ngoại ô từ 3 đến 5 độ C.",
+        "answer": "The urban heat island effect makes city centre temperatures 3 to 5 degrees Celsius higher than the suburbs."
+      },
+      {
+        "vi": "Hà Nội đang nỗ lực xây dựng hình ảnh trung tâm văn hoá và sáng tạo của khu vực Đông Nam Á.",
+        "answer": "Hanoi is striving to build its image as a cultural and creative hub of Southeast Asia."
+      },
+      {
+        "vi": "Khu vực dành cho người đi bộ quanh Hồ Hoàn Kiếm đã trở thành điểm đến yêu thích vào cuối tuần.",
+        "answer": "The pedestrian zone around Hoan Kiem Lake has become a favourite destination at weekends."
+      },
+      {
+        "vi": "Thiết kế không gian công cộng theo giới cần tính đến sự an toàn và tiện nghi cho phụ nữ và trẻ em.",
+        "answer": "Gendered public space design needs to consider the safety and comfort of women and children."
+      },
+      {
+        "vi": "Dự án tái thiết đô thị khu vực quận 4 TP.HCM đang mang lại bộ mặt mới cho khu vực từng xuống cấp.",
+        "answer": "The urban renewal project in District 4 of Ho Chi Minh City is giving a new face to an area that was once run-down."
+      },
+      {
+        "vi": "Vành đai ngoại ô ngày càng mở rộng khi người dân tìm nơi ở rẻ hơn nhưng vẫn làm việc trong thành phố.",
+        "answer": "The commuter belt is expanding as people seek cheaper accommodation while still working in the city."
+      },
+      {
+        "vi": "Tham gia vào hoạt động công dân giúp người dân có tiếng nói trong các quyết định ảnh hưởng đến cuộc sống của họ.",
+        "answer": "Civic engagement allows citizens to have a voice in decisions that affect their lives."
+      },
+      {
+        "vi": "Sự phát triển của metro Hà Nội và TP.HCM đang từng bước thay đổi văn hoá di chuyển của người dân đô thị.",
+        "answer": "The development of metro systems in Hanoi and Ho Chi Minh City is gradually transforming the commuting culture of urban residents."
+      },
+      {
+        "vi": "Giá thuê nhà tại trung tâm các thành phố lớn đã tăng đến mức nhiều công nhân và nhân viên trẻ không thể tiếp cận.",
+        "answer": "Rental prices in the city centres of major cities have risen to a level that many workers and young professionals can no longer afford."
+      },
+      {
+        "vi": "Không gian làm việc chung (co-working space) đang mọc lên như nấm tại các thành phố, phục vụ cộng đồng freelancer và startup ngày càng đông.",
+        "answer": "Co-working spaces are mushrooming across cities, serving an ever-growing community of freelancers and startups."
+      },
+      {
+        "vi": "Tốc độ đô thị hoá nhanh đang xoá đi nhiều di tích kiến trúc cổ, làm mất đi một phần ký ức tập thể của đô thị.",
+        "answer": "The rapid pace of urbanisation is erasing many historic architectural sites, causing the loss of a portion of the city's collective memory."
+      },
+      {
+        "vi": "Ô nhiễm tiếng ồn ở các khu dân cư gần đường lớn ảnh hưởng nghiêm trọng đến chất lượng cuộc sống và sức khoẻ tâm thần.",
+        "answer": "Noise pollution in residential areas near major roads seriously affects quality of life and mental health."
+      },
+      {
+        "vi": "Các khu phố đêm đang được quy hoạch như một chiến lược kích thích kinh tế sau khi nhiều doanh nghiệp giải trí bị ảnh hưởng bởi đại dịch.",
+        "answer": "Night economy districts are being planned as a strategy to stimulate economic activity after many entertainment businesses were affected by the pandemic."
+      },
+      {
+        "vi": "Thiếu không gian vui chơi an toàn cho trẻ em trong các khu chung cư cao tầng là vấn đề quy hoạch đô thị cần được ưu tiên giải quyết.",
+        "answer": "A lack of safe play spaces for children in high-rise apartment complexes is an urban planning issue that needs to be prioritised."
+      },
+      {
+        "vi": "Nhiều thành phố đang đặt mục tiêu trung hoà carbon vào năm 2050 bằng cách chuyển đổi hệ thống giao thông và năng lượng.",
+        "answer": "Many cities are targeting carbon neutrality by 2050 by transforming their transport and energy systems."
+      },
+      {
+        "vi": "Thành phố sáng tạo là khái niệm thu hút nhân tài trẻ và đầu tư nước ngoài thông qua môi trường văn hoá và kinh doanh năng động.",
+        "answer": "The creative city concept attracts young talent and foreign investment through a dynamic cultural and business environment."
+      },
+      {
+        "vi": "Các khu đô thị nén với mật độ cao nhưng đầy đủ tiện ích đi bộ đang được xem là mô hình lý tưởng cho phát triển đô thị bền vững.",
+        "answer": "Compact, high-density urban districts with full walkable amenities are being regarded as the ideal model for sustainable urban development."
+      },
+      {
+        "vi": "Hệ thống thoát nước đô thị xuống cấp gây ra tình trạng ngập úng nghiêm trọng sau mỗi trận mưa lớn ở nhiều quận nội thành.",
+        "answer": "Deteriorating urban drainage systems cause severe flooding after every heavy downpour in many inner-city districts."
+      },
+      {
+        "vi": "Chiến lược thu hút đầu tư nước ngoài của thành phố phải cân bằng giữa tăng trưởng kinh tế và duy trì bản sắc địa phương.",
+        "answer": "A city's strategy for attracting foreign investment must balance economic growth with the preservation of local identity."
+      },
+      {
+        "vi": "Công viên và mảng xanh đô thị không chỉ có giá trị sinh thái mà còn là không gian quan trọng cho sức khoẻ tâm thần của cư dân.",
+        "answer": "Urban parks and green spaces have not only ecological value but are also important spaces for the mental health of residents."
+      },
+      {
+        "vi": "Các chung cư xuống cấp tại các quận trung tâm đang đặt ra bài toán khó về tái định cư cho cư dân và quy hoạch lại không gian.",
+        "answer": "Deteriorating apartment blocks in central districts pose a difficult challenge regarding resident relocation and the replanning of the space."
+      },
+      {
+        "vi": "Xe buýt điện đang dần thay thế xe buýt diesel trong nhiều thành phố như một bước quan trọng hướng tới giao thông phát thải thấp.",
+        "answer": "Electric buses are gradually replacing diesel buses in many cities as an important step towards low-emission transport."
+      },
+      {
+        "vi": "Chiều cao xây dựng ngày càng tăng đang thay đổi đường chân trời các thành phố và đặt ra câu hỏi về quản lý không gian trên cao.",
+        "answer": "Rising building heights are transforming city skylines and raising questions about the management of elevated space."
+      },
+      {
+        "vi": "Người nhập cư đóng vai trò quan trọng trong việc làm đầy khoảng trống lao động tại các thành phố đang phát triển nhanh.",
+        "answer": "Migrants play an important role in filling labour gaps in rapidly growing cities."
+      },
+      {
+        "vi": "Tình trạng tắc nghẽn giao thông làm mất hàng tỷ đồng mỗi ngày do thời gian di chuyển của người lao động kéo dài.",
+        "answer": "Traffic congestion costs billions of dong each day due to the extended commuting time of workers."
+      },
+      {
+        "vi": "Phong trào đô thị hoá nông thôn đang tạo ra các thị trấn nhỏ có cơ sở hạ tầng tốt hơn và giảm áp lực cho các thành phố lớn.",
+        "answer": "The rural urbanisation movement is creating small towns with better infrastructure and reducing pressure on major cities."
+      },
+      {
+        "vi": "Lát vỉa hè bằng bê tông thay vì vật liệu thấm nước đang làm trầm trọng thêm tình trạng ngập úng đô thị trong mùa mưa.",
+        "answer": "Paving footpaths with concrete instead of permeable materials is worsening urban flooding during the rainy season."
+      }
+    ],
+    "is_published": true,
+    "order_index": 12,
+    "created_at": "2026-05-26T00:58:30.376975+00:00",
+    "updated_at": "2026-05-26T00:58:30.376975+00:00"
+  },
+  {
+    "id": "633f04fa-5ccb-41cb-aa67-7d92e6c7361c",
+    "exercise_id": "buoc2-transport",
+    "title": "Giao thông",
+    "topic": {
+      "en": "Transport",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Khí thải carbon từ giao thông chiếm gần một phần tư tổng lượng khí thải nhà kính toàn cầu.",
+        "answer": "Carbon emissions from transport account for nearly a quarter of total global greenhouse gas emissions."
+      },
+      {
+        "vi": "Giao thông công cộng hiệu quả là xương sống của bất kỳ thành phố bền vững nào.",
+        "answer": "Efficient public transit is the backbone of any sustainable city."
+      },
+      {
+        "vi": "Hệ thống quản lý giao thông thông minh sử dụng AI để điều tiết đèn tín hiệu theo thời gian thực.",
+        "answer": "An intelligent traffic management system uses AI to regulate traffic signals in real time."
+      },
+      {
+        "vi": "Xe điện đang ngày càng được ưa chuộng tại Việt Nam nhờ giá thành giảm và chính sách ưu đãi.",
+        "answer": "Electric vehicles are gaining popularity in Vietnam thanks to falling prices and preferential policies."
+      },
+      {
+        "vi": "An toàn đường bộ vẫn là vấn đề đáng lo ngại khi số vụ tai nạn giao thông chưa giảm đáng kể.",
+        "answer": "Road safety remains a concern as the number of traffic accidents has yet to decrease significantly."
+      },
+      {
+        "vi": "Thiếu làn đường dành cho xe đạp là rào cản lớn khiến nhiều người không dám đi xe đạp đi làm.",
+        "answer": "The lack of cycle lanes is a major barrier that discourages many people from cycling to work."
+      },
+      {
+        "vi": "Dự án đường sắt cao tốc Bắc-Nam đang được chính phủ Việt Nam nghiên cứu và chuẩn bị đầu tư.",
+        "answer": "The North-South high-speed rail project is being studied and prepared for investment by the Vietnamese government."
+      },
+      {
+        "vi": "Ngành hàng không Việt Nam đang phục hồi mạnh mẽ sau những thiệt hại nặng nề từ đại dịch.",
+        "answer": "Vietnam's aviation industry is recovering strongly after severe losses suffered during the pandemic."
+      },
+      {
+        "vi": "Một số chuyên gia đề xuất thu phí chống tắc đường tại các tuyến phố trung tâm Hà Nội.",
+        "answer": "Some experts have proposed introducing a congestion charge on central streets in Hanoi."
+      },
+      {
+        "vi": "Đi chung xe không chỉ giảm chi phí đi lại mà còn góp phần giảm lượng xe trên đường.",
+        "answer": "Carpooling not only reduces travel costs but also helps decrease the number of vehicles on the road."
+      },
+      {
+        "vi": "Mạng lưới hậu cần phát triển là điều kiện tiên quyết để Việt Nam trở thành trung tâm thương mại khu vực.",
+        "answer": "A well-developed logistics network is a prerequisite for Vietnam to become a regional trade hub."
+      },
+      {
+        "vi": "Xe tự lái hứa hẹn giảm tai nạn giao thông do lỗi của con người nhưng vẫn cần giải quyết nhiều vấn đề pháp lý.",
+        "answer": "Autonomous vehicles promise to reduce traffic accidents caused by human error but still need many legal issues resolved."
+      },
+      {
+        "vi": "Di chuyển đô thị linh hoạt đòi hỏi sự kết hợp giữa xe buýt, metro, xe đạp và đi bộ.",
+        "answer": "Flexible urban mobility requires a combination of buses, metro, cycling, and walking."
+      },
+      {
+        "vi": "Sân bay quốc tế Nội Bài đang được nâng cấp để trở thành trung tâm giao thông hàng không lớn của khu vực.",
+        "answer": "Noi Bai International Airport is being upgraded to become a major aviation transport hub in the region."
+      },
+      {
+        "vi": "Tiêu chuẩn hiệu quả nhiên liệu ngày càng cao thúc đẩy các hãng xe phát triển động cơ sạch hơn.",
+        "answer": "Increasingly stringent fuel efficiency standards are pushing automakers to develop cleaner engines."
+      },
+      {
+        "vi": "Dịch vụ đi xe chung theo yêu cầu của Grab và Be đã thay đổi cách người dân đô thị di chuyển hàng ngày.",
+        "answer": "Ride-sharing services from Grab and Be have transformed the way urban residents get around daily."
+      },
+      {
+        "vi": "Cơ sở hạ tầng giao thông xuống cấp là trở ngại lớn cho sự phát triển kinh tế của các tỉnh miền núi.",
+        "answer": "Deteriorating transport infrastructure is a major obstacle to economic development in mountainous provinces."
+      },
+      {
+        "vi": "Thương mại đường biển giữ vai trò chủ đạo trong hoạt động xuất nhập khẩu của Việt Nam.",
+        "answer": "Maritime trade plays a dominant role in Vietnam's import and export activities."
+      },
+      {
+        "vi": "An toàn cho người đi bộ cần được ưu tiên hơn khi thiết kế các tuyến đường đô thị mới.",
+        "answer": "Pedestrian safety needs to be given higher priority when designing new urban roads."
+      },
+      {
+        "vi": "Vận chuyển hàng không là lựa chọn tối ưu cho hàng hoá có giá trị cao và cần giao gấp.",
+        "answer": "Air freight is the optimal choice for high-value goods that need to be delivered urgently."
+      },
+      {
+        "vi": "Thiếu chỗ đỗ xe là vấn đề nan giải ở hầu hết các khu đô thị lớn tại Việt Nam.",
+        "answer": "A shortage of parking spaces is a difficult problem in most major urban areas in Vietnam."
+      },
+      {
+        "vi": "Khoảng cách đi lại dài từ ngoại ô vào trung tâm mỗi ngày làm giảm đáng kể chất lượng cuộc sống.",
+        "answer": "A long daily commuting distance from the suburbs to the city centre significantly reduces quality of life."
+      },
+      {
+        "vi": "Tai nạn giao thông do uống rượu bia vẫn là nguyên nhân gây tử vong hàng đầu tại Việt Nam.",
+        "answer": "Traffic accidents caused by drink-driving remain the leading cause of death in Vietnam."
+      },
+      {
+        "vi": "Vận tải biển nội địa đang được đầu tư để giảm tải cho hệ thống đường bộ vốn đang quá tải.",
+        "answer": "Domestic sea transport is being invested in to relieve pressure on the already overloaded road network."
+      },
+      {
+        "vi": "Dịch vụ di chuyển tích hợp cho phép người dùng lên kế hoạch và thanh toán nhiều phương tiện chỉ qua một ứng dụng.",
+        "answer": "Mobility as a service allows users to plan and pay for multiple modes of transport through a single app."
+      },
+      {
+        "vi": "Dự án metro số 1 của TP.HCM sau nhiều năm trì hoãn đã đi vào hoạt động và đang dần thay đổi thói quen đi lại của người dân.",
+        "answer": "Ho Chi Minh City's Metro Line 1, after years of delays, has entered operation and is gradually changing residents' travel habits."
+      },
+      {
+        "vi": "Hàng không carbon trung tính đang được các hãng bay cam kết đạt được vào năm 2050 thông qua nhiên liệu bền vững và bù đắp carbon.",
+        "answer": "Carbon-neutral aviation is being pledged by airlines for 2050 through the use of sustainable fuels and carbon offsets."
+      },
+      {
+        "vi": "Phát triển hệ thống đường sắt kết nối các tỉnh là chìa khoá để giảm tải cho mạng lưới đường bộ đang quá tải.",
+        "answer": "Developing a rail network connecting provinces is the key to relieving pressure on the overloaded road network."
+      },
+      {
+        "vi": "Tình trạng đội vốn và chậm tiến độ trong các dự án hạ tầng giao thông lớn là vấn đề nan giải đối với nhiều quốc gia đang phát triển.",
+        "answer": "Cost overruns and delays in major transport infrastructure projects are a persistent problem for many developing countries."
+      },
+      {
+        "vi": "Xe đạp điện đang nổi lên như giải pháp giao thông xanh và tiết kiệm chi phí cho quãng đường ngắn tại đô thị.",
+        "answer": "Electric bicycles are emerging as a green and cost-effective transport solution for short distances in cities."
+      },
+      {
+        "vi": "Kiến trúc ga tàu điện ngầm không chỉ là công trình hạ tầng mà còn là không gian nghệ thuật công cộng tại nhiều thành phố lớn thế giới.",
+        "answer": "Metro station architecture is not merely infrastructure but also a public art space in many major cities around the world."
+      },
+      {
+        "vi": "Hệ thống giao thông công cộng kết nối thông suốt là yếu tố quan trọng để thành phố giảm sự phụ thuộc vào xe cá nhân.",
+        "answer": "A seamlessly connected public transport system is a crucial factor in reducing a city's dependence on private vehicles."
+      },
+      {
+        "vi": "Quy định giới hạn tốc độ và xử phạt nghiêm các vi phạm giao thông là biện pháp quan trọng nhất để giảm tai nạn đường bộ.",
+        "answer": "Speed limits and strict enforcement of traffic violations are the most important measures for reducing road accidents."
+      },
+      {
+        "vi": "Sự phát triển của drone giao hàng đang mở ra khả năng giao hàng hoá đến vùng hẻo lánh nhanh hơn và rẻ hơn trong tương lai.",
+        "answer": "The development of delivery drones is opening up the possibility of faster and cheaper delivery of goods to remote areas in the future."
+      },
+      {
+        "vi": "Hạ tầng sạc xe điện cần được đầu tư đồng bộ mới có thể thúc đẩy người dân chuyển đổi sang phương tiện điện với quy mô lớn.",
+        "answer": "Electric vehicle charging infrastructure needs to be invested in at scale before people can be encouraged to switch to electric vehicles in large numbers."
+      },
+      {
+        "vi": "Vận tải đa phương thức kết hợp đường bộ, đường sắt và đường biển giúp tối ưu hoá chuỗi cung ứng và giảm chi phí logistics.",
+        "answer": "Multimodal transport combining road, rail, and sea helps optimise supply chains and reduce logistics costs."
+      },
+      {
+        "vi": "Tắc nghẽn tại các cảng hàng không lớn do tăng trưởng hành khách nhanh hơn tốc độ mở rộng hạ tầng là thách thức toàn cầu.",
+        "answer": "Congestion at major airports due to passenger growth outpacing infrastructure expansion is a global challenge."
+      },
+      {
+        "vi": "Giá nhiên liệu biến động mạnh ảnh hưởng trực tiếp đến chi phí vận tải và từ đó tác động đến giá thành hàng hoá.",
+        "answer": "Volatile fuel prices directly affect transport costs and consequently impact the price of goods."
+      },
+      {
+        "vi": "Đầu tư vào đường sắt tốc độ cao có thể giúp giảm áp lực lên các đường hàng không nội địa ngắn và giảm phát thải carbon.",
+        "answer": "Investment in high-speed rail can help reduce pressure on short domestic air routes and lower carbon emissions."
+      },
+      {
+        "vi": "Cầu vượt và đường hầm dành cho người đi bộ là giải pháp hiệu quả để tăng an toàn giao thông tại các nút giao thông đông đúc.",
+        "answer": "Pedestrian overpasses and underpasses are effective solutions for improving traffic safety at busy intersections."
+      },
+      {
+        "vi": "Chiến lược quy hoạch đô thị hướng đến phát triển theo hành lang giao thông công cộng giúp tối ưu hoá sử dụng đất và giảm di chuyển.",
+        "answer": "Urban planning strategies oriented around public transport corridors help optimise land use and reduce travel distances."
+      },
+      {
+        "vi": "Các ứng dụng điều hướng thông minh đang làm thay đổi cách người lái xe phản ứng với tắc nghẽn và tìm tuyến đường thay thế.",
+        "answer": "Smart navigation apps are transforming the way drivers respond to congestion and find alternative routes."
+      },
+      {
+        "vi": "Cước phí vận tải biển quốc tế tăng mạnh sau đại dịch đã gây áp lực lên chuỗi cung ứng toàn cầu và làm tăng giá hàng tiêu dùng.",
+        "answer": "A sharp rise in international sea freight rates after the pandemic placed pressure on global supply chains and pushed up consumer prices."
+      },
+      {
+        "vi": "Tự động hoá trong cảng biển và kho vận đang tăng hiệu quả bốc dỡ hàng hoá nhưng đồng thời giảm nhu cầu lao động thủ công.",
+        "answer": "Automation in seaports and warehouses is increasing cargo handling efficiency but simultaneously reducing demand for manual labour."
+      },
+      {
+        "vi": "Văn hoá chia sẻ xe đang dần thay đổi quan niệm về sở hữu phương tiện cá nhân, đặc biệt trong giới trẻ đô thị.",
+        "answer": "The car-sharing culture is gradually changing attitudes towards private vehicle ownership, particularly among urban young people."
+      }
+    ],
+    "is_published": true,
+    "order_index": 13,
+    "created_at": "2026-05-26T00:58:30.624627+00:00",
+    "updated_at": "2026-05-26T00:58:30.624627+00:00"
+  },
+  {
+    "id": "34b7ad2b-e383-4f86-886d-1dc2cb7e1695",
+    "exercise_id": "buoc2-culture",
+    "title": "Văn hoá",
+    "topic": {
+      "en": "Culture",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Di sản văn hoá của Việt Nam rất phong phú và đa dạng, là nguồn tài nguyên du lịch quý giá.",
+        "answer": "Vietnam's cultural heritage is rich and diverse, representing a valuable tourism resource."
+      },
+      {
+        "vi": "Giữ gìn bản sắc văn hoá trong bối cảnh toàn cầu hoá là bài toán khó mà mọi quốc gia phải đối mặt.",
+        "answer": "Preserving cultural identity in the context of globalisation is a difficult challenge every nation must face."
+      },
+      {
+        "vi": "Đa văn hoá tạo ra sự phong phú về tư tưởng và giúp xã hội thích nghi tốt hơn với sự thay đổi.",
+        "answer": "Multiculturalism creates a richness of ideas and helps society adapt better to change."
+      },
+      {
+        "vi": "Đồng hoá văn hoá quá mức có thể dẫn đến mất đi ngôn ngữ và phong tục của các dân tộc thiểu số.",
+        "answer": "Excessive cultural assimilation can lead to the loss of the language and customs of minority groups."
+      },
+      {
+        "vi": "Văn hoá bản địa của các dân tộc Tây Nguyên đang được nỗ lực bảo tồn và phát huy.",
+        "answer": "The indigenous culture of the Central Highlands ethnic groups is being actively preserved and promoted."
+      },
+      {
+        "vi": "Ngoại giao văn hoá qua ẩm thực, âm nhạc và phim ảnh giúp Việt Nam quảng bá hình ảnh ra thế giới.",
+        "answer": "Cultural diplomacy through food, music, and film helps Vietnam promote its image to the world."
+      },
+      {
+        "vi": "Văn hoá đại chúng Hàn Quốc đang có sức ảnh hưởng lớn đến thị hiếu của giới trẻ Việt Nam.",
+        "answer": "Korean pop culture is having a major influence on the tastes of young Vietnamese people."
+      },
+      {
+        "vi": "Đa dạng văn hoá của 54 dân tộc anh em là điểm mạnh và là niềm tự hào của Việt Nam.",
+        "answer": "The cultural diversity of 54 ethnic groups is a strength and a source of pride for Vietnam."
+      },
+      {
+        "vi": "Định kiến văn hoá thường là nguồn gốc của hiểu lầm và kỳ thị giữa các cộng đồng khác nhau.",
+        "answer": "Cultural stereotypes are often the source of misunderstandings and prejudice between different communities."
+      },
+      {
+        "vi": "Dân ca Quan họ Bắc Ninh được UNESCO công nhận là di sản phi vật thể đại diện của nhân loại.",
+        "answer": "Bac Ninh Quan ho folk songs have been recognised by UNESCO as representative intangible heritage of humanity."
+      },
+      {
+        "vi": "Chuẩn mực văn hoá về lễ nghĩa và tôn trọng người lớn tuổi vẫn được gìn giữ trong gia đình Việt.",
+        "answer": "Cultural norms of etiquette and respect for elders are still maintained in Vietnamese families."
+      },
+      {
+        "vi": "Chiếm dụng văn hoá xảy ra khi yếu tố văn hoá của một cộng đồng bị sử dụng sai ngữ cảnh bởi người ngoài.",
+        "answer": "Cultural appropriation occurs when elements of one community's culture are used out of context by outsiders."
+      },
+      {
+        "vi": "Toàn cầu hoá giúp giao lưu văn hoá nhưng đồng thời cũng đặt ra nguy cơ đồng hoá văn hoá.",
+        "answer": "Globalisation facilitates cultural exchange but also poses the risk of cultural homogenisation."
+      },
+      {
+        "vi": "Nỗ lực bảo tồn tiếng Việt trong cộng đồng người Việt hải ngoại là công việc đòi hỏi sự bền bỉ.",
+        "answer": "Preservation efforts for the Vietnamese language within overseas Vietnamese communities require sustained dedication."
+      },
+      {
+        "vi": "Truyền thống biểu diễn múa rối nước đang được bảo tồn và phát triển để phục vụ du khách.",
+        "answer": "The water puppet performance tradition is being preserved and developed to serve tourists."
+      },
+      {
+        "vi": "Lễ hội văn hoá như Tết Nguyên Đán là dịp để gia đình đoàn tụ và gìn giữ phong tục truyền thống.",
+        "answer": "Cultural festivals such as the Lunar New Year are occasions for family reunions and preserving traditional customs."
+      },
+      {
+        "vi": "Hình thức nghệ thuật tranh Đông Hồ đang đứng trước nguy cơ mai một do thiếu thợ lành nghề.",
+        "answer": "The Dong Ho folk painting art form is facing the risk of decline due to a shortage of skilled craftspeople."
+      },
+      {
+        "vi": "Kỹ năng giao tiếp liên văn hoá ngày càng quan trọng khi Việt Nam hội nhập sâu vào nền kinh tế toàn cầu.",
+        "answer": "Cross-cultural communication skills are becoming increasingly important as Vietnam integrates more deeply into the global economy."
+      },
+      {
+        "vi": "Nhạy cảm văn hoá là kỹ năng không thể thiếu đối với người làm trong môi trường quốc tế.",
+        "answer": "Cultural sensitivity is an indispensable skill for those working in international environments."
+      },
+      {
+        "vi": "Văn hoá thiểu số cần được bảo vệ và phát huy thay vì bị đồng hoá vào văn hoá đa số.",
+        "answer": "Minority cultures need to be protected and promoted rather than assimilated into the majority culture."
+      },
+      {
+        "vi": "Bảo tồn ngôn ngữ của các dân tộc thiểu số là trách nhiệm của nhà nước và cả cộng đồng.",
+        "answer": "Language preservation for ethnic minorities is the responsibility of both the state and the community."
+      },
+      {
+        "vi": "Chương trình trao đổi văn hoá giữa Việt Nam và Pháp đã tạo ra nhiều thế hệ nhà ngoại giao và nghệ sĩ xuất sắc.",
+        "answer": "Cultural exchange programmes between Vietnam and France have produced many outstanding generations of diplomats and artists."
+      },
+      {
+        "vi": "Hệ thống giá trị của người Việt Nam đang biến đổi dưới tác động của kinh tế thị trường và internet.",
+        "answer": "The value system of Vietnamese people is transforming under the impact of the market economy and the internet."
+      },
+      {
+        "vi": "Tiểu văn hoá hip-hop và streetwear đang ngày càng phổ biến trong giới trẻ đô thị Việt Nam.",
+        "answer": "The hip-hop and streetwear subculture is becoming increasingly popular among urban young people in Vietnam."
+      },
+      {
+        "vi": "Thích ứng văn hoá tốt giúp người Việt Nam làm việc và học tập hiệu quả ở nước ngoài.",
+        "answer": "Good cultural adaptation helps Vietnamese people work and study effectively abroad."
+      },
+      {
+        "vi": "Điện ảnh Việt Nam đang trải qua giai đoạn phục hưng với nhiều bộ phim thương mại đạt doanh thu phòng vé ấn tượng.",
+        "answer": "Vietnamese cinema is experiencing a renaissance with many commercial films achieving impressive box office revenues."
+      },
+      {
+        "vi": "Nghề thủ công truyền thống đang được hồi sinh thông qua các chương trình du lịch làng nghề và thị trường hàng thủ công mỹ nghệ.",
+        "answer": "Traditional crafts are being revived through village craft tourism programmes and the handicraft market."
+      },
+      {
+        "vi": "Toàn cầu hoá văn hoá tạo ra hiện tượng văn hoá lai ghép, nơi yếu tố địa phương và quốc tế hoà trộn tạo ra điều gì đó mới.",
+        "answer": "Cultural globalisation creates a phenomenon of cultural hybridisation, where local and international elements blend to produce something new."
+      },
+      {
+        "vi": "Bảo tàng số đang mở ra cơ hội tiếp cận di sản văn hoá cho hàng triệu người trên thế giới không thể đến thăm trực tiếp.",
+        "answer": "Digital museums are opening up access to cultural heritage for millions of people around the world who cannot visit in person."
+      },
+      {
+        "vi": "Sự lan rộng của K-pop và văn hoá Hàn Quốc đã chứng minh sức mạnh của 'quyền lực mềm' văn hoá trong quan hệ quốc tế.",
+        "answer": "The spread of K-pop and Korean culture has demonstrated the power of cultural 'soft power' in international relations."
+      },
+      {
+        "vi": "Ngôn ngữ là linh hồn của văn hoá, và mất đi một ngôn ngữ đồng nghĩa với mất đi một cách nhìn độc đáo về thế giới.",
+        "answer": "Language is the soul of culture, and losing a language means losing a unique way of seeing the world."
+      },
+      {
+        "vi": "Nghệ thuật đường phố như graffiti và tranh tường đang được nhiều thành phố công nhận là biểu đạt văn hoá có giá trị thay vì coi là phá hoại.",
+        "answer": "Street art such as graffiti and murals is being recognised by many cities as a valuable cultural expression rather than vandalism."
+      },
+      {
+        "vi": "Lễ hội ánh sáng và âm thanh tại các khu di sản đang tạo ra trải nghiệm độc đáo thu hút cả người dân địa phương lẫn du khách.",
+        "answer": "Light and sound festivals at heritage sites are creating unique experiences that attract both local residents and tourists."
+      },
+      {
+        "vi": "Văn học dịch đang đóng vai trò cầu nối quan trọng giúp độc giả Việt Nam tiếp cận kho tàng tri thức và tư tưởng toàn cầu.",
+        "answer": "Translated literature is playing an important bridging role in helping Vietnamese readers access the global wealth of knowledge and ideas."
+      },
+      {
+        "vi": "Phong trào bảo tồn kiến trúc thuộc địa Pháp ở Hà Nội và TP.HCM ngày càng được sự ủng hộ của giới chuyên gia và công chúng.",
+        "answer": "The movement to preserve French colonial architecture in Hanoi and Ho Chi Minh City is gaining increasing support from experts and the public."
+      },
+      {
+        "vi": "Sự giao thoa giữa thời trang và văn hoá dân tộc đang tạo ra những xu hướng thời trang mang bản sắc Việt độc đáo.",
+        "answer": "The intersection of fashion and ethnic culture is creating fashion trends with a distinctive Vietnamese identity."
+      },
+      {
+        "vi": "Các liên hoan phim quốc tế là cơ hội để điện ảnh của các quốc gia nhỏ tiếp cận khán giả toàn cầu và được công nhận.",
+        "answer": "International film festivals provide an opportunity for the cinema of smaller nations to reach global audiences and gain recognition."
+      },
+      {
+        "vi": "Tranh Đông Hồ và lụa Hà Đông là những sản phẩm văn hoá đặc trưng cần được đầu tư bảo tồn và phát triển thành sản phẩm xuất khẩu.",
+        "answer": "Dong Ho paintings and Ha Dong silk are distinctive cultural products that need investment in preservation and development as export commodities."
+      },
+      {
+        "vi": "Sự phổ biến của podcast văn hoá và lịch sử đang kéo người nghe trẻ quay lại với di sản và câu chuyện của dân tộc.",
+        "answer": "The popularity of cultural and historical podcasts is drawing younger audiences back to their nation's heritage and stories."
+      },
+      {
+        "vi": "Giáo dục nghệ thuật trong trường học không chỉ nuôi dưỡng tài năng mà còn phát triển sự nhạy cảm thẩm mỹ và tư duy sáng tạo.",
+        "answer": "Arts education in schools not only nurtures talent but also develops aesthetic sensitivity and creative thinking."
+      },
+      {
+        "vi": "Chương trình dạy tiếng dân tộc thiểu số trong trường học là bước đi quan trọng để bảo tồn ngôn ngữ và bản sắc văn hoá.",
+        "answer": "Programmes to teach minority languages in schools are an important step in preserving linguistic and cultural identity."
+      },
+      {
+        "vi": "Phim tài liệu về thiên nhiên và văn hoá Việt Nam đang giúp thế giới hiểu rõ hơn về đất nước và con người Việt Nam.",
+        "answer": "Documentaries about Vietnam's nature and culture are helping the world gain a clearer understanding of the country and its people."
+      },
+      {
+        "vi": "Khái niệm 'văn hoá xoá' (cancel culture) đang gây tranh luận về ranh giới giữa trách nhiệm giải trình và trừng phạt tập thể.",
+        "answer": "The concept of 'cancel culture' is sparking debate about the boundary between accountability and collective punishment."
+      },
+      {
+        "vi": "Âm nhạc dân gian Việt Nam đang được các nghệ sĩ trẻ tái hiện qua lăng kính hiện đại, thu hút lớp khán giả mới.",
+        "answer": "Vietnamese folk music is being reinterpreted by young artists through a modern lens, attracting a new generation of listeners."
+      },
+      {
+        "vi": "Triết học và tư tưởng phương Đông đang được nhiều người phương Tây tìm đến như một nguồn trí tuệ bổ sung cho chủ nghĩa duy lý phương Tây.",
+        "answer": "Eastern philosophy and thought are being sought out by many Westerners as a source of wisdom to complement Western rationalism."
+      }
+    ],
+    "is_published": true,
+    "order_index": 14,
+    "created_at": "2026-05-26T00:58:30.870084+00:00",
+    "updated_at": "2026-05-26T00:58:30.870084+00:00"
+  },
+  {
+    "id": "f12c940d-59fc-4b66-9fbc-f65bfbbd379a",
+    "exercise_id": "buoc2-crime",
+    "title": "Tội phạm",
+    "topic": {
+      "en": "Crime",
+      "question": "",
+      "taskType": "Collocation"
+    },
+    "band_target": "Bước 2",
+    "sentences": [
+      {
+        "vi": "Tội phạm có tổ chức xuyên quốc gia đang là thách thức lớn cho các cơ quan thực thi pháp luật.",
+        "answer": "Transnational organised crime is a major challenge for law enforcement agencies."
+      },
+      {
+        "vi": "Tội phạm vị thành niên gia tăng khi trẻ thiếu sự quan tâm của gia đình và tiếp xúc với nội dung xấu.",
+        "answer": "Juvenile delinquency increases when children lack family attention and are exposed to harmful content."
+      },
+      {
+        "vi": "Thực thi pháp luật công bằng và nhất quán là nền tảng của một xã hội văn minh.",
+        "answer": "Fair and consistent law enforcement is the foundation of a civilised society."
+      },
+      {
+        "vi": "Hệ thống tư pháp hình sự cần được cải cách để đảm bảo mọi người đều được xét xử công bằng.",
+        "answer": "The criminal justice system needs to be reformed to ensure everyone receives a fair trial."
+      },
+      {
+        "vi": "Tỷ lệ tái phạm cao cho thấy chương trình cải tạo trong trại giam chưa đạt hiệu quả mong muốn.",
+        "answer": "A high recidivism rate shows that rehabilitation programmes in prisons have not achieved the desired effectiveness."
+      },
+      {
+        "vi": "Tội phạm cổ cồn trắng như gian lận chứng khoán và tham nhũng thường khó bị phát hiện hơn tội phạm thông thường.",
+        "answer": "White-collar crime such as securities fraud and corruption is often harder to detect than conventional crime."
+      },
+      {
+        "vi": "Buôn bán ma tuý qua biên giới vẫn là vấn đề nhức nhối mà các nước trong khu vực chưa giải quyết được.",
+        "answer": "Cross-border drug trafficking remains a pressing problem that countries in the region have yet to solve."
+      },
+      {
+        "vi": "Hình phạt tử hình vẫn còn được áp dụng cho các tội danh nghiêm trọng như giết người và buôn bán ma tuý.",
+        "answer": "Capital punishment is still applied for serious crimes such as murder and drug trafficking."
+      },
+      {
+        "vi": "Chương trình cải tạo hiệu quả cần kết hợp đào tạo nghề với tư vấn tâm lý cho người chấp hành án.",
+        "answer": "An effective rehabilitation programme needs to combine vocational training with psychological counselling for offenders."
+      },
+      {
+        "vi": "Quá tải nhà tù làm cho điều kiện giam giữ trở nên tồi tệ hơn và cản trở quá trình cải tạo.",
+        "answer": "Prison overcrowding makes detention conditions worse and hinders the rehabilitation process."
+      },
+      {
+        "vi": "Tội ác căm thù nhắm vào người vì tôn giáo, dân tộc hoặc giới tính cần bị trừng trị nghiêm khắc.",
+        "answer": "Hate crimes targeting people because of their religion, ethnicity, or gender must be severely punished."
+      },
+      {
+        "vi": "Tội phạm mạng ngày càng tinh vi và gây thiệt hại hàng tỷ đô la cho cá nhân và tổ chức mỗi năm.",
+        "answer": "Cybercrime is becoming increasingly sophisticated and causes billions of dollars in damage to individuals and organisations each year."
+      },
+      {
+        "vi": "Tham nhũng làm xói mòn niềm tin của người dân vào bộ máy nhà nước và cản trở phát triển kinh tế.",
+        "answer": "Corruption erodes public trust in state institutions and hinders economic development."
+      },
+      {
+        "vi": "Khủng bố không có tôn giáo hay quốc tịch và là kẻ thù chung của toàn nhân loại.",
+        "answer": "Terrorism has no religion or nationality and is a common enemy of all humanity."
+      },
+      {
+        "vi": "Buôn bán người là tội ác dã man và cần sự hợp tác quốc tế để triệt phá các đường dây.",
+        "answer": "Human trafficking is a barbaric crime that requires international cooperation to dismantle its networks."
+      },
+      {
+        "vi": "Lý thuyết răn đe cho rằng hình phạt nặng hơn sẽ khiến người ta suy nghĩ kỹ trước khi phạm tội.",
+        "answer": "Deterrence theory holds that harsher punishments will make people think carefully before committing crimes."
+      },
+      {
+        "vi": "Công lý phục hồi tập trung vào việc bồi thường cho nạn nhân và tái hoà nhập người phạm tội.",
+        "answer": "Restorative justice focuses on compensating victims and reintegrating offenders into society."
+      },
+      {
+        "vi": "Phòng ngừa tội phạm từ cộng đồng hiệu quả hơn nhiều so với chờ tội phạm xảy ra rồi mới xử lý.",
+        "answer": "Community-based crime prevention is far more effective than waiting for crimes to occur and then dealing with them."
+      },
+      {
+        "vi": "Hồ sơ tội phạm là rào cản lớn khiến người đã cải tạo khó tìm được việc làm ổn định.",
+        "answer": "A criminal record is a major barrier that makes it difficult for rehabilitated offenders to find stable employment."
+      },
+      {
+        "vi": "Hệ thống giám sát camera công cộng giúp cảnh sát nhanh chóng xác định và bắt giữ tội phạm.",
+        "answer": "Public surveillance camera systems help police quickly identify and apprehend criminals."
+      },
+      {
+        "vi": "Đánh cắp danh tính trực tuyến ngày càng phổ biến khi người dùng chia sẻ quá nhiều thông tin cá nhân.",
+        "answer": "Online identity theft is becoming more common as users share too much personal information."
+      },
+      {
+        "vi": "Hệ thống hình phạt công bằng cần cân bằng giữa mục tiêu trừng phạt và mục tiêu cải tạo.",
+        "answer": "A fair penal system needs to balance the goals of punishment and rehabilitation."
+      },
+      {
+        "vi": "Băng đảng có tổ chức thường hoạt động ở các khu vực nghèo và lợi dụng sự thất nghiệp để tuyển thành viên.",
+        "answer": "Organised gangs often operate in poor areas and exploit unemployment to recruit members."
+      },
+      {
+        "vi": "Rửa tiền qua bất động sản và sòng bạc là phương thức phổ biến mà tội phạm tổ chức thường dùng.",
+        "answer": "Money laundering through real estate and casinos is a common method used by organised crime."
+      },
+      {
+        "vi": "Gian lận thương mại điện tử đang tăng mạnh khiến người tiêu dùng cần thận trọng hơn khi mua hàng online.",
+        "answer": "E-commerce fraud is rising sharply, making consumers need to be more cautious when shopping online."
+      },
+      {
+        "vi": "Lừa đảo trực tuyến ngày càng tinh vi với các kịch bản được dàn dựng kỹ lưỡng nhắm vào người cao tuổi và thiếu am hiểu công nghệ.",
+        "answer": "Online fraud is becoming increasingly sophisticated, with carefully scripted scenarios targeting the elderly and those with limited technological literacy."
+      },
+      {
+        "vi": "Cải cách hệ thống tư pháp hình sự cần ưu tiên tái hoà nhập tội phạm vào xã hội hơn là chỉ tập trung vào trừng phạt.",
+        "answer": "Criminal justice system reform needs to prioritise the reintegration of offenders into society rather than focusing solely on punishment."
+      },
+      {
+        "vi": "Nạn buôn người qua biên giới thường được che đậy dưới hình thức xuất khẩu lao động giả mạo hoặc kết hôn bất hợp pháp.",
+        "answer": "Cross-border human trafficking is often concealed under the guise of fraudulent labour export or illegal marriage arrangements."
+      },
+      {
+        "vi": "Mức độ tội phạm trong một xã hội phản ánh sâu sắc mức độ bất bình đẳng kinh tế và thiếu hụt cơ hội cho các nhóm dễ bị tổn thương.",
+        "answer": "The level of crime in a society is a deep reflection of the degree of economic inequality and lack of opportunity for vulnerable groups."
+      },
+      {
+        "vi": "Điều tra tội phạm mạng đòi hỏi sự hợp tác chặt chẽ giữa các cơ quan thực thi pháp luật ở nhiều quốc gia do bản chất xuyên quốc gia của nó.",
+        "answer": "Investigating cybercrime requires close cooperation between law enforcement agencies across multiple countries due to its transnational nature."
+      },
+      {
+        "vi": "Chương trình giải quyết nguyên nhân gốc rễ của tội phạm như nghèo đói và thiếu giáo dục hiệu quả hơn chi phí giam giữ dài hạn.",
+        "answer": "Programmes that address the root causes of crime such as poverty and lack of education are more cost-effective than long-term imprisonment."
+      },
+      {
+        "vi": "Bằng chứng thu thập từ camera giám sát ngày càng đóng vai trò then chốt trong việc buộc tội và kết án tội phạm.",
+        "answer": "Evidence gathered from surveillance cameras is playing an increasingly central role in prosecuting and convicting criminals."
+      },
+      {
+        "vi": "Văn hoá im lặng trong các cộng đồng tội phạm có tổ chức khiến nhân chứng không dám đứng ra khai báo dù biết sự thật.",
+        "answer": "The culture of silence within organised crime communities prevents witnesses from coming forward to testify even when they know the truth."
+      },
+      {
+        "vi": "Các chính sách khoan nhượng bằng không đối với tội phạm bạo lực đã bị chỉ trích vì thường ảnh hưởng không cân xứng đến các nhóm thiểu số.",
+        "answer": "Zero-tolerance policies towards violent crime have been criticised for disproportionately affecting minority groups."
+      },
+      {
+        "vi": "Phòng chống tham nhũng hiệu quả đòi hỏi không chỉ luật pháp nghiêm minh mà còn cần xây dựng văn hoá liêm chính từ bên trong.",
+        "answer": "Effective anti-corruption efforts require not only strict laws but also the cultivation of a culture of integrity from within institutions."
+      },
+      {
+        "vi": "Tội phạm môi trường như khai thác cát trái phép và phá rừng thường bị xử phạt nhẹ hơn nhiều so với tác hại thực tế gây ra.",
+        "answer": "Environmental crime such as illegal sand extraction and deforestation is often penalised far more leniently than the actual harm it causes."
+      },
+      {
+        "vi": "Sự xuất hiện của 'vigilantism' trực tuyến khi người dùng mạng tự xét xử và trừng phạt người khác đặt ra câu hỏi về công bằng và pháp quyền.",
+        "answer": "The emergence of online vigilantism, where internet users judge and punish others themselves, raises questions about fairness and the rule of law."
+      },
+      {
+        "vi": "Nghiên cứu tội phạm học chỉ ra rằng nghèo đói tương đối chứ không phải nghèo đói tuyệt đối mới là yếu tố dự báo tội phạm tốt hơn.",
+        "answer": "Criminological research indicates that relative poverty rather than absolute poverty is a better predictor of crime."
+      },
+      {
+        "vi": "Hệ thống nhà tù quá tải không chỉ là vấn đề nhân đạo mà còn làm tăng nguy cơ tái phạm khi người chấp hành án không được cải tạo đúng nghĩa.",
+        "answer": "Overcrowded prisons are not only a humanitarian concern but also increase the risk of reoffending when those serving sentences are not genuinely rehabilitated."
+      },
+      {
+        "vi": "Các tổ chức phi lợi nhuận hỗ trợ nạn nhân tội phạm đóng vai trò thiết yếu mà hệ thống tư pháp nhà nước thường không đáp ứng được.",
+        "answer": "Non-profit organisations supporting crime victims play an essential role that the state justice system is often unable to fulfil."
+      },
+      {
+        "vi": "Tội phạm tài chính xuyên quốc gia sử dụng các thiên đường thuế và công ty bình phong để che giấu nguồn gốc của tiền bất hợp pháp.",
+        "answer": "Transnational financial crime uses tax havens and shell companies to conceal the origins of illicit money."
+      },
+      {
+        "vi": "Giáo dục pháp luật từ sớm giúp trẻ em hiểu về quyền và nghĩa vụ công dân, từ đó giảm nguy cơ vi phạm pháp luật vô tình.",
+        "answer": "Early legal education helps children understand their rights and civic responsibilities, thereby reducing the risk of unintentional law-breaking."
+      },
+      {
+        "vi": "Sử dụng trí tuệ nhân tạo để dự đoán tội phạm gây tranh cãi vì có thể tạo ra định kiến có hệ thống chống lại một số cộng đồng.",
+        "answer": "Using artificial intelligence to predict crime is controversial because it may create systematic bias against certain communities."
+      },
+      {
+        "vi": "Nạn nhân bạo lực gia đình thường không trình báo vì sợ bị trả thù hoặc không tin vào khả năng bảo vệ của lực lượng chức năng.",
+        "answer": "Victims of domestic violence frequently do not report incidents for fear of retaliation or out of distrust in the ability of authorities to protect them."
+      },
+      {
+        "vi": "Tội phạm cổ cồn trắng gây thiệt hại kinh tế lớn hơn nhiều so với tội phạm đường phố nhưng thường nhận được mức án nhẹ hơn.",
+        "answer": "White-collar crime causes far greater economic damage than street crime but typically receives lighter sentences."
+      }
+    ],
+    "is_published": true,
+    "order_index": 15,
+    "created_at": "2026-05-26T00:58:31.074799+00:00",
+    "updated_at": "2026-05-26T00:58:31.074799+00:00"
+  }
+]

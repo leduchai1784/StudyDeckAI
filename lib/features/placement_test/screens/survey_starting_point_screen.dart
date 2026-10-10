@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../app/theme.dart';
 import '../../../shared/widgets/studydeck_logo_header.dart';
+import '../../../shared/widgets/app_back_button.dart';
 
 class SurveyStartingPointScreen extends StatelessWidget {
   const SurveyStartingPointScreen({super.key});
@@ -22,8 +23,7 @@ class SurveyStartingPointScreen extends StatelessWidget {
                   // Top Bar: Unified Back Button & Brand Header Badge
                   Row(
                     children: [
-                      IconButton(
-                        icon: const Icon(Icons.arrow_back_ios_new, size: 20, color: AppTheme.brandTextPrimary),
+                      AppBackButton(
                         onPressed: () {
                           if (context.canPop()) {
                             context.pop();

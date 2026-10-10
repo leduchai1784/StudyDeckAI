@@ -53,12 +53,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               constraints: BoxConstraints(
                 minHeight: constraints.maxHeight,
               ),
-              child: Center(
-                child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 480),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
-                    child: Column(
+              child: IntrinsicHeight(
+                child: Center(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 480),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+                      child: Column(
                       children: [
                         const Spacer(),
                         // Official StudyDeck AI Brand Badge Logo Header
@@ -155,6 +156,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
               ),
+            ),
             ),
           ),
         ),

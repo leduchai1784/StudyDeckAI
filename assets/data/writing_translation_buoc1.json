@@ -1,0 +1,1138 @@
+[
+  {
+    "id": "3e6a3d66-401d-4eb6-86f1-7d2851c6c9f3",
+    "exercise_id": "buoc1-simple-present",
+    "title": "Hiện tại đơn (Simple Present)",
+    "topic": {
+      "en": "Simple Present — 25 Sentences",
+      "question": "Dịch các câu tiếng Việt sau sang tiếng Anh. Nhấn vào từ để xem gợi ý.",
+      "taskType": "Bước 1 – Câu Cơ Bản"
+    },
+    "band_target": "Bước 1",
+    "sentences": [
+      {
+        "vi": "Tôi học tiếng Anh mỗi ngày.",
+        "hint": "I study English every day.",
+        "answer": "I study English every day."
+      },
+      {
+        "vi": "Cô ấy dạy toán ở trường tiểu học.",
+        "hint": "She teaches math at a...",
+        "answer": "She teaches math at a primary school."
+      },
+      {
+        "vi": "Họ không thích ăn đồ ăn cay.",
+        "hint": "They do not like eating...",
+        "answer": "They do not like eating spicy food."
+      },
+      {
+        "vi": "Anh ấy thường đi làm bằng xe buýt.",
+        "hint": "He usually goes to work...",
+        "answer": "He usually goes to work by bus."
+      },
+      {
+        "vi": "Chúng tôi sống ở Hà Nội.",
+        "hint": "We live in Hanoi.",
+        "answer": "We live in Hanoi."
+      },
+      {
+        "vi": "Con mèo ngủ trên ghế sofa mỗi buổi chiều.",
+        "hint": "The cat sleeps on the...",
+        "answer": "The cat sleeps on the sofa every afternoon."
+      },
+      {
+        "vi": "Em gái tôi chơi piano rất hay.",
+        "hint": "My younger sister plays the...",
+        "answer": "My younger sister plays the piano very well."
+      },
+      {
+        "vi": "Nhà máy này sản xuất hàng nghìn sản phẩm mỗi năm.",
+        "hint": "This factory produces thousands of...",
+        "answer": "This factory produces thousands of products every year."
+      },
+      {
+        "vi": "Anh ấy không bao giờ uống cà phê vào buổi tối.",
+        "hint": "He never drinks coffee in...",
+        "answer": "He never drinks coffee in the evening."
+      },
+      {
+        "vi": "Giáo viên luôn giải thích bài học một cách rõ ràng.",
+        "hint": "The teacher always explains the...",
+        "answer": "The teacher always explains the lesson clearly."
+      },
+      {
+        "vi": "Chúng tôi thường họp vào thứ Hai hàng tuần.",
+        "hint": "We usually have meetings every...",
+        "answer": "We usually have meetings every Monday."
+      },
+      {
+        "vi": "Trái đất quay quanh mặt trời.",
+        "hint": "The Earth revolves around the...",
+        "answer": "The Earth revolves around the Sun."
+      },
+      {
+        "vi": "Bà tôi thức dậy lúc 5 giờ sáng mỗi ngày.",
+        "hint": "My grandmother wakes up at...",
+        "answer": "My grandmother wakes up at 5 a.m. every day."
+      },
+      {
+        "vi": "Học sinh lớp này học rất chăm chỉ.",
+        "hint": "Students in this class study...",
+        "answer": "Students in this class study very hard."
+      },
+      {
+        "vi": "Cửa hàng đó mở cửa lúc 8 giờ sáng.",
+        "hint": "That shop opens at 8...",
+        "answer": "That shop opens at 8 a.m."
+      },
+      {
+        "vi": "Tôi không hiểu câu hỏi này.",
+        "hint": "I do not understand this...",
+        "answer": "I do not understand this question."
+      },
+      {
+        "vi": "Con trai tôi thích chơi bóng đá sau giờ học.",
+        "hint": "My son likes playing football...",
+        "answer": "My son likes playing football after school."
+      },
+      {
+        "vi": "Bác sĩ khuyên bệnh nhân uống nhiều nước.",
+        "hint": "The doctor advises patients to...",
+        "answer": "The doctor advises patients to drink plenty of water."
+      },
+      {
+        "vi": "Nhiều người trẻ sử dụng mạng xã hội hàng giờ mỗi ngày.",
+        "hint": "Many young people use social...",
+        "answer": "Many young people use social media for hours every day."
+      },
+      {
+        "vi": "Con sông này chảy qua nhiều tỉnh thành.",
+        "hint": "This river flows through many...",
+        "answer": "This river flows through many provinces."
+      },
+      {
+        "vi": "Cô ấy luôn mỉm cười khi gặp người lạ.",
+        "hint": "She always smiles when meeting...",
+        "answer": "She always smiles when meeting strangers."
+      },
+      {
+        "vi": "Công ty tôi xuất khẩu hàng hoá sang châu Âu.",
+        "hint": "My company exports goods to...",
+        "answer": "My company exports goods to Europe."
+      },
+      {
+        "vi": "Trẻ em cần ngủ đủ giấc để phát triển khỏe mạnh.",
+        "hint": "Children need enough sleep to...",
+        "answer": "Children need enough sleep to develop healthily."
+      },
+      {
+        "vi": "Anh tôi làm việc ở một ngân hàng lớn.",
+        "hint": "My brother works at a...",
+        "answer": "My brother works at a large bank."
+      },
+      {
+        "vi": "Các nhà khoa học nghiên cứu nguyên nhân của biến đổi khí hậu.",
+        "hint": "Scientists research the causes of...",
+        "answer": "Scientists research the causes of climate change."
+      }
+    ],
+    "is_published": true,
+    "order_index": 100,
+    "created_at": "2026-05-21T04:32:59.699027+00:00",
+    "updated_at": "2026-05-21T04:32:59.699027+00:00"
+  },
+  {
+    "id": "66db3702-7be4-4289-97ea-6097bbc5116f",
+    "exercise_id": "buoc1-present-continuous",
+    "title": "Hiện tại tiếp diễn (Present Continuous)",
+    "topic": {
+      "en": "Present Continuous — 25 Sentences",
+      "question": "Dịch các câu tiếng Việt sau sang tiếng Anh. Nhấn vào từ để xem gợi ý.",
+      "taskType": "Bước 1 – Câu Cơ Bản"
+    },
+    "band_target": "Bước 1",
+    "sentences": [
+      {
+        "vi": "Tôi đang học bài cho kỳ thi ngày mai.",
+        "hint": "I am studying for tomorrow's...",
+        "answer": "I am studying for tomorrow's exam."
+      },
+      {
+        "vi": "Cô ấy đang nói chuyện điện thoại với sếp.",
+        "hint": "She is talking on the...",
+        "answer": "She is talking on the phone with her boss."
+      },
+      {
+        "vi": "Họ đang xây dựng một tòa nhà mới ở trung tâm thành phố.",
+        "hint": "They are building a new...",
+        "answer": "They are building a new building in the city centre."
+      },
+      {
+        "vi": "Tôi đang nghe nhạc trong khi làm bài tập.",
+        "hint": "I am listening to music...",
+        "answer": "I am listening to music while doing my homework."
+      },
+      {
+        "vi": "Anh ấy đang cố gắng học một kỹ năng mới.",
+        "hint": "He is trying to learn...",
+        "answer": "He is trying to learn a new skill."
+      },
+      {
+        "vi": "Trời đang mưa rất to bên ngoài.",
+        "hint": "It is raining very heavily...",
+        "answer": "It is raining very heavily outside."
+      },
+      {
+        "vi": "Chúng tôi đang thảo luận về dự án mới.",
+        "hint": "We are discussing the new...",
+        "answer": "We are discussing the new project."
+      },
+      {
+        "vi": "Em bé đang khóc vì đói.",
+        "hint": "The baby is crying because...",
+        "answer": "The baby is crying because it is hungry."
+      },
+      {
+        "vi": "Các sinh viên đang chuẩn bị cho bài thuyết trình.",
+        "hint": "The students are preparing for...",
+        "answer": "The students are preparing for their presentation."
+      },
+      {
+        "vi": "Giá nhà ở Hà Nội đang tăng lên nhanh chóng.",
+        "hint": "House prices in Hanoi are...",
+        "answer": "House prices in Hanoi are rising rapidly."
+      },
+      {
+        "vi": "Bạn tôi đang sống ở Canada trong năm nay.",
+        "hint": "My friend is living in...",
+        "answer": "My friend is living in Canada this year."
+      },
+      {
+        "vi": "Ngành công nghệ thông tin đang phát triển mạnh ở Việt Nam.",
+        "hint": "The IT industry is growing...",
+        "answer": "The IT industry is growing strongly in Vietnam."
+      },
+      {
+        "vi": "Anh ấy đang viết một cuốn sách về lịch sử Việt Nam.",
+        "hint": "He is writing a book...",
+        "answer": "He is writing a book about Vietnamese history."
+      },
+      {
+        "vi": "Bọn trẻ đang chơi ở sân sau.",
+        "hint": "The children are playing in...",
+        "answer": "The children are playing in the backyard."
+      },
+      {
+        "vi": "Chính phủ đang thực hiện nhiều chính sách mới.",
+        "hint": "The government is implementing many...",
+        "answer": "The government is implementing many new policies."
+      },
+      {
+        "vi": "Tôi không ngủ được vì tiếng ồn quá lớn.",
+        "hint": "I cannot sleep because the...",
+        "answer": "I cannot sleep because the noise is too loud."
+      },
+      {
+        "vi": "Cô ấy đang cân nhắc việc thay đổi công việc.",
+        "hint": "She is considering changing her...",
+        "answer": "She is considering changing her job."
+      },
+      {
+        "vi": "Mọi người đang xếp hàng chờ mua vé.",
+        "hint": "People are queuing to buy...",
+        "answer": "People are queuing to buy tickets."
+      },
+      {
+        "vi": "Thời tiết đang ngày càng khắc nghiệt hơn.",
+        "hint": "The weather is becoming increasingly...",
+        "answer": "The weather is becoming increasingly harsh."
+      },
+      {
+        "vi": "Nhóm nghiên cứu đang phân tích dữ liệu.",
+        "hint": "The research team is analysing...",
+        "answer": "The research team is analysing the data."
+      },
+      {
+        "vi": "Cô ấy đang tập chạy để chuẩn bị cho marathon.",
+        "hint": "She is training for a...",
+        "answer": "She is training for a marathon."
+      },
+      {
+        "vi": "Hệ thống đang được nâng cấp vào lúc này.",
+        "hint": "The system is being upgraded...",
+        "answer": "The system is being upgraded at this moment."
+      },
+      {
+        "vi": "Các em học sinh đang làm bài kiểm tra.",
+        "hint": "The students are doing their...",
+        "answer": "The students are doing their test."
+      },
+      {
+        "vi": "Dân số thế giới đang tăng với tốc độ đáng lo ngại.",
+        "hint": "The world population is growing...",
+        "answer": "The world population is growing at an alarming rate."
+      },
+      {
+        "vi": "Tôi đang cố gắng cải thiện kỹ năng viết tiếng Anh của mình.",
+        "hint": "I am trying to improve...",
+        "answer": "I am trying to improve my English writing skills."
+      }
+    ],
+    "is_published": true,
+    "order_index": 101,
+    "created_at": "2026-05-21T04:33:00.396951+00:00",
+    "updated_at": "2026-05-21T04:33:00.396951+00:00"
+  },
+  {
+    "id": "facb2cf2-a43e-4218-a78a-e97850fa9208",
+    "exercise_id": "buoc1-present-perfect",
+    "title": "Hiện tại hoàn thành (Present Perfect)",
+    "topic": {
+      "en": "Present Perfect — 25 Sentences",
+      "question": "Dịch các câu tiếng Việt sau sang tiếng Anh. Nhấn vào từ để xem gợi ý.",
+      "taskType": "Bước 1 – Câu Cơ Bản"
+    },
+    "band_target": "Bước 1",
+    "sentences": [
+      {
+        "vi": "Tôi đã đọc cuốn sách đó rồi.",
+        "hint": "I have already read that...",
+        "answer": "I have already read that book."
+      },
+      {
+        "vi": "Cô ấy chưa bao giờ đến Anh.",
+        "hint": "She has never been to...",
+        "answer": "She has never been to England."
+      },
+      {
+        "vi": "Họ vừa mới hoàn thành dự án.",
+        "hint": "They have just completed the...",
+        "answer": "They have just completed the project."
+      },
+      {
+        "vi": "Anh ấy đã sống ở đây được 10 năm rồi.",
+        "hint": "He has lived here for...",
+        "answer": "He has lived here for 10 years."
+      },
+      {
+        "vi": "Chúng tôi đã gặp nhau từ năm 2015.",
+        "hint": "We have known each other...",
+        "answer": "We have known each other since 2015."
+      },
+      {
+        "vi": "Bạn đã bao giờ ăn sushi chưa?",
+        "hint": "Have you ever eaten sushi?",
+        "answer": "Have you ever eaten sushi?"
+      },
+      {
+        "vi": "Cô ấy đã nộp đơn xin việc rồi.",
+        "hint": "She has already submitted her...",
+        "answer": "She has already submitted her job application."
+      },
+      {
+        "vi": "Tình trạng ô nhiễm đã trở nên tồi tệ hơn trong những năm gần đây.",
+        "hint": "Pollution has worsened in recent...",
+        "answer": "Pollution has worsened in recent years."
+      },
+      {
+        "vi": "Các nhà khoa học đã phát hiện ra nhiều loài mới.",
+        "hint": "Scientists have discovered many new...",
+        "answer": "Scientists have discovered many new species."
+      },
+      {
+        "vi": "Anh ấy chưa trả lời email của tôi.",
+        "hint": "He has not replied to...",
+        "answer": "He has not replied to my email yet."
+      },
+      {
+        "vi": "Số người sử dụng điện thoại thông minh đã tăng đáng kể.",
+        "hint": "The number of smartphone users...",
+        "answer": "The number of smartphone users has increased significantly."
+      },
+      {
+        "vi": "Chúng tôi đã thảo luận về vấn đề này nhiều lần rồi.",
+        "hint": "We have discussed this issue...",
+        "answer": "We have discussed this issue many times."
+      },
+      {
+        "vi": "Chính phủ đã ban hành nhiều luật mới để bảo vệ môi trường.",
+        "hint": "The government has passed several...",
+        "answer": "The government has passed several new laws to protect the environment."
+      },
+      {
+        "vi": "Tôi đã làm việc ở công ty này được 5 năm.",
+        "hint": "I have worked at this...",
+        "answer": "I have worked at this company for five years."
+      },
+      {
+        "vi": "Cô giáo đã giải thích bài học chưa?",
+        "hint": "Has the teacher explained the...",
+        "answer": "Has the teacher explained the lesson yet?"
+      },
+      {
+        "vi": "Công nghệ đã thay đổi cách chúng ta giao tiếp.",
+        "hint": "Technology has changed the way...",
+        "answer": "Technology has changed the way we communicate."
+      },
+      {
+        "vi": "Anh ấy đã thi trượt hai lần rồi.",
+        "hint": "He has failed the exam...",
+        "answer": "He has failed the exam twice."
+      },
+      {
+        "vi": "Chúng tôi vừa nhận được kết quả nghiên cứu.",
+        "hint": "We have just received the...",
+        "answer": "We have just received the research results."
+      },
+      {
+        "vi": "Nhiều công ty lớn đã cắt giảm nhân sự.",
+        "hint": "Many large companies have laid...",
+        "answer": "Many large companies have laid off workers."
+      },
+      {
+        "vi": "Bạn đã hoàn thành bài tập chưa?",
+        "hint": "Have you finished the assignment...",
+        "answer": "Have you finished the assignment yet?"
+      },
+      {
+        "vi": "Cô ấy đã học tiếng Pháp được ba năm.",
+        "hint": "She has studied French for...",
+        "answer": "She has studied French for three years."
+      },
+      {
+        "vi": "Tôi chưa bao giờ trải nghiệm cảm giác này trước đây.",
+        "hint": "I have never experienced this...",
+        "answer": "I have never experienced this feeling before."
+      },
+      {
+        "vi": "Mức sống của người dân đã được cải thiện rõ rệt.",
+        "hint": "The living standards of the...",
+        "answer": "The living standards of the people have improved remarkably."
+      },
+      {
+        "vi": "Họ đã xây dựng mối quan hệ tốt với đối tác nước ngoài.",
+        "hint": "They have built a good...",
+        "answer": "They have built a good relationship with foreign partners."
+      },
+      {
+        "vi": "Nhiều trẻ em ở các nước đang phát triển chưa bao giờ được đến trường.",
+        "hint": "Many children in developing countries...",
+        "answer": "Many children in developing countries have never had access to school."
+      }
+    ],
+    "is_published": true,
+    "order_index": 102,
+    "created_at": "2026-05-21T04:33:01.152395+00:00",
+    "updated_at": "2026-05-21T04:33:01.152395+00:00"
+  },
+  {
+    "id": "d29a253a-e6aa-4fce-93e6-ca26edfbf02d",
+    "exercise_id": "buoc1-present-perfect-continuous",
+    "title": "Hiện tại hoàn thành tiếp diễn (Present Perfect Continuous)",
+    "topic": {
+      "en": "Present Perfect Continuous — 25 Sentences",
+      "question": "Dịch các câu tiếng Việt sau sang tiếng Anh. Nhấn vào từ để xem gợi ý.",
+      "taskType": "Bước 1 – Câu Cơ Bản"
+    },
+    "band_target": "Bước 1",
+    "sentences": [
+      {
+        "vi": "Tôi đã học tiếng Anh liên tục được hai tiếng đồng hồ.",
+        "hint": "I have been studying English...",
+        "answer": "I have been studying English for two hours."
+      },
+      {
+        "vi": "Cô ấy đã làm việc từ sáng đến giờ mà không nghỉ.",
+        "hint": "She has been working since...",
+        "answer": "She has been working since morning without a break."
+      },
+      {
+        "vi": "Họ đã chờ xe buýt được nửa tiếng rồi.",
+        "hint": "They have been waiting for...",
+        "answer": "They have been waiting for the bus for half an hour."
+      },
+      {
+        "vi": "Anh ấy đã tập thể dục đều đặn suốt ba tháng nay.",
+        "hint": "He has been exercising regularly...",
+        "answer": "He has been exercising regularly for the past three months."
+      },
+      {
+        "vi": "Các nhà nghiên cứu đã nghiên cứu về căn bệnh này nhiều năm nay.",
+        "hint": "The researchers have been studying...",
+        "answer": "The researchers have been studying this disease for many years."
+      },
+      {
+        "vi": "Mưa đã rơi liên tục từ sáng đến giờ.",
+        "hint": "It has been raining continuously...",
+        "answer": "It has been raining continuously since this morning."
+      },
+      {
+        "vi": "Chúng tôi đã thảo luận về kế hoạch này từ đầu tháng.",
+        "hint": "We have been discussing this...",
+        "answer": "We have been discussing this plan since the beginning of the month."
+      },
+      {
+        "vi": "Cô ấy đã dạy ở trường này được mười năm.",
+        "hint": "She has been teaching at...",
+        "answer": "She has been teaching at this school for ten years."
+      },
+      {
+        "vi": "Anh ấy trông mệt vì anh ấy đã làm thêm giờ suốt cả tuần.",
+        "hint": "He looks tired because he...",
+        "answer": "He looks tired because he has been working overtime all week."
+      },
+      {
+        "vi": "Nhiệt độ Trái Đất đã tăng lên trong nhiều thập kỷ qua.",
+        "hint": "The Earth's temperature has been...",
+        "answer": "The Earth's temperature has been rising for decades."
+      },
+      {
+        "vi": "Họ đã xây dựng cây cầu này được hai năm rồi nhưng vẫn chưa xong.",
+        "hint": "They have been building this...",
+        "answer": "They have been building this bridge for two years but it is not finished yet."
+      },
+      {
+        "vi": "Tôi đã cố gắng liên lạc với anh ấy cả buổi sáng nay.",
+        "hint": "I have been trying to...",
+        "answer": "I have been trying to contact him all morning."
+      },
+      {
+        "vi": "Con sông này đã bị ô nhiễm từ khi có nhà máy.",
+        "hint": "This river has been polluted...",
+        "answer": "This river has been polluted since the factory was built."
+      },
+      {
+        "vi": "Cô ấy đã luyện tập hát mỗi ngày để chuẩn bị cho cuộc thi.",
+        "hint": "She has been practising singing...",
+        "answer": "She has been practising singing every day to prepare for the competition."
+      },
+      {
+        "vi": "Chính phủ đã nỗ lực cải thiện hệ thống giao thông từ nhiều năm trước.",
+        "hint": "The government has been making...",
+        "answer": "The government has been making efforts to improve the transport system for many years."
+      },
+      {
+        "vi": "Anh ấy đã đọc cuốn tiểu thuyết đó từ tuần trước.",
+        "hint": "He has been reading that...",
+        "answer": "He has been reading that novel since last week."
+      },
+      {
+        "vi": "Chúng tôi đã chờ tin tức từ phía công ty suốt hai ngày nay.",
+        "hint": "We have been waiting for...",
+        "answer": "We have been waiting for news from the company for two days."
+      },
+      {
+        "vi": "Các kỹ sư đã làm việc để khắc phục sự cố từ tối qua.",
+        "hint": "The engineers have been working...",
+        "answer": "The engineers have been working to fix the problem since last night."
+      },
+      {
+        "vi": "Cô ấy đã cảm thấy mệt mỏi từ khi bắt đầu dự án mới.",
+        "hint": "She has been feeling tired...",
+        "answer": "She has been feeling tired since she started the new project."
+      },
+      {
+        "vi": "Tôi đã học lái xe được ba tháng rồi nhưng vẫn chưa thi.",
+        "hint": "I have been learning to...",
+        "answer": "I have been learning to drive for three months but I have not taken the test yet."
+      },
+      {
+        "vi": "Nhóm từ thiện đã giúp đỡ người dân vùng lũ lụt từ đầu tháng.",
+        "hint": "The charity group has been...",
+        "answer": "The charity group has been helping flood victims since the beginning of the month."
+      },
+      {
+        "vi": "Anh ấy đã làm việc từ xa kể từ khi dịch bùng phát.",
+        "hint": "He has been working remotely...",
+        "answer": "He has been working remotely since the outbreak began."
+      },
+      {
+        "vi": "Chúng tôi đã cố gắng tìm giải pháp cho vấn đề này từ rất lâu.",
+        "hint": "We have been trying to...",
+        "answer": "We have been trying to find a solution to this problem for a long time."
+      },
+      {
+        "vi": "Nền kinh tế đã phục hồi dần dần sau cuộc khủng hoảng.",
+        "hint": "The economy has been recovering...",
+        "answer": "The economy has been recovering gradually since the crisis."
+      },
+      {
+        "vi": "Trẻ em đã dành quá nhiều thời gian cho màn hình điện tử trong những năm gần đây.",
+        "hint": "Children have been spending too...",
+        "answer": "Children have been spending too much time on screens in recent years."
+      }
+    ],
+    "is_published": true,
+    "order_index": 103,
+    "created_at": "2026-05-21T04:33:01.90981+00:00",
+    "updated_at": "2026-05-21T04:33:01.90981+00:00"
+  },
+  {
+    "id": "ce8208cd-a705-44df-b036-27e3e2324a1e",
+    "exercise_id": "buoc1-uncountable-nouns",
+    "title": "Danh từ không đếm được (Uncountable Nouns)",
+    "topic": {
+      "en": "Uncountable Nouns — 25 Sentences",
+      "question": "Dịch các câu tiếng Việt sau sang tiếng Anh. Nhấn vào từ để xem gợi ý.",
+      "taskType": "Bước 1 – Câu Cơ Bản"
+    },
+    "band_target": "Bước 1",
+    "sentences": [
+      {
+        "vi": "Anh ấy cần thêm thông tin trước khi đưa ra quyết định.",
+        "hint": "He needs more information before...",
+        "answer": "He needs more information before making a decision."
+      },
+      {
+        "vi": "Thiếu kiến thức có thể dẫn đến những sai lầm đáng tiếc.",
+        "hint": "A lack of knowledge can...",
+        "answer": "A lack of knowledge can lead to regrettable mistakes."
+      },
+      {
+        "vi": "Nghèo đói vẫn là một vấn đề nghiêm trọng ở nhiều quốc gia.",
+        "hint": "Poverty remains a serious problem...",
+        "answer": "Poverty remains a serious problem in many countries."
+      },
+      {
+        "vi": "Sữa rất tốt cho sức khỏe của trẻ em.",
+        "hint": "Milk is very good for...",
+        "answer": "Milk is very good for children's health."
+      },
+      {
+        "vi": "Cô ấy không có nhiều tiền để du lịch.",
+        "hint": "She does not have much...",
+        "answer": "She does not have much money to travel."
+      },
+      {
+        "vi": "Chúng ta cần nhiều sự hợp tác hơn để giải quyết các vấn đề toàn cầu.",
+        "hint": "We need more cooperation to...",
+        "answer": "We need more cooperation to address global issues."
+      },
+      {
+        "vi": "Nghiên cứu khoa học đòi hỏi rất nhiều thời gian và sự kiên nhẫn.",
+        "hint": "Scientific research requires a great...",
+        "answer": "Scientific research requires a great deal of time and patience."
+      },
+      {
+        "vi": "Sự hiểu biết lẫn nhau là nền tảng của tình bạn tốt.",
+        "hint": "Mutual understanding is the foundation...",
+        "answer": "Mutual understanding is the foundation of a good friendship."
+      },
+      {
+        "vi": "Không khí ở thành phố ngày càng ô nhiễm hơn.",
+        "hint": "The air in cities is...",
+        "answer": "The air in cities is becoming increasingly polluted."
+      },
+      {
+        "vi": "Việc tiếp cận giáo dục là quyền cơ bản của mọi trẻ em.",
+        "hint": "Access to education is a...",
+        "answer": "Access to education is a fundamental right of every child."
+      },
+      {
+        "vi": "Lòng tốt là điều mà xã hội hiện đại đang thiếu.",
+        "hint": "Kindness is something that modern...",
+        "answer": "Kindness is something that modern society is lacking."
+      },
+      {
+        "vi": "Giá xăng dầu ảnh hưởng trực tiếp đến giá cả hàng hóa.",
+        "hint": "The price of petrol directly...",
+        "answer": "The price of petrol directly affects the price of goods."
+      },
+      {
+        "vi": "Sự tham nhũng làm suy yếu niềm tin của người dân vào chính phủ.",
+        "hint": "Corruption undermines public trust in...",
+        "answer": "Corruption undermines public trust in the government."
+      },
+      {
+        "vi": "Chúng tôi cần thêm bằng chứng để chứng minh giả thuyết này.",
+        "hint": "We need more evidence to...",
+        "answer": "We need more evidence to prove this hypothesis."
+      },
+      {
+        "vi": "Ô nhiễm tiếng ồn ảnh hưởng tiêu cực đến sức khỏe tâm thần.",
+        "hint": "Noise pollution negatively affects mental...",
+        "answer": "Noise pollution negatively affects mental health."
+      },
+      {
+        "vi": "Sự thay đổi khí hậu đòi hỏi hành động khẩn cấp từ tất cả các quốc gia.",
+        "hint": "Climate change requires urgent action...",
+        "answer": "Climate change requires urgent action from all countries."
+      },
+      {
+        "vi": "Sức mạnh ý chí là yếu tố quan trọng để đạt được thành công.",
+        "hint": "Willpower is an important factor...",
+        "answer": "Willpower is an important factor in achieving success."
+      },
+      {
+        "vi": "Cô ấy đã thể hiện rất nhiều sự dũng cảm trong tình huống khó khăn.",
+        "hint": "She showed a great deal...",
+        "answer": "She showed a great deal of courage in a difficult situation."
+      },
+      {
+        "vi": "Đói nghèo và bất bình đẳng đang gia tăng ở nhiều nơi trên thế giới.",
+        "hint": "Hunger and inequality are increasing...",
+        "answer": "Hunger and inequality are increasing in many parts of the world."
+      },
+      {
+        "vi": "Sự cạnh tranh lành mạnh giúp thúc đẩy sự phát triển của nền kinh tế.",
+        "hint": "Healthy competition helps drive economic...",
+        "answer": "Healthy competition helps drive economic development."
+      },
+      {
+        "vi": "Lòng biết ơn là một phẩm chất đáng trân trọng.",
+        "hint": "Gratitude is a quality worth...",
+        "answer": "Gratitude is a quality worth cherishing."
+      },
+      {
+        "vi": "Tự do báo chí là một trụ cột của nền dân chủ.",
+        "hint": "Freedom of the press is...",
+        "answer": "Freedom of the press is a pillar of democracy."
+      },
+      {
+        "vi": "Rác thải nhựa đang hủy hoại hệ sinh thái biển.",
+        "hint": "Plastic waste is destroying marine...",
+        "answer": "Plastic waste is destroying marine ecosystems."
+      },
+      {
+        "vi": "Nhiều người trẻ thiếu kinh nghiệm làm việc thực tế.",
+        "hint": "Many young people lack practical...",
+        "answer": "Many young people lack practical work experience."
+      },
+      {
+        "vi": "Sự đoàn kết trong cộng đồng giúp vượt qua những khó khăn chung.",
+        "hint": "Community solidarity helps overcome shared...",
+        "answer": "Community solidarity helps overcome shared difficulties."
+      }
+    ],
+    "is_published": true,
+    "order_index": 104,
+    "created_at": "2026-05-21T04:33:02.533107+00:00",
+    "updated_at": "2026-05-21T04:33:02.533107+00:00"
+  },
+  {
+    "id": "40453648-a19b-418a-a3e7-3092c1700136",
+    "exercise_id": "buoc1-singular-plural",
+    "title": "Số ít / Số nhiều (Singular / Plural)",
+    "topic": {
+      "en": "Singular / Plural — 25 Sentences",
+      "question": "Dịch các câu tiếng Việt sau sang tiếng Anh. Nhấn vào từ để xem gợi ý.",
+      "taskType": "Bước 1 – Câu Cơ Bản"
+    },
+    "band_target": "Bước 1",
+    "sentences": [
+      {
+        "vi": "Đứa trẻ đang chơi ngoài sân.",
+        "hint": "The child is playing in...",
+        "answer": "The child is playing in the yard."
+      },
+      {
+        "vi": "Những đứa trẻ đang chơi ngoài sân.",
+        "hint": "The children are playing in...",
+        "answer": "The children are playing in the yard."
+      },
+      {
+        "vi": "Người đàn ông đó là kỹ sư nổi tiếng.",
+        "hint": "That man is a famous...",
+        "answer": "That man is a famous engineer."
+      },
+      {
+        "vi": "Những người đàn ông đó đều là kỹ sư nổi tiếng.",
+        "hint": "Those men are all famous...",
+        "answer": "Those men are all famous engineers."
+      },
+      {
+        "vi": "Hiện tượng này rất hiếm gặp trong tự nhiên.",
+        "hint": "This phenomenon is very rare...",
+        "answer": "This phenomenon is very rare in nature."
+      },
+      {
+        "vi": "Những hiện tượng này cần được nghiên cứu kỹ hơn.",
+        "hint": "These phenomena need to be...",
+        "answer": "These phenomena need to be studied more carefully."
+      },
+      {
+        "vi": "Tiêu chí quan trọng nhất là chất lượng sản phẩm.",
+        "hint": "The most important criterion is...",
+        "answer": "The most important criterion is product quality."
+      },
+      {
+        "vi": "Các tiêu chí đánh giá được đặt ra rất rõ ràng.",
+        "hint": "The criteria for evaluation have...",
+        "answer": "The criteria for evaluation have been set out very clearly."
+      },
+      {
+        "vi": "Phụ nữ ngày nay đóng vai trò quan trọng trong xã hội.",
+        "hint": "Women today play an important...",
+        "answer": "Women today play an important role in society."
+      },
+      {
+        "vi": "Bàn chân của anh ấy bị thương trong trận đấu.",
+        "hint": "His foot was injured during...",
+        "answer": "His foot was injured during the match."
+      },
+      {
+        "vi": "Anh ấy bị thương ở cả hai bàn chân.",
+        "hint": "He was injured in both...",
+        "answer": "He was injured in both feet."
+      },
+      {
+        "vi": "Con chuột này đã phá hủy nhiều thứ trong nhà.",
+        "hint": "This mouse has destroyed many...",
+        "answer": "This mouse has destroyed many things in the house."
+      },
+      {
+        "vi": "Đàn chuột đã xâm nhập vào kho thóc.",
+        "hint": "The mice have entered the...",
+        "answer": "The mice have entered the grain store."
+      },
+      {
+        "vi": "Đó là một phân tích rất sâu sắc về vấn đề xã hội.",
+        "hint": "That is a very insightful...",
+        "answer": "That is a very insightful analysis of the social issue."
+      },
+      {
+        "vi": "Các phân tích cho thấy xu hướng đáng lo ngại.",
+        "hint": "The analyses show a worrying...",
+        "answer": "The analyses show a worrying trend."
+      },
+      {
+        "vi": "Cuộc khủng hoảng kinh tế ảnh hưởng đến toàn bộ dân số.",
+        "hint": "The economic crisis affects the...",
+        "answer": "The economic crisis affects the entire population."
+      },
+      {
+        "vi": "Dân số thế giới đã vượt 8 tỷ người.",
+        "hint": "The world's population has exceeded...",
+        "answer": "The world's population has exceeded 8 billion people."
+      },
+      {
+        "vi": "Người phụ nữ đó là một nhà khoa học tài năng.",
+        "hint": "That woman is a talented...",
+        "answer": "That woman is a talented scientist."
+      },
+      {
+        "vi": "Nhiều người phụ nữ đã trở thành lãnh đạo xuất sắc.",
+        "hint": "Many women have become outstanding...",
+        "answer": "Many women have become outstanding leaders."
+      },
+      {
+        "vi": "Trục giao thông này đóng vai trò rất quan trọng.",
+        "hint": "This transport axis plays a...",
+        "answer": "This transport axis plays a very important role."
+      },
+      {
+        "vi": "Một số nước đang phát triển đang đối mặt với nợ công lớn.",
+        "hint": "Some developing countries are facing...",
+        "answer": "Some developing countries are facing large public debt."
+      },
+      {
+        "vi": "Mỗi loại thuốc đều có tác dụng phụ riêng.",
+        "hint": "Each type of medicine has...",
+        "answer": "Each type of medicine has its own side effects."
+      },
+      {
+        "vi": "Các loại thuốc này cần được bảo quản đúng cách.",
+        "hint": "These medicines need to be...",
+        "answer": "These medicines need to be stored properly."
+      },
+      {
+        "vi": "Một nghiên cứu mới đây đã chứng minh điều này.",
+        "hint": "A recent study has proved...",
+        "answer": "A recent study has proved this."
+      },
+      {
+        "vi": "Nhiều nghiên cứu đã chỉ ra mối liên hệ giữa căng thẳng và bệnh tim mạch.",
+        "hint": "Many studies have shown the...",
+        "answer": "Many studies have shown the link between stress and heart disease."
+      }
+    ],
+    "is_published": true,
+    "order_index": 105,
+    "created_at": "2026-05-21T04:33:03.228824+00:00",
+    "updated_at": "2026-05-21T04:33:03.228824+00:00"
+  },
+  {
+    "id": "42887992-4938-4289-8602-068628148c3b",
+    "exercise_id": "buoc1-passive-voice",
+    "title": "Câu bị động (Passive Voice)",
+    "topic": {
+      "en": "Passive Voice — 25 Sentences",
+      "question": "Dịch các câu tiếng Việt sau sang tiếng Anh. Nhấn vào từ để xem gợi ý.",
+      "taskType": "Bước 1 – Câu Cơ Bản"
+    },
+    "band_target": "Bước 1",
+    "sentences": [
+      {
+        "vi": "Người ta xây tòa nhà này vào năm 1990.",
+        "hint": "This building was built in...",
+        "answer": "This building was built in 1990."
+      },
+      {
+        "vi": "Người ta đang nghiên cứu loại vaccine mới này.",
+        "hint": "This new vaccine is being...",
+        "answer": "This new vaccine is being researched."
+      },
+      {
+        "vi": "Chính phủ đã thông qua đạo luật mới.",
+        "hint": "The new law has been...",
+        "answer": "The new law has been passed by the government."
+      },
+      {
+        "vi": "Người ta sẽ tổ chức hội nghị quốc tế vào tháng tới.",
+        "hint": "The international conference will be...",
+        "answer": "The international conference will be held next month."
+      },
+      {
+        "vi": "Học sinh được yêu cầu nộp bài trước thứ Sáu.",
+        "hint": "Students are required to submit...",
+        "answer": "Students are required to submit their work before Friday."
+      },
+      {
+        "vi": "Người ta phát hiện ra sự thật bởi một nhà báo địa phương.",
+        "hint": "The truth was discovered by...",
+        "answer": "The truth was discovered by a local journalist."
+      },
+      {
+        "vi": "Thông tin đã được gửi đến tất cả các bộ phận liên quan.",
+        "hint": "The information has been sent...",
+        "answer": "The information has been sent to all relevant departments."
+      },
+      {
+        "vi": "Bệnh nhân đang được theo dõi chặt chẽ bởi đội ngũ y tế.",
+        "hint": "The patient is being closely...",
+        "answer": "The patient is being closely monitored by the medical team."
+      },
+      {
+        "vi": "Dự án sẽ được hoàn thành vào cuối năm nay.",
+        "hint": "The project will be completed...",
+        "answer": "The project will be completed by the end of this year."
+      },
+      {
+        "vi": "Hàng nghìn cây xanh đã bị chặt phá để xây khu đô thị.",
+        "hint": "Thousands of trees have been...",
+        "answer": "Thousands of trees have been cut down to build the urban area."
+      },
+      {
+        "vi": "Trẻ em nên được nuôi dưỡng trong một môi trường an toàn.",
+        "hint": "Children should be raised in...",
+        "answer": "Children should be raised in a safe environment."
+      },
+      {
+        "vi": "Sản phẩm bị lỗi đã được thu hồi bởi nhà sản xuất.",
+        "hint": "The defective product has been...",
+        "answer": "The defective product has been recalled by the manufacturer."
+      },
+      {
+        "vi": "Vấn đề này cần được giải quyết ngay lập tức.",
+        "hint": "This problem needs to be...",
+        "answer": "This problem needs to be solved immediately."
+      },
+      {
+        "vi": "Bài báo được đăng tải trên tạp chí khoa học uy tín.",
+        "hint": "The article was published in...",
+        "answer": "The article was published in a prestigious scientific journal."
+      },
+      {
+        "vi": "Người ta thường hiểu nhầm khái niệm này.",
+        "hint": "This concept is often misunderstood.",
+        "answer": "This concept is often misunderstood."
+      },
+      {
+        "vi": "Kế hoạch mới đã được các nhà quản lý phê duyệt.",
+        "hint": "The new plan has been...",
+        "answer": "The new plan has been approved by the managers."
+      },
+      {
+        "vi": "Nhiều sinh vật biển đang bị đe dọa bởi ô nhiễm đại dương.",
+        "hint": "Many marine creatures are being...",
+        "answer": "Many marine creatures are being threatened by ocean pollution."
+      },
+      {
+        "vi": "Tiền thưởng đã được chia đều cho tất cả nhân viên.",
+        "hint": "The bonus has been distributed...",
+        "answer": "The bonus has been distributed equally to all employees."
+      },
+      {
+        "vi": "Rác thải cần được phân loại trước khi đưa đến bãi chôn lấp.",
+        "hint": "Waste needs to be sorted...",
+        "answer": "Waste needs to be sorted before being taken to the landfill."
+      },
+      {
+        "vi": "Trẻ em ở nhiều vùng nông thôn chưa được tiếp cận với internet.",
+        "hint": "Children in many rural areas...",
+        "answer": "Children in many rural areas have not been given access to the internet."
+      },
+      {
+        "vi": "Quy trình sản xuất sẽ được tự động hóa trong tương lai gần.",
+        "hint": "The production process will be...",
+        "answer": "The production process will be automated in the near future."
+      },
+      {
+        "vi": "Ứng dụng mới này đã được tải xuống hàng triệu lần.",
+        "hint": "This new application has been...",
+        "answer": "This new application has been downloaded millions of times."
+      },
+      {
+        "vi": "Hệ thống y tế cần được cải thiện để đáp ứng nhu cầu của người dân.",
+        "hint": "The healthcare system needs to...",
+        "answer": "The healthcare system needs to be improved to meet the needs of the population."
+      },
+      {
+        "vi": "Các tài liệu quan trọng đã bị mất trong vụ hỏa hoạn.",
+        "hint": "The important documents were lost...",
+        "answer": "The important documents were lost in the fire."
+      },
+      {
+        "vi": "Nhiều chính sách mới đang được xem xét để ứng phó với lạm phát.",
+        "hint": "Many new policies are being...",
+        "answer": "Many new policies are being considered to respond to inflation."
+      }
+    ],
+    "is_published": true,
+    "order_index": 106,
+    "created_at": "2026-05-21T04:33:04.279575+00:00",
+    "updated_at": "2026-05-21T04:33:04.279575+00:00"
+  },
+  {
+    "id": "f2b972aa-3580-4c9e-97e0-6efab3f023fc",
+    "exercise_id": "buoc1-comparison",
+    "title": "Câu so sánh (Comparison)",
+    "topic": {
+      "en": "Comparison — 25 Sentences",
+      "question": "Dịch các câu tiếng Việt sau sang tiếng Anh. Nhấn vào từ để xem gợi ý.",
+      "taskType": "Bước 1 – Câu Cơ Bản"
+    },
+    "band_target": "Bước 1",
+    "sentences": [
+      {
+        "vi": "Sức khỏe quan trọng hơn tiền bạc.",
+        "hint": "Health is more important than...",
+        "answer": "Health is more important than money."
+      },
+      {
+        "vi": "Đây là bài thi khó nhất mà tôi từng làm.",
+        "hint": "This is the most difficult...",
+        "answer": "This is the most difficult exam I have ever taken."
+      },
+      {
+        "vi": "Phương án B rẻ hơn nhưng kém hiệu quả hơn phương án A.",
+        "hint": "Option B is cheaper but...",
+        "answer": "Option B is cheaper but less effective than Option A."
+      },
+      {
+        "vi": "Mức độ ô nhiễm không khí ở thành phố cao hơn nhiều so với nông thôn.",
+        "hint": "The level of air pollution...",
+        "answer": "The level of air pollution in cities is much higher than in rural areas."
+      },
+      {
+        "vi": "Tàu cao tốc nhanh hơn tàu thông thường gần gấp đôi.",
+        "hint": "High-speed trains are almost twice...",
+        "answer": "High-speed trains are almost twice as fast as ordinary trains."
+      },
+      {
+        "vi": "Cô ấy nói tiếng Anh tốt hơn bất kỳ ai trong lớp.",
+        "hint": "She speaks English better than...",
+        "answer": "She speaks English better than anyone else in the class."
+      },
+      {
+        "vi": "Cuộc sống ở thành phố tiện nghi hơn nhưng cũng bận rộn hơn nhiều.",
+        "hint": "Life in cities is more...",
+        "answer": "Life in cities is more convenient but also much busier."
+      },
+      {
+        "vi": "Đây là giải pháp bền vững nhất mà chúng ta có thể thực hiện.",
+        "hint": "This is the most sustainable...",
+        "answer": "This is the most sustainable solution that we can implement."
+      },
+      {
+        "vi": "Căng thẳng có hại cho sức khỏe không kém gì chế độ ăn uống không lành mạnh.",
+        "hint": "Stress is just as harmful...",
+        "answer": "Stress is just as harmful to health as an unhealthy diet."
+      },
+      {
+        "vi": "Giáo dục là khoản đầu tư có lợi nhất mà xã hội có thể thực hiện.",
+        "hint": "Education is the most profitable...",
+        "answer": "Education is the most profitable investment that society can make."
+      },
+      {
+        "vi": "Công nghệ mới làm cho quá trình sản xuất nhanh hơn và rẻ hơn.",
+        "hint": "New technology makes the production...",
+        "answer": "New technology makes the production process faster and cheaper."
+      },
+      {
+        "vi": "Ngày nay học sinh trẻ có xu hướng học ít sáng tạo hơn thế hệ trước.",
+        "hint": "Today's younger students tend to...",
+        "answer": "Today's younger students tend to learn less creatively than the previous generation."
+      },
+      {
+        "vi": "Tỷ lệ thất nghiệp ở khu vực nông thôn cao hơn nhiều so với thành thị.",
+        "hint": "The unemployment rate in rural...",
+        "answer": "The unemployment rate in rural areas is much higher than in urban areas."
+      },
+      {
+        "vi": "Xe điện thân thiện với môi trường hơn xe chạy xăng.",
+        "hint": "Electric vehicles are more environmentally...",
+        "answer": "Electric vehicles are more environmentally friendly than petrol-powered cars."
+      },
+      {
+        "vi": "Kỹ năng giao tiếp quan trọng không kém kỹ năng chuyên môn.",
+        "hint": "Communication skills are just as...",
+        "answer": "Communication skills are just as important as professional skills."
+      },
+      {
+        "vi": "Đây là thách thức lớn nhất mà thế hệ chúng ta phải đối mặt.",
+        "hint": "This is the greatest challenge...",
+        "answer": "This is the greatest challenge that our generation must face."
+      },
+      {
+        "vi": "Ở nhà thường an toàn hơn ra ngoài trong trời mưa lớn.",
+        "hint": "Staying at home is often...",
+        "answer": "Staying at home is often safer than going out in heavy rain."
+      },
+      {
+        "vi": "Tình trạng ùn tắc giao thông ở Hà Nội tệ hơn ở nhiều thành phố khác.",
+        "hint": "Traffic congestion in Hanoi is...",
+        "answer": "Traffic congestion in Hanoi is worse than in many other cities."
+      },
+      {
+        "vi": "Học trực tuyến ngày càng phổ biến hơn nhờ sự phát triển của công nghệ.",
+        "hint": "Online learning is becoming increasingly...",
+        "answer": "Online learning is becoming increasingly popular thanks to technological development."
+      },
+      {
+        "vi": "Lương ở thành phố lớn thường cao hơn ở tỉnh nhỏ.",
+        "hint": "Salaries in large cities are...",
+        "answer": "Salaries in large cities are usually higher than in small provinces."
+      },
+      {
+        "vi": "Không có gì quý giá hơn thời gian.",
+        "hint": "Nothing is more precious than...",
+        "answer": "Nothing is more precious than time."
+      },
+      {
+        "vi": "Phương pháp dạy học tích cực hiệu quả hơn phương pháp truyền thống.",
+        "hint": "Active teaching methods are more...",
+        "answer": "Active teaching methods are more effective than traditional methods."
+      },
+      {
+        "vi": "Hàng hóa nhập khẩu thường đắt hơn hàng nội địa.",
+        "hint": "Imported goods are usually more...",
+        "answer": "Imported goods are usually more expensive than domestic products."
+      },
+      {
+        "vi": "Ô nhiễm nguồn nước là vấn đề nghiêm trọng nhất ở vùng đồng bằng sông Cửu Long.",
+        "hint": "Water pollution is the most...",
+        "answer": "Water pollution is the most serious problem in the Mekong Delta region."
+      },
+      {
+        "vi": "Tỷ lệ biết đọc biết viết ở Việt Nam cao hơn mức trung bình của khu vực.",
+        "hint": "The literacy rate in Vietnam...",
+        "answer": "The literacy rate in Vietnam is higher than the regional average."
+      }
+    ],
+    "is_published": true,
+    "order_index": 107,
+    "created_at": "2026-05-21T04:33:05.296394+00:00",
+    "updated_at": "2026-05-21T04:33:05.296394+00:00"
+  }
+]

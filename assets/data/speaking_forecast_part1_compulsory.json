@@ -1,0 +1,41 @@
+[
+  {
+    "topicNumber": 1,
+    "topicTitle": "Where you live now",
+    "fullTitle": "1. Where you live now",
+    "part": 1,
+    "isCompulsory": true,
+    "questions": [
+      "Which town or city do you live in now?",
+      "Are there any things you don't like about your area? (What are they?)",
+      "Do you think you will continue to live there for a long time? (Why? Why not?)",
+      "What are some changes in the area recently?",
+      "Do you live in a house or an apartment?",
+      "What is your favourite room in your home? (Why?)",
+      "What things make your home pleasant to live in? (Why?)",
+      "Are the people in your neighbourhood nice and friendly?",
+      "Do you know any of your neighbours?",
+      "Do you know any famous people in your area?"
+    ]
+  },
+  {
+    "topicNumber": 2,
+    "topicTitle": "Work / Study",
+    "fullTitle": "2. Work / Study",
+    "part": 1,
+    "isCompulsory": true,
+    "questions": [
+      "What kind of work do you do?",
+      "What do you find most interesting about your work? (Why?)",
+      "Which is more important to you – the people you work with or the work you do? (Why?)",
+      "Do you work best in the morning or the afternoon? (Why?)",
+      "What do you study?",
+      "What do you find most interesting about your studies? (Why?)",
+      "Which is more important to you – the teachers or the other students on your course? (Why?)",
+      "How much time do you spend studying every week?",
+      "How do you usually travel to the city where you study?",
+      "Do you study best in the morning or the afternoon? (Why?)",
+      "Have you always wanted to study this subject / these subjects? (Why? Why not?)"
+    ]
+  }
+]

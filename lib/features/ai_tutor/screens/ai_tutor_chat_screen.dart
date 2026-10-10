@@ -6,6 +6,7 @@ import '../../../app/theme.dart';
 import '../../../services/tts_service.dart';
 import '../models/chat_message_model.dart';
 import '../services/gemini_ai_tutor_service.dart';
+import '../../../shared/widgets/app_back_button.dart';
 
 class AiTutorChatScreen extends StatefulWidget {
   final String? initialPrompt;
@@ -322,8 +323,7 @@ class _AiTutorChatScreenState extends State<AiTutorChatScreen> {
         ),
         automaticallyImplyLeading: false,
         leading: context.canPop()
-            ? IconButton(
-                icon: const Icon(Icons.arrow_back_ios_new_rounded, color: AppTheme.brandTextPrimary, size: 18),
+            ? AppBackButton(
                 onPressed: () {
                   _ttsService.stop();
                   context.pop();

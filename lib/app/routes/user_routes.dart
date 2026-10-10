@@ -25,26 +25,35 @@ import '../../features/profile/screens/edit_profile_screen.dart';
 import '../../features/profile/screens/change_password_screen.dart';
 import '../../features/profile/screens/update_cccd_screen.dart';
 import '../../features/documents/screens/document_list_screen.dart';
-import '../../features/skills/screens/skill_detail_screen.dart';
+import '../../features/skills/listening/screens/listening_hub_screen.dart';
 import '../../features/grammar/screens/grammar_lesson_detail_screen.dart';
-import '../../features/reading/screens/reading_hub_screen.dart';
-import '../../features/reading/screens/reading_practice_screen.dart';
-import '../../features/reading/screens/reading_result_screen.dart';
-import '../../features/reading/models/reading_test_model.dart';
-import '../../features/reading/models/reading_result_model.dart';
-import '../../features/skills/screens/dictation_library_screen.dart';
-import '../../features/skills/screens/listening_dictation_screen.dart';
-import '../../features/skills/models/dictation_model.dart';
-import '../../features/speaking/screens/speaking_hub_screen.dart';
-import '../../features/speaking/screens/speaking_forecast_screen.dart';
-import '../../features/speaking/screens/speaking_roulette_screen.dart';
-import '../../features/speaking/screens/speaking_practice_screen.dart';
-import '../../features/speaking/models/speaking_model.dart';
-import '../../features/writing/screens/writing_hub_screen.dart';
-import '../../features/writing/screens/writing_tests_list_screen.dart';
-import '../../features/writing/screens/writing_practice_screen.dart';
-import '../../features/writing/screens/writing_translation_screen.dart';
-import '../../features/writing/models/writing_model.dart';
+import '../../features/skills/reading/screens/reading_hub_screen.dart';
+import '../../features/skills/reading/screens/reading_practice_screen.dart';
+import '../../features/skills/reading/screens/reading_result_screen.dart';
+import '../../features/skills/reading/models/reading_test_model.dart';
+import '../../features/skills/reading/models/reading_result_model.dart';
+import '../../features/skills/listening/screens/dictation_library_screen.dart';
+import '../../features/skills/listening/screens/listening_dictation_screen.dart';
+import '../../features/skills/listening/models/dictation_model.dart';
+import '../../features/skills/speaking/screens/speaking_hub_screen.dart';
+import '../../features/skills/speaking/screens/speaking_forecast_screen.dart';
+import '../../features/skills/speaking/screens/speaking_part1_compulsory_screen.dart';
+import '../../features/skills/speaking/screens/speaking_part1_topics_screen.dart';
+import '../../features/skills/speaking/screens/speaking_part2_3_screen.dart';
+import '../../features/skills/speaking/screens/speaking_roulette_screen.dart';
+import '../../features/skills/speaking/screens/speaking_practice_screen.dart';
+import '../../features/skills/speaking/screens/speaking_shadowing_library_screen.dart';
+import '../../features/skills/speaking/screens/speaking_shadowing_screen.dart';
+import '../../features/skills/speaking/models/speaking_shadowing_model.dart';
+import '../../features/skills/speaking/data/speaking_shadowing_data.dart';
+import '../../features/skills/speaking/models/speaking_model.dart';
+import '../../features/skills/writing/screens/writing_hub_screen.dart';
+import '../../features/skills/writing/screens/writing_tests_list_screen.dart';
+import '../../features/skills/writing/screens/writing_practice_screen.dart';
+import '../../features/skills/writing/screens/writing_translation_hub_screen.dart';
+import '../../features/skills/writing/screens/writing_translation_practice_screen.dart';
+import '../../features/skills/writing/models/writing_translation_model.dart';
+import '../../features/skills/writing/models/writing_model.dart';
 import '../../shared/layouts/mobile_scaffold.dart';
 
 final List<RouteBase> userRoutes = [
@@ -238,9 +247,23 @@ final List<RouteBase> userRoutes = [
   GoRoute(
     path: '/skill/:skillType',
     builder: (context, state) {
-      final skillType = state.pathParameters['skillType'] ?? 'listening';
-      return SkillDetailScreen(skillType: skillType);
+      final skillType = (state.pathParameters['skillType'] ?? 'listening').toLowerCase();
+      switch (skillType) {
+        case 'reading':
+          return const ReadingHubScreen();
+        case 'speaking':
+          return const SpeakingHubScreen();
+        case 'writing':
+          return const WritingHubScreen();
+        case 'listening':
+        default:
+          return const ListeningHubScreen();
+      }
     },
+  ),
+  GoRoute(
+    path: '/listening',
+    builder: (context, state) => const ListeningHubScreen(),
   ),
 
   // Grammar IELTS Practice (Redirects to unified Course & Roadmap screen)
@@ -316,6 +339,18 @@ final List<RouteBase> userRoutes = [
     builder: (context, state) => const SpeakingForecastScreen(),
   ),
   GoRoute(
+    path: '/speaking/part1-compulsory',
+    builder: (context, state) => const SpeakingPart1CompulsoryScreen(),
+  ),
+  GoRoute(
+    path: '/speaking/part1-topics',
+    builder: (context, state) => const SpeakingPart1TopicsScreen(),
+  ),
+  GoRoute(
+    path: '/speaking/part2-3',
+    builder: (context, state) => const SpeakingPart23Screen(),
+  ),
+  GoRoute(
     path: '/speaking/roulette',
     builder: (context, state) => const SpeakingRouletteScreen(),
   ),
@@ -329,6 +364,19 @@ final List<RouteBase> userRoutes = [
         topic: topic,
         initialQuestionIndex: initialIndex,
       );
+    },
+  ),
+  GoRoute(
+    path: '/speaking/shadowing',
+    builder: (context, state) => const SpeakingShadowingLibraryScreen(),
+  ),
+  GoRoute(
+    path: '/speaking/shadowing/practice',
+    builder: (context, state) {
+      final extra = state.extra as Map<String, dynamic>?;
+      final exercise = extra?['exercise'] as ShadowingExercise? ??
+          SpeakingShadowingData.allExercises.first;
+      return SpeakingShadowingScreen(exercise: exercise);
     },
   ),
 
@@ -351,6 +399,18 @@ final List<RouteBase> userRoutes = [
   ),
   GoRoute(
     path: '/writing/translation',
-    builder: (context, state) => const WritingTranslationScreen(),
+    builder: (context, state) => const WritingTranslationHubScreen(),
+  ),
+  GoRoute(
+    path: '/writing/translation/practice',
+    builder: (context, state) {
+      final extra = state.extra as Map<String, dynamic>?;
+      final exercise = extra?['exercise'] as WritingTranslationExercise;
+      final index = extra?['initialIndex'] as int? ?? 0;
+      return WritingTranslationPracticeScreen(
+        exercise: exercise,
+        initialSentenceIndex: index,
+      );
+    },
   ),
 ];

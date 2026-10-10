@@ -5,6 +5,7 @@ import '../../../models/edu_word.dart';
 import '../../../models/user_deck_progress.dart';
 import '../../../services/eduwords_service.dart';
 import '../../../services/flashcard_progress_service.dart';
+import '../../../shared/widgets/app_back_button.dart';
 
 class DeckDetailScreen extends StatefulWidget {
   final String deckId;
@@ -86,10 +87,7 @@ class _DeckDetailScreenState extends State<DeckDetailScreen> {
       appBar: AppBar(
         backgroundColor: AppTheme.brandSurface,
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppTheme.brandTextPrimary),
-          onPressed: () => context.pop(),
-        ),
+        leading: const AppBackButton(),
         title: Text(
           widget.deckTitle,
           style: const TextStyle(

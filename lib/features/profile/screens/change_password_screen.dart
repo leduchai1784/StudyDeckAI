@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import '../../../app/theme.dart';
 import '../../../services/user_service.dart';
+import '../../../shared/widgets/app_back_button.dart';
 
 class ChangePasswordScreen extends StatefulWidget {
   const ChangePasswordScreen({super.key});
@@ -180,6 +181,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
     return Scaffold(
       backgroundColor: AppTheme.brandBackground,
       appBar: AppBar(
+        leading: const AppBackButton(),
         title: const Text('Đổi Mật Khẩu', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         backgroundColor: AppTheme.brandSurface,
         foregroundColor: AppTheme.brandTextPrimary,

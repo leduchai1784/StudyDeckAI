@@ -7,6 +7,7 @@ import '../../../models/nks_user.dart';
 import '../../../services/user_service.dart';
 import '../../../shared/utils/avatar_helper.dart';
 import '../../../shared/utils/date_formatter.dart';
+import '../../../shared/widgets/app_back_button.dart';
 
 class UpdateCccdScreen extends StatefulWidget {
   const UpdateCccdScreen({super.key});
@@ -230,6 +231,7 @@ class _UpdateCccdScreenState extends State<UpdateCccdScreen> {
     return Scaffold(
       backgroundColor: AppTheme.brandBackground,
       appBar: AppBar(
+        leading: const AppBackButton(),
         title: const Text('Cập Nhật Định Danh CCCD', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         backgroundColor: AppTheme.brandSurface,
         foregroundColor: AppTheme.brandTextPrimary,

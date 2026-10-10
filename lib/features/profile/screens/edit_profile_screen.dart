@@ -9,6 +9,7 @@ import '../../../services/user_service.dart';
 import '../../../shared/utils/avatar_helper.dart';
 import '../../../shared/utils/date_formatter.dart';
 import '../widgets/avatar_editor_dialog.dart';
+import '../../../shared/widgets/app_back_button.dart';
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({super.key});
@@ -357,6 +358,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     return Scaffold(
       backgroundColor: AppTheme.brandBackground,
       appBar: AppBar(
+        leading: const AppBackButton(),
         title: const Text('Chỉnh Sửa Hồ Sơ Cá Nhân', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         backgroundColor: AppTheme.brandSurface,
         foregroundColor: AppTheme.brandTextPrimary,

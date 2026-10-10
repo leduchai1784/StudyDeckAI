@@ -1,0 +1,1387 @@
+[
+  {
+    "id": "ae1f8451-38b2-49ef-ba92-24fbc4ef02f9",
+    "exercise_id": "buoc4-education",
+    "title": "Đoạn Văn Band 8.0: Education",
+    "topic": {
+      "en": "Education — 25 Advanced Paragraphs",
+      "question": "Dịch từng đoạn văn học thuật tiếng Việt sang tiếng Anh ở mức Band 8.0.",
+      "taskType": "Bước 4 – Dịch Đoạn Văn Band 8.0"
+    },
+    "band_target": "Bước 4",
+    "sentences": [
+      {
+        "vi": "Giáo dục không chỉ đơn thuần là việc truyền đạt kiến thức mà còn là quá trình hình thành tư duy phản biện và bản lĩnh cá nhân.",
+        "hint": "Education is not merely the...",
+        "answer": "Education is not merely the transmission of knowledge but also the process of cultivating critical thinking and individual character."
+      },
+      {
+        "vi": "Sự phụ thuộc ngày càng tăng vào các phương tiện công nghệ trong giảng dạy đòi hỏi giáo viên phải liên tục thích nghi và nâng cao năng lực số hóa.",
+        "hint": "The growing reliance on technological...",
+        "answer": "The growing reliance on technological tools in teaching demands that educators continuously adapt and enhance their digital competencies."
+      },
+      {
+        "vi": "Bất bình đẳng trong tiếp cận giáo dục chất lượng cao vẫn là rào cản lớn nhất ngăn cản sự phát triển công bằng của xã hội.",
+        "hint": "Inequality in access to high-quality...",
+        "answer": "Inequality in access to high-quality education remains the most significant barrier to equitable social development."
+      },
+      {
+        "vi": "Mô hình giáo dục truyền thống lấy giáo viên làm trung tâm đang dần nhường chỗ cho các phương pháp lấy học sinh làm trung tâm, khuyến khích sự chủ động và sáng tạo.",
+        "hint": "The traditional teacher-centred educational model...",
+        "answer": "The traditional teacher-centred educational model is gradually giving way to student-centred approaches that foster initiative and creativity."
+      },
+      {
+        "vi": "Việc đào tạo nghề và giáo dục đại học cần được xem là hai con đường bổ trợ nhau thay vì đặt chúng trong mối quan hệ đối lập về giá trị.",
+        "hint": "Vocational training and university education...",
+        "answer": "Vocational training and university education should be regarded as complementary pathways rather than placed in opposition regarding their respective values."
+      },
+      {
+        "vi": "Áp lực thành tích học tập quá mức không chỉ ảnh hưởng tiêu cực đến sức khỏe tâm thần của học sinh mà còn triệt tiêu động lực học tập nội tại của các em.",
+        "hint": "Excessive academic pressure not only...",
+        "answer": "Excessive academic pressure not only negatively affects students' mental health but also extinguishes their intrinsic motivation to learn."
+      },
+      {
+        "vi": "Chương trình học cần được thiết kế để trang bị cho học sinh những kỹ năng của thế kỷ 21, bao gồm tư duy phân tích, sự sáng tạo và khả năng cộng tác hiệu quả.",
+        "hint": "Curricula must be designed to...",
+        "answer": "Curricula must be designed to equip students with twenty-first-century skills, encompassing analytical thinking, creativity, and the capacity for effective collaboration."
+      },
+      {
+        "vi": "Đầu tư vào giáo dục mầm non chất lượng cao mang lại lợi ích lâu dài cho cả cá nhân lẫn xã hội, vượt trội so với hầu hết các hình thức đầu tư công khác.",
+        "hint": "Investing in high-quality early childhood...",
+        "answer": "Investing in high-quality early childhood education yields long-term benefits for both individuals and society that surpass most other forms of public investment."
+      },
+      {
+        "vi": "Số hóa tài liệu học tập mở ra cơ hội tiếp cận kiến thức cho hàng triệu người, song cũng làm nổi bật khoảng cách kỹ thuật số giữa các quốc gia và tầng lớp xã hội.",
+        "hint": "The digitalisation of learning materials...",
+        "answer": "The digitalisation of learning materials opens up access to knowledge for millions, yet also highlights the digital divide between nations and social strata."
+      },
+      {
+        "vi": "Giáo viên xuất sắc không chỉ truyền cảm hứng mà còn định hình quan niệm thế giới của học sinh, ảnh hưởng sâu sắc đến những lựa chọn nghề nghiệp và cuộc đời của các em.",
+        "hint": "Outstanding teachers do not merely...",
+        "answer": "Outstanding teachers do not merely inspire but also shape students' worldviews, profoundly influencing their professional and life choices."
+      },
+      {
+        "vi": "Học tập suốt đời không còn là lựa chọn mà đã trở thành yêu cầu bắt buộc trong bối cảnh thế giới thay đổi nhanh chóng và thị trường lao động không ngừng biến động.",
+        "hint": "Lifelong learning is no longer...",
+        "answer": "Lifelong learning is no longer optional but has become an imperative given the rapid pace of global change and the continuously shifting labour market."
+      },
+      {
+        "vi": "Sự tham gia của phụ huynh vào quá trình học tập của con cái có mối tương quan chặt chẽ với thành tích học thuật và sự phát triển cảm xúc tích cực của trẻ.",
+        "hint": "Parental involvement in children's learning...",
+        "answer": "Parental involvement in children's learning is strongly correlated with academic achievement and positive emotional development in children."
+      },
+      {
+        "vi": "Giáo dục toàn diện cần cân bằng giữa việc phát triển trí tuệ, thể chất, cảm xúc và đạo đức, thay vì tập trung một chiều vào kết quả thi cử.",
+        "hint": "Holistic education must balance intellectual,...",
+        "answer": "Holistic education must balance intellectual, physical, emotional, and moral development rather than focusing narrowly on examination outcomes."
+      },
+      {
+        "vi": "Đa dạng hóa phương pháp đánh giá, từ thi viết truyền thống đến đánh giá dự án thực tế, giúp đo lường toàn diện hơn năng lực thực sự của học sinh.",
+        "hint": "Diversifying assessment methods, from traditional...",
+        "answer": "Diversifying assessment methods, from traditional written examinations to project-based evaluation, enables a more comprehensive measurement of students' genuine capabilities."
+      },
+      {
+        "vi": "Xu hướng quốc tế hóa giáo dục đang thúc đẩy sự hợp tác xuyên quốc gia, nhưng cũng đặt ra câu hỏi về việc bảo tồn bản sắc văn hóa trong môi trường học thuật toàn cầu.",
+        "hint": "The trend towards internationalisation of...",
+        "answer": "The trend towards internationalisation of education is driving transnational collaboration, yet also raises questions about preserving cultural identity within a global academic environment."
+      },
+      {
+        "vi": "Giáo dục về công dân số cần được tích hợp vào chương trình học từ sớm để chuẩn bị cho thế hệ trẻ những kỹ năng sống thiết yếu trong thế giới kết nối.",
+        "hint": "Digital citizenship education must be...",
+        "answer": "Digital citizenship education must be integrated into curricula from an early stage to prepare the younger generation with essential life skills in an interconnected world."
+      },
+      {
+        "vi": "Khoảng cách giữa kiến thức học thuật và yêu cầu thực tiễn của thị trường lao động đang đặt ra thách thức lớn cho các nhà hoạch định chính sách giáo dục.",
+        "hint": "The gap between academic knowledge...",
+        "answer": "The gap between academic knowledge and the practical requirements of the labour market poses a considerable challenge for education policymakers."
+      },
+      {
+        "vi": "Học bổng và các chương trình hỗ trợ tài chính đóng vai trò quan trọng trong việc tạo ra cơ hội bình đẳng cho những học sinh có năng lực nhưng thiếu điều kiện kinh tế.",
+        "hint": "Scholarships and financial support programmes...",
+        "answer": "Scholarships and financial support programmes play a vital role in creating equal opportunities for talented students who lack economic means."
+      },
+      {
+        "vi": "Sự kết hợp giữa học tập chính quy và học tập không chính quy đang tạo ra những mô hình giáo dục linh hoạt hơn, phù hợp với nhu cầu đa dạng của người học.",
+        "hint": "The integration of formal and...",
+        "answer": "The integration of formal and informal learning is generating more flexible educational models that suit the diverse needs of learners."
+      },
+      {
+        "vi": "Giáo dục đặc biệt cho trẻ em có nhu cầu học tập khác biệt đòi hỏi đầu tư đáng kể vào cả nguồn nhân lực chuyên môn lẫn cơ sở vật chất phù hợp.",
+        "hint": "Special education for children with...",
+        "answer": "Special education for children with different learning needs requires significant investment in both specialist human resources and appropriate facilities."
+      },
+      {
+        "vi": "Tự học qua các nền tảng trực tuyến mở đang phá vỡ mô hình giáo dục truyền thống và trao quyền cho người học kiểm soát hành trình tri thức của mình.",
+        "hint": "Self-directed learning through open online...",
+        "answer": "Self-directed learning through open online platforms is disrupting the traditional educational model and empowering learners to take control of their own intellectual journeys."
+      },
+      {
+        "vi": "Chính sách giáo dục hiệu quả cần dựa trên bằng chứng nghiên cứu khoa học thay vì chỉ phản ánh xu hướng chính trị hay áp lực xã hội nhất thời.",
+        "hint": "Effective education policy must be...",
+        "answer": "Effective education policy must be grounded in scientific research evidence rather than simply reflecting transient political trends or social pressures."
+      },
+      {
+        "vi": "Nghịch lý của giáo dục hiện đại là trong khi tiếp cận thông tin chưa bao giờ dễ dàng đến vậy, thì khả năng phân biệt thông tin chính xác lại ngày càng trở nên quan trọng và khó hơn.",
+        "hint": "The paradox of modern education...",
+        "answer": "The paradox of modern education is that while access to information has never been easier, the capacity to discern accurate information is becoming increasingly important and more challenging."
+      },
+      {
+        "vi": "Môi trường học tập toàn diện và an toàn về mặt cảm xúc là điều kiện tiên quyết để học sinh có thể phát triển tiềm năng trí tuệ đầy đủ nhất.",
+        "hint": "A psychologically safe and inclusive...",
+        "answer": "A psychologically safe and inclusive learning environment is a prerequisite for students to develop their intellectual potential to the fullest."
+      },
+      {
+        "vi": "Đầu tư vào đào tạo và phát triển chuyên môn liên tục cho giáo viên là chiến lược căn bản để nâng cao chất lượng giáo dục ở mọi cấp độ.",
+        "hint": "Investing in continuous professional training...",
+        "answer": "Investing in continuous professional training and development for teachers is a fundamental strategy for improving the quality of education at every level."
+      }
+    ],
+    "is_published": true,
+    "order_index": 400,
+    "created_at": "2026-05-21T04:33:30.772689+00:00",
+    "updated_at": "2026-05-21T04:33:30.772689+00:00"
+  },
+  {
+    "id": "c6b9e155-c574-42b0-aa44-4a097d5c99a3",
+    "exercise_id": "buoc4-environment",
+    "title": "Đoạn Văn Band 8.0: Environment",
+    "topic": {
+      "en": "Environment — 25 Advanced Paragraphs",
+      "question": "Dịch từng đoạn văn học thuật tiếng Việt sang tiếng Anh ở mức Band 8.0.",
+      "taskType": "Bước 4 – Dịch Đoạn Văn Band 8.0"
+    },
+    "band_target": "Bước 4",
+    "sentences": [
+      {
+        "vi": "Biến đổi khí hậu không chỉ là vấn đề môi trường mà còn là cuộc khủng hoảng đa chiều ảnh hưởng đến kinh tế, an ninh lương thực và ổn định chính trị toàn cầu.",
+        "hint": "Climate change is not merely...",
+        "answer": "Climate change is not merely an environmental issue but a multidimensional crisis affecting the global economy, food security and political stability."
+      },
+      {
+        "vi": "Chuyển đổi sang nền kinh tế carbon thấp đòi hỏi sự phối hợp chưa từng có giữa các chính phủ, doanh nghiệp và người dân trên toàn thế giới.",
+        "hint": "The transition to a low-carbon...",
+        "answer": "The transition to a low-carbon economy demands unprecedented coordination among governments, businesses and citizens worldwide."
+      },
+      {
+        "vi": "Mất đa dạng sinh học đang diễn ra với tốc độ chưa từng thấy trong lịch sử loài người, đe dọa sự ổn định của các hệ sinh thái mà nhân loại phụ thuộc vào.",
+        "hint": "Biodiversity loss is occurring at...",
+        "answer": "Biodiversity loss is occurring at a rate unprecedented in human history, threatening the stability of the ecosystems upon which humanity depends."
+      },
+      {
+        "vi": "Các giải pháp công nghệ như năng lượng tái tạo và lưu trữ carbon có tiềm năng to lớn, nhưng sẽ không đủ nếu không có sự thay đổi hành vi tiêu dùng ở quy mô xã hội.",
+        "hint": "Technological solutions such as renewable...",
+        "answer": "Technological solutions such as renewable energy and carbon capture hold enormous potential, yet will be insufficient without behavioural change in consumption at the societal level."
+      },
+      {
+        "vi": "Công bằng khí hậu đòi hỏi rằng các quốc gia giàu có, vốn là tác nhân lịch sử chính gây ra ô nhiễm, phải gánh chịu trách nhiệm lớn hơn trong việc tài trợ giải pháp cho các nước dễ bị tổn thương.",
+        "hint": "Climate justice demands that wealthy...",
+        "answer": "Climate justice demands that wealthy nations, historically the primary drivers of pollution, bear a greater responsibility for financing solutions for vulnerable countries."
+      },
+      {
+        "vi": "Ô nhiễm vi nhựa đã xâm nhập vào mọi ngóc ngách của hành tinh từ đáy đại dương sâu thẳm đến đỉnh núi tuyết cao nhất, đặt ra mối lo ngại nghiêm trọng về sức khỏe con người và sinh thái.",
+        "hint": "Microplastic pollution has penetrated every...",
+        "answer": "Microplastic pollution has penetrated every corner of the planet, from the deepest ocean floor to the highest mountain peaks, raising serious concerns about human health and ecology."
+      },
+      {
+        "vi": "Tăng trưởng kinh tế truyền thống dựa trên khai thác tài nguyên cần được thay thế bằng mô hình kinh tế tuần hoàn nhằm tái sử dụng và tái tạo thay vì thải bỏ.",
+        "hint": "Traditional resource-extraction-based economic growth must...",
+        "answer": "Traditional resource-extraction-based economic growth must be replaced by a circular economy model that prioritises reuse and regeneration over disposal."
+      },
+      {
+        "vi": "Nước ngọt đang trở thành tài nguyên khan hiếm ở nhiều khu vực trên thế giới, và căng thẳng nguồn nước có thể trở thành nguyên nhân của các xung đột địa chính trị trong tương lai.",
+        "hint": "Freshwater is becoming a scarce...",
+        "answer": "Freshwater is becoming a scarce resource in many regions of the world, and water stress may become a source of geopolitical conflict in the future."
+      },
+      {
+        "vi": "Tái trồng rừng quy mô lớn được coi là một trong những giải pháp tự nhiên hiệu quả nhất để hấp thụ carbon và phục hồi hệ sinh thái bị suy thoái.",
+        "hint": "Large-scale reforestation is regarded as...",
+        "answer": "Large-scale reforestation is regarded as one of the most effective natural solutions for carbon sequestration and the restoration of degraded ecosystems."
+      },
+      {
+        "vi": "Cộng đồng bản địa nắm giữ tri thức sinh thái sâu sắc tích lũy qua nhiều thế kỷ, và sự tham gia của họ là điều không thể thiếu trong bất kỳ chiến lược bảo tồn bền vững nào.",
+        "hint": "Indigenous communities hold profound ecological...",
+        "answer": "Indigenous communities hold profound ecological knowledge accumulated over centuries, and their involvement is indispensable in any sustainable conservation strategy."
+      },
+      {
+        "vi": "Nông nghiệp công nghiệp hiện đại chiếm phần lớn lượng khí thải nhà kính toàn cầu và là tác nhân chính gây ra suy thoái đất và ô nhiễm nguồn nước.",
+        "hint": "Modern industrial agriculture accounts for...",
+        "answer": "Modern industrial agriculture accounts for a substantial portion of global greenhouse gas emissions and is a primary driver of soil degradation and water pollution."
+      },
+      {
+        "vi": "Định giá carbon là một trong những công cụ chính sách hiệu quả nhất để buộc các tác nhân kinh tế nội hoá chi phí môi trường vào quyết định sản xuất và tiêu dùng của họ.",
+        "hint": "Carbon pricing is among the...",
+        "answer": "Carbon pricing is among the most effective policy instruments for compelling economic actors to internalise environmental costs into their production and consumption decisions."
+      },
+      {
+        "vi": "Đại dương không chỉ là nguồn protein thiết yếu cho hàng tỷ người mà còn là bể hấp thụ carbon và điều tiết khí hậu quan trọng nhất của Trái Đất.",
+        "hint": "The oceans are not merely...",
+        "answer": "The oceans are not merely an essential protein source for billions of people but are also the Earth's most significant carbon sink and climate regulator."
+      },
+      {
+        "vi": "Quy hoạch đô thị bền vững, bao gồm không gian xanh, giao thông công cộng hiệu quả và tòa nhà tiết kiệm năng lượng, có thể giảm đáng kể lượng khí thải của các thành phố.",
+        "hint": "Sustainable urban planning, encompassing green...",
+        "answer": "Sustainable urban planning, encompassing green spaces, efficient public transport and energy-efficient buildings, can significantly reduce the carbon footprint of cities."
+      },
+      {
+        "vi": "Giáo dục về môi trường từ sớm là nền tảng để hình thành thế hệ công dân có ý thức sinh thái, sẵn sàng đưa ra những lựa chọn có trách nhiệm với hành tinh.",
+        "hint": "Early environmental education is the...",
+        "answer": "Early environmental education is the foundation for forming a generation of ecologically conscious citizens, ready to make responsible choices for the planet."
+      },
+      {
+        "vi": "Tác động của biến đổi khí hậu đến sức khỏe con người ngày càng trở nên rõ ràng hơn qua sự gia tăng của các bệnh truyền nhiễm, ô nhiễm không khí và các hiện tượng thời tiết cực đoan.",
+        "hint": "The impact of climate change...",
+        "answer": "The impact of climate change on human health is becoming increasingly apparent through the rise of infectious diseases, air pollution and extreme weather events."
+      },
+      {
+        "vi": "Năng lượng tái tạo không chỉ là giải pháp cho cuộc khủng hoảng khí hậu mà còn là cơ hội kinh tế to lớn, tạo ra hàng triệu việc làm chất lượng cao trên toàn thế giới.",
+        "hint": "Renewable energy is not only...",
+        "answer": "Renewable energy is not only a solution to the climate crisis but also a tremendous economic opportunity, creating millions of high-quality jobs worldwide."
+      },
+      {
+        "vi": "Nghịch lý của thế giới hiện đại là trong khi chúng ta sở hữu công nghệ để giải quyết khủng hoảng môi trường, thì rào cản chính lại là ý chí chính trị và cơ cấu lợi ích kinh tế.",
+        "hint": "The paradox of the modern...",
+        "answer": "The paradox of the modern world is that while we possess the technology to address the environmental crisis, the primary barriers remain political will and entrenched economic interests."
+      },
+      {
+        "vi": "Ứng phó với thiên tai ngày càng thường xuyên và khốc liệt đòi hỏi đầu tư lớn vào hạ tầng chống chịu khí hậu và hệ thống cảnh báo sớm.",
+        "hint": "Responding to increasingly frequent and...",
+        "answer": "Responding to increasingly frequent and severe natural disasters demands substantial investment in climate-resilient infrastructure and early warning systems."
+      },
+      {
+        "vi": "Sự sụp đổ của các rạn san hô toàn cầu là tín hiệu báo động đỏ cho thấy đại dương đang đạt đến điểm giới hạn sinh thái mà nếu vượt qua, hậu quả sẽ không thể đảo ngược.",
+        "hint": "The collapse of global coral...",
+        "answer": "The collapse of global coral reefs is a red alert indicating that the oceans are approaching ecological tipping points beyond which the consequences will be irreversible."
+      },
+      {
+        "vi": "Tiêu dùng có trách nhiệm không đơn giản chỉ là lựa chọn cá nhân mà cần được hỗ trợ bởi chính sách công đúng đắn, bao gồm dán nhãn môi trường và loại bỏ trợ cấp nhiên liệu hóa thạch.",
+        "hint": "Responsible consumption is not simply...",
+        "answer": "Responsible consumption is not simply a matter of individual choice but must be supported by sound public policies, including environmental labelling and the elimination of fossil fuel subsidies."
+      },
+      {
+        "vi": "Di dân khí hậu đang trở thành một thực tế cấp thiết khi hàng chục triệu người có nguy cơ mất đất đai và sinh kế do mực nước biển dâng và hạn hán kéo dài.",
+        "hint": "Climate migration is becoming an...",
+        "answer": "Climate migration is becoming an urgent reality as tens of millions of people face the loss of their land and livelihoods due to rising sea levels and prolonged droughts."
+      },
+      {
+        "vi": "Hợp tác quốc tế về biến đổi khí hậu đòi hỏi sự tin tưởng lẫn nhau và cơ chế giám sát minh bạch để đảm bảo rằng các cam kết không chỉ là lời hứa mà được thực thi trên thực tế.",
+        "hint": "International cooperation on climate change...",
+        "answer": "International cooperation on climate change requires mutual trust and transparent monitoring mechanisms to ensure that commitments move beyond mere pledges to actual implementation."
+      },
+      {
+        "vi": "Cách mạng năng lượng xanh sẽ không chỉ thay đổi bức tranh địa chính trị toàn cầu mà còn tái định hình nền kinh tế của các quốc gia phụ thuộc vào xuất khẩu nhiên liệu hóa thạch.",
+        "hint": "The green energy revolution will...",
+        "answer": "The green energy revolution will not only reshape the global geopolitical landscape but will also redefine the economies of nations heavily dependent on fossil fuel exports."
+      },
+      {
+        "vi": "Cuộc khủng hoảng môi trường chúng ta đang đối mặt cuối cùng là cuộc khủng hoảng của hệ thống giá trị, đặt câu hỏi về mối quan hệ căn bản giữa con người, tự nhiên và sự tăng trưởng kinh tế.",
+        "hint": "The environmental crisis we face...",
+        "answer": "The environmental crisis we face is ultimately a crisis of values, posing fundamental questions about the relationship between humanity, nature and economic growth."
+      }
+    ],
+    "is_published": true,
+    "order_index": 401,
+    "created_at": "2026-05-21T04:33:31.710557+00:00",
+    "updated_at": "2026-05-21T04:33:31.710557+00:00"
+  },
+  {
+    "id": "8cd7def4-0ca6-48b2-8e64-ef3744786d9e",
+    "exercise_id": "buoc4-technology",
+    "title": "Đoạn Văn Band 8.0: Technology",
+    "topic": {
+      "en": "Technology — 25 Advanced Paragraphs",
+      "question": "Dịch từng đoạn văn học thuật tiếng Việt sang tiếng Anh ở mức Band 8.0.",
+      "taskType": "Bước 4 – Dịch Đoạn Văn Band 8.0"
+    },
+    "band_target": "Bước 4",
+    "sentences": [
+      {
+        "vi": "Trí tuệ nhân tạo đang tái định hình cấu trúc của thị trường lao động với tốc độ chưa từng có, đòi hỏi sự thích nghi liên tục không chỉ từ cá nhân mà còn từ cả hệ thống giáo dục và chính sách.",
+        "hint": "Artificial intelligence is reshaping the...",
+        "answer": "Artificial intelligence is reshaping the structure of the labour market at an unprecedented pace, demanding continuous adaptation not only from individuals but from the entire educational and policy system."
+      },
+      {
+        "vi": "Quyền riêng tư dữ liệu đang trở thành một trong những vấn đề nhân quyền căn bản nhất của thế kỷ 21, khi mà ranh giới giữa sự tiện lợi kỹ thuật số và sự giám sát ngày càng trở nên mờ nhạt.",
+        "hint": "Data privacy is becoming one...",
+        "answer": "Data privacy is becoming one of the most fundamental human rights issues of the twenty-first century, as the boundary between digital convenience and surveillance grows increasingly blurred."
+      },
+      {
+        "vi": "Cuộc cách mạng công nghiệp lần thứ tư không chỉ thay thế lao động thủ công mà còn bắt đầu thực hiện những nhiệm vụ nhận thức phức tạp, buộc nhân loại phải suy nghĩ lại về bản chất của công việc và giá trị con người.",
+        "hint": "The Fourth Industrial Revolution is...",
+        "answer": "The Fourth Industrial Revolution is not merely replacing manual labour but has begun performing complex cognitive tasks, compelling humanity to reconsider the nature of work and human value."
+      },
+      {
+        "vi": "Sự phân cực thông tin do thuật toán mạng xã hội tạo ra đang làm xói mòn nền tảng của các xã hội dân chủ, khi công dân ngày càng sống trong những bong bóng thông tin tách biệt nhau.",
+        "hint": "Information polarisation created by social...",
+        "answer": "Information polarisation created by social media algorithms is eroding the foundations of democratic societies, as citizens increasingly inhabit separate, mutually isolated information bubbles."
+      },
+      {
+        "vi": "Công nghệ sinh học và chỉnh sửa gene mang lại tiềm năng to lớn trong điều trị bệnh, song cũng đặt ra những câu hỏi đạo đức sâu sắc về giới hạn của sự can thiệp vào bản chất tự nhiên của con người.",
+        "hint": "Biotechnology and gene editing hold...",
+        "answer": "Biotechnology and gene editing hold tremendous potential in treating disease, yet also raise profound ethical questions about the limits of intervention in human nature."
+      },
+      {
+        "vi": "Phụ thuộc vào công nghệ kỹ thuật số có thể tạo ra những điểm yếu hệ thống nghiêm trọng, khi các cuộc tấn công mạng có khả năng tê liệt hạ tầng thiết yếu của các quốc gia.",
+        "hint": "Dependence on digital technology can...",
+        "answer": "Dependence on digital technology can create serious systemic vulnerabilities, as cyberattacks are capable of paralysing the essential infrastructure of nations."
+      },
+      {
+        "vi": "Khoảng cách kỹ thuật số giữa các quốc gia phát triển và đang phát triển đang tạo ra một hình thức bất bình đẳng toàn cầu mới, trong đó quyền truy cập công nghệ quyết định triển vọng kinh tế.",
+        "hint": "The digital divide between developed...",
+        "answer": "The digital divide between developed and developing nations is creating a new form of global inequality in which access to technology determines economic prospects."
+      },
+      {
+        "vi": "Nền kinh tế nền tảng, vốn được vận hành bởi các tập đoàn công nghệ lớn, đang tập trung quyền lực kinh tế ở mức độ chưa từng có và đặt ra thách thức nghiêm trọng cho luật chống độc quyền truyền thống.",
+        "hint": "The platform economy, operated by...",
+        "answer": "The platform economy, operated by major technology corporations, is concentrating economic power to an unprecedented degree and posing serious challenges to traditional antitrust legislation."
+      },
+      {
+        "vi": "Thực tế ảo và tăng cường không chỉ cách mạng hóa ngành giải trí mà còn mở ra những khả năng mới trong giáo dục, y tế và đào tạo nghề nghiệp có tiềm năng to lớn chưa được khai thác đầy đủ.",
+        "hint": "Virtual and augmented reality are...",
+        "answer": "Virtual and augmented reality are not only revolutionising the entertainment industry but also opening new possibilities in education, healthcare and vocational training with substantial untapped potential."
+      },
+      {
+        "vi": "Đạo đức trí tuệ nhân tạo đang trở thành lĩnh vực nghiên cứu cấp thiết khi các thuật toán ngày càng đưa ra những quyết định có ảnh hưởng sâu rộng đến cuộc sống của con người.",
+        "hint": "Artificial intelligence ethics is becoming...",
+        "answer": "Artificial intelligence ethics is becoming an urgent field of research as algorithms increasingly make decisions with far-reaching consequences for people's lives."
+      },
+      {
+        "vi": "Sự xuất hiện của truyền thông sâu giả mạo đang gây ra mối đe dọa chưa từng có cho niềm tin vào thông tin, tạo ra một bối cảnh trong đó thực tế và hư cấu ngày càng khó phân biệt.",
+        "hint": "The emergence of deepfakes is...",
+        "answer": "The emergence of deepfakes is posing an unprecedented threat to information trust, creating a context in which reality and fabrication are increasingly difficult to distinguish."
+      },
+      {
+        "vi": "Tự động hóa trong logistics và vận tải sẽ mang lại hiệu quả kinh tế to lớn nhưng cũng có nguy cơ xóa bỏ hàng triệu việc làm ở các nền kinh tế đang phát triển vốn phụ thuộc vào lao động phổ thông.",
+        "hint": "Automation in logistics and transport...",
+        "answer": "Automation in logistics and transport will deliver enormous economic efficiency but also risks eliminating millions of jobs in developing economies that are heavily dependent on unskilled labour."
+      },
+      {
+        "vi": "Tiền kỹ thuật số và công nghệ blockchain có tiềm năng dân chủ hóa hệ thống tài chính toàn cầu, song cũng đặt ra những thách thức cho các cơ quan quản lý và ổn định tài chính.",
+        "hint": "Digital currencies and blockchain technology...",
+        "answer": "Digital currencies and blockchain technology have the potential to democratise the global financial system, yet also present challenges for regulators and financial stability."
+      },
+      {
+        "vi": "Phát triển công nghệ vũ khí tự động và robot quân sự đang đặt ra những câu hỏi đạo đức chưa có tiền lệ về trách nhiệm giải trình trong chiến tranh hiện đại.",
+        "hint": "The development of autonomous weapons...",
+        "answer": "The development of autonomous weapons technology and military robots is raising unprecedented ethical questions about accountability in modern warfare."
+      },
+      {
+        "vi": "Internet vạn vật đang kết nối hàng tỷ thiết bị thành một mạng lưới thống nhất, nhưng mỗi điểm kết nối cũng là một điểm dễ bị tổn thương tiềm năng trong bối cảnh an ninh mạng ngày càng phức tạp.",
+        "hint": "The Internet of Things is...",
+        "answer": "The Internet of Things is connecting billions of devices into a unified network, yet each connection point is also a potential vulnerability in an increasingly complex cybersecurity landscape."
+      },
+      {
+        "vi": "Đổi mới sáng tạo công nghệ đang xảy ra với tốc độ vượt xa khả năng thích nghi của các khuôn khổ pháp lý hiện hành, tạo ra những khoảng trống quản trị nguy hiểm.",
+        "hint": "Technological innovation is occurring at...",
+        "answer": "Technological innovation is occurring at a pace that far outstrips the adaptive capacity of existing regulatory frameworks, creating dangerous governance gaps."
+      },
+      {
+        "vi": "Mô hình làm việc từ xa được thúc đẩy bởi công nghệ đang thách thức khái niệm truyền thống về văn phòng và không gian làm việc, đồng thời mở ra cả cơ hội lẫn thách thức mới cho người lao động.",
+        "hint": "The remote working model facilitated...",
+        "answer": "The remote working model facilitated by technology is challenging traditional notions of the office and workspace, while simultaneously presenting both new opportunities and challenges for workers."
+      },
+      {
+        "vi": "Chăm sóc sức khỏe từ xa và trí tuệ nhân tạo trong chẩn đoán bệnh có tiềm năng cách mạng hóa y học, đặc biệt là ở các vùng nông thôn thiếu cơ sở y tế và bác sĩ chuyên khoa.",
+        "hint": "Telemedicine and artificial intelligence in...",
+        "answer": "Telemedicine and artificial intelligence in medical diagnosis have the potential to revolutionise healthcare, particularly in rural areas lacking medical facilities and specialist physicians."
+      },
+      {
+        "vi": "Sự tập trung quyền kiểm soát internet trong tay một số ít tập đoàn công nghệ đặt ra câu hỏi về quản trị không gian mạng toàn cầu và chủ quyền kỹ thuật số của các quốc gia.",
+        "hint": "The concentration of internet control...",
+        "answer": "The concentration of internet control in the hands of a few technology corporations raises questions about the governance of global cyberspace and the digital sovereignty of nations."
+      },
+      {
+        "vi": "Tốc độ phát triển của trí tuệ nhân tạo đã vượt xa khả năng hiểu biết của hầu hết các nhà lập pháp, tạo ra khoảng cách giữa tiến bộ công nghệ và khung pháp lý cần thiết để điều tiết nó.",
+        "hint": "The pace of artificial intelligence...",
+        "answer": "The pace of artificial intelligence development has surpassed the understanding of most legislators, creating a gap between technological progress and the regulatory frameworks needed to govern it."
+      },
+      {
+        "vi": "Công nghệ theo dõi và giám sát có thể đóng vai trò quan trọng trong an toàn công cộng, song ranh giới mong manh giữa an ninh và kiểm soát xã hội cần được xác định rõ ràng và bảo vệ nghiêm ngặt.",
+        "hint": "Surveillance and monitoring technology may...",
+        "answer": "Surveillance and monitoring technology may play an important role in public safety, yet the fine line between security and social control must be clearly defined and rigorously protected."
+      },
+      {
+        "vi": "Năng lượng tiêu thụ bởi các trung tâm dữ liệu và cơ sở hạ tầng kỹ thuật số đang tăng nhanh đến mức trở thành mối lo ngại môi trường nghiêm trọng trong bức tranh toàn cầu về biến đổi khí hậu.",
+        "hint": "The energy consumed by data...",
+        "answer": "The energy consumed by data centres and digital infrastructure is increasing so rapidly that it is becoming a serious environmental concern within the global context of climate change."
+      },
+      {
+        "vi": "Phong trào đạo đức công nghệ đang kêu gọi thiết kế công nghệ có trách nhiệm, trong đó quyền lợi và phẩm giá của con người được đặt lên trên mục tiêu tối đa hóa lợi nhuận.",
+        "hint": "The technology ethics movement is...",
+        "answer": "The technology ethics movement is calling for responsible technology design in which human rights and dignity are placed above the objective of profit maximisation."
+      },
+      {
+        "vi": "Tương lai của trí tuệ nhân tạo tổng quát đặt ra câu hỏi triết học sâu sắc về ý thức, tự do ý chí và vị trí của con người trong một thế giới mà máy móc có thể vượt trội chúng ta về mọi mặt nhận thức.",
+        "hint": "The prospect of artificial general...",
+        "answer": "The prospect of artificial general intelligence raises profound philosophical questions about consciousness, free will and humanity's place in a world where machines may surpass us in every cognitive dimension."
+      },
+      {
+        "vi": "Sự phổ biến của phương tiện thanh toán kỹ thuật số đang tạo ra những cơ hội tài chính mới cho hàng tỷ người không có tài khoản ngân hàng, đồng thời cũng làm tăng nguy cơ gian lận và mất an toàn tài chính.",
+        "hint": "The proliferation of digital payment...",
+        "answer": "The proliferation of digital payment methods is creating new financial opportunities for billions of unbanked people, while simultaneously increasing the risks of fraud and financial insecurity."
+      }
+    ],
+    "is_published": true,
+    "order_index": 402,
+    "created_at": "2026-05-21T04:33:32.778993+00:00",
+    "updated_at": "2026-05-21T04:33:32.778993+00:00"
+  },
+  {
+    "id": "df6f83f3-3b66-42e2-8e5a-c894793dae7e",
+    "exercise_id": "buoc4-health",
+    "title": "Đoạn Văn Band 8.0: Health",
+    "topic": {
+      "en": "Health — 25 Advanced Paragraphs",
+      "question": "Dịch từng đoạn văn học thuật tiếng Việt sang tiếng Anh ở mức Band 8.0.",
+      "taskType": "Bước 4 – Dịch Đoạn Văn Band 8.0"
+    },
+    "band_target": "Bước 4",
+    "sentences": [
+      {
+        "vi": "Sức khỏe tâm thần đang được thừa nhận ngày càng rộng rãi là nền tảng không thể tách rời của sức khỏe tổng thể, song kỳ thị xã hội vẫn là rào cản lớn khiến nhiều người không tìm kiếm sự hỗ trợ cần thiết.",
+        "hint": "Mental health is increasingly being...",
+        "answer": "Mental health is increasingly being recognised as an inseparable foundation of overall well-being, yet social stigma remains a major barrier preventing many people from seeking the support they need."
+      },
+      {
+        "vi": "Đại dịch COVID-19 đã phơi bày những điểm yếu hệ thống nghiêm trọng trong y tế toàn cầu, đồng thời thúc đẩy đổi mới chưa từng có trong phát triển vắc-xin và hệ thống y tế số.",
+        "hint": "The COVID-19 pandemic exposed serious...",
+        "answer": "The COVID-19 pandemic exposed serious systemic weaknesses in global healthcare while simultaneously driving unprecedented innovation in vaccine development and digital health systems."
+      },
+      {
+        "vi": "Kháng kháng sinh đang được các chuyên gia y tế coi là một trong những mối đe dọa lớn nhất đối với sức khỏe toàn cầu, có thể đưa nhân loại trở lại thời kỳ trước khi kháng sinh được phát minh.",
+        "hint": "Antimicrobial resistance is being regarded...",
+        "answer": "Antimicrobial resistance is being regarded by health experts as one of the greatest threats to global health, potentially returning humanity to an era before the invention of antibiotics."
+      },
+      {
+        "vi": "Hệ thống y tế lấy bệnh nhân làm trung tâm, trong đó người bệnh là đối tác chủ động trong quyết định điều trị, đang dần thay thế mô hình gia trưởng truyền thống trong y học.",
+        "hint": "Patient-centred healthcare systems, in which...",
+        "answer": "Patient-centred healthcare systems, in which the patient is an active partner in treatment decisions, are gradually replacing the traditional paternalistic model in medicine."
+      },
+      {
+        "vi": "Sự gia tăng của các bệnh không lây nhiễm như tiểu đường, tim mạch và ung thư đang đặt gánh nặng ngày càng lớn lên các hệ thống y tế, đòi hỏi ưu tiên đầu tư mạnh mẽ hơn vào phòng ngừa.",
+        "hint": "The rise of non-communicable diseases...",
+        "answer": "The rise of non-communicable diseases such as diabetes, cardiovascular disease and cancer is placing an ever-increasing burden on healthcare systems, demanding a stronger investment priority in prevention."
+      },
+      {
+        "vi": "Y học chính xác, sử dụng dữ liệu di truyền cá nhân để cá thể hóa điều trị, hứa hẹn một cuộc cách mạng trong hiệu quả chăm sóc sức khỏe nhưng cũng đặt ra câu hỏi về bình đẳng trong tiếp cận.",
+        "hint": "Precision medicine, using individual genetic...",
+        "answer": "Precision medicine, using individual genetic data to personalise treatment, promises a revolution in healthcare effectiveness yet also raises questions about equitable access."
+      },
+      {
+        "vi": "Sức khỏe của người cao tuổi trong bối cảnh dân số già hoá nhanh chóng đang trở thành ưu tiên chính sách cấp bách ở nhiều quốc gia phát triển và đang phát triển.",
+        "hint": "The health of elderly populations...",
+        "answer": "The health of elderly populations amid rapidly ageing demographics is becoming an urgent policy priority in both developed and developing nations."
+      },
+      {
+        "vi": "Mối liên hệ giữa bất bình đẳng kinh tế và kết quả sức khỏe kém là bằng chứng thuyết phục nhất cho thấy sức khỏe cộng đồng không thể được giải quyết tách biệt khỏi công bằng xã hội.",
+        "hint": "The relationship between economic inequality...",
+        "answer": "The relationship between economic inequality and poor health outcomes is the most compelling evidence that public health cannot be addressed in isolation from social equity."
+      },
+      {
+        "vi": "Sức khoẻ tinh thần của trẻ em và thanh thiếu niên đang chịu tác động tiêu cực ngày càng rõ rệt từ mạng xã hội, tạo ra áp lực cấp thiết đối với các nhà giáo dục, phụ huynh và nhà hoạch định chính sách.",
+        "hint": "The mental health of children...",
+        "answer": "The mental health of children and adolescents is experiencing increasingly evident negative impacts from social media, creating urgent pressure on educators, parents and policymakers."
+      },
+      {
+        "vi": "Trí tuệ nhân tạo trong chẩn đoán hình ảnh y tế đang cho thấy độ chính xác vượt trội so với bác sĩ con người trong một số lĩnh vực, mở ra câu hỏi về vai trò tương lai của bác sĩ trong quy trình chẩn đoán.",
+        "hint": "Artificial intelligence in medical imaging...",
+        "answer": "Artificial intelligence in medical imaging diagnostics is demonstrating superior accuracy compared to human physicians in certain domains, raising questions about the future role of doctors in the diagnostic process."
+      },
+      {
+        "vi": "Tiếp cận thuốc thiết yếu vẫn là vấn đề công bằng sức khỏe toàn cầu cấp bách khi hàng triệu người ở các nước có thu nhập thấp không thể tiếp cận các loại thuốc cứu sống đang phổ biến ở các nước giàu.",
+        "hint": "Access to essential medicines remains...",
+        "answer": "Access to essential medicines remains an urgent global health equity issue as millions in low-income countries cannot access life-saving drugs that are widely available in wealthy nations."
+      },
+      {
+        "vi": "Lối sống đô thị với thói quen ít vận động, chế độ ăn uống giàu đường và chất béo, cùng với ô nhiễm không khí, đang tạo ra một cuộc khủng hoảng sức khỏe toàn cầu chưa được nhìn nhận đúng mức.",
+        "hint": "The urban lifestyle characterised by...",
+        "answer": "The urban lifestyle characterised by sedentary habits, diets rich in sugar and fat, and air pollution is generating a global health crisis that has not yet been adequately recognised."
+      },
+      {
+        "vi": "Tác động của khủng hoảng khí hậu lên sức khỏe con người ngày càng được ghi nhận rõ ràng hơn, từ sự lây lan của bệnh truyền nhiễm đến tác động nhiệt độ cực đoan lên tim mạch và hô hấp.",
+        "hint": "The impact of the climate...",
+        "answer": "The impact of the climate crisis on human health is increasingly well-documented, from the spread of infectious diseases to the effects of extreme temperatures on cardiovascular and respiratory systems."
+      },
+      {
+        "vi": "Phong trào sức khỏe toàn thể đang nhấn mạnh rằng sức khỏe không chỉ là sự vắng mặt của bệnh tật mà là trạng thái cân bằng tích cực về thể chất, tinh thần và xã hội.",
+        "hint": "The holistic health movement emphasises...",
+        "answer": "The holistic health movement emphasises that health is not merely the absence of disease but a positive state of balance across physical, mental and social dimensions."
+      },
+      {
+        "vi": "Hệ thống y tế toàn dân, dù khác nhau về hình thức, thể hiện sự công nhận rằng chăm sóc sức khỏe là quyền cơ bản của con người chứ không phải hàng hóa chỉ dành cho người có khả năng chi trả.",
+        "hint": "Universal healthcare systems, though varying...",
+        "answer": "Universal healthcare systems, though varying in form, represent an acknowledgement that healthcare is a fundamental human right rather than a commodity available only to those who can afford it."
+      },
+      {
+        "vi": "Sự gia tăng của đại dịch béo phì toàn cầu phản ánh những thất bại có hệ thống trong chính sách thực phẩm, môi trường đô thị và giáo dục sức khỏe hơn là chỉ đơn thuần là lựa chọn cá nhân kém.",
+        "hint": "The rise of the global...",
+        "answer": "The rise of the global obesity epidemic reflects systemic failures in food policy, urban environments and health education rather than simply being a matter of poor individual choices."
+      },
+      {
+        "vi": "Ô nhiễm không khí đang được các nhà khoa học mô tả là 'thuốc lá mới' của thế kỷ 21, gây ra hàng triệu ca tử vong sớm mỗi năm do các bệnh hô hấp và tim mạch.",
+        "hint": "Air pollution is being described...",
+        "answer": "Air pollution is being described by scientists as the 'new tobacco' of the twenty-first century, causing millions of premature deaths annually from respiratory and cardiovascular diseases."
+      },
+      {
+        "vi": "Nghiên cứu vi sinh vật đường ruột đang cách mạng hóa hiểu biết của chúng ta về sức khỏe, cho thấy mối liên hệ sâu sắc giữa hệ khuẩn trong cơ thể và sức khỏe tâm thần, miễn dịch và chuyển hóa.",
+        "hint": "Gut microbiome research is revolutionising...",
+        "answer": "Gut microbiome research is revolutionising our understanding of health, revealing profound connections between the body's microbial communities and mental health, immunity and metabolism."
+      },
+      {
+        "vi": "Sự thiếu hụt nhân lực y tế là cuộc khủng hoảng thầm lặng đang ảnh hưởng đến chất lượng chăm sóc sức khỏe ở nhiều khu vực, đòi hỏi các chiến lược đào tạo và giữ chân nhân tài y tế sáng tạo hơn.",
+        "hint": "The healthcare workforce shortage is...",
+        "answer": "The healthcare workforce shortage is a silent crisis affecting the quality of care in many regions, demanding more innovative strategies for training and retaining health professionals."
+      },
+      {
+        "vi": "Y học phòng ngừa, tập trung vào việc ngăn chặn bệnh trước khi phát sinh thay vì điều trị sau khi mắc, đại diện cho sự thay đổi mô hình cơ bản nhất cần thiết trong hệ thống chăm sóc sức khỏe hiện đại.",
+        "hint": "Preventive medicine, focused on stopping...",
+        "answer": "Preventive medicine, focused on stopping disease before it arises rather than treating it after onset, represents the most fundamental paradigm shift needed in modern healthcare systems."
+      },
+      {
+        "vi": "Tự chăm sóc sức khỏe qua ứng dụng và thiết bị đeo có thể trao quyền cho người dùng, nhưng cũng tạo ra nguy cơ của sự chẩn đoán sai và bỏ qua lời khuyên y tế chuyên nghiệp.",
+        "hint": "Health self-management through apps and...",
+        "answer": "Health self-management through apps and wearable devices can empower users, yet also creates risks of misdiagnosis and the bypassing of professional medical advice."
+      },
+      {
+        "vi": "Chăm sóc sức khỏe toàn diện không thể chỉ là trách nhiệm của cá nhân mà phải được nhúng vào cấu trúc của xã hội, từ chính sách đô thị đến hệ thống giáo dục và pháp luật lao động.",
+        "hint": "Comprehensive healthcare cannot be solely...",
+        "answer": "Comprehensive healthcare cannot be solely the responsibility of the individual but must be embedded in the structures of society, from urban policy to the educational system and labour law."
+      },
+      {
+        "vi": "Chuyển đổi kỹ thuật số trong y tế mang lại hiệu quả to lớn nhưng cũng đặt ra những rủi ro nghiêm trọng liên quan đến bảo mật dữ liệu sức khỏe cá nhân và quyền riêng tư của bệnh nhân.",
+        "hint": "Digital transformation in healthcare delivers...",
+        "answer": "Digital transformation in healthcare delivers enormous efficiency but also poses serious risks related to the security of personal health data and patient privacy."
+      },
+      {
+        "vi": "Khủng hoảng sức khỏe tâm thần trong giới trẻ sau đại dịch đang đòi hỏi phản ứng chính sách toàn diện, bao gồm tích hợp hỗ trợ tâm lý vào trường học và cộng đồng.",
+        "hint": "The post-pandemic mental health crisis...",
+        "answer": "The post-pandemic mental health crisis among young people is demanding a comprehensive policy response, including the integration of psychological support into schools and communities."
+      },
+      {
+        "vi": "Hành trình hướng tới chăm sóc sức khỏe toàn cầu công bằng đòi hỏi không chỉ nguồn lực tài chính mà còn cả ý chí chính trị và sự cam kết tái phân phối công nghệ y tế giữa các quốc gia.",
+        "hint": "The journey towards equitable global...",
+        "answer": "The journey towards equitable global healthcare requires not only financial resources but also political will and a commitment to redistributing medical technology across nations."
+      }
+    ],
+    "is_published": true,
+    "order_index": 403,
+    "created_at": "2026-05-21T04:33:33.740446+00:00",
+    "updated_at": "2026-05-21T04:33:33.740446+00:00"
+  },
+  {
+    "id": "5a119113-787e-4c9d-bf5a-463f03372874",
+    "exercise_id": "buoc4-work",
+    "title": "Đoạn Văn Band 8.0: Work",
+    "topic": {
+      "en": "Work — 24 Advanced Paragraphs",
+      "question": "Dịch từng đoạn văn học thuật tiếng Việt sang tiếng Anh ở mức Band 8.0.",
+      "taskType": "Bước 4 – Dịch Đoạn Văn Band 8.0"
+    },
+    "band_target": "Bước 4",
+    "sentences": [
+      {
+        "vi": "Tương lai của công việc đang được tái định hình bởi sự hội tụ của tự động hóa, trí tuệ nhân tạo và sự thay đổi trong kỳ vọng của người lao động về ý nghĩa và sự linh hoạt trong công việc.",
+        "hint": "The future of work is...",
+        "answer": "The future of work is being redefined by the convergence of automation, artificial intelligence and a shift in workers' expectations regarding meaning and flexibility in employment."
+      },
+      {
+        "vi": "Nền kinh tế việc làm tạm thời đang phát triển mạnh mẽ, cung cấp sự linh hoạt cho một số người lao động trong khi tước bỏ sự ổn định và bảo trợ xã hội của những người khác.",
+        "hint": "The gig economy is flourishing,...",
+        "answer": "The gig economy is flourishing, offering flexibility for some workers while stripping others of job security and social protection."
+      },
+      {
+        "vi": "Văn hóa làm việc lành mạnh không chỉ giúp tăng năng suất mà còn là yếu tố cạnh tranh quan trọng giúp tổ chức thu hút và giữ chân nhân tài trong thị trường lao động thắt chặt.",
+        "hint": "A healthy workplace culture not...",
+        "answer": "A healthy workplace culture not only enhances productivity but is also a critical competitive factor enabling organisations to attract and retain talent in a tight labour market."
+      },
+      {
+        "vi": "Khoảng cách lương theo giới tính vẫn tồn tại dai dẳng và phức tạp hơn so với nhận thức thông thường, phản ánh những bất bình đẳng có cấu trúc ăn sâu vào thị trường lao động và xã hội.",
+        "hint": "The gender pay gap persists...",
+        "answer": "The gender pay gap persists in ways more entrenched and complex than commonly perceived, reflecting structural inequalities deeply embedded in the labour market and society."
+      },
+      {
+        "vi": "Làm việc từ xa đã thay đổi căn bản quan niệm về không gian và thời gian trong công việc, buộc cả người lao động lẫn tổ chức phải định nghĩa lại hiệu suất và sự gắn kết.",
+        "hint": "Remote working has fundamentally altered...",
+        "answer": "Remote working has fundamentally altered conceptions of space and time in employment, compelling both workers and organisations to redefine productivity and engagement."
+      },
+      {
+        "vi": "Tự động hóa sẽ không đơn giản là xoá bỏ công việc mà còn biến đổi chúng theo những cách phức tạp, đòi hỏi sự đầu tư lớn vào đào tạo lại và nâng cấp kỹ năng ở quy mô xã hội.",
+        "hint": "Automation will not simply eliminate...",
+        "answer": "Automation will not simply eliminate jobs but will transform them in complex ways, requiring large-scale investment in retraining and upskilling at the societal level."
+      },
+      {
+        "vi": "Lãnh đạo hiệu quả trong thế kỷ 21 đòi hỏi không chỉ tầm nhìn chiến lược mà còn cả trí tuệ cảm xúc, khả năng lắng nghe sâu và kỹ năng dẫn dắt qua sự không chắc chắn và thay đổi liên tục.",
+        "hint": "Effective leadership in the twenty-first...",
+        "answer": "Effective leadership in the twenty-first century demands not only strategic vision but also emotional intelligence, deep listening capacity and the ability to lead through constant uncertainty and change."
+      },
+      {
+        "vi": "Sự kiệt sức nghề nghiệp đang ở mức độ nguy cơ ở nhiều quốc gia, phản ánh những vấn đề có hệ thống về thiết kế công việc, văn hoá tổ chức và kỳ vọng của xã hội đối với năng suất.",
+        "hint": "Occupational burnout is reaching crisis...",
+        "answer": "Occupational burnout is reaching crisis levels in many countries, reflecting systemic problems in job design, organisational culture and societal expectations regarding productivity."
+      },
+      {
+        "vi": "Nâng cao chất lượng công việc không chỉ là vấn đề lương bổng mà còn bao gồm tự chủ trong công việc, cơ hội phát triển và cảm giác đóng góp có ý nghĩa cho tổ chức và xã hội.",
+        "hint": "Improving the quality of work...",
+        "answer": "Improving the quality of work is not solely a matter of remuneration but encompasses autonomy in one's role, opportunities for development and a sense of making a meaningful contribution to the organisation and society."
+      },
+      {
+        "vi": "Đa dạng và hòa nhập không chỉ là mệnh lệnh đạo đức mà còn là lợi thế kinh doanh có thể đo lường được, với các nghiên cứu liên tục chỉ ra mối tương quan giữa sự đa dạng lực lượng lao động và kết quả sáng tạo tốt hơn.",
+        "hint": "Diversity and inclusion are not...",
+        "answer": "Diversity and inclusion are not only an ethical imperative but a measurable business advantage, with research consistently indicating a correlation between workforce diversity and superior innovative outcomes."
+      },
+      {
+        "vi": "Chuyển đổi sang nền kinh tế xanh sẽ tạo ra hàng triệu việc làm mới trong các lĩnh vực năng lượng tái tạo và bền vững, nhưng đòi hỏi kế hoạch chuyển đổi công bằng để bảo vệ những người lao động bị ảnh hưởng.",
+        "hint": "The transition to a green...",
+        "answer": "The transition to a green economy will generate millions of new jobs in renewable energy and sustainability sectors, but requires a fair transition plan to protect affected workers."
+      },
+      {
+        "vi": "Mô hình tuần làm việc bốn ngày đang được thử nghiệm ở nhiều quốc gia và cho thấy kết quả đáng khích lệ về cả năng suất lẫn sức khỏe nhân viên, thách thức giả định truyền thống về thời gian làm việc và hiệu suất.",
+        "hint": "The four-day working week is...",
+        "answer": "The four-day working week is being trialled in many countries and is showing encouraging results in both productivity and employee well-being, challenging traditional assumptions about working hours and performance."
+      },
+      {
+        "vi": "Quyền của người lao động trong nền kinh tế số đang bị thách thức bởi sự nổi lên của các nền tảng kỹ thuật số, vốn mờ nhạt ranh giới giữa công nhân tự do và nhân viên để né tránh trách nhiệm pháp lý.",
+        "hint": "Workers' rights in the digital...",
+        "answer": "Workers' rights in the digital economy are being challenged by the rise of digital platforms that blur the boundary between independent contractors and employees in order to evade legal obligations."
+      },
+      {
+        "vi": "Sự di chuyển lao động quốc tế tạo ra những đóng góp đáng kể cho cả nền kinh tế xuất khẩu lẫn tiếp nhận, song cũng gây ra những thách thức về tích hợp xã hội và bảo vệ quyền lợi người lao động di cư.",
+        "hint": "International labour migration generates significant...",
+        "answer": "International labour migration generates significant contributions to both sending and receiving economies, yet also creates challenges for social integration and the protection of migrant workers' rights."
+      },
+      {
+        "vi": "Tư duy phát triển, tức là niềm tin rằng năng lực có thể phát triển thông qua nỗ lực và học hỏi, đang được chứng minh là yếu tố dự báo thành công nghề nghiệp mạnh hơn cả tài năng thiên phú.",
+        "hint": "The growth mindset, that is,...",
+        "answer": "The growth mindset, that is, the belief that abilities can be developed through effort and learning, is being proven to be a stronger predictor of professional success than innate talent."
+      },
+      {
+        "vi": "Vai trò ngày càng tăng của các công đoàn và tổ chức người lao động trong thị trường lao động toàn cầu phản ánh xu hướng người lao động tìm kiếm tiếng nói tập thể trước những bất cân xứng quyền lực ngày càng tăng.",
+        "hint": "The growing role of unions...",
+        "answer": "The growing role of unions and worker organisations in the global labour market reflects a trend of workers seeking collective voice in the face of increasing power asymmetries."
+      },
+      {
+        "vi": "Đổi mới và sáng tạo không phải là đặc quyền của các tập đoàn lớn mà phụ thuộc vào khả năng thu hút và phát triển nhân tài ở mọi cấp độ và loại hình tổ chức.",
+        "hint": "Innovation and creativity are not...",
+        "answer": "Innovation and creativity are not the exclusive domain of large corporations but depend on the capacity to attract and develop talent at every level and type of organisation."
+      },
+      {
+        "vi": "Phúc lợi người lao động toàn diện, bao gồm hỗ trợ sức khỏe tâm thần, linh hoạt trong sắp xếp công việc và phát triển nghề nghiệp liên tục, đang trở thành thành phần thiết yếu của chiến lược nhân sự hiện đại.",
+        "hint": "Comprehensive employee well-being, encompassing mental...",
+        "answer": "Comprehensive employee well-being, encompassing mental health support, flexible work arrangements and continuous professional development, is becoming an essential component of modern human resource strategy."
+      },
+      {
+        "vi": "Trách nhiệm xã hội doanh nghiệp không còn là hoạt động ngoại vi mà ngày càng được tích hợp vào chiến lược kinh doanh cốt lõi, phản ánh kỳ vọng ngày càng cao của người tiêu dùng và người lao động.",
+        "hint": "Corporate social responsibility is no...",
+        "answer": "Corporate social responsibility is no longer a peripheral activity but is increasingly integrated into core business strategy, reflecting the rising expectations of both consumers and workers."
+      },
+      {
+        "vi": "Sự xuất hiện của các công cụ trí tuệ nhân tạo trong môi trường làm việc đang làm mờ ranh giới giữa hỗ trợ và thay thế, đặt ra câu hỏi cấp bách về cách tái định nghĩa vai trò của con người trong quy trình làm việc.",
+        "hint": "The emergence of artificial intelligence...",
+        "answer": "The emergence of artificial intelligence tools in the workplace is blurring the boundary between augmentation and replacement, raising urgent questions about how to redefine the human role in work processes."
+      },
+      {
+        "vi": "Thành công nghề nghiệp trong thế kỷ 21 sẽ ngày càng phụ thuộc vào khả năng học hỏi nhanh chóng và thích nghi liên tục hơn là vào bộ kỹ năng cố định được tích lũy trong giai đoạn giáo dục ban đầu.",
+        "hint": "Professional success in the twenty-first...",
+        "answer": "Professional success in the twenty-first century will increasingly depend on the capacity for rapid learning and continuous adaptation rather than on a fixed skill set accumulated during initial education."
+      },
+      {
+        "vi": "Mô hình làm việc hybrid đang đòi hỏi tổ chức thiết kế lại không gian văn phòng và quy trình làm việc để hỗ trợ hiệu quả cả hợp tác trực tiếp lẫn làm việc từ xa.",
+        "hint": "The hybrid working model is...",
+        "answer": "The hybrid working model is requiring organisations to redesign office space and work processes to effectively support both in-person collaboration and remote working."
+      },
+      {
+        "vi": "Phong trào quyền lao động toàn cầu đang đặt áp lực lên các chuỗi cung ứng xuyên quốc gia để đảm bảo các tiêu chuẩn lao động tối thiểu được tuân thủ ở mọi mắt xích của chuỗi.",
+        "hint": "The global labour rights movement...",
+        "answer": "The global labour rights movement is placing pressure on transnational supply chains to ensure that minimum labour standards are upheld at every link in the chain."
+      },
+      {
+        "vi": "Nghề nghiệp của tương lai sẽ đòi hỏi sự kết hợp ngày càng tinh tế giữa kỹ năng kỹ thuật và kỹ năng con người, trong đó sự sáng tạo, đồng cảm và phán đoán đạo đức là những điều máy móc khó có thể sao chép.",
+        "hint": "The professions of the future...",
+        "answer": "The professions of the future will demand an increasingly refined combination of technical and human skills, where creativity, empathy and ethical judgement are qualities that machines will find difficult to replicate."
+      }
+    ],
+    "is_published": true,
+    "order_index": 404,
+    "created_at": "2026-05-21T04:33:34.792655+00:00",
+    "updated_at": "2026-05-21T04:33:34.792655+00:00"
+  },
+  {
+    "id": "aae6600b-7702-4c76-b4e5-b6b6d0b5d58a",
+    "exercise_id": "buoc4-travel",
+    "title": "Đoạn Văn Band 8.0: Travel",
+    "topic": {
+      "en": "Travel — 24 Advanced Paragraphs",
+      "question": "Dịch từng đoạn văn học thuật tiếng Việt sang tiếng Anh ở mức Band 8.0.",
+      "taskType": "Bước 4 – Dịch Đoạn Văn Band 8.0"
+    },
+    "band_target": "Bước 4",
+    "sentences": [
+      {
+        "vi": "Du lịch bền vững không chỉ đơn giản là giảm lượng khí thải từ hàng không mà đòi hỏi một sự tái cơ cấu toàn diện cách mà chúng ta tổ chức, trải nghiệm và hiểu giá trị của việc đi lại.",
+        "hint": "Sustainable tourism is not simply...",
+        "answer": "Sustainable tourism is not simply about reducing aviation emissions but demands a comprehensive restructuring of how we organise, experience and understand the value of travel."
+      },
+      {
+        "vi": "Quá tải du lịch đang phá hủy những điểm đến mang tính biểu tượng trên toàn thế giới, đặt ra câu hỏi cấp bách về cách cân bằng giữa quyền lợi kinh tế của ngành du lịch và bảo tồn di sản văn hóa và thiên nhiên.",
+        "hint": "Overtourism is destroying iconic destinations...",
+        "answer": "Overtourism is destroying iconic destinations worldwide, raising urgent questions about how to balance the economic interests of the tourism industry with the preservation of cultural and natural heritage."
+      },
+      {
+        "vi": "Nền tảng kinh tế chia sẻ trong lĩnh vực lưu trú và vận chuyển đã dân chủ hóa tiếp cận du lịch nhưng cũng tạo ra những tác động không mong muốn lên thị trường nhà ở và cộng đồng địa phương.",
+        "hint": "Sharing economy platforms in accommodation...",
+        "answer": "Sharing economy platforms in accommodation and transport have democratised access to travel, yet have also created unintended impacts on housing markets and local communities."
+      },
+      {
+        "vi": "Du lịch văn hóa có trách nhiệm đòi hỏi du khách không chỉ tiêu dùng văn hóa như một sản phẩm mà còn phải nhận thức được quyền lực và quan hệ bất bình đẳng vốn có trong các tương tác du lịch.",
+        "hint": "Responsible cultural tourism demands that...",
+        "answer": "Responsible cultural tourism demands that travellers not merely consume culture as a product but also develop an awareness of the power dynamics and inherent inequalities in tourism encounters."
+      },
+      {
+        "vi": "Tác động tâm lý và nhận thức của du lịch xa nhà có giá trị sâu xa hơn sự thoải mái bề ngoài, bao gồm việc định hình lại quan điểm, tăng khả năng đồng cảm và thúc đẩy sự phát triển cá nhân.",
+        "hint": "The psychological and cognitive impact...",
+        "answer": "The psychological and cognitive impact of travel far from home has deeper value than superficial comfort, encompassing the reshaping of perspective, enhanced empathy and the facilitation of personal growth."
+      },
+      {
+        "vi": "Lượng carbon khổng lồ từ ngành hàng không đặt ra những câu hỏi đạo đức gay gắt về du lịch xa hoa xuyên lục địa trong thời đại khủng hoảng khí hậu.",
+        "hint": "The enormous carbon footprint of...",
+        "answer": "The enormous carbon footprint of the aviation industry poses sharp ethical questions about luxury transcontinental travel in an era of climate crisis."
+      },
+      {
+        "vi": "Du lịch có thể là lực lượng mạnh mẽ cho sự hiểu biết và hoà giải giữa các nền văn hoá, nhưng chỉ khi nó được thực hành với sự tôn trọng sâu sắc và ý thức về bối cảnh lịch sử.",
+        "hint": "Tourism can be a powerful...",
+        "answer": "Tourism can be a powerful force for cross-cultural understanding and reconciliation, but only when it is practised with profound respect and an awareness of historical context."
+      },
+      {
+        "vi": "Sự phục hồi của du lịch sau đại dịch cung cấp cơ hội hiếm có để tái thiết ngành theo hướng bền vững hơn về môi trường và công bằng hơn về mặt kinh tế đối với các cộng đồng địa phương.",
+        "hint": "The post-pandemic recovery of tourism...",
+        "answer": "The post-pandemic recovery of tourism offers a rare opportunity to rebuild the industry in a manner more environmentally sustainable and more economically equitable for local communities."
+      },
+      {
+        "vi": "Sự bùng nổ của hình thức du lịch số hóa và thực tế ảo đặt ra câu hỏi triết học thú vị về giá trị của trải nghiệm thực tế và liệu trải nghiệm ảo có thể thay thế thực sự hay không.",
+        "hint": "The boom in digital tourism...",
+        "answer": "The boom in digital tourism and virtual reality raises fascinating philosophical questions about the value of genuine physical experience and whether virtual experiences can serve as authentic substitutes."
+      },
+      {
+        "vi": "Các điểm đến ít nổi tiếng thường bảo tồn tính xác thực và sự phong phú văn hóa tốt hơn những điểm du lịch đã bị khai thác thương mại, nhưng sự lan rộng của du lịch đang mang theo những rủi ro tương tự đến những nơi này.",
+        "hint": "Lesser-known destinations often preserve authenticity...",
+        "answer": "Lesser-known destinations often preserve authenticity and cultural richness better than commercially exploited tourist sites, yet the expansion of tourism carries similar risks to these places as well."
+      },
+      {
+        "vi": "Chính sách thị thực và kiểm soát biên giới không chỉ là vấn đề an ninh mà còn là biểu hiện của bất bình đẳng toàn cầu, khi công dân của các quốc gia giàu có được di chuyển tự do trong khi những người khác phải đối mặt với những rào cản khắc nghiệt.",
+        "hint": "Visa policies and border controls...",
+        "answer": "Visa policies and border controls are not merely a security matter but are also an expression of global inequality, as citizens of wealthy nations move freely while others face severe restrictions."
+      },
+      {
+        "vi": "Trải nghiệm ẩm thực là một trong những cách sâu sắc nhất để tiếp cận văn hóa và lịch sử của một địa phương, biến bữa ăn thành một không gian cho sự giao thoa và hiểu biết lẫn nhau.",
+        "hint": "Culinary experience is one of...",
+        "answer": "Culinary experience is one of the most profound means of engaging with the culture and history of a place, transforming a meal into a space for mutual exchange and understanding."
+      },
+      {
+        "vi": "Chứng nhận du lịch bền vững có thể giúp định hướng lựa chọn của du khách, nhưng chỉ khi chúng dựa trên các tiêu chuẩn nghiêm ngặt, minh bạch và được kiểm chứng độc lập.",
+        "hint": "Sustainable tourism certification can help...",
+        "answer": "Sustainable tourism certification can help guide travellers' choices, but only when based on rigorous, transparent and independently verified standards."
+      },
+      {
+        "vi": "Du lịch tình nguyện có tiềm năng mang lại lợi ích cho cộng đồng địa phương, song khi được thiết kế kém có thể tạo ra sự phụ thuộc, củng cố định kiến và thậm chí gây hại nhiều hơn lợi ích mang lại.",
+        "hint": "Volunteer tourism has the potential...",
+        "answer": "Volunteer tourism has the potential to benefit local communities, yet when poorly designed can create dependency, reinforce stereotypes and even cause more harm than good."
+      },
+      {
+        "vi": "Phong trào du lịch chậm đang phản ứng lại văn hóa du lịch chớp nhoáng bằng cách khuyến khích sự dừng lại sâu, kết nối thực sự với nơi chốn và con người, thay vì tích lũy địa điểm như thành tích.",
+        "hint": "The slow travel movement is...",
+        "answer": "The slow travel movement is responding to fast-paced tourism culture by encouraging deep immersion, genuine connection with places and people, rather than the accumulation of destinations as achievements."
+      },
+      {
+        "vi": "Câu hỏi về ai được hưởng lợi thực sự từ du lịch quốc tế và ai chịu gánh nặng của nó là câu hỏi cốt lõi về công bằng kinh tế mà ngành du lịch toàn cầu chưa có câu trả lời thỏa đáng.",
+        "hint": "The question of who truly...",
+        "answer": "The question of who truly benefits from international tourism and who bears its burdens is a core question of economic equity to which the global tourism industry has yet to provide a satisfactory answer."
+      },
+      {
+        "vi": "Phát triển cơ sở hạ tầng du lịch tại các quốc gia đang phát triển có thể là con dao hai lưỡi, mang lại việc làm và thu nhập nhưng cũng rủi ro phá vỡ lối sống truyền thống và cộng đồng địa phương.",
+        "hint": "Tourism infrastructure development in developing...",
+        "answer": "Tourism infrastructure development in developing countries can be a double-edged sword, bringing employment and income yet also risking the disruption of traditional ways of life and local communities."
+      },
+      {
+        "vi": "Sự gia tăng của nền tảng số trong du lịch đã trao quyền cho du khách cá nhân nhưng cũng đang phá vỡ ngành lữ hành truyền thống và tạo ra những thách thức mới cho quản lý du lịch địa phương.",
+        "hint": "The rise of digital platforms...",
+        "answer": "The rise of digital platforms in travel has empowered individual travellers but is also disrupting the traditional travel industry and creating new challenges for local tourism management."
+      },
+      {
+        "vi": "Hành trình khám phá thế giới trở nên sâu sắc và có ý nghĩa hơn khi du khách mang theo sự tò mò về lịch sử, bối cảnh chính trị và tính nhân văn của mỗi nơi họ đặt chân đến.",
+        "hint": "The journey of world exploration...",
+        "answer": "The journey of world exploration becomes deeper and more meaningful when travellers carry genuine curiosity about the history, political context and humanity of each place they visit."
+      },
+      {
+        "vi": "Phân tích kỹ lưỡng ngành du lịch toàn cầu cho thấy đây không chỉ là ngành dịch vụ đơn thuần mà là một hệ thống quyền lực phức tạp định hình cách các nền văn hóa được nhìn nhận, đại diện và định giá.",
+        "hint": "A critical analysis of the...",
+        "answer": "A critical analysis of the global tourism industry reveals it to be not merely a service sector but a complex power system that shapes how cultures are perceived, represented and valued."
+      },
+      {
+        "vi": "Du lịch trong thời đại khủng hoảng khí hậu đòi hỏi sự trung thực về đánh đổi giữa trải nghiệm cá nhân và trách nhiệm tập thể đối với hành tinh, một cuộc đối thoại mà xã hội mới chỉ bắt đầu.",
+        "hint": "Travel in the age of...",
+        "answer": "Travel in the age of climate crisis demands honesty about the trade-off between individual experience and collective responsibility for the planet, a conversation that society has only just begun."
+      },
+      {
+        "vi": "Cộng đồng bản địa thường bị đẩy ra ngoài lề của phát triển du lịch trên chính vùng đất của họ, một nghịch lý cần phải được giải quyết thông qua mô hình du lịch do cộng đồng lãnh đạo và sở hữu.",
+        "hint": "Indigenous communities are often marginalised...",
+        "answer": "Indigenous communities are often marginalised from tourism development on their own lands, a paradox that must be addressed through community-led and community-owned tourism models."
+      },
+      {
+        "vi": "Đại dịch đã buộc ngành du lịch nhìn lại sự mỏng manh của mình và cung cấp cơ hội để tái nghĩ về những gì làm cho một điểm đến thực sự trở thành một nơi đáng đến thăm và gìn giữ.",
+        "hint": "The pandemic forced the tourism...",
+        "answer": "The pandemic forced the tourism industry to confront its own fragility and offered an opportunity to reconsider what truly makes a destination worth visiting and preserving."
+      },
+      {
+        "vi": "Sự tò mò chân thực về người khác và thế giới là nền tảng cho mọi du lịch có ý nghĩa, và chính nó mới là hành lý quan trọng nhất mà bất kỳ du khách nào cũng nên mang theo.",
+        "hint": "Genuine curiosity about others and...",
+        "answer": "Genuine curiosity about others and the world is the foundation of all meaningful travel, and it is precisely this that constitutes the most important luggage any traveller should bring."
+      }
+    ],
+    "is_published": true,
+    "order_index": 405,
+    "created_at": "2026-05-21T04:33:35.740807+00:00",
+    "updated_at": "2026-05-21T04:33:35.740807+00:00"
+  },
+  {
+    "id": "fcb6a149-16a9-4d49-88c8-0700b0e0b1f0",
+    "exercise_id": "buoc4-food",
+    "title": "Đoạn Văn Band 8.0: Food",
+    "topic": {
+      "en": "Food — 24 Advanced Paragraphs",
+      "question": "Dịch từng đoạn văn học thuật tiếng Việt sang tiếng Anh ở mức Band 8.0.",
+      "taskType": "Bước 4 – Dịch Đoạn Văn Band 8.0"
+    },
+    "band_target": "Bước 4",
+    "sentences": [
+      {
+        "vi": "Hệ thống thực phẩm toàn cầu đang đứng trước ngã rẽ lịch sử, khi cùng một lúc phải đối mặt với thách thức nuôi sống 10 tỷ người trong khi giảm đáng kể tác động đến môi trường.",
+        "hint": "The global food system stands...",
+        "answer": "The global food system stands at a historical crossroads, simultaneously confronting the challenge of feeding 10 billion people while significantly reducing its environmental impact."
+      },
+      {
+        "vi": "Văn hóa ẩm thực là một hình thức di sản phi vật thể sâu sắc, phản ánh lịch sử, địa lý và bản sắc của một cộng đồng theo cách mà không hình thức biểu đạt nào khác có thể sánh kịp.",
+        "hint": "Food culture is a profound...",
+        "answer": "Food culture is a profound form of intangible heritage, reflecting the history, geography and identity of a community in a way that no other form of expression can match."
+      },
+      {
+        "vi": "Công nghiệp hoá nông nghiệp đã tạo ra nguồn cung thực phẩm dồi dào nhưng với chi phí về đa dạng sinh học, sức khỏe đất đai và phúc lợi động vật mà nhân loại phải đối mặt ngay bây giờ.",
+        "hint": "The industrialisation of agriculture has...",
+        "answer": "The industrialisation of agriculture has created abundant food supplies but at costs to biodiversity, soil health and animal welfare that humanity must now confront."
+      },
+      {
+        "vi": "Lãng phí thực phẩm ở quy mô toàn cầu đại diện không chỉ cho sự kém hiệu quả kinh tế mà còn là thất bại đạo đức trong bối cảnh hàng trăm triệu người vẫn đang thiếu ăn mỗi ngày.",
+        "hint": "Food waste at the global...",
+        "answer": "Food waste at the global scale represents not only economic inefficiency but also a moral failure in the context of hundreds of millions of people who still go hungry each day."
+      },
+      {
+        "vi": "Thực phẩm có nguồn gốc thực vật không còn chỉ là lựa chọn của thiểu số có ý thức môi trường mà đang nhanh chóng trở thành dòng chính trong hành vi tiêu dùng toàn cầu.",
+        "hint": "Plant-based food is no longer...",
+        "answer": "Plant-based food is no longer merely the choice of an environmentally conscious minority but is rapidly becoming mainstream in global consumption behaviour."
+      },
+      {
+        "vi": "Mối quan hệ giữa nghèo đói lương thực và bệnh tật không lây nhiễm là nghịch lý đau lòng của hệ thống thực phẩm hiện đại, nơi những thực phẩm rẻ nhất cũng là những thực phẩm kém lành mạnh nhất.",
+        "hint": "The relationship between food poverty...",
+        "answer": "The relationship between food poverty and non-communicable diseases is a painful paradox of the modern food system, where the cheapest foods are also the least healthy."
+      },
+      {
+        "vi": "Chuỗi cung ứng thực phẩm toàn cầu mang thức ăn từ khắp nơi trên thế giới đến bàn ăn của chúng ta nhưng cũng tạo ra sự phụ thuộc lẫn nhau mỏng manh dễ bị phá vỡ bởi khủng hoảng địa chính trị hay thiên tai.",
+        "hint": "Global food supply chains bring...",
+        "answer": "Global food supply chains bring food from all over the world to our tables but also create fragile interdependencies that are easily disrupted by geopolitical crises or natural disasters."
+      },
+      {
+        "vi": "Thịt nuôi trong phòng thí nghiệm và thực phẩm lên men bằng công nghệ sinh học đang mở ra những khả năng mới để cung cấp protein cho thế giới mà không cần khai thác thêm đất đai và tài nguyên.",
+        "hint": "Lab-grown meat and biotechnologically fermented...",
+        "answer": "Lab-grown meat and biotechnologically fermented food are opening new possibilities for supplying protein to the world without requiring additional exploitation of land and resources."
+      },
+      {
+        "vi": "Quyền lương thực là quyền con người cơ bản, và việc hàng trăm triệu người thiếu tiếp cận với thực phẩm đủ dinh dưỡng không phải do thiếu sản xuất mà do phân phối không công bằng.",
+        "hint": "The right to food is...",
+        "answer": "The right to food is a fundamental human right, and the fact that hundreds of millions lack access to adequate nutrition is not due to insufficient production but to inequitable distribution."
+      },
+      {
+        "vi": "Mối liên hệ giữa chế độ ăn uống và sức khỏe tâm thần đang được nghiên cứu ngày càng sâu, gợi ý rằng những gì chúng ta ăn có tác động không chỉ đến cơ thể mà còn đến trạng thái tâm lý và nhận thức của chúng ta.",
+        "hint": "The connection between diet and...",
+        "answer": "The connection between diet and mental health is being researched with increasing depth, suggesting that what we eat affects not only the body but also our psychological and cognitive state."
+      },
+      {
+        "vi": "Tính xác thực của ẩm thực địa phương đang ngày càng bị xói mòn bởi quá trình đồng nhất hóa toàn cầu, và nỗ lực bảo tồn những kỹ thuật nấu ăn truyền thống là một hành động chống lại sự mất mát văn hóa.",
+        "hint": "The authenticity of local cuisine...",
+        "answer": "The authenticity of local cuisine is being progressively eroded by global homogenisation, and efforts to preserve traditional cooking techniques represent an act of resistance against cultural loss."
+      },
+      {
+        "vi": "Hệ thống nhãn thực phẩm hiện hành thường gây nhầm lẫn hơn là giúp ích cho người tiêu dùng, và cải cách theo hướng minh bạch và dễ hiểu hơn là điều kiện tiên quyết để thúc đẩy tiêu dùng thực phẩm lành mạnh.",
+        "hint": "The current food labelling system...",
+        "answer": "The current food labelling system often confuses rather than assists consumers, and reform towards greater transparency and accessibility is a prerequisite for promoting healthy food consumption."
+      },
+      {
+        "vi": "Nông nghiệp tái sinh, khác với nông nghiệp bền vững thông thường, không chỉ cố gắng duy trì hiện trạng mà hướng đến việc khôi phục tích cực hệ sinh thái và độ màu mỡ của đất.",
+        "hint": "Regenerative agriculture, distinct from conventional...",
+        "answer": "Regenerative agriculture, distinct from conventional sustainable farming, does not merely aim to maintain the status quo but seeks to actively restore ecosystems and soil fertility."
+      },
+      {
+        "vi": "Chiến lược an ninh lương thực quốc gia không thể chỉ tập trung vào sản xuất mà phải bao gồm cả giảm lãng phí, phân phối công bằng và tăng khả năng chống chịu của hệ thống thực phẩm với các cú sốc bên ngoài.",
+        "hint": "National food security strategies cannot...",
+        "answer": "National food security strategies cannot focus solely on production but must encompass waste reduction, equitable distribution and strengthening the resilience of the food system to external shocks."
+      },
+      {
+        "vi": "Thực phẩm không chỉ nuôi sống cơ thể mà còn đóng vai trò quan trọng trong việc tạo ra và duy trì cộng đồng, từ các bữa ăn gia đình đến các lễ hội cộng đồng chia sẻ di sản ẩm thực.",
+        "hint": "Food does not merely nourish...",
+        "answer": "Food does not merely nourish the body but plays a vital role in creating and sustaining community, from family meals to communal festivals sharing culinary heritage."
+      },
+      {
+        "vi": "Chính sách thực phẩm công cộng cần dũng cảm đứng lên trước sức mạnh của các tập đoàn thực phẩm lớn để bảo vệ sức khỏe cộng đồng, một cuộc đấu tranh mà kết quả ảnh hưởng đến sức khỏe của hàng tỷ người.",
+        "hint": "Public food policy must courageously...",
+        "answer": "Public food policy must courageously stand up to the power of large food corporations in order to protect public health, a struggle whose outcome affects the well-being of billions of people."
+      },
+      {
+        "vi": "Phong trào nông nghiệp đô thị đang thách thức quan điểm truyền thống về nơi thực phẩm được trồng, mang đến những cơ hội mới về kết nối cộng đồng, giảm dấu chân carbon và giáo dục thực phẩm.",
+        "hint": "The urban agriculture movement is...",
+        "answer": "The urban agriculture movement is challenging traditional notions of where food is grown, bringing new opportunities for community connection, reduced carbon footprints and food education."
+      },
+      {
+        "vi": "Kỷ nguyên thực phẩm cá nhân hóa, trong đó chế độ ăn uống được điều chỉnh theo dữ liệu sinh học cá nhân, hứa hẹn hiệu quả dinh dưỡng tối ưu nhưng cũng đặt ra những câu hỏi về quyền riêng tư và tiếp cận bình đẳng.",
+        "hint": "The era of personalised food,...",
+        "answer": "The era of personalised food, in which diets are tailored to individual biological data, promises optimal nutritional outcomes but also raises questions about privacy and equitable access."
+      },
+      {
+        "vi": "Sự trỗi dậy của ẩm thực đường phố như một hình thức biểu đạt văn hóa và kinh tế phi chính thức đang ngày càng được công nhận và bảo vệ như một phần không thể thiếu của đô thị sống động.",
+        "hint": "The rise of street food...",
+        "answer": "The rise of street food as a form of informal cultural and economic expression is increasingly being recognised and protected as an indispensable element of vibrant urban life."
+      },
+      {
+        "vi": "Câu hỏi về ai kiểm soát hạt giống, đất đai và chuỗi phân phối thực phẩm là câu hỏi quyền lực căn bản định hình ai được ăn gì, với giá bao nhiêu và dưới điều kiện nào trên toàn thế giới.",
+        "hint": "The question of who controls...",
+        "answer": "The question of who controls seeds, land and food distribution chains is a fundamental question of power that shapes who eats what, at what price and under what conditions worldwide."
+      },
+      {
+        "vi": "Cuộc chiến chống lại nạn đói đòi hỏi không chỉ tăng cường sản xuất lương thực mà còn giải quyết các nguyên nhân gốc rễ như xung đột, bất bình đẳng và thay đổi khí hậu làm gián đoạn hệ thống thực phẩm.",
+        "hint": "The fight against hunger demands...",
+        "answer": "The fight against hunger demands not only increasing food production but also addressing the root causes such as conflict, inequality and climate change that disrupt food systems."
+      },
+      {
+        "vi": "Ẩm thực là cầu nối ngôn ngữ phổ quát vượt qua mọi rào cản văn hóa, và hành động đơn giản của việc cùng nhau chia sẻ bữa ăn mang sức mạnh để xây dựng sự hiểu biết và hòa giải.",
+        "hint": "Cuisine is the universal language...",
+        "answer": "Cuisine is the universal language that transcends all cultural barriers, and the simple act of sharing a meal together carries the power to build understanding and reconciliation."
+      },
+      {
+        "vi": "Tối ưu hóa chuỗi cung ứng lương thực toàn cầu nhờ trí tuệ nhân tạo và phân tích dữ liệu lớn có thể giảm đáng kể lãng phí và nâng cao hiệu quả, nhưng tập trung quyền lực kinh tế vào tay ít nhà sản xuất hơn.",
+        "hint": "Optimising global food supply chains...",
+        "answer": "Optimising global food supply chains through artificial intelligence and big data analysis could significantly reduce waste and enhance efficiency, yet concentrates economic power in the hands of fewer producers."
+      },
+      {
+        "vi": "Thực phẩm không nên chỉ được nhìn nhận như nhiên liệu sinh học mà còn là biểu đạt văn hóa, kết nối giữa các thế hệ và là phương tiện để trải nghiệm cái đẹp của sự đa dạng trong cuộc sống con người.",
+        "hint": "Food should not merely be...",
+        "answer": "Food should not merely be perceived as biological fuel but also as cultural expression, an intergenerational connection and a means of experiencing the beauty of diversity in human life."
+      }
+    ],
+    "is_published": true,
+    "order_index": 406,
+    "created_at": "2026-05-21T04:33:36.542057+00:00",
+    "updated_at": "2026-05-21T04:33:36.542057+00:00"
+  },
+  {
+    "id": "4edd17a6-e540-4154-948c-54b3cb90d8c5",
+    "exercise_id": "buoc4-hobbies",
+    "title": "Đoạn Văn Band 8.0: Hobbies",
+    "topic": {
+      "en": "Hobbies — 24 Advanced Paragraphs",
+      "question": "Dịch từng đoạn văn học thuật tiếng Việt sang tiếng Anh ở mức Band 8.0.",
+      "taskType": "Bước 4 – Dịch Đoạn Văn Band 8.0"
+    },
+    "band_target": "Bước 4",
+    "sentences": [
+      {
+        "vi": "Sở thích sáng tạo không chỉ là hình thức giải trí mà còn là phương tiện để con người xử lý cảm xúc, khám phá bản thân và tạo ra ý nghĩa trong cuộc sống vượt ra ngoài những yêu cầu của công việc và nghĩa vụ.",
+        "hint": "Creative hobbies are not merely...",
+        "answer": "Creative hobbies are not merely a form of entertainment but also a means by which people process emotions, explore the self and create meaning in life beyond the demands of work and obligation."
+      },
+      {
+        "vi": "Nghịch lý của thời đại số là trong khi chúng ta có nhiều thời gian giải trí hơn bao giờ hết, khả năng tận hưởng sự nhàm chán sáng tạo và thư giãn thực sự lại ngày càng hiếm hơn.",
+        "hint": "The paradox of the digital...",
+        "answer": "The paradox of the digital age is that while we have more leisure time than ever before, the capacity to enjoy creative idleness and genuine relaxation is becoming increasingly rare."
+      },
+      {
+        "vi": "Trò chơi điện tử, vốn thường bị xem nhẹ về mặt văn hóa, đang ngày càng được thừa nhận là hình thức nghệ thuật tương tác với tiềm năng kể chuyện, thẩm mỹ và xã hội độc đáo.",
+        "hint": "Video games, long undervalued culturally,...",
+        "answer": "Video games, long undervalued culturally, are increasingly being recognised as an interactive art form with unique narrative, aesthetic and social potential."
+      },
+      {
+        "vi": "Thực hành chánh niệm thông qua các hoạt động như thiền định, yoga và làm vườn đang được nghiên cứu khoa học xác nhận là có lợi ích đo lường được cho sức khỏe thần kinh và tâm lý.",
+        "hint": "Mindfulness practice through activities such...",
+        "answer": "Mindfulness practice through activities such as meditation, yoga and gardening is being confirmed by scientific research to have measurable benefits for neurological and psychological health."
+      },
+      {
+        "vi": "Thể thao và hoạt động thể chất mang những lợi ích vượt ra ngoài sức khỏe thể chất đơn thuần, bao gồm xây dựng tính kỷ luật, khả năng chịu đựng áp lực và tinh thần đồng đội không thể học được từ lý thuyết.",
+        "hint": "Sport and physical activity carry...",
+        "answer": "Sport and physical activity carry benefits that extend beyond mere physical health, including the cultivation of discipline, resilience under pressure and a spirit of teamwork that cannot be learned from theory."
+      },
+      {
+        "vi": "Sự hồi sinh của các nghề thủ công truyền thống trong bối cảnh sản xuất hàng loạt phản ánh khát vọng sâu xa của con người muốn được gắn kết với quá trình tạo ra đồ vật bằng đôi tay của mình.",
+        "hint": "The revival of traditional crafts...",
+        "answer": "The revival of traditional crafts in the context of mass production reflects a deep human desire to reconnect with the process of creating objects with one's own hands."
+      },
+      {
+        "vi": "Đọc sách sâu, phân biệt với việc quét qua thông tin trực tuyến, là kỹ năng nhận thức đang ngày càng trở nên quý hiếm và cần được nuôi dưỡng có ý thức trong thế giới bị phân mảnh bởi thông tin số.",
+        "hint": "Deep reading, distinct from the...",
+        "answer": "Deep reading, distinct from the scanning of online information, is a cognitive skill that is becoming increasingly rare and needs to be consciously cultivated in a world fragmented by digital information."
+      },
+      {
+        "vi": "Sở thích âm nhạc, dù là nghe, chơi hay sáng tác, tham gia vào một trong những quá trình xử lý thần kinh phức tạp nhất mà con người trải qua và mang lại những lợi ích nhận thức được ghi nhận rõ ràng.",
+        "hint": "Musical engagement, whether through listening,...",
+        "answer": "Musical engagement, whether through listening, playing or composing, involves one of the most complex neurological processes humans experience and delivers well-documented cognitive benefits."
+      },
+      {
+        "vi": "Du lịch như một sở thích, khi được thực hành với sự tò mò thực sự và tôn trọng văn hóa, có thể là một trong những con đường hiệu quả nhất để mở rộng tầm nhìn và xây dựng sự đồng cảm liên văn hóa.",
+        "hint": "Travel as a hobby, when...",
+        "answer": "Travel as a hobby, when practised with genuine curiosity and cultural respect, can be one of the most effective pathways to broadening perspective and building intercultural empathy."
+      },
+      {
+        "vi": "Nấu ăn sáng tạo không chỉ là kỹ năng thực hành mà còn là hình thức biểu đạt nghệ thuật, nơi nguyên liệu thô trở thành phương tiện để truyền đạt ký ức, tình cảm và bản sắc văn hóa.",
+        "hint": "Creative cooking is not merely...",
+        "answer": "Creative cooking is not merely a practical skill but a form of artistic expression, where raw ingredients become a medium for conveying memory, emotion and cultural identity."
+      },
+      {
+        "vi": "Cộng đồng sở thích, dù trực tuyến hay trực tiếp, cung cấp cảm giác thuộc về và kết nối xã hội mà nhiều nghiên cứu chứng minh có tầm quan trọng thiết yếu đối với sức khỏe tâm thần.",
+        "hint": "Hobby communities, whether online or...",
+        "answer": "Hobby communities, whether online or in person, provide a sense of belonging and social connection that numerous studies have demonstrated to be of essential importance for mental health."
+      },
+      {
+        "vi": "Nhiếp ảnh như một sở thích dạy cho người chụp cách nhìn thế giới theo cách khác, chú ý đến ánh sáng, bố cục và khoảnh khắc thoáng qua mà thường bị bỏ lỡ trong nhịp sống hối hả hàng ngày.",
+        "hint": "Photography as a hobby teaches...",
+        "answer": "Photography as a hobby teaches the practitioner to see the world differently, attending to light, composition and fleeting moments that are often missed in the hurried pace of daily life."
+      },
+      {
+        "vi": "Sở thích tình nguyện và phục vụ cộng đồng đại diện cho hình thức sử dụng thời gian rảnh rỗi ý nghĩa nhất, kết hợp sự thỏa mãn cá nhân với đóng góp thực sự cho phúc lợi tập thể.",
+        "hint": "Volunteering and community service as...",
+        "answer": "Volunteering and community service as a hobby represent the most meaningful use of leisure time, combining personal fulfilment with a genuine contribution to collective well-being."
+      },
+      {
+        "vi": "Sưu tầm đồ cổ và hiện vật lịch sử là thực hành bảo tồn phi chính thức, trong đó những cá nhân bình thường trở thành người gìn giữ mảnh nhỏ của ký ức vật chất của nhân loại.",
+        "hint": "Collecting antiques and historical artefacts...",
+        "answer": "Collecting antiques and historical artefacts is an informal conservation practice in which ordinary individuals become custodians of fragments of humanity's material memory."
+      },
+      {
+        "vi": "Thể thao mạo hiểm không chỉ đơn giản là tìm kiếm cảm giác mạnh mà phản ánh nhu cầu tâm lý sâu sắc của con người về thử thách, làm chủ và trải nghiệm cuộc sống ở cường độ cao nhất.",
+        "hint": "Extreme sports are not simply...",
+        "answer": "Extreme sports are not simply about seeking thrills but reflect a deep psychological need in humans for challenge, mastery and the experience of life at its highest intensity."
+      },
+      {
+        "vi": "Học một ngôn ngữ mới như sở thích mở ra không chỉ cơ hội giao tiếp mà còn là cánh cửa vào một thế giới quan và cách tri giác thực tại hoàn toàn khác biệt.",
+        "hint": "Learning a new language as...",
+        "answer": "Learning a new language as a hobby opens not only communication opportunities but also a gateway into an entirely different worldview and way of perceiving reality."
+      },
+      {
+        "vi": "Thiên văn học nghiệp dư là ví dụ hiếm hoi về sở thích trong đó người không chuyên có thể đóng góp thực sự vào kiến thức khoa học, đặt sở thích này ở vị trí giao thoa đặc biệt giữa giải trí và khám phá.",
+        "hint": "Amateur astronomy is a rare...",
+        "answer": "Amateur astronomy is a rare example of a hobby in which non-professionals can make genuine contributions to scientific knowledge, placing it at a unique intersection between recreation and discovery."
+      },
+      {
+        "vi": "Sở thích cá nhân thường là nơi con người trải nghiệm trạng thái dòng chảy sâu nhất, trong đó thời gian tan biến và hành động trở nên hoàn toàn tự nhiên, một trạng thái tâm lý có liên quan chặt chẽ đến hạnh phúc.",
+        "hint": "Personal hobbies are often where...",
+        "answer": "Personal hobbies are often where people experience the deepest states of flow, in which time dissolves and action becomes entirely effortless, a psychological state closely associated with well-being."
+      },
+      {
+        "vi": "Đầu tư thời gian và nguồn lực vào sở thích không phải là xa xỉ mà là chiến lược duy trì sức khỏe tâm thần và sự sáng tạo thiết yếu trong cuộc sống hiện đại đầy áp lực và yêu cầu.",
+        "hint": "Investing time and resources in...",
+        "answer": "Investing time and resources in hobbies is not a luxury but an essential strategy for maintaining mental health and creativity in the demanding and pressurised conditions of modern life."
+      },
+      {
+        "vi": "Câu chuyện về cách một sở thích đơn giản đôi khi trở thành sự nghiệp hay đổi mới đột phá nhắc nhở chúng ta rằng ranh giới giữa chơi và làm việc nghiêm túc thường mỏng manh hơn chúng ta nghĩ.",
+        "hint": "The story of how a...",
+        "answer": "The story of how a simple hobby sometimes becomes a career or a breakthrough innovation reminds us that the boundary between play and serious work is often thinner than we imagine."
+      },
+      {
+        "vi": "Trong thế giới ngày càng kết nối và không có thời gian chết, khả năng dành thời gian cho hoạt động thuần tuý là mục đích tự thân, không cần biện hộ về năng suất, đang trở thành hình thức kháng cự văn hoá quan trọng.",
+        "hint": "In an increasingly connected world...",
+        "answer": "In an increasingly connected world with no dead time, the capacity to dedicate time to activities that are purely ends in themselves, requiring no productivity justification, is becoming an important form of cultural resistance."
+      },
+      {
+        "vi": "Thiên nhiên và các hoạt động ngoài trời mang lại những lợi ích phục hồi tâm lý được nghiên cứu khoa học xác nhận, và quyền tiếp cận không gian xanh là vấn đề công bằng xã hội quan trọng ở các đô thị.",
+        "hint": "Nature and outdoor activities deliver...",
+        "answer": "Nature and outdoor activities deliver psychologically restorative benefits that are scientifically confirmed, and access to green spaces is an important social equity issue in urban settings."
+      },
+      {
+        "vi": "Khiêu vũ như sở thích không chỉ là biểu đạt nghệ thuật và vận động thể chất mà còn là hình thức giao tiếp phi ngôn ngữ và kết nối xã hội có lịch sử cổ xưa gần như không có giới hạn văn hóa.",
+        "hint": "Dance as a hobby is...",
+        "answer": "Dance as a hobby is not only artistic expression and physical movement but also a form of non-verbal communication and social bonding with an ancient history that transcends almost all cultural boundaries."
+      },
+      {
+        "vi": "Sở thích của con người không phải là sự phân tâm khỏi cuộc sống 'thực sự' mà là một phần không thể thiếu của cuộc sống đó, định hình ai chúng ta trở thành và cung cấp những tài nguyên bên trong để đối phó với những thách thức không thể tránh khỏi của tồn tại.",
+        "hint": "Human hobbies are not a...",
+        "answer": "Human hobbies are not a distraction from 'real' life but an indispensable part of it, shaping who we become and providing inner resources to meet the inevitable challenges of existence."
+      }
+    ],
+    "is_published": true,
+    "order_index": 407,
+    "created_at": "2026-05-21T04:33:37.386399+00:00",
+    "updated_at": "2026-05-21T04:33:37.386399+00:00"
+  },
+  {
+    "id": "85dd1107-046c-457e-8e3f-4a0e4cd71bb1",
+    "exercise_id": "buoc4-family",
+    "title": "Đoạn Văn Band 8.0: Family",
+    "topic": {
+      "en": "Family — 24 Advanced Paragraphs",
+      "question": "Dịch từng đoạn văn học thuật tiếng Việt sang tiếng Anh ở mức Band 8.0.",
+      "taskType": "Bước 4 – Dịch Đoạn Văn Band 8.0"
+    },
+    "band_target": "Bước 4",
+    "sentences": [
+      {
+        "vi": "Gia đình trong thế kỷ 21 đang được định nghĩa lại theo những cách sâu sắc, phản ánh sự đa dạng ngày càng tăng của cấu trúc gia đình và sự thay đổi trong quan niệm về nghĩa vụ và tình yêu thương.",
+        "hint": "The family in the twenty-first...",
+        "answer": "The family in the twenty-first century is being redefined in profound ways, reflecting the growing diversity of family structures and a shift in conceptions of obligation and affection."
+      },
+      {
+        "vi": "Chăm sóc cha mẹ già đang trở thành áp lực thế hệ ngày càng tăng ở các xã hội đang già hoá, nơi mà trách nhiệm chăm sóc ngày càng va chạm với yêu cầu của sự nghiệp và cuộc sống cá nhân.",
+        "hint": "Caring for ageing parents is...",
+        "answer": "Caring for ageing parents is becoming an escalating generational pressure in ageing societies, where caring responsibilities increasingly clash with the demands of careers and personal life."
+      },
+      {
+        "vi": "Phong cách nuôi dạy con trực thăng, dù xuất phát từ tình yêu thương chân thật, có thể vô tình cản trở sự phát triển của sự tự lập và khả năng chịu đựng nghịch cảnh ở trẻ em.",
+        "hint": "Helicopter parenting, though arising from...",
+        "answer": "Helicopter parenting, though arising from genuine affection, can inadvertently hinder the development of independence and resilience in children."
+      },
+      {
+        "vi": "Ảnh hưởng của cấu trúc gia đình lên kết quả cuộc sống của trẻ em là phức tạp và không thể rút gọn thành đơn giản, vì tính ấm áp và sự gắn kết cảm xúc có tác động lớn hơn cấu trúc gia đình hình thức.",
+        "hint": "The influence of family structure...",
+        "answer": "The influence of family structure on children's life outcomes is complex and cannot be oversimplified, as emotional warmth and attachment carry greater impact than formal family structure."
+      },
+      {
+        "vi": "Mạng xã hội và công nghệ số đang thay đổi sâu sắc động lực giao tiếp trong gia đình, tạo ra những kết nối mới nhưng cũng những rào cản chưa từng có giữa các thế hệ và ngay trong cùng một mái nhà.",
+        "hint": "Social media and digital technology...",
+        "answer": "Social media and digital technology are profoundly altering communication dynamics within families, creating new connections but also unprecedented barriers between generations and even within the same household."
+      },
+      {
+        "vi": "Bạo lực gia đình là một trong những vi phạm nhân quyền phổ biến nhất và bị che giấu nhất trên toàn thế giới, và sự kết hợp giữa hỗ trợ nạn nhân và can thiệp sớm là chìa khóa để phá vỡ vòng tuần hoàn của nó.",
+        "hint": "Domestic violence is one of...",
+        "answer": "Domestic violence is one of the most widespread and concealed human rights violations globally, and the combination of victim support and early intervention is key to breaking its cycle."
+      },
+      {
+        "vi": "Vai trò của ông bà trong việc chăm sóc cháu đang ngày càng trở nên phức tạp hơn trong bối cảnh cả cha lẫn mẹ đều đi làm, tạo ra những căng thẳng thế hệ mới và những câu hỏi chưa có câu trả lời về ranh giới và trách nhiệm.",
+        "hint": "The role of grandparents in...",
+        "answer": "The role of grandparents in childcare is becoming increasingly complex in contexts where both parents work, generating new generational tensions and unanswered questions about boundaries and responsibilities."
+      },
+      {
+        "vi": "Hòa giải trong gia đình sau xung đột đòi hỏi mức độ can đảm cảm xúc và kỹ năng giao tiếp mà xã hội thường không dạy một cách rõ ràng, dẫn đến những tổn thương kéo dài không đáng có.",
+        "hint": "Family reconciliation after conflict demands...",
+        "answer": "Family reconciliation after conflict demands a level of emotional courage and communication skill that society often does not explicitly teach, leading to unnecessarily protracted wounds."
+      },
+      {
+        "vi": "Trẻ em lớn lên trong gia đình với mâu thuẫn không được giải quyết thường mang theo những mô hình quan hệ không lành mạnh vào cuộc đời người lớn, nhấn mạnh tầm quan trọng của can thiệp sớm và hỗ trợ gia đình.",
+        "hint": "Children raised in families with...",
+        "answer": "Children raised in families with unresolved conflict often carry unhealthy relational patterns into adult life, underscoring the importance of early intervention and family support."
+      },
+      {
+        "vi": "Quan niệm về gia đình lý tưởng được xây dựng bởi truyền thông và văn hóa đại chúng đôi khi tạo ra những kỳ vọng không thực tế gây áp lực lên các gia đình thực tế với những phức tạp và không hoàn hảo của họ.",
+        "hint": "The notion of the ideal...",
+        "answer": "The notion of the ideal family constructed by media and popular culture sometimes creates unrealistic expectations that pressure real families with their genuine complexities and imperfections."
+      },
+      {
+        "vi": "Phân chia công việc nhà công bằng giữa cha mẹ là vấn đề bình đẳng giới sâu sắc hơn là chỉ vấn đề thực tiễn, ảnh hưởng đến sức khỏe tâm thần, sự nghiệp và cảm giác giá trị của người phụ nữ.",
+        "hint": "The equitable division of household...",
+        "answer": "The equitable division of household labour between parents is a matter of deep gender equality rather than merely a practical issue, affecting women's mental health, career and sense of self-worth."
+      },
+      {
+        "vi": "Nuôi dưỡng trẻ em có nhu cầu đặc biệt đặt ra những yêu cầu về cả nguồn lực vật chất lẫn cảm xúc mà nhiều gia đình phải đối mặt mà không có đủ sự hỗ trợ từ xã hội và hệ thống y tế.",
+        "hint": "Raising children with special needs...",
+        "answer": "Raising children with special needs places demands on both material and emotional resources that many families face without adequate support from society and the healthcare system."
+      },
+      {
+        "vi": "Ký ức gia đình được chia sẻ qua các câu chuyện, nghi lễ và đồ vật là sợi chỉ vô hình gắn kết các thế hệ và tạo nên ý thức thuộc về không thể thay thế được.",
+        "hint": "Family memory shared through stories,...",
+        "answer": "Family memory shared through stories, rituals and objects is an invisible thread binding generations together and creating a sense of belonging that cannot be replaced."
+      },
+      {
+        "vi": "Sự ly khai giữa anh chị em trong gia đình, thường bắt nguồn từ những xung đột thời thơ ấu chưa được giải quyết hoặc sự bất công về tài sản thừa kế, là một trong những nỗi đau thầm lặng phổ biến nhất của cuộc sống người lớn.",
+        "hint": "Estrangement between siblings, often rooted...",
+        "answer": "Estrangement between siblings, often rooted in unresolved childhood conflicts or perceived inheritance injustice, is one of the most common silent sorrows of adult life."
+      },
+      {
+        "vi": "Gia đình đa văn hóa, sinh ra từ cuộc hôn nhân giữa các nền văn hóa khác nhau, có thể trở thành không gian phong phú cho việc nuôi dưỡng sự đồng cảm và hiểu biết liên văn hóa cho trẻ em.",
+        "hint": "Multicultural families, born of marriage...",
+        "answer": "Multicultural families, born of marriage between different cultural backgrounds, can become rich spaces for nurturing empathy and intercultural understanding in children."
+      },
+      {
+        "vi": "Tình yêu thương trong gia đình, khi được biểu đạt một cách lành mạnh và có ranh giới rõ ràng, là một trong những nguồn lực phục hồi tâm lý mạnh mẽ nhất mà một cá nhân có thể có trong cuộc sống.",
+        "hint": "Family affection, when expressed in...",
+        "answer": "Family affection, when expressed in a healthy manner with clear boundaries, is one of the most powerful psychological resilience resources an individual can possess in life."
+      },
+      {
+        "vi": "Mô hình trị liệu gia đình ngày càng được công nhận là cần thiết không chỉ khi gia đình đang trong khủng hoảng mà còn như một thực hành phòng ngừa giúp xây dựng các mô hình giao tiếp lành mạnh hơn.",
+        "hint": "Family therapy models are increasingly...",
+        "answer": "Family therapy models are increasingly being recognised as necessary not only when a family is in crisis but also as a preventive practice for building healthier communication patterns."
+      },
+      {
+        "vi": "Cuộc tranh luận về nhận nuôi quốc tế phản ánh những câu hỏi phức tạp về quyền trẻ em, bản sắc văn hóa và nghĩa vụ toàn cầu trong một thế giới nơi hàng triệu trẻ em thiếu chăm sóc gia đình.",
+        "hint": "The debate over international adoption...",
+        "answer": "The debate over international adoption reflects complex questions about children's rights, cultural identity and global obligation in a world where millions of children lack family care."
+      },
+      {
+        "vi": "Sự biến đổi của cấu trúc gia đình truyền thống không nhất thiết là sự suy tàn đạo đức mà là sự thích nghi của một thiết chế xã hội cốt lõi với những điều kiện kinh tế, văn hóa và nhân khẩu học thay đổi.",
+        "hint": "The transformation of traditional family...",
+        "answer": "The transformation of traditional family structures is not necessarily moral decline but the adaptation of a core social institution to changing economic, cultural and demographic conditions."
+      },
+      {
+        "vi": "Thiết lập truyền thống gia đình có ý nghĩa là một trong những việc làm cha mẹ giá trị nhất, tạo ra sự ổn định, kết nối và cảm giác liên tục xuyên qua sự thay đổi và không chắc chắn của cuộc sống.",
+        "hint": "Establishing meaningful family traditions is...",
+        "answer": "Establishing meaningful family traditions is one of the most valuable acts of parenting, creating stability, connection and a sense of continuity through the changes and uncertainties of life."
+      },
+      {
+        "vi": "Nghiên cứu về gắn kết và phát triển thời kỳ đầu đời đang cung cấp cơ sở khoa học mạnh mẽ cho sự đầu tư công vào hỗ trợ cha mẹ và môi trường gia đình an toàn cho trẻ nhỏ.",
+        "hint": "Research on attachment and early...",
+        "answer": "Research on attachment and early childhood development is providing a powerful scientific basis for public investment in parental support and safe family environments for young children."
+      },
+      {
+        "vi": "Câu hỏi về kỳ vọng và nghĩa vụ giữa cha mẹ và con cái trưởng thành là một trong những nguồn xung đột không được nói ra nhất trong các gia đình hiện đại, đòi hỏi sự đàm phán thường xuyên và cởi mở.",
+        "hint": "The question of expectations and...",
+        "answer": "The question of expectations and obligations between parents and adult children is one of the most unspoken sources of conflict in modern families, requiring ongoing and open negotiation."
+      },
+      {
+        "vi": "Vai trò của người cha đang được tái định nghĩa một cách căn bản, từ người kiếm tiền thuần túy sang người chăm sóc và nuôi dưỡng tích cực, và sự thay đổi này có lợi ích sâu sắc không chỉ cho trẻ em mà còn cho sự phát triển cá nhân của người cha.",
+        "hint": "The role of the father...",
+        "answer": "The role of the father is being fundamentally redefined, from a purely breadwinning figure to an active caregiver and nurturer, and this shift brings profound benefits not only for children but for the personal development of fathers themselves."
+      },
+      {
+        "vi": "Gia đình không phải là pháo đài cô lập khỏi xã hội mà là đơn vị xã hội cơ bản phản ánh và tái tạo các giá trị, bất bình đẳng và quyền lực của xã hội rộng lớn hơn xung quanh nó.",
+        "hint": "The family is not a...",
+        "answer": "The family is not a fortress isolated from society but the basic social unit that reflects and reproduces the values, inequalities and power structures of the broader society surrounding it."
+      }
+    ],
+    "is_published": true,
+    "order_index": 408,
+    "created_at": "2026-05-21T04:33:38.221364+00:00",
+    "updated_at": "2026-05-21T04:33:38.221364+00:00"
+  },
+  {
+    "id": "c43586f2-e08b-4e63-ab9c-e05f97853bbd",
+    "exercise_id": "buoc4-social-media",
+    "title": "Đoạn Văn Band 8.0: Social Media",
+    "topic": {
+      "en": "Social Media — 23 Advanced Paragraphs",
+      "question": "Dịch từng đoạn văn học thuật tiếng Việt sang tiếng Anh ở mức Band 8.0.",
+      "taskType": "Bước 4 – Dịch Đoạn Văn Band 8.0"
+    },
+    "band_target": "Bước 4",
+    "sentences": [
+      {
+        "vi": "Mạng xã hội đã tạo ra một cuộc cách mạng trong cách thức thông tin lưu thông, trao quyền cho cá nhân nhưng đồng thời tạo ra những hệ quả không lường trước cho sự gắn kết xã hội, sức khỏe tâm thần và nền dân chủ.",
+        "hint": "Social media has created a...",
+        "answer": "Social media has created a revolution in the way information circulates, empowering individuals while simultaneously generating unforeseen consequences for social cohesion, mental health and democracy."
+      },
+      {
+        "vi": "Nền kinh tế chú ý, trong đó sự tham gia của người dùng là hàng hóa chính, đã tạo ra các nền tảng được thiết kế để tối đa hóa thời gian sử dụng bất kể tác động tâm lý và xã hội của điều đó.",
+        "hint": "The attention economy, in which...",
+        "answer": "The attention economy, in which user engagement is the primary commodity, has produced platforms designed to maximise usage time regardless of the psychological and social consequences."
+      },
+      {
+        "vi": "Sự phân cực chính trị được khuếch đại bởi mạng xã hội là mối đe dọa nghiêm trọng đối với sức khỏe của các xã hội dân chủ, tạo ra môi trường trong đó đối thoại dân sự và thỏa hiệp trở nên ngày càng khó khăn.",
+        "hint": "Political polarisation amplified by social...",
+        "answer": "Political polarisation amplified by social media is a serious threat to the health of democratic societies, creating an environment in which civic dialogue and compromise become increasingly difficult."
+      },
+      {
+        "vi": "Quy định các nền tảng mạng xã hội là thách thức quản trị căn bản của thời đại chúng ta, đòi hỏi cân bằng tinh tế giữa bảo vệ quyền tự do ngôn luận và ngăn chặn tác hại thực sự.",
+        "hint": "Regulating social media platforms is...",
+        "answer": "Regulating social media platforms is the fundamental governance challenge of our era, demanding a delicate balance between protecting freedom of expression and preventing genuine harm."
+      },
+      {
+        "vi": "Tác động của mạng xã hội lên bản sắc và lòng tự trọng của trẻ vị thành niên là vấn đề chăm sóc sức khỏe công cộng cấp thiết đòi hỏi phản ứng đa chiều từ nhà trường, gia đình, nhà lập pháp và bản thân ngành công nghệ.",
+        "hint": "The impact of social media...",
+        "answer": "The impact of social media on the identity and self-esteem of adolescents is an urgent public health issue demanding a multidimensional response from schools, families, legislators and the technology industry itself."
+      },
+      {
+        "vi": "Misinformation lan truyền nhanh hơn sự thật trên mạng xã hội vì nó thường giàu cảm xúc hơn và phù hợp hơn với những thành kiến nhận thức hiện có của người đọc, một thực tế mà các nỗ lực kiểm chứng thực tế thuần túy không thể đảo ngược.",
+        "hint": "Misinformation spreads faster than truth...",
+        "answer": "Misinformation spreads faster than truth on social media because it is typically more emotionally charged and more consistent with readers' pre-existing cognitive biases, a reality that fact-checking efforts alone cannot reverse."
+      },
+      {
+        "vi": "Sự chênh lệch giữa hình ảnh được trình bày trên mạng xã hội và thực tại cuộc sống tạo ra một dạng nghèo đói quan hệ xã hội, trong đó con người cảm thấy cuộc sống của mình thua kém hơn so với người khác một cách không thực tế.",
+        "hint": "The gap between the curated...",
+        "answer": "The gap between the curated image presented on social media and the reality of life creates a form of relational poverty, in which people feel their lives are unrealistically inferior to those of others."
+      },
+      {
+        "vi": "Trách nhiệm của các tập đoàn công nghệ không kết thúc ở điều khoản dịch vụ mà mở rộng đến thiết kế thuật toán của họ và các lựa chọn kiến trúc tạo ra hoặc giảm nhẹ tác hại xã hội.",
+        "hint": "The responsibility of technology corporations...",
+        "answer": "The responsibility of technology corporations does not end at terms of service but extends to their algorithmic design and architectural choices that either create or mitigate social harm."
+      },
+      {
+        "vi": "Mạng xã hội đã dân chủ hóa sản xuất nội dung nhưng đồng thời cũng gây ra cuộc khủng hoảng về tính đáng tin cậy, khi ranh giới giữa chuyên gia và người nghiệp dư, thực tế và hư cấu ngày càng mờ nhạt.",
+        "hint": "Social media has democratised content...",
+        "answer": "Social media has democratised content production but simultaneously precipitated a credibility crisis, as the boundaries between expert and amateur, reality and fiction, grow increasingly blurred."
+      },
+      {
+        "vi": "Quyền được lãng quên trong môi trường kỹ thuật số, nơi mọi sai lầm và giai đoạn có thể tồn tại mãi mãi trực tuyến, là một câu hỏi đạo đức và pháp lý ngày càng cấp thiết.",
+        "hint": "The right to be forgotten...",
+        "answer": "The right to be forgotten in the digital environment, where every mistake and phase can persist online indefinitely, is an increasingly urgent ethical and legal question."
+      },
+      {
+        "vi": "Những người có ảnh hưởng trên mạng xã hội đã tạo ra một hình thức quyền lực văn hóa mới mà các khuôn khổ quản trị truyền thống chưa được chuẩn bị để điều tiết một cách hiệu quả.",
+        "hint": "Social media influencers have created...",
+        "answer": "Social media influencers have created a new form of cultural power that traditional governance frameworks have not been adequately prepared to regulate effectively."
+      },
+      {
+        "vi": "Nền kinh tế sáng tạo nội dung mang lại thu nhập cho hàng triệu người nhưng cũng tạo ra sự bấp bênh, căng thẳng về hiệu suất và phụ thuộc vào thuật toán có thể thay đổi bất cứ lúc nào.",
+        "hint": "The content creator economy generates...",
+        "answer": "The content creator economy generates income for millions but also produces precarity, performance anxiety and dependence on algorithms that can change at any moment."
+      },
+      {
+        "vi": "Sự tham gia chính trị trực tuyến đã hạ thấp rào cản tham gia dân chủ nhưng cũng tạo ra những hình thức hoạt động ảo dễ bị hiểu nhầm là tác động thực tế, một hiện tượng được gọi là hành động chủ nghĩa ghế bành.",
+        "hint": "Online political participation has lowered...",
+        "answer": "Online political participation has lowered barriers to democratic engagement but has also produced forms of virtual activism easily mistaken for real impact, a phenomenon known as slacktivism."
+      },
+      {
+        "vi": "Cuộc tranh luận về quản trị internet là cuộc tranh luận về giá trị: tự do và đổi mới so với sự an toàn và trách nhiệm giải trình, và không có câu trả lời đơn giản nào cho câu hỏi về cách cân bằng những giá trị này.",
+        "hint": "The debate over internet governance...",
+        "answer": "The debate over internet governance is a debate about values: freedom and innovation versus safety and accountability, and there is no simple answer to the question of how to balance these values."
+      },
+      {
+        "vi": "Tự cách ly khỏi mạng xã hội, dù tạm thời hay lâu dài, đang được nhiều người trải nghiệm như một hành động chủ động bảo vệ sức khỏe tâm thần và lấy lại quyền kiểm soát sự chú ý của mình.",
+        "hint": "Disengaging from social media, whether...",
+        "answer": "Disengaging from social media, whether temporarily or permanently, is being experienced by many as a proactive act of mental health protection and a reclaiming of control over one's attention."
+      },
+      {
+        "vi": "Giáo dục về hiểu biết kỹ thuật số, bao gồm cách đánh giá nguồn tin, nhận biết thông tin sai lệch và sử dụng nền tảng có ý thức, đang trở thành kỹ năng công dân thiết yếu của thế kỷ 21.",
+        "hint": "Digital literacy education, encompassing how...",
+        "answer": "Digital literacy education, encompassing how to evaluate sources, recognise misinformation and use platforms consciously, is becoming an essential civic skill of the twenty-first century."
+      },
+      {
+        "vi": "Sức mạnh của phong trào xã hội được khuếch đại bởi mạng xã hội là thực, nhưng mạng xã hội cũng có thể phân tán năng lượng tập thể, tạo ra ảo giác về sự thay đổi mà không có hành động tổ chức thực sự.",
+        "hint": "The power of social movements...",
+        "answer": "The power of social movements amplified by social media is real, yet social media can also disperse collective energy, creating an illusion of change without genuine organisational action."
+      },
+      {
+        "vi": "Thiết kế nhân văn của mạng xã hội, trong đó phúc lợi người dùng được đặt lên trên các chỉ số tương tác, là một hướng phát triển khả thi nhưng đòi hỏi áp lực từ cả thị trường lẫn quy định để trở thành hiện thực.",
+        "hint": "Human-centred design of social media,...",
+        "answer": "Human-centred design of social media, in which user well-being is prioritised over engagement metrics, is a viable direction for development but requires pressure from both the market and regulation to become a reality."
+      },
+      {
+        "vi": "Ảnh hưởng của mạng xã hội lên tiêu chuẩn sắc đẹp, đặc biệt thông qua các bộ lọc và chỉnh sửa ảnh, đang tạo ra những áp lực không thực tế lên đặc biệt là phụ nữ và trẻ em gái về ngoại hình.",
+        "hint": "The impact of social media...",
+        "answer": "The impact of social media on beauty standards, particularly through filters and photo editing, is generating unrealistic pressures especially on women and girls regarding their appearance."
+      },
+      {
+        "vi": "Sự vắng mặt của giới hạn về không gian và thời gian trong truyền thông kỹ thuật số có nghĩa là xung đột và hiểu lầm trên mạng xã hội có thể leo thang với tốc độ và cường độ mà con người có ít khả năng tiến hóa để xử lý.",
+        "hint": "The absence of spatial and...",
+        "answer": "The absence of spatial and temporal limits in digital communication means that conflicts and misunderstandings on social media can escalate with a speed and intensity that humans have little evolutionary capacity to manage."
+      },
+      {
+        "vi": "Dữ liệu hành vi người dùng được thu thập bởi các nền tảng mạng xã hội đại diện cho nguồn tài nguyên kinh tế và quyền lực chính trị cực kỳ có giá trị mà chưa có khuôn khổ pháp lý thỏa đáng để quản lý.",
+        "hint": "User behavioural data collected by...",
+        "answer": "User behavioural data collected by social media platforms represents an extremely valuable economic resource and political power asset for which no adequate regulatory framework yet exists."
+      },
+      {
+        "vi": "Phong trào phúc lợi kỹ thuật số đang kêu gọi một mối quan hệ khác với công nghệ, trong đó thiết kế kỹ thuật số tích cực hỗ trợ con người sống có ý thức và kết nối thực sự hơn thay vì thụ động và bị phân tâm.",
+        "hint": "The digital well-being movement is...",
+        "answer": "The digital well-being movement is calling for a different relationship with technology, in which digital design actively supports people in living more consciously and genuinely connected rather than passively and distracted."
+      },
+      {
+        "vi": "Cuối cùng, câu hỏi về mạng xã hội là câu hỏi về loại xã hội nào chúng ta muốn xây dựng, và câu trả lời đòi hỏi sự tham gia có ý thức không chỉ từ nhà hoạch định chính sách mà từ tất cả chúng ta với tư cách là người dùng.",
+        "hint": "Ultimately, the question of social...",
+        "answer": "Ultimately, the question of social media is a question about what kind of society we wish to build, and the answer demands conscious participation not only from policymakers but from all of us as users."
+      }
+    ],
+    "is_published": true,
+    "order_index": 409,
+    "created_at": "2026-05-21T04:33:39.242994+00:00",
+    "updated_at": "2026-05-21T04:33:39.242994+00:00"
+  }
+]

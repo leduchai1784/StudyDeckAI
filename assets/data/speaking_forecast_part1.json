@@ -1,0 +1,682 @@
+[
+  {
+    "topicNumber": 1,
+    "topicTitle": "Computers / Tablets",
+    "fullTitle": "1. Computers / Tablets",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "In what conditions would you use a computer?",
+      "When was the first time you used a computer?",
+      "In what conditions would it be difficult for you to use a computer?"
+    ]
+  },
+  {
+    "topicNumber": 2,
+    "topicTitle": "Collecting things",
+    "fullTitle": "2. Collecting things",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "Do you collect things?",
+      "Are there any things you keep from childhood?",
+      "Where do you usually keep things you need?"
+    ]
+  },
+  {
+    "topicNumber": 3,
+    "topicTitle": "Street market",
+    "fullTitle": "3. Street market",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "Are street markets common in your country?",
+      "What is usually sold there?",
+      "Do you think people like street markets? Why?"
+    ]
+  },
+  {
+    "topicNumber": 4,
+    "topicTitle": "Travelling",
+    "fullTitle": "4. Travelling",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 5,
+    "questions": [
+      "Do you like to travel?",
+      "Do you often travel by air?",
+      "How long was the longest trip you took?",
+      "Which country would you like to travel to in the future?",
+      "Would you like to travel to space?"
+    ]
+  },
+  {
+    "topicNumber": 5,
+    "topicTitle": "Paper / Writing letters",
+    "fullTitle": "5. Paper / Writing letters",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 4,
+    "questions": [
+      "Do you often write things?",
+      "Do you prefer to write by hand or write using a computer?",
+      "Do you think computers might one day replace handwriting?",
+      "When do children begin to write in your country?"
+    ]
+  },
+  {
+    "topicNumber": 6,
+    "topicTitle": "Losing things / Lost and found",
+    "fullTitle": "6. Losing things / Lost and found",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 2,
+    "questions": [
+      "Do you always bring a lot of keys with you?",
+      "Have you ever lost your keys?"
+    ]
+  },
+  {
+    "topicNumber": 7,
+    "topicTitle": "Being polite / Politeness",
+    "fullTitle": "7. Being polite / Politeness",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "How did you learn to be polite as a child?",
+      "Do you think being polite is very important?",
+      "Who taught you to be polite when you were young?"
+    ]
+  },
+  {
+    "topicNumber": 8,
+    "topicTitle": "Shoes",
+    "fullTitle": "8. Shoes",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 4,
+    "questions": [
+      "What's your favorite type of shoes?",
+      "Do you know anyone who likes to buy a lot of shoes?",
+      "Have you ever bought shoes online?",
+      "How often do you buy shoes?"
+    ]
+  },
+  {
+    "topicNumber": 9,
+    "topicTitle": "Advertisements",
+    "fullTitle": "9. Advertisements",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 4,
+    "questions": [
+      "Are there many advertisements in your country?",
+      "Why do you think there are so many advertisements now?",
+      "What are the various places where we see advertisements?",
+      "How do you feel about advertisements?"
+    ]
+  },
+  {
+    "topicNumber": 10,
+    "topicTitle": "Secondary school",
+    "fullTitle": "10. Secondary school",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "Where do you go to school?",
+      "Do you think your school is good for every student?",
+      "What changes do you want to make in your school?"
+    ]
+  },
+  {
+    "topicNumber": 11,
+    "topicTitle": "Rubbish / Recycling",
+    "fullTitle": "11. Rubbish / Recycling",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 4,
+    "questions": [
+      "Do you recycle now? Why?",
+      "Did you recycle when you were a kid?",
+      "Will you recycle in the future?",
+      "What kind of things do you recycle?"
+    ]
+  },
+  {
+    "topicNumber": 12,
+    "topicTitle": "Remembering names",
+    "fullTitle": "12. Remembering names",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "Is it easy for you to remember names?",
+      "Will you forget other people's names if others forget your name?",
+      "How can you strengthen your memory?"
+    ]
+  },
+  {
+    "topicNumber": 13,
+    "topicTitle": "Tiredness",
+    "fullTitle": "13. Tiredness",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 4,
+    "questions": [
+      "Do you often feel tired?",
+      "When would you feel tired?",
+      "What do you do when you feel tired?",
+      "Do you think you get enough rest?"
+    ]
+  },
+  {
+    "topicNumber": 14,
+    "topicTitle": "Glasses",
+    "fullTitle": "14. Glasses",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "Do people in your country wear sunglasses?",
+      "Where can you buy sunglasses?",
+      "Do you like to wear sunglasses?"
+    ]
+  },
+  {
+    "topicNumber": 15,
+    "topicTitle": "Food",
+    "fullTitle": "15. Food",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 5,
+    "questions": [
+      "What kinds of meals do you like?",
+      "Do you often have dinner with your family or friends?",
+      "When do you usually eat dinner?",
+      "Are there any fruits or vegetables you don't like? Why?",
+      "What is your favourite cuisine?"
+    ]
+  },
+  {
+    "topicNumber": 16,
+    "topicTitle": "Headphones",
+    "fullTitle": "16. Headphones",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 5,
+    "questions": [
+      "Is wearing headphones comfortable?",
+      "Do you use headphones?",
+      "What type of headphones do you use?",
+      "When would you use headphones?",
+      "In what conditions would you not use headphones?"
+    ]
+  },
+  {
+    "topicNumber": 17,
+    "topicTitle": "Watches",
+    "fullTitle": "17. Watches",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 5,
+    "questions": [
+      "How often do you wear a watch?",
+      "What was your first watch like?",
+      "What kind of watches do you like to wear?",
+      "Do people still wear watches in your country?",
+      "Did you receive any watch as a gift when you were a child?"
+    ]
+  },
+  {
+    "topicNumber": 18,
+    "topicTitle": "Cars / Driving",
+    "fullTitle": "18. Cars / Driving",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 6,
+    "questions": [
+      "Will you buy an expensive car in the future?",
+      "Do you think car colours are important?",
+      "Did you enjoy travelling by car when you were a kid?",
+      "What types of cars do you like?",
+      "Do you prefer to be a driver or the passenger?",
+      "What do you usually do when there is a traffic jam?"
+    ]
+  },
+  {
+    "topicNumber": 19,
+    "topicTitle": "Websites",
+    "fullTitle": "19. Websites",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 2,
+    "questions": [
+      "What kinds of websites do you usually use?",
+      "What changes compared to the past?"
+    ]
+  },
+  {
+    "topicNumber": 20,
+    "topicTitle": "Mirrors",
+    "fullTitle": "20. Mirrors",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "Do you like looking at yourself in the mirror? How often?",
+      "Have you ever bought mirrors?",
+      "Would you use mirrors to decorate your room?"
+    ]
+  },
+  {
+    "topicNumber": 21,
+    "topicTitle": "Parks",
+    "fullTitle": "21. Parks",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 8,
+    "questions": [
+      "Did you like going to parks as a child?",
+      "Do you still like going to parks now?",
+      "Would you like to see more parks in your city?",
+      "Are there any parks you want to go to in the future?",
+      "Would you prefer to play in a personal garden or public garden?",
+      "How are the parks today different from those you visited as a kid?",
+      "What do you like to do when visiting a park?",
+      "Would you like to play in a public garden or park?"
+    ]
+  },
+  {
+    "topicNumber": 22,
+    "topicTitle": "Shopping",
+    "fullTitle": "22. Shopping",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 4,
+    "questions": [
+      "Do you like going shopping?",
+      "Do you shop online?",
+      "Does shopping take you a lot of time?",
+      "What is the best part about shopping?"
+    ]
+  },
+  {
+    "topicNumber": 23,
+    "topicTitle": "Keeping things tidy",
+    "fullTitle": "23. Keeping things tidy",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "Are you a tidy person?",
+      "Are all of your family members tidy?",
+      "Are you tidier at home or at work/school?"
+    ]
+  },
+  {
+    "topicNumber": 24,
+    "topicTitle": "Music",
+    "fullTitle": "24. Music",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 10,
+    "questions": [
+      "Do you like listening to music?",
+      "When do you listen to music?",
+      "Did you learn instruments?",
+      "Did you have any music classes in school?",
+      "Do you think it is necessary for children to have music classes?",
+      "What do you think of Vietnamese traditional music?",
+      "How much time do you spend listening to music every day?",
+      "What is your favorite kind of music?",
+      "When did you start listening to this type of music?",
+      "How do you feel when you listen to music?"
+    ]
+  },
+  {
+    "topicNumber": 25,
+    "topicTitle": "Teachers",
+    "fullTitle": "25. Teachers",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 6,
+    "questions": [
+      "Do you like any teacher of yours?",
+      "Do you still keep in touch with your teachers?",
+      "Do you think it's important to like your teacher?",
+      "Do you want to be a teacher?",
+      "What qualities should a good teacher have?",
+      "Do you have a favorite teacher?"
+    ]
+  },
+  {
+    "topicNumber": 26,
+    "topicTitle": "Social Media",
+    "fullTitle": "26. Social Media",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 4,
+    "questions": [
+      "Do you like to use social media?",
+      "Do you think you or your friends use too much social media?",
+      "Do you want to work in social media? Why?",
+      "What's the most popular social media in Vietnam? Why?"
+    ]
+  },
+  {
+    "topicNumber": 27,
+    "topicTitle": "Clothes",
+    "fullTitle": "27. Clothes",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 4,
+    "questions": [
+      "What's your favorite color of clothes?",
+      "What kind of clothes do you never wear?",
+      "What kind of clothes do you usually wear?",
+      "Do you wear the same style of clothes on weekdays and weekends?"
+    ]
+  },
+  {
+    "topicNumber": 28,
+    "topicTitle": "Films",
+    "fullTitle": "28. Films",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "What's your favourite kind of movie?",
+      "Did you go to the cinema a lot when you were a child?",
+      "Which is more popular in your country, going to the cinema or watching movies at home?"
+    ]
+  },
+  {
+    "topicNumber": 29,
+    "topicTitle": "Dreams",
+    "fullTitle": "29. Dreams",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 7,
+    "questions": [
+      "How long can you remember your dream when you wake up?",
+      "Do you like hearing about other people's dreams?",
+      "Do you think dreams can affect your life?",
+      "Do you often have dreams at night?",
+      "Have you had a bad dream before?",
+      "What was the strangest dream you have had?",
+      "What do you usually dream about?"
+    ]
+  },
+  {
+    "topicNumber": 30,
+    "topicTitle": "City",
+    "fullTitle": "30. City",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 10,
+    "questions": [
+      "Would you recommend your city to others?",
+      "What's the weather like where you live?",
+      "Are there people of different ages living in this city?",
+      "Are the people friendly in the city?",
+      "Is the city friendly to children and old people?",
+      "Do you often see your neighbors?",
+      "What city do you live in?",
+      "Do you like this city? Why?",
+      "How long have you lived in this city?",
+      "Are there big changes in this city?"
+    ]
+  },
+  {
+    "topicNumber": 31,
+    "topicTitle": "Outer Space",
+    "fullTitle": "31. Outer Space",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 1,
+    "questions": [
+      "Have you ever learnt about outer space and stars?"
+    ]
+  },
+  {
+    "topicNumber": 32,
+    "topicTitle": "Art",
+    "fullTitle": "32. Art",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "Do you like art?",
+      "Have you ever visited an art gallery?",
+      "Is there any art work on the wall in your room?"
+    ]
+  },
+  {
+    "topicNumber": 33,
+    "topicTitle": "Singing",
+    "fullTitle": "33. Singing",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 5,
+    "questions": [
+      "Do you often sing?",
+      "When do you like to sing?",
+      "Is it difficult to sing well?",
+      "Do you want to be a singer?",
+      "What kinds of music do you like to sing?"
+    ]
+  },
+  {
+    "topicNumber": 34,
+    "topicTitle": "Evening",
+    "fullTitle": "34. Evening",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 4,
+    "questions": [
+      "Do you prefer studying in the morning or in the afternoon?",
+      "What do you usually do in the evening?",
+      "What did you do in the evening when you were little? Why?",
+      "Are there any differences between what you do in the evening now and what you did in the past?"
+    ]
+  },
+  {
+    "topicNumber": 35,
+    "topicTitle": "Old Buildings",
+    "fullTitle": "35. Old Buildings",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "Have you ever seen some old buildings in the city?",
+      "Do you think we should keep old buildings in cities?",
+      "Do you prefer living in an old building or a modern house?"
+    ]
+  },
+  {
+    "topicNumber": 36,
+    "topicTitle": "Sports",
+    "fullTitle": "36. Sports",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 4,
+    "questions": [
+      "Did you do any sport when you were younger? (Why/Why not?)",
+      "Have you ever supported a sports team? (Why/Why not?)",
+      "Do you enjoy watching sports? (Why/Why not?)",
+      "Do you think there is too much sport on television in your country? (Why/Why not?)"
+    ]
+  },
+  {
+    "topicNumber": 37,
+    "topicTitle": "Science",
+    "fullTitle": "37. Science",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 5,
+    "questions": [
+      "Do you like science?",
+      "What science have you studied?",
+      "How do you study science?",
+      "What's the most difficult part of studying science?",
+      "How has the science that you have studied helped you?"
+    ]
+  },
+  {
+    "topicNumber": 38,
+    "topicTitle": "Comedy/Jokes",
+    "fullTitle": "38. Comedy/Jokes",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "Do you like watching movies that make you laugh?",
+      "Do you find it easy to make others laugh?",
+      "Do you think it's a good thing if you always make others laugh?"
+    ]
+  },
+  {
+    "topicNumber": 39,
+    "topicTitle": "History",
+    "fullTitle": "39. History",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 5,
+    "questions": [
+      "Do you like learning history?",
+      "What historical event do you find most interesting?",
+      "Do you think history is important?",
+      "Do you like to watch programmes on TV about history?",
+      "Do you think the internet is a good place to learn about history?"
+    ]
+  },
+  {
+    "topicNumber": 40,
+    "topicTitle": "Morning Routine",
+    "fullTitle": "40. Morning Routine",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 4,
+    "questions": [
+      "Do you like to get up early in the morning?",
+      "What do you do in the morning?",
+      "What is your morning routine?",
+      "Is breakfast important?"
+    ]
+  },
+  {
+    "topicNumber": 41,
+    "topicTitle": "Study/Subject",
+    "fullTitle": "41. Study/Subject",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 7,
+    "questions": [
+      "Describe your education.",
+      "What is your area of specialization?",
+      "Why did you choose to study that major?",
+      "What kind of school did you go to as a child?",
+      "What was your favourite subject as a child?",
+      "Do you think your country has an effective education system?",
+      "Are you looking forward to working?"
+    ]
+  },
+  {
+    "topicNumber": 42,
+    "topicTitle": "Home/Accommodation",
+    "fullTitle": "42. Home/Accommodation",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 9,
+    "questions": [
+      "What kind of housing/accommodation do you live in?",
+      "Who do you live with?",
+      "How long have you lived there?",
+      "What's the difference between where you are living now and where you have lived in the past?",
+      "Do you plan to live there for a long time?",
+      "Which room does your family spend most of the time in?",
+      "Are the transport facilities to your home very good?",
+      "Do you prefer living in a house or a flat?",
+      "What part of your home do you like the most?"
+    ]
+  },
+  {
+    "topicNumber": 43,
+    "topicTitle": "Hometown",
+    "fullTitle": "43. Hometown",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 7,
+    "questions": [
+      "Do you like living there?",
+      "Do you think you will continue living there for a long time?",
+      "Please describe your hometown a little.",
+      "What's your hometown famous for?",
+      "Did you learn about the history of your hometown at school?",
+      "Are there many young people in your hometown?",
+      "Is your hometown a good place for young people to pursue their careers?"
+    ]
+  },
+  {
+    "topicNumber": 44,
+    "topicTitle": "Neighborhood/Area",
+    "fullTitle": "44. Neighborhood/Area",
+    "part": 1,
+    "category": "Part 1 Chu de",
+    "quarter": "Quy 3 (Thang 9-12/2026)",
+    "totalQuestions": 3,
+    "questions": [
+      "Do you know your neighbors?",
+      "What do you think of your neighbors?",
+      "How do you get along well with your neighbors?"
+    ]
+  }
+]

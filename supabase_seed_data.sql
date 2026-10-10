@@ -1,28 +1,33 @@
 -- ====================================================================
--- SCRIPT CẤP QUYỀN TRUY CẬP (GRANT PRIVILEGES) & SEED DATA DỮ LIỆU MẪU
--- CHẠY SCRIPT NÀY TRONG SUPABASE SQL EDITOR ĐỂ ĐỒNG BỘ 100% VỚI APP
+-- SCRIPT CẤP TOÀN QUYỀN ĐỌC/GHI/SỬA/XÓA (CRUD) & TẮT RLS TRÊN SUPABASE
+-- CHẠY SCRIPT NÀY TRONG SUPABASE SQL EDITOR ĐỂ APP KẾT NỐI & THAO TÁC 100%
 -- ====================================================================
 
--- 1. CẤP QUYỀN TRUY CẬP CHO ROLE 'anon' VÀ 'authenticated'
-GRANT USAGE ON SCHEMA public TO anon, authenticated;
-GRANT ALL ON ALL TABLES IN SCHEMA public TO anon, authenticated;
-GRANT ALL ON ALL SEQUENCES IN SCHEMA public TO anon, authenticated;
-GRANT ALL ON ALL ROUTINES IN SCHEMA public TO anon, authenticated;
+-- 1. CẤP QUYỀN TRUY CẬP SCHEMA & TOÀN BỘ BẢNG CHO ROLE 'anon' VÀ 'authenticated'
+-- Cho phép đọc (SELECT), ghi mới (INSERT), cập nhật (UPDATE), xóa (DELETE)
+GRANT USAGE ON SCHEMA public TO anon, authenticated, service_role;
+GRANT ALL ON ALL TABLES IN SCHEMA public TO anon, authenticated, service_role;
+GRANT ALL ON ALL SEQUENCES IN SCHEMA public TO anon, authenticated, service_role;
+GRANT ALL ON ALL ROUTINES IN SCHEMA public TO anon, authenticated, service_role;
 
-ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO anon, authenticated;
-ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO anon, authenticated;
-ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON ROUTINES TO anon, authenticated;
+-- Áp dụng quyền tự động cho các bảng/sequence tạo trong tương lai
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO anon, authenticated, service_role;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO anon, authenticated, service_role;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON ROUTINES TO anon, authenticated, service_role;
 
--- 2. TẮT RLS HOẶC THÊM POLICY MỞ RỘNG CHO CÁC BẢNG CHÍNH
-ALTER TABLE public.users DISABLE ROW LEVEL SECURITY;
-ALTER TABLE public.courses DISABLE ROW LEVEL SECURITY;
-ALTER TABLE public.lessons DISABLE ROW LEVEL SECURITY;
-ALTER TABLE public.decks DISABLE ROW LEVEL SECURITY;
-ALTER TABLE public.flashcards DISABLE ROW LEVEL SECURITY;
-ALTER TABLE public.vocabularies DISABLE ROW LEVEL SECURITY;
-ALTER TABLE public.documents DISABLE ROW LEVEL SECURITY;
+-- 2. TỰ ĐỘNG TẮT ROW LEVEL SECURITY (RLS) CHO TOÀN BỘ CÁC BẢNG TRONG SCHEMA PUBLIC
+-- (Giúp App Flutter ghi trực tiếp và thay đổi trực tiếp mà không bị chặn bởi bất kỳ Policy nào)
+DO $$ 
+DECLARE 
+    r RECORD;
+BEGIN 
+    FOR r IN (SELECT tablename FROM pg_tables WHERE schemaname = 'public') 
+    LOOP 
+        EXECUTE 'ALTER TABLE public.' || quote_ident(r.tablename) || ' DISABLE ROW LEVEL SECURITY;';
+    END LOOP; 
+END $$;
 
--- 3. CHÈN DỮ LIỆU MẪU (SEED DATA) BAN ĐẦU
+-- 3. CHÈN DỮ LIỆU MẪU BAN ĐẦU (NẾU CHƯA CÓ)
 -- A. Khóa học mẫu (Courses)
 INSERT INTO public.courses (id, title, description, level, total_lessons, category, is_published, created_at)
 VALUES 

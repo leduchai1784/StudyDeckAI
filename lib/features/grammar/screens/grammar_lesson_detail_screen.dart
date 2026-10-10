@@ -4,6 +4,7 @@ import '../../../app/theme.dart';
 import '../../../services/roadmap_progress_service.dart';
 import '../data/grammar_lessons_data.dart';
 import '../models/grammar_lesson_model.dart';
+import '../../../shared/widgets/app_back_button.dart';
 
 class GrammarLessonDetailScreen extends StatefulWidget {
   final String lessonId;
@@ -105,10 +106,7 @@ class _GrammarLessonDetailScreenState extends State<GrammarLessonDetailScreen>
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.5,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 18, color: AppTheme.brandTextPrimary),
-          onPressed: () => context.pop(),
-        ),
+        leading: const AppBackButton(),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

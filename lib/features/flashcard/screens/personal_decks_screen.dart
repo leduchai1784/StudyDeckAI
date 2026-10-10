@@ -4,6 +4,7 @@ import '../../../app/theme.dart';
 import '../../../models/edu_word.dart';
 import '../../../models/user_custom_deck.dart';
 import '../../../services/flashcard_progress_service.dart';
+import '../../../shared/widgets/app_back_button.dart';
 
 class PersonalDecksScreen extends StatefulWidget {
   const PersonalDecksScreen({super.key});
@@ -348,8 +349,7 @@ class _PersonalDecksScreenState extends State<PersonalDecksScreen> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: AppTheme.brandSurface,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppTheme.brandTextPrimary),
+        leading: AppBackButton(
           onPressed: () => context.pop(true),
         ),
         title: const Text(

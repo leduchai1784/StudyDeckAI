@@ -4,6 +4,7 @@ import '../../../../app/theme.dart';
 import '../../../../services/auth_service.dart';
 import '../../../../shared/utils/avatar_helper.dart';
 import '../../../../shared/widgets/studydeck_logo_header.dart';
+import '../../../../shared/widgets/app_back_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -324,10 +325,7 @@ class _LoginScreenState extends State<LoginScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new, size: 20, color: AppTheme.brandTextPrimary),
-          onPressed: () => context.pop(),
-        ),
+        leading: const AppBackButton(),
       ),
       body: SafeArea(
         child: Center(

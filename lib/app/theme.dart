@@ -256,6 +256,25 @@ class AppTheme {
         ),
         behavior: SnackBarBehavior.floating,
       ),
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.white,
+        elevation: 0.5,
+        surfaceTintColor: Colors.transparent,
+        centerTitle: false,
+        iconTheme: IconThemeData(color: brandTextPrimary),
+        titleTextStyle: TextStyle(
+          fontSize: 17,
+          fontWeight: FontWeight.bold,
+          color: brandTextPrimary,
+        ),
+      ),
+      actionIconTheme: ActionIconThemeData(
+        backButtonIconBuilder: (BuildContext context) => const Icon(
+          Icons.chevron_left_rounded,
+          size: 26,
+          color: brandTextPrimary,
+        ),
+      ),
     );
   }
 

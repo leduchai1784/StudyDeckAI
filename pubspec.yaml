@@ -19,6 +19,12 @@ dependencies:
   supabase_flutter: ^2.8.0
   image_picker: ^1.1.2
   flutter_tts: ^4.2.2
+  audioplayers: ^6.7.1
+  record: ^5.2.0
+  path_provider: ^2.1.2
+
+dependency_overrides:
+  record_platform_interface: 1.2.0
 
 dev_dependencies:
   flutter_test:
@@ -53,3 +59,4 @@ flutter:
     - assets/icons/
     - assets/animations/
     - assets/audio/
+    - assets/data/

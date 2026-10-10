@@ -1,3 +1,5 @@
 {
-    "cmake.sourceDirectory": "C:/BC_TotNghiep/StudyDeckAI/windows"
-}
+    "cmake.configureOnOpen": false,
+    "javascript.validate.enable": false,
+    "typescript.validate.enable": false
+}

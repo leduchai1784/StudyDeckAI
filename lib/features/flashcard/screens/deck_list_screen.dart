@@ -137,7 +137,17 @@ class _DeckListScreenState extends State<DeckListScreen> {
     }
   }
 
-  // --- Filtering Decks & Words ---
+  // --- Filtering Decks & Words By Keyword ---
+  static String _normalizeText(String text) {
+    var str = text.toLowerCase().trim();
+    const withDia = 'àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ';
+    const withoutDia = 'aaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuuyyyyyd';
+    for (int i = 0; i < withDia.length; i++) {
+      str = str.replaceAll(withDia[i], withoutDia[i]);
+    }
+    return str;
+  }
+
   List<Map<String, dynamic>> _getFilteredDecks() {
     List<Map<String, dynamic>> list = _levelDecksConfig;
 
@@ -161,12 +171,19 @@ class _DeckListScreenState extends State<DeckListScreen> {
     }
 
     if (_searchQuery.trim().isEmpty) return list;
-    final q = _searchQuery.trim().toLowerCase();
+    final rawQ = _searchQuery.trim().toLowerCase();
+    final normQ = _normalizeText(rawQ);
     return list.where((deck) {
       final title = (deck['title'] as String).toLowerCase();
+      final titleNorm = _normalizeText(deck['title'] as String);
       final level = (deck['level'] as String).toLowerCase();
       final label = (deck['levelLabel'] as String).toLowerCase();
-      return title.contains(q) || level.contains(q) || label.contains(q);
+      final labelNorm = _normalizeText(deck['levelLabel'] as String);
+      return title.contains(rawQ) ||
+          titleNorm.contains(normQ) ||
+          level.contains(rawQ) ||
+          label.contains(rawQ) ||
+          labelNorm.contains(normQ);
     }).toList();
   }
 
@@ -180,25 +197,74 @@ class _DeckListScreenState extends State<DeckListScreen> {
       }
     });
 
-    final q = _searchQuery.trim().toLowerCase();
-    if (q.isEmpty) {
+    final rawQuery = _searchQuery.trim().toLowerCase();
+    if (rawQuery.isEmpty) {
       return allWords;
     }
 
-    return allWords.where((w) {
-      final title = w.title.toLowerCase();
-      final viword = w.viword.toLowerCase();
-      final transcription = w.transcription.toLowerCase();
-      final example = w.example.toLowerCase();
-      final description = w.description.toLowerCase();
-      final videscription = w.videscription.toLowerCase();
-      return title.contains(q) ||
-          viword.contains(q) ||
-          transcription.contains(q) ||
-          example.contains(q) ||
-          description.contains(q) ||
-          videscription.contains(q);
-    }).toList();
+    final normalizedQuery = _normalizeText(rawQuery);
+    final queryTokens = normalizedQuery.split(RegExp(r'\s+')).where((t) => t.isNotEmpty).toList();
+
+    // Map each word with its keyword relevance score (điểm càng thấp ưu tiên càng cao)
+    final List<MapEntry<EduWord, int>> scoredWords = [];
+
+    for (final w in allWords) {
+      final titleLower = w.title.toLowerCase().trim();
+      final titleNorm = _normalizeText(w.title);
+      final viLower = w.viword.toLowerCase().trim();
+      final viNorm = _normalizeText(w.viword);
+
+      // Chỉ tìm theo KEYWORD: từ tiếng Anh (title) hoặc nghĩa tiếng Việt (viword)
+      final bool matchesTitle = titleLower.contains(rawQuery) || titleNorm.contains(normalizedQuery);
+      final bool matchesVi = viLower.contains(rawQuery) || viNorm.contains(normalizedQuery);
+
+      // Khớp đa từ khóa (nếu gõ nhiều từ)
+      bool allTokensMatch = queryTokens.isNotEmpty;
+      for (final token in queryTokens) {
+        final inTitle = titleLower.contains(token) || titleNorm.contains(token);
+        final inVi = viLower.contains(token) || viNorm.contains(token);
+        if (!inTitle && !inVi) {
+          allTokensMatch = false;
+          break;
+        }
+      }
+
+      if (matchesTitle || matchesVi || (queryTokens.length > 1 && allTokensMatch)) {
+        // Xếp hạng độ liên quan của từ khóa
+        int score = 100;
+
+        if (titleLower == rawQuery || titleNorm == normalizedQuery) {
+          score = 1; // 1. Khớp chính xác từ tiếng Anh
+        } else if (titleLower.startsWith(rawQuery) || titleNorm.startsWith(normalizedQuery)) {
+          score = 2; // 2. Bắt đầu bằng từ khóa (ví dụ "y" -> "Year", "Young")
+        } else if (titleLower.split(RegExp(r'\s+')).any((part) => part.startsWith(rawQuery)) ||
+                   titleNorm.split(RegExp(r'\s+')).any((part) => part.startsWith(normalizedQuery))) {
+          score = 3; // 3. Từ con trong cụm từ tiếng Anh bắt đầu bằng từ khóa
+        } else if (viLower == rawQuery || viNorm == normalizedQuery) {
+          score = 4; // 4. Khớp chính xác nghĩa tiếng Việt
+        } else if (viLower.startsWith(rawQuery) || viNorm.startsWith(normalizedQuery)) {
+          score = 5; // 5. Nghĩa tiếng Việt bắt đầu bằng từ khóa (ví dụ "tre" -> "Trẻ, trẻ tuổi")
+        } else if (viLower.split(RegExp(r'[,;\s]+')).any((part) => part.trim().startsWith(rawQuery)) ||
+                   viNorm.split(RegExp(r'[,;\s]+')).any((part) => part.trim().startsWith(normalizedQuery))) {
+          score = 6; // 6. Từ con trong nghĩa tiếng Việt bắt đầu bằng từ khóa
+        } else if (matchesTitle) {
+          score = 7; // 7. Chứa từ khóa trong từ tiếng Anh
+        } else {
+          score = 8; // 8. Chứa từ khóa trong nghĩa tiếng Việt
+        }
+
+        scoredWords.add(MapEntry(w, score));
+      }
+    }
+
+    // Sắp xếp theo mức độ ưu tiên từ khóa, sau đó theo bảng chữ cái
+    scoredWords.sort((a, b) {
+      final cmp = a.value.compareTo(b.value);
+      if (cmp != 0) return cmp;
+      return a.key.title.toLowerCase().compareTo(b.key.title.toLowerCase());
+    });
+
+    return scoredWords.map((e) => e.key).toList();
   }
 
   Map<String, Color> _getLevelBadgeColors(String level) {
