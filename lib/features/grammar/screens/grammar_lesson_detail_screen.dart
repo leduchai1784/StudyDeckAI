@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import '../../../app/theme.dart';
 import '../../../services/roadmap_progress_service.dart';
 import '../data/grammar_lessons_data.dart';
+import '../data/grammar_lessons_repository.dart';
 import '../models/grammar_lesson_model.dart';
 import '../../../shared/widgets/app_back_button.dart';
 
@@ -27,14 +28,29 @@ class _GrammarLessonDetailScreenState extends State<GrammarLessonDetailScreen>
   int _currentQuestionIndex = 0;
   final Map<int, int> _selectedAnswers = {}; // questionIndex -> optionIndex
   bool _isLessonCompleted = false;
+  bool _isLoading = true;
 
   @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
-    _lesson = GrammarLessonsData.getLessonById(widget.lessonId) ??
-        GrammarLessonsData.getAllLessons().first;
-    _checkInitialCompletion();
+    _loadLesson();
+  }
+
+  Future<void> _loadLesson() async {
+    final repoLesson = await GrammarLessonsRepository.instance.getLessonById(widget.lessonId);
+    final fallbackLesson = GrammarLessonsData.getLessonById(widget.lessonId);
+    final fallbackFirst = GrammarLessonsData.getAllLessons().first;
+
+    final resolved = repoLesson ?? fallbackLesson ?? fallbackFirst;
+
+    if (mounted) {
+      setState(() {
+        _lesson = resolved;
+        _isLoading = false;
+      });
+      _checkInitialCompletion();
+    }
   }
 
   Future<void> _checkInitialCompletion() async {
@@ -93,10 +109,45 @@ class _GrammarLessonDetailScreenState extends State<GrammarLessonDetailScreen>
 
   @override
   Widget build(BuildContext context) {
+    if (_isLoading) {
+      return Scaffold(
+        backgroundColor: AppTheme.brandBackground,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0.5,
+          leading: const AppBackButton(),
+          title: const Text(
+            'Bài học ngữ pháp',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: AppTheme.brandTextPrimary,
+            ),
+          ),
+        ),
+        body: const Center(
+          child: CircularProgressIndicator(color: AppTheme.brandPrimary),
+        ),
+      );
+    }
+
     final lesson = _lesson;
     if (lesson == null) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Bài học ngữ pháp')),
+        backgroundColor: AppTheme.brandBackground,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0.5,
+          leading: const AppBackButton(),
+          title: const Text(
+            'Bài học ngữ pháp',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: AppTheme.brandTextPrimary,
+            ),
+          ),
+        ),
         body: const Center(child: Text('Không tìm thấy bài học')),
       );
     }
@@ -690,7 +741,7 @@ class _GrammarLessonDetailScreenState extends State<GrammarLessonDetailScreen>
                   _tabController.index == 0
                       ? 'Bắt đầu làm bài tập (${lesson.questions.length} câu)'
                       : (hasNext
-                          ? 'Câu tiếp theo →'
+                          ? 'Câu tiếp theo'
                           : (_isLessonCompleted ? 'Quay lại Trang Chủ' : 'Hoàn thành bài học 🎉')),
                   style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
                 ),

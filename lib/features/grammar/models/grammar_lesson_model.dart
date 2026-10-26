@@ -43,6 +43,20 @@ class GrammarTheoryRow {
     required this.formula,
     required this.example,
   });
+  Map<String, dynamic> toJson() => {
+        'title': title,
+        'usage': usage,
+        'formula': formula,
+        'example': example,
+      };
+
+  factory GrammarTheoryRow.fromJson(Map<String, dynamic> json) =>
+      GrammarTheoryRow(
+        title: json['title'] as String? ?? '',
+        usage: json['usage'] as String? ?? '',
+        formula: json['formula'] as String? ?? '',
+        example: json['example'] as String? ?? '',
+      );
 }
 
 class GrammarTheorySection {
@@ -57,6 +71,27 @@ class GrammarTheorySection {
     required this.rows,
     this.examTips = const [],
   });
+
+  Map<String, dynamic> toJson() => {
+        'sectionTitle': sectionTitle,
+        'overview': overview,
+        'rows': rows.map((r) => r.toJson()).toList(),
+        'examTips': examTips,
+      };
+
+  factory GrammarTheorySection.fromJson(Map<String, dynamic> json) =>
+      GrammarTheorySection(
+        sectionTitle: json['sectionTitle'] as String? ?? '',
+        overview: json['overview'] as String? ?? '',
+        rows: (json['rows'] as List<dynamic>?)
+                ?.map((r) => GrammarTheoryRow.fromJson(r as Map<String, dynamic>))
+                .toList() ??
+            const [],
+        examTips: (json['examTips'] as List<dynamic>?)
+                ?.map((e) => e.toString())
+                .toList() ??
+            const [],
+      );
 }
 
 class GrammarLessonModel {
@@ -85,4 +120,40 @@ class GrammarLessonModel {
     required this.theorySections,
     required this.questions,
   });
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'slug': slug,
+        'title': title,
+        'titleEn': titleEn,
+        'titleVi': titleVi,
+        'category': category,
+        'bandText': bandText,
+        'durationMinutes': durationMinutes,
+        'questionCount': questionCount,
+        'theorySections': theorySections.map((s) => s.toJson()).toList(),
+        'questions': questions.map((q) => q.toJson()).toList(),
+      };
+
+  factory GrammarLessonModel.fromJson(Map<String, dynamic> json) =>
+      GrammarLessonModel(
+        id: json['id'] as String? ?? '',
+        slug: json['slug'] as String? ?? '',
+        title: json['title'] as String? ?? '',
+        titleEn: json['titleEn'] as String? ?? '',
+        titleVi: json['titleVi'] as String? ?? '',
+        category: json['category'] as String? ?? 'reference',
+        bandText: json['bandText'] as String? ?? '',
+        durationMinutes: (json['durationMinutes'] as num?)?.toInt() ?? 15,
+        questionCount: (json['questionCount'] as num?)?.toInt() ?? 0,
+        theorySections: (json['theorySections'] as List<dynamic>?)
+                ?.map((s) =>
+                    GrammarTheorySection.fromJson(s as Map<String, dynamic>))
+                .toList() ??
+            const [],
+        questions: (json['questions'] as List<dynamic>?)
+                ?.map((q) => GrammarQuestion.fromJson(q as Map<String, dynamic>))
+                .toList() ??
+            const [],
+      );
 }

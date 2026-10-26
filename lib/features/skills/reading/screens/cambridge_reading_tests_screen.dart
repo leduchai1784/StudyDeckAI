@@ -183,7 +183,7 @@ class _CambridgeReadingTestsScreenState
                                 '${widget.volume}',
                                 style: TextStyle(
                                   fontSize: 21,
-                                  fontWeight: FontWeight.w900,
+                                  fontWeight: FontWeight.w700,
                                   color: themeColor,
                                   height: 1.1,
                                 ),
@@ -264,7 +264,7 @@ class _CambridgeReadingTestsScreenState
                             'CÁC BÀI TEST TRONG BỘ',
                             style: TextStyle(
                               fontSize: 13,
-                              fontWeight: FontWeight.w800,
+                              fontWeight: FontWeight.w700,
                               color: Color(0xFF475569),
                               letterSpacing: 0.6,
                             ),

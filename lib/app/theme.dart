@@ -159,13 +159,15 @@ class AppTheme {
           backgroundColor: primaryContainer,
           foregroundColor: onPrimary,
           elevation: 2,
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+          minimumSize: const Size(64, 48),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),
           textStyle: GoogleFonts.beVietnamPro(
             fontSize: 16,
             fontWeight: FontWeight.bold,
+            height: 1.25,
           ),
         ),
       ),
@@ -173,24 +175,29 @@ class AppTheme {
         style: OutlinedButton.styleFrom(
           foregroundColor: primary,
           side: const BorderSide(color: Color(0xFFC3C0FF)),
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+          minimumSize: const Size(64, 48),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),
           textStyle: GoogleFonts.beVietnamPro(
             fontSize: 16,
             fontWeight: FontWeight.bold,
+            height: 1.25,
           ),
         ),
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
+          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+          minimumSize: const Size(64, 48),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),
           textStyle: GoogleFonts.beVietnamPro(
             fontSize: 16,
             fontWeight: FontWeight.bold,
+            height: 1.25,
           ),
         ),
       ),

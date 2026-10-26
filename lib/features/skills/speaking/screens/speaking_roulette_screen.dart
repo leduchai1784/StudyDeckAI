@@ -419,12 +419,12 @@ class _SpeakingRouletteScreenState extends State<SpeakingRouletteScreen> {
                   );
                 },
                 icon: const Icon(Icons.mic_rounded, size: 16, color: Colors.white),
-                label: const Text('Luyện Trả Lời Với AI ➔', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
+                label: const Text('Luyện Trả Lời Với AI', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppTheme.brandPrimary,
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 12),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                   elevation: 0,
                 ),
               ),

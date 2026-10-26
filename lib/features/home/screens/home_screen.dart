@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../app/theme.dart';
 import '../../../models/nks_user.dart';
 import '../../../services/eduwords_service.dart';
@@ -33,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _fetchDashboardData() async {
-    // 1. User Info from API
+    // 1. User Info from API (with SharedPreferences fallback)
     try {
       final res = await _userService.getUserInfo();
       if (res['success'] == true) {
@@ -43,6 +44,22 @@ class _HomeScreenState extends State<HomeScreen> {
         }
       }
     } catch (_) {}
+
+    if (_user == null) {
+      try {
+        final prefs = await SharedPreferences.getInstance();
+        final name = prefs.getString('user_name');
+        final email = prefs.getString('user_email');
+        final avatar = prefs.getString('user_avatar');
+        if (email != null && email.isNotEmpty) {
+          _user = NksUserModel(
+            name: name?.isNotEmpty == true ? name : 'Thành viên StudyDeck',
+            email: email,
+            avatar: avatar,
+          );
+        }
+      } catch (_) {}
+    }
 
     // 2. Real-time Streak from FlashcardProgressService
     try {

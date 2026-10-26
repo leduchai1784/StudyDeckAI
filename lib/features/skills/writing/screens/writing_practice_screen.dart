@@ -1,5 +1,8 @@
 import 'dart:async';
+import 'dart:io';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import '../../../../app/theme.dart';
 import '../models/writing_model.dart';
 import '../../../ai_tutor/services/gemini_ai_tutor_service.dart';
@@ -31,6 +34,13 @@ class _WritingPracticeScreenState extends State<WritingPracticeScreen> {
   // AI Evaluation state
   bool _isEvaluating = false;
   WritingEvaluationResult? _evaluationResult;
+
+  // External Attachment state (Image OCR, Word, PDF)
+  File? _attachedFile;
+  String? _attachedFileName;
+  String? _attachedFileType; // 'image', 'word', 'pdf', 'txt'
+  int? _attachedFileSize;
+  bool _isExtractingText = false;
 
   @override
   void initState() {
@@ -212,7 +222,242 @@ class _WritingPracticeScreenState extends State<WritingPracticeScreen> {
     );
   }
 
+  String _formatFileSize(int bytes) {
+    if (bytes < 1024) return '$bytes B';
+    if (bytes < 1024 * 1024) return '${(bytes / 1024).toStringAsFixed(1)} KB';
+    return '${(bytes / (1024 * 1024)).toStringAsFixed(1)} MB';
+  }
+
+  Future<void> _pickImage(ImageSource source) async {
+    try {
+      final picker = ImagePicker();
+      final picked = await picker.pickImage(
+        source: source,
+        maxWidth: 1920,
+        maxHeight: 1920,
+        imageQuality: 85,
+      );
+
+      if (picked != null) {
+        final file = File(picked.path);
+        final size = await file.length();
+        setState(() {
+          _attachedFile = file;
+          _attachedFileName = picked.name;
+          _attachedFileType = 'image';
+          _attachedFileSize = size;
+        });
+
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Row(
+                children: [
+                  const Icon(Icons.photo_library_rounded, color: Colors.white, size: 20),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text('Đã tải ảnh: ${picked.name}. Bấm "Trích xuất chữ (OCR)" để chuyển thành văn bản!'),
+                  ),
+                ],
+              ),
+              backgroundColor: const Color(0xFF10B981),
+              behavior: SnackBarBehavior.floating,
+            ),
+          );
+        }
+      }
+    } catch (_) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Không thể chọn ảnh. Vui lòng kiểm tra quyền truy cập.'),
+            backgroundColor: Color(0xFFEF4444),
+          ),
+        );
+      }
+    }
+  }
+
+  Future<void> _pickDocument() async {
+    try {
+      final picked = await FilePicker.pickFile(
+        type: FileType.custom,
+        allowedExtensions: ['pdf', 'docx', 'doc', 'txt'],
+      );
+
+      if (picked != null && picked.path != null) {
+        final path = picked.path!;
+        final file = File(path);
+        final name = picked.name;
+        final size = await file.length();
+        final ext = name.split('.').last.toLowerCase();
+
+        String fileType = 'word';
+        if (ext == 'pdf') {
+          fileType = 'pdf';
+        } else if (ext == 'txt') {
+          fileType = 'txt';
+        }
+
+        setState(() {
+          _attachedFile = file;
+          _attachedFileName = name;
+          _attachedFileType = fileType;
+          _attachedFileSize = size;
+        });
+
+        if (fileType == 'txt') {
+          try {
+            final content = await file.readAsString();
+            if (content.trim().isNotEmpty) {
+              _textController.text = content.trim();
+              _onTextChanged(_textController.text);
+            }
+          } catch (_) {}
+        }
+
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Row(
+                children: [
+                  const Icon(Icons.description_rounded, color: Colors.white, size: 20),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text('Đã tải tài liệu: $name ($fileType)'),
+                  ),
+                ],
+              ),
+              backgroundColor: const Color(0xFF10B981),
+              behavior: SnackBarBehavior.floating,
+            ),
+          );
+        }
+      }
+    } catch (_) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Không thể chọn tài liệu. Vui lòng thử lại!'),
+            backgroundColor: Color(0xFFEF4444),
+          ),
+        );
+      }
+    }
+  }
+
+  void _removeAttachment() {
+    setState(() {
+      _attachedFile = null;
+      _attachedFileName = null;
+      _attachedFileType = null;
+      _attachedFileSize = null;
+    });
+  }
+
+  Future<void> _extractTextFromAttachment() async {
+    if (_attachedFile == null) return;
+
+    if (_attachedFileType == 'image') {
+      setState(() => _isExtractingText = true);
+      try {
+        final extracted = await GeminiAiTutorService().extractTextFromImage(_attachedFile!);
+        if (mounted) {
+          if (extracted != null && extracted.trim().isNotEmpty) {
+            if (_textController.text.trim().isNotEmpty) {
+              _textController.text = '${_textController.text}\n\n${extracted.trim()}';
+            } else {
+              _textController.text = extracted.trim();
+            }
+            _onTextChanged(_textController.text);
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Row(
+                  children: [
+                    Icon(Icons.auto_awesome_rounded, color: Colors.white, size: 20),
+                    SizedBox(width: 8),
+                    Expanded(child: Text('AI OCR đã trích xuất bài viết thành công! Hãy kiểm tra và chỉnh sửa bên dưới.')),
+                  ],
+                ),
+                backgroundColor: Color(0xFF10B981),
+                behavior: SnackBarBehavior.floating,
+              ),
+            );
+          } else {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('Không thể nhận diện chữ viết trong ảnh. Vui lòng thử ảnh rõ nét hơn hoặc gõ trực tiếp.'),
+                backgroundColor: Color(0xFFEF4444),
+              ),
+            );
+          }
+        }
+      } catch (_) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Lỗi khi trích xuất chữ bằng AI. Vui lòng thử lại.'),
+              backgroundColor: Color(0xFFEF4444),
+            ),
+          );
+        }
+      } finally {
+        if (mounted) setState(() => _isExtractingText = false);
+      }
+    } else if (_attachedFileType == 'txt') {
+      try {
+        final content = await _attachedFile!.readAsString();
+        if (content.trim().isNotEmpty) {
+          _textController.text = content.trim();
+          _onTextChanged(_textController.text);
+        }
+      } catch (_) {}
+    } else {
+      showDialog(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          title: Row(
+            children: [
+              Icon(
+                _attachedFileType == 'pdf' ? Icons.picture_as_pdf_rounded : Icons.article_rounded,
+                color: _attachedFileType == 'pdf' ? const Color(0xFFEF4444) : const Color(0xFF2563EB),
+                size: 24,
+              ),
+              const SizedBox(width: 8),
+              const Text('Tài liệu đã đính kèm', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            ],
+          ),
+          content: Text(
+            'Tệp ${_attachedFileName ?? "tài liệu"} đã được đính kèm vào bài nộp.\n\n'
+            'Để AI giám khảo chấm điểm chi tiết từng câu (Line-by-line corrections), bạn hãy copy nội dung bài viết dán vào ô nhập bên dưới.',
+            style: const TextStyle(fontSize: 13.5, color: Color(0xFF334155), height: 1.4),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(ctx),
+              child: const Text('Đã hiểu', style: TextStyle(fontWeight: FontWeight.bold, color: AppTheme.brandPrimary)),
+            ),
+          ],
+        ),
+      );
+    }
+  }
+
   Future<void> _evaluateEssayWithAI() async {
+    // If text is too short but an image was attached and not yet OCR'd, auto OCR first
+    if (_wordCount < 50 && _attachedFile != null && _attachedFileType == 'image') {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Đang tự động nhận diện chữ từ ảnh bài làm qua AI OCR...'),
+          backgroundColor: AppTheme.brandPrimary,
+          duration: Duration(seconds: 2),
+        ),
+      );
+      await _extractTextFromAttachment();
+    }
+
+    if (!mounted) return;
+
     final text = _textController.text.trim();
     if (_wordCount < 50) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -229,9 +474,12 @@ class _WritingPracticeScreenState extends State<WritingPracticeScreen> {
     });
 
     try {
+      final attachmentNote = _attachedFileName != null
+          ? '\n(Thí sinh có đính kèm tệp bài làm: $_attachedFileName)'
+          : '';
       final promptString = '''
 Bạn là Giám khảo IELTS Writing Band 9.0 chấm thi chính thức của Cambridge. Hãy chấm điểm bài luận sau:
-Đề bài: "${widget.prompt.promptText}" (${widget.prompt.categoryLabel})
+Đề bài: "${widget.prompt.promptText}" (${widget.prompt.categoryLabel})$attachmentNote
 Bài viết của thí sinh:
 """
 $text
@@ -435,13 +683,21 @@ Hãy đưa ra:
           children: [
             // 1. Prompt Card
             _buildPromptCard(),
-            const SizedBox(height: 14),
+            const SizedBox(height: 12),
 
-            // 2. Editor Toolbar (Word count, Font Family, Font Size)
+            // 2. Attachment Toolbar & Preview Card
+            _buildAttachmentToolbar(),
+            if (_attachedFile != null) ...[
+              const SizedBox(height: 10),
+              _buildAttachmentPreviewCard(),
+            ],
+            const SizedBox(height: 12),
+
+            // 3. Editor Toolbar (Word count, Font Family, Font Size)
             _buildEditorToolbar(isWordCountMet, minWords),
             const SizedBox(height: 8),
 
-            // 3. Essay Text Area
+            // 4. Essay Text Area
             _buildEditorTextArea(),
             const SizedBox(height: 14),
 
@@ -541,6 +797,265 @@ Hãy đưa ra:
               height: 1.4,
             ),
           ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildAttachmentToolbar() {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: const Color(0xFFE2E8F0)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFEEF2FF),
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: const Icon(Icons.cloud_upload_outlined, size: 16, color: AppTheme.brandPrimary),
+              ),
+              const SizedBox(width: 8),
+              const Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Tải bài viết từ bên ngoài',
+                      style: TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFF1E293B),
+                      ),
+                    ),
+                    Text(
+                      'Hỗ trợ ảnh chụp bài làm (AI OCR), tệp Word (.docx) và PDF (.pdf)',
+                      style: TextStyle(
+                        fontSize: 11,
+                        color: Color(0xFF64748B),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              // 1. Chụp ảnh camera
+              Expanded(
+                child: OutlinedButton.icon(
+                  onPressed: () => _pickImage(ImageSource.camera),
+                  icon: const Icon(Icons.camera_alt_outlined, size: 15),
+                  label: const FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text('Chụp ảnh', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600)),
+                  ),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: const Color(0xFF334155),
+                    side: const BorderSide(color: Color(0xFFCBD5E1)),
+                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 6),
+              // 2. Chọn ảnh thư viện
+              Expanded(
+                child: OutlinedButton.icon(
+                  onPressed: () => _pickImage(ImageSource.gallery),
+                  icon: const Icon(Icons.photo_library_outlined, size: 15),
+                  label: const FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text('Chọn ảnh', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600)),
+                  ),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: const Color(0xFF334155),
+                    side: const BorderSide(color: Color(0xFFCBD5E1)),
+                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 6),
+              // 3. Chọn file Word / PDF
+              Expanded(
+                child: ElevatedButton.icon(
+                  onPressed: _pickDocument,
+                  icon: const Icon(Icons.upload_file_rounded, size: 15, color: Colors.white),
+                  label: const FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text('Word / PDF', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600)),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppTheme.brandPrimary,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    elevation: 0,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildAttachmentPreviewCard() {
+    if (_attachedFile == null) return const SizedBox.shrink();
+
+    IconData typeIcon = Icons.article_rounded;
+    Color typeColor = const Color(0xFF2563EB);
+    String typeLabel = 'Word';
+
+    if (_attachedFileType == 'image') {
+      typeIcon = Icons.image_rounded;
+      typeColor = const Color(0xFF10B981);
+      typeLabel = 'Ảnh bài làm';
+    } else if (_attachedFileType == 'pdf') {
+      typeIcon = Icons.picture_as_pdf_rounded;
+      typeColor = const Color(0xFFEF4444);
+      typeLabel = 'PDF';
+    } else if (_attachedFileType == 'txt') {
+      typeIcon = Icons.description_rounded;
+      typeColor = const Color(0xFF64748B);
+      typeLabel = 'TXT';
+    }
+
+    final fileSizeStr = _attachedFileSize != null ? _formatFileSize(_attachedFileSize!) : '';
+
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: const Color(0xFFCBD5E1)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              // Thumbnail or icon
+              if (_attachedFileType == 'image')
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(6),
+                  child: Image.file(
+                    _attachedFile!,
+                    width: 42,
+                    height: 42,
+                    fit: BoxFit.cover,
+                    errorBuilder: (_, __, ___) => Container(
+                      width: 42,
+                      height: 42,
+                      color: const Color(0xFFE2E8F0),
+                      child: Icon(typeIcon, color: typeColor, size: 22),
+                    ),
+                  ),
+                )
+              else
+                Container(
+                  width: 42,
+                  height: 42,
+                  decoration: BoxDecoration(
+                    color: typeColor.withValues(alpha: 0.1),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Icon(typeIcon, color: typeColor, size: 24),
+                ),
+              const SizedBox(width: 10),
+              // File info
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      _attachedFileName ?? 'Tệp đính kèm',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFF1E293B),
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
+                          decoration: BoxDecoration(
+                            color: typeColor.withValues(alpha: 0.12),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Text(
+                            typeLabel,
+                            style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w600,
+                              color: typeColor,
+                            ),
+                          ),
+                        ),
+                        if (fileSizeStr.isNotEmpty) ...[
+                          const SizedBox(width: 6),
+                          Text(
+                            fileSizeStr,
+                            style: const TextStyle(fontSize: 11, color: Color(0xFF64748B)),
+                          ),
+                        ],
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              // Remove button
+              IconButton(
+                icon: const Icon(Icons.close_rounded, size: 18, color: Color(0xFF64748B)),
+                onPressed: _removeAttachment,
+                tooltip: 'Xóa tệp đính kèm',
+              ),
+            ],
+          ),
+          // OCR Extraction button for image
+          if (_attachedFileType == 'image') ...[
+            const SizedBox(height: 10),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                onPressed: _isExtractingText ? null : _extractTextFromAttachment,
+                icon: _isExtractingText
+                    ? const SizedBox(
+                        width: 14,
+                        height: 14,
+                        child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                      )
+                    : const Icon(Icons.auto_awesome_rounded, size: 16, color: Colors.white),
+                label: Text(
+                  _isExtractingText ? 'Đang trích xuất chữ qua AI OCR...' : 'Trích xuất nội dung từ ảnh (AI OCR)',
+                  style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF10B981),
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  elevation: 0,
+                ),
+              ),
+            ),
+          ],
         ],
       ),
     );

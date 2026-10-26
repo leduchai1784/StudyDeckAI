@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../app/theme.dart';
 import '../../../models/nks_user.dart';
 import '../../../models/user_deck_progress.dart';
@@ -49,7 +50,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Future<void> _loadAllProfileData() async {
     setState(() => _isLoading = true);
 
-    // 1. User Info from API
+    // 1. User Info from API (with SharedPreferences fallback)
     try {
       final res = await _userService.getUserInfo();
       if (res['success'] == true) {
@@ -59,6 +60,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
         }
       }
     } catch (_) {}
+
+    if (_nksUser == null) {
+      try {
+        final prefs = await SharedPreferences.getInstance();
+        final name = prefs.getString('user_name');
+        final email = prefs.getString('user_email');
+        final avatar = prefs.getString('user_avatar');
+        if (email != null && email.isNotEmpty) {
+          _nksUser = NksUserModel(
+            name: name?.isNotEmpty == true ? name : 'Thành viên StudyDeck',
+            email: email,
+            avatar: avatar,
+          );
+        }
+      } catch (_) {}
+    }
 
     // 2. Target Band & Stats from FlashcardProgressService
     final now = DateTime.now();

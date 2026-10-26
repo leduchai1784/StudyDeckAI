@@ -419,7 +419,7 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
               ),
               style: TextButton.styleFrom(
                 backgroundColor: const Color(0xFFEEF2FF),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 minimumSize: Size.zero,
                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -586,7 +586,7 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
                             foregroundColor: AppTheme.brandPrimary,
                             side: const BorderSide(color: Color(0xFFC7D2FE)),
                             padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                           ),
                         ),
                       ),
@@ -603,7 +603,7 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
                             foregroundColor: const Color(0xFF4F46E5),
                             side: const BorderSide(color: Color(0xFFC7D2FE)),
                             padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                           ),
                         ),
                       ),
@@ -624,7 +624,7 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
                             foregroundColor: const Color(0xFFD97706),
                             side: const BorderSide(color: Color(0xFFFDE68A)),
                             padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                           ),
                         ),
                       ),
@@ -657,13 +657,13 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
             ),
             const SizedBox(height: 10),
 
-            // 3. Sentence Navigation (Câu trước ⏮ & Đáp án 👁 & Câu sau ⏭)
+            // 3. Sentence Navigation (Câu trước ‹ & Đáp án 👁 & Câu sau ›)
             Row(
               children: [
                 Expanded(
                   child: OutlinedButton.icon(
                     onPressed: _currentIndex > 0 ? _prevSentence : null,
-                    icon: const Icon(Icons.skip_previous_rounded, size: 16),
+                    icon: const Icon(Icons.arrow_back_rounded, size: 16),
                     label: const FittedBox(fit: BoxFit.scaleDown, child: Text('Trước')),
                     style: OutlinedButton.styleFrom(
                       foregroundColor: const Color(0xFF475569),
@@ -690,7 +690,10 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
                 Expanded(
                   child: OutlinedButton.icon(
                     onPressed: _currentIndex < totalSentences - 1 ? _nextSentence : _showFinishConfirmation,
-                    icon: const Icon(Icons.skip_next_rounded, size: 16),
+                    icon: Icon(
+                      _currentIndex < totalSentences - 1 ? Icons.arrow_forward_rounded : Icons.check_circle_outline_rounded,
+                      size: 16,
+                    ),
                     label: FittedBox(
                       fit: BoxFit.scaleDown,
                       child: Text(_currentIndex < totalSentences - 1 ? 'Sau' : 'Nộp bài'),
@@ -940,19 +943,19 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
                 ),
               ),
               const SizedBox(height: 10),
-              ElevatedButton.icon(
+              ElevatedButton(
                 onPressed: _nextSentence,
-                icon: const Icon(Icons.arrow_forward_rounded, size: 16),
-                label: Text(
-                  _currentIndex < totalSentences - 1 ? 'Câu tiếp theo ➔' : 'Hoàn thành bài tập ➔',
-                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
-                ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF10B981),
                   foregroundColor: Colors.white,
+                  minimumSize: const Size(double.infinity, 44),
                   padding: const EdgeInsets.symmetric(vertical: 12),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                   elevation: 0,
+                ),
+                child: Text(
+                  _currentIndex < totalSentences - 1 ? 'Câu tiếp theo' : 'Hoàn thành bài tập',
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
                 ),
               ),
             ],
@@ -1092,7 +1095,7 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
                 const SizedBox(height: 12),
                 const Text(
                   'Hoàn Thành Bài Tập!',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1E293B)),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Color(0xFF1E293B)),
                 ),
                 const SizedBox(height: 4),
                 Text(
@@ -1180,7 +1183,7 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
               },
               icon: const Icon(Icons.arrow_forward_rounded, size: 17),
               label: Text(
-                'Bài tiếp theo: ${nextExercise.title} ➔',
+                'Bài tiếp theo: ${nextExercise.title}',
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
@@ -1240,7 +1243,7 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
                 'CHI TIẾT TỪNG CÂU VỪA LUYỆN',
                 style: TextStyle(
                   fontSize: 12.5,
-                  fontWeight: FontWeight.w800,
+                  fontWeight: FontWeight.w700,
                   color: Color(0xFF64748B),
                   letterSpacing: 0.5,
                 ),
@@ -1347,7 +1350,7 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
         children: [
           Text(
             value,
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: color),
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: color),
           ),
           const SizedBox(height: 2),
           Text(

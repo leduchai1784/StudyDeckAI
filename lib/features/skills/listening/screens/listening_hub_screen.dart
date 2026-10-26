@@ -139,7 +139,7 @@ class _ListeningHubScreenState extends State<ListeningHubScreen> {
                       'ĐỀ THI CAMBRIDGE',
                       style: TextStyle(
                         fontSize: 13,
-                        fontWeight: FontWeight.w800,
+                        fontWeight: FontWeight.w700,
                         color: Color(0xFF475569),
                         letterSpacing: 0.6,
                       ),
@@ -234,7 +234,7 @@ class _ListeningHubScreenState extends State<ListeningHubScreen> {
                         '$volume',
                         style: TextStyle(
                           fontSize: 18,
-                          fontWeight: FontWeight.w900,
+                          fontWeight: FontWeight.w700,
                           color: color,
                           height: 1.05,
                         ),
@@ -301,7 +301,7 @@ class _ListeningHubScreenState extends State<ListeningHubScreen> {
               'LUYỆN TẬP BỔ TRỢ',
               style: TextStyle(
                 fontSize: 13,
-                fontWeight: FontWeight.w800,
+                fontWeight: FontWeight.w700,
                 color: Color(0xFF475569),
                 letterSpacing: 0.6,
               ),

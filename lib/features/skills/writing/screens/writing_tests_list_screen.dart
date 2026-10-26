@@ -74,7 +74,7 @@ class _WritingTestsListScreenState extends State<WritingTestsListScreen> {
         elevation: 0.5,
         leading: const AppBackButton(),
         title: const Text(
-          'Thư Viện Đề Thi Writing',
+          'Luyện Viết IELTS (Task 1 & Task 2)',
           style: TextStyle(
             fontSize: 16.5,
             fontWeight: FontWeight.bold,
@@ -387,7 +387,7 @@ class _WritingTestsListScreenState extends State<WritingTestsListScreen> {
                   label: const FittedBox(
                     fit: BoxFit.scaleDown,
                     child: Text(
-                      'Vào viết bài ➔',
+                      'Vào viết bài',
                       style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                     ),
                   ),

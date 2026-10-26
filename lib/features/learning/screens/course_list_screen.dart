@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../app/theme.dart';
 import '../../../services/roadmap_progress_service.dart';
-import '../../grammar/data/grammar_lessons_data.dart';
+import '../../grammar/data/grammar_lessons_repository.dart';
 import '../../grammar/models/grammar_lesson_model.dart';
 
 class CourseListScreen extends StatefulWidget {
@@ -16,6 +16,8 @@ class _CourseListScreenState extends State<CourseListScreen> {
   final RoadmapProgressService _roadmapService = RoadmapProgressService();
 
   Set<String> _completedIds = {};
+  List<GrammarLessonModel> _allRefLessons = [];
+  List<GrammarLessonModel> _allAdvLessons = [];
   bool _isLoading = true;
   String _searchQuery = '';
   int _selectedTabIndex = 0; // 0: Toàn Tập (25 Chủ Đề), 1: Nâng Cao Theo Band
@@ -29,10 +31,14 @@ class _CourseListScreenState extends State<CourseListScreen> {
   Future<void> _loadData() async {
     try {
       final completed = await _roadmapService.getAllCompletedLessonIds();
+      final ref = await GrammarLessonsRepository.instance.getReferenceLessons();
+      final adv = await GrammarLessonsRepository.instance.getAdvancedLessons();
 
       if (mounted) {
         setState(() {
           _completedIds = completed;
+          _allRefLessons = ref;
+          _allAdvLessons = adv;
           _isLoading = false;
         });
       }
@@ -45,7 +51,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final refLessons = GrammarLessonsData.getReferenceLessons()
+    final refLessons = _allRefLessons
         .where((l) =>
             _searchQuery.isEmpty ||
             l.title.toLowerCase().contains(_searchQuery.toLowerCase()) ||
@@ -53,7 +59,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
             l.titleEn.toLowerCase().contains(_searchQuery.toLowerCase()))
         .toList();
 
-    final advLessons = GrammarLessonsData.getAdvancedLessons()
+    final advLessons = _allAdvLessons
         .where((l) =>
             _searchQuery.isEmpty ||
             l.title.toLowerCase().contains(_searchQuery.toLowerCase()) ||

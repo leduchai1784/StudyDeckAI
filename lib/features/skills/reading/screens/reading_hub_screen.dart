@@ -216,7 +216,7 @@ class _ReadingHubScreenState extends State<ReadingHubScreen> {
                               'KẾT QUẢ TÌM KIẾM',
                               style: TextStyle(
                                 fontSize: 13,
-                                fontWeight: FontWeight.w800,
+                                fontWeight: FontWeight.w700,
                                 color: Color(0xFF475569),
                                 letterSpacing: 0.6,
                               ),
@@ -339,7 +339,7 @@ class _ReadingHubScreenState extends State<ReadingHubScreen> {
                               'ĐỀ THI CAMBRIDGE',
                               style: TextStyle(
                                 fontSize: 13,
-                                fontWeight: FontWeight.w800,
+                                fontWeight: FontWeight.w700,
                                 color: Color(0xFF475569),
                                 letterSpacing: 0.6,
                               ),
@@ -450,7 +450,7 @@ class _ReadingHubScreenState extends State<ReadingHubScreen> {
                         '$volume',
                         style: TextStyle(
                           fontSize: 19,
-                          fontWeight: FontWeight.w900,
+                          fontWeight: FontWeight.w700,
                           color: color,
                           height: 1.05,
                         ),

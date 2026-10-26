@@ -13,10 +13,11 @@ class EduwordsService {
     try {
       final response = await _dio.post(
         _apiUrl,
+        data: {'limit': 500},
         options: Options(
+          contentType: Headers.formUrlEncodedContentType,
           headers: {
             'Authorization': 'Bearer $_bearerToken',
-            'Content-Type': 'application/json',
           },
           receiveTimeout: const Duration(seconds: 10),
           sendTimeout: const Duration(seconds: 10),

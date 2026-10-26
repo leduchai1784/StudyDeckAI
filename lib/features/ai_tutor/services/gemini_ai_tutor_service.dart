@@ -601,4 +601,138 @@ Return ONLY a valid JSON object:
       audioDurationSeconds: durationSeconds,
     );
   }
+
+  /// Trích xuất chữ từ ảnh bài làm viết tay hoặc tài liệu (OCR)
+  Future<String?> extractTextFromImage(File imageFile) async {
+    try {
+      final bytes = await imageFile.readAsBytes();
+      final base64Image = base64Encode(bytes);
+      final ext = imageFile.path.split('.').last.toLowerCase();
+      final mimeType = (ext == 'png') ? 'image/png' : 'image/jpeg';
+
+      const prompt =
+          'Bạn là trợ lý OCR chuyên nghiệp. Hãy đọc và chuyển đổi chính xác toàn bộ chữ viết tay hoặc chữ in trong ảnh bài làm IELTS Writing này sang văn bản tiếng Anh thuần túy. Chỉ trả về nội dung bài viết bằng tiếng Anh, giữ đúng ngắt đoạn, không thêm lời chào, không giải thích gì khác.';
+
+      for (final model in _models) {
+        try {
+          final url =
+              'https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent';
+          final response = await _dio.post(
+            url,
+            options: Options(
+              headers: {'x-goog-api-key': _apiKey},
+            ),
+            data: {
+              'contents': [
+                {
+                  'role': 'user',
+                  'parts': [
+                    {'text': prompt},
+                    {
+                      'inlineData': {
+                        'mimeType': mimeType,
+                        'data': base64Image,
+                      }
+                    }
+                  ]
+                }
+              ],
+              'generationConfig': {
+                'temperature': 0.1,
+                'maxOutputTokens': 2000,
+              },
+            },
+          );
+
+          if (response.statusCode == 200 && response.data != null) {
+            final data = response.data is Map<String, dynamic>
+                ? response.data as Map<String, dynamic>
+                : jsonDecode(response.data.toString()) as Map<String, dynamic>;
+            final candidates = data['candidates'] as List?;
+            if (candidates != null && candidates.isNotEmpty) {
+              final parts = candidates[0]?['content']?['parts'] as List?;
+              if (parts != null && parts.isNotEmpty) {
+                final text = parts[0]?['text'] as String?;
+                if (text != null && text.trim().isNotEmpty) {
+                  return text.trim();
+                }
+              }
+            }
+          }
+        } catch (_) {}
+      }
+      return null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// Nhận diện giọng nói từ file ghi âm sang văn bản (Speech-to-Text)
+  Future<String?> transcribeAudio(File audioFile) async {
+    try {
+      final bytes = await audioFile.readAsBytes();
+      final base64Audio = base64Encode(bytes);
+      final ext = audioFile.path.split('.').last.toLowerCase();
+      final mimeType = (ext == 'wav')
+          ? 'audio/wav'
+          : (ext == 'mp3')
+              ? 'audio/mp3'
+              : 'audio/mp4';
+
+      const prompt =
+          'Please transcribe the English speech in this audio recording accurately into text. Output only the transcribed English text, without commentary, greetings, or explanations.';
+
+      for (final model in _models) {
+        try {
+          final url =
+              'https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent';
+          final response = await _dio.post(
+            url,
+            options: Options(
+              headers: {'x-goog-api-key': _apiKey},
+            ),
+            data: {
+              'contents': [
+                {
+                  'role': 'user',
+                  'parts': [
+                    {'text': prompt},
+                    {
+                      'inlineData': {
+                        'mimeType': mimeType,
+                        'data': base64Audio,
+                      }
+                    }
+                  ]
+                }
+              ],
+              'generationConfig': {
+                'temperature': 0.1,
+                'maxOutputTokens': 1000,
+              },
+            },
+          );
+
+          if (response.statusCode == 200 && response.data != null) {
+            final data = response.data is Map<String, dynamic>
+                ? response.data as Map<String, dynamic>
+                : jsonDecode(response.data.toString()) as Map<String, dynamic>;
+            final candidates = data['candidates'] as List?;
+            if (candidates != null && candidates.isNotEmpty) {
+              final parts = candidates[0]?['content']?['parts'] as List?;
+              if (parts != null && parts.isNotEmpty) {
+                final text = parts[0]?['text'] as String?;
+                if (text != null && text.trim().isNotEmpty) {
+                  return text.trim();
+                }
+              }
+            }
+          }
+        } catch (_) {}
+      }
+      return null;
+    } catch (_) {
+      return null;
+    }
+  }
 }

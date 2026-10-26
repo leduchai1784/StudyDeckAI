@@ -118,7 +118,7 @@ class _ReadingResultScreenState extends State<ReadingResultScreen> {
                         widget.result.bandScore.toStringAsFixed(1),
                         style: const TextStyle(
                           fontSize: 40,
-                          fontWeight: FontWeight.w900,
+                          fontWeight: FontWeight.bold,
                           color: Colors.white,
                         ),
                       ),

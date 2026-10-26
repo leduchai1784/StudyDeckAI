@@ -43,9 +43,7 @@ class _SpeakingPart23ScreenState extends State<SpeakingPart23Screen> {
       setState(() {
         _topics = loaded;
         _isLoading = false;
-        if (loaded.isNotEmpty) {
-          _expandedTopicIds.add(loaded.first.id);
-        }
+        // Không tự động mở bất kỳ thẻ nào khi vào màn hình
       });
     }
   }
@@ -58,7 +56,7 @@ class _SpeakingPart23ScreenState extends State<SpeakingPart23Screen> {
     final p3Questions = topic.questions.where((q) => q.part == SpeakingPart.part3).toList();
 
     final buffer = StringBuffer();
-    buffer.writeln('PART 2 CUE CARD: ${topic.title}');
+    buffer.writeln('PART 3 CUE CARD & DISCUSSION: ${topic.title}');
     buffer.writeln('Dịch nghĩa: ${topic.titleVi}');
     buffer.writeln('---------------------------');
     buffer.writeln('You should say:');
@@ -68,7 +66,7 @@ class _SpeakingPart23ScreenState extends State<SpeakingPart23Screen> {
       }
     }
     if (p3Questions.isNotEmpty) {
-      buffer.writeln('\nPART 3 QUESTIONS:');
+      buffer.writeln('\nPART 3 DISCUSSION QUESTIONS:');
       for (int i = 0; i < p3Questions.length; i++) {
         buffer.writeln('Q${i + 1}. ${p3Questions[i].questionText}');
       }
@@ -77,7 +75,7 @@ class _SpeakingPart23ScreenState extends State<SpeakingPart23Screen> {
     Clipboard.setData(ClipboardData(text: buffer.toString()));
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('Đã sao chép chủ đề Part 2+3 "${topic.title}" vào bộ nhớ tạm'),
+        content: Text('Đã sao chép chủ đề Part 3 "${topic.title}" vào bộ nhớ tạm'),
         duration: const Duration(seconds: 2),
         backgroundColor: const Color(0xFF1E293B),
         behavior: SnackBarBehavior.floating,
@@ -144,7 +142,7 @@ class _SpeakingPart23ScreenState extends State<SpeakingPart23Screen> {
                     controller: _searchController,
                     onChanged: (val) => setState(() => _searchQuery = val.trim()),
                     decoration: InputDecoration(
-                      hintText: 'Tìm đề Part 2+3 (Describe a person, gift, movie...)...',
+                      hintText: 'Tìm đề Part 3 (Describe a person, gift, movie...)...',
                       hintStyle: const TextStyle(fontSize: 13, color: Color(0xFF94A3B8)),
                       prefixIcon: const Icon(Icons.search_rounded, color: Color(0xFF94A3B8), size: 20),
                       suffixIcon: _searchQuery.isNotEmpty
@@ -276,82 +274,95 @@ class _SpeakingPart23ScreenState extends State<SpeakingPart23Screen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(14),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Top Badges
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFEDE9FE),
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      child: const Text(
-                        'PART 2 + 3',
-                        style: TextStyle(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w800,
-                          color: Color(0xFF6D28D9),
-                        ),
-                      ),
-                    ),
-                    const Spacer(),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF8FAFC),
-                        borderRadius: BorderRadius.circular(5),
-                        border: Border.all(color: const Color(0xFFE2E8F0)),
-                      ),
-                      child: Text(
-                        'Cue Card + ${p3Questions.length} câu Part 3',
-                        style: const TextStyle(
-                          fontSize: 10.5,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xFF475569),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 10),
-
-                // Title & Action Buttons
-                Row(
+          // Header Card with InkWell so tapping anywhere expands/collapses
+          Material(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.circular(14),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(14),
+              onTap: () {
+                setState(() {
+                  if (isExpanded) {
+                    _expandedTopicIds.remove(topic.id);
+                  } else {
+                    _expandedTopicIds.add(topic.id);
+                  }
+                });
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(14),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            topic.title,
-                            style: const TextStyle(
-                              fontSize: 15.5,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xFF0F172A),
-                              height: 1.3,
+                    // Tầng 1: Top Badges
+                    Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFEDE9FE),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: const Text(
+                            'PART 3',
+                            style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xFF6D28D9),
                             ),
                           ),
-                          const SizedBox(height: 3),
-                          Text(
-                            topic.titleVi,
+                        ),
+                        const Spacer(),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFF8FAFC),
+                            borderRadius: BorderRadius.circular(5),
+                            border: Border.all(color: const Color(0xFFE2E8F0)),
+                          ),
+                          child: Text(
+                            'Cue Card + ${p3Questions.length} câu Part 3',
                             style: const TextStyle(
-                              fontSize: 12.5,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0xFF64748B),
+                              fontSize: 10.5,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xFF475569),
                             ),
                           ),
-                        ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+
+                    // Tầng 2: Title & Subtitle (Full-width, đồng đều chiều cao)
+                    ConstrainedBox(
+                      constraints: const BoxConstraints(minHeight: 40),
+                      child: Text(
+                        topic.title,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xFF0F172A),
+                          height: 1.3,
+                        ),
                       ),
                     ),
-                    const SizedBox(width: 8),
+                    const SizedBox(height: 3),
+                    Text(
+                      topic.titleVi,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontSize: 12.5,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFF64748B),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+
+                    // Tầng 3: Action Buttons Bar
                     Row(
-                      mainAxisSize: MainAxisSize.min,
                       children: [
                         ElevatedButton.icon(
                           onPressed: () {
@@ -365,59 +376,74 @@ class _SpeakingPart23ScreenState extends State<SpeakingPart23Screen> {
                               ),
                             );
                           },
-                          icon: const Icon(Icons.play_arrow_rounded, size: 14, color: Color(0xFF1E293B)),
+                          icon: const Icon(Icons.play_arrow_rounded, size: 15, color: Colors.white),
                           label: const Text(
                             'Luyện tập',
                             style: TextStyle(
-                              fontSize: 11.5,
-                              fontWeight: FontWeight.w800,
-                              color: Color(0xFF1E293B),
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFFFBBF24),
+                            backgroundColor: AppTheme.brandPrimary,
+                            foregroundColor: Colors.white,
                             elevation: 0,
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
                             minimumSize: Size.zero,
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
-                              side: const BorderSide(color: Color(0xFFD97706), width: 1),
                             ),
                           ),
                         ),
-                        const SizedBox(width: 6),
-                        IconButton(
-                          icon: const Icon(Icons.copy_rounded, size: 16, color: Color(0xFF64748B)),
-                          tooltip: 'Sao chép nội dung',
-                          constraints: const BoxConstraints(),
-                          padding: const EdgeInsets.all(6),
+                        const SizedBox(width: 8),
+                        OutlinedButton.icon(
                           onPressed: () => _copyTopicData(topic),
-                        ),
-                        IconButton(
-                          icon: Icon(
-                            isExpanded ? Icons.keyboard_arrow_up_rounded : Icons.keyboard_arrow_down_rounded,
-                            size: 20,
-                            color: const Color(0xFF475569),
+                          icon: const Icon(Icons.copy_rounded, size: 13, color: Color(0xFF64748B)),
+                          label: const Text(
+                            'Sao chép',
+                            style: TextStyle(
+                              fontSize: 11.5,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xFF475569),
+                            ),
                           ),
-                          tooltip: isExpanded ? 'Thu gọn' : 'Xem chi tiết',
-                          constraints: const BoxConstraints(),
-                          padding: const EdgeInsets.all(6),
-                          onPressed: () {
-                            setState(() {
-                              if (isExpanded) {
-                                _expandedTopicIds.remove(topic.id);
-                              } else {
-                                _expandedTopicIds.add(topic.id);
-                              }
-                            });
-                          },
+                          style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 6),
+                            minimumSize: Size.zero,
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            side: const BorderSide(color: Color(0xFFCBD5E1)),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        ),
+                        const Spacer(),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              isExpanded ? 'Thu gọn' : 'Chi tiết',
+                              style: TextStyle(
+                                fontSize: 11.5,
+                                fontWeight: FontWeight.w600,
+                                color: isExpanded ? const Color(0xFF7C3AED) : const Color(0xFF64748B),
+                              ),
+                            ),
+                            const SizedBox(width: 2),
+                            Icon(
+                              isExpanded ? Icons.keyboard_arrow_up_rounded : Icons.keyboard_arrow_down_rounded,
+                              size: 18,
+                              color: isExpanded ? const Color(0xFF7C3AED) : const Color(0xFF64748B),
+                            ),
+                          ],
                         ),
                       ],
                     ),
                   ],
                 ),
-              ],
+              ),
             ),
           ),
 
@@ -442,7 +468,10 @@ class _SpeakingPart23ScreenState extends State<SpeakingPart23Screen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
+                        Wrap(
+                          spacing: 8,
+                          runSpacing: 4,
+                          crossAxisAlignment: WrapCrossAlignment.center,
                           children: [
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
@@ -451,14 +480,13 @@ class _SpeakingPart23ScreenState extends State<SpeakingPart23Screen> {
                                 borderRadius: BorderRadius.circular(4),
                               ),
                               child: const Text(
-                                'PART 2 CUE CARD',
+                                'CUE CARD',
                                 style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: Colors.white),
                               ),
                             ),
-                            const SizedBox(width: 6),
                             const Text(
                               'Chuẩn bị: 1 phút • Trình bày: 2 phút',
-                              style: TextStyle(fontSize: 11, color: Color(0xFF78350F)),
+                              style: TextStyle(fontSize: 11, color: Color(0xFF78350F), fontWeight: FontWeight.w500),
                             ),
                           ],
                         ),
@@ -541,7 +569,7 @@ class _SpeakingPart23ScreenState extends State<SpeakingPart23Screen> {
                                   style: TextStyle(
                                     fontSize: 13.5,
                                     fontWeight: FontWeight.bold,
-                                    color: Color(0xFFEA580C),
+                                    color: AppTheme.brandPrimary,
                                   ),
                                 ),
                                 Expanded(

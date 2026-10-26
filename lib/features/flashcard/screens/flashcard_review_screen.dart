@@ -1,11 +1,22 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../app/theme.dart';
 import '../../../models/edu_word.dart';
 import '../../../services/eduwords_service.dart';
 import '../../../services/flashcard_progress_service.dart';
 import '../../../services/tts_service.dart';
+import '../widgets/flashcard_study_card.dart';
+import '../widgets/flashcard_mode_bottom_bar.dart';
+import '../widgets/flashcard_study_modes_modal.dart';
+import '../widgets/flashcard_typing_view.dart';
+import '../widgets/flashcard_quiz_view.dart';
+import '../widgets/flashcard_listening_view.dart';
+import '../widgets/flashcard_cloze_view.dart';
+import '../widgets/flashcard_pronunciation_view.dart';
+import '../widgets/flashcard_card_blast_view.dart';
+import '../widgets/flashcard_settings_bottom_sheet.dart';
 
 class FlashcardReviewScreen extends StatefulWidget {
   final String level;
@@ -42,6 +53,35 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
   int _reviewCount = 0;
   bool _isCompleted = false;
   final Set<int> _starredWordIds = {};
+  FlashcardStudyMode _currentStudyMode = FlashcardStudyMode.flipCard;
+
+  // Danh sách các chế độ bài tập tương tác dùng cho chế độ "Tổng hợp" (loại trừ flipCard)
+  static const List<FlashcardStudyMode> _mixedEligibleModes = [
+    FlashcardStudyMode.quiz,
+    FlashcardStudyMode.typing,
+    FlashcardStudyMode.listening,
+    FlashcardStudyMode.cloze,
+    FlashcardStudyMode.pronunciation,
+    FlashcardStudyMode.cardBlast,
+  ];
+
+  int _mixedModeOffset = 0;
+
+  /// Lấy chế độ học thực tế cho từng thẻ. Ở chế độ mixed, mỗi thẻ có một dạng bài tập khác nhau.
+  FlashcardStudyMode _getEffectiveStudyMode(int index) {
+    if (_currentStudyMode != FlashcardStudyMode.mixed) {
+      return _currentStudyMode;
+    }
+    if (_words.isEmpty || index < 0) {
+      return FlashcardStudyMode.quiz;
+    }
+    final modeIndex = (index + _mixedModeOffset) % _mixedEligibleModes.length;
+    return _mixedEligibleModes[modeIndex];
+  }
+
+  bool _isFrontVietnamese = false;
+  bool _showIpa = true;
+  bool _showExample = true;
 
   late AnimationController _flipController;
   late Animation<double> _flipAnimation;
@@ -74,23 +114,33 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
     final levelKey = widget.level.toUpperCase();
     final list = grouped[levelKey] ?? [];
 
+    final prefs = await SharedPreferences.getInstance();
+    final savedFrontVi = prefs.getBool('flashcard_front_vietnamese') ?? false;
+    final savedShowIpa = prefs.getBool('flashcard_show_ipa') ?? true;
+    final savedShowExample = prefs.getBool('flashcard_show_example') ?? true;
+
     if (!mounted) return;
 
-    final initialWords = widget.customWords != null && widget.customWords!.isNotEmpty
+    List<EduWord> initialWords = widget.customWords != null && widget.customWords!.isNotEmpty
         ? List<EduWord>.from(widget.customWords!)
         : List<EduWord>.from(list);
+
+    final originalList = List<EduWord>.from(initialWords);
 
     final startIdx = (widget.startIndex >= 0 && widget.startIndex < initialWords.length)
         ? widget.startIndex
         : 0;
 
     setState(() {
-      _originalDeckWords = List.from(list);
+      _originalDeckWords = originalList;
       _words = initialWords;
       _currentIndex = startIdx;
       _unmasteredWords.clear();
       _starredWordIds.clear();
       _starredWordIds.addAll(favIds);
+      _isFrontVietnamese = savedFrontVi;
+      _showIpa = savedShowIpa;
+      _showExample = savedShowExample;
       _isLoading = false;
     });
 
@@ -147,7 +197,7 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
   void _answerCard(bool isMastered) {
     _ttsService.stop();
     if (_isFlipped) {
-      _flipController.reverse();
+      _flipController.reset();
       _isFlipped = false;
     }
 
@@ -219,7 +269,7 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
     if (_currentIndex > 0) {
       _ttsService.stop();
       if (_isFlipped) {
-        _flipController.reverse();
+        _flipController.reset();
         _isFlipped = false;
       }
       setState(() {
@@ -233,7 +283,7 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
     if (_currentIndex + 1 < _words.length) {
       _ttsService.stop();
       if (_isFlipped) {
-        _flipController.reverse();
+        _flipController.reset();
         _isFlipped = false;
       }
       setState(() {
@@ -249,6 +299,7 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
       _words = List.from(_originalDeckWords);
       _unmasteredWords.clear();
       _currentIndex = 0;
+      _mixedModeOffset = Random().nextInt(_mixedEligibleModes.length);
       _isFlipped = false;
       _masteredCount = 0;
       _reviewCount = 0;
@@ -394,9 +445,20 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
                     ),
                   ),
                   const SizedBox(width: 8),
+
+                  // Nút Trộn thẻ nhanh (Quick Shuffle Action)
                   IconButton(
-                    icon: const Icon(Icons.more_vert, color: AppTheme.onSurface, size: 24),
-                    onPressed: () => _showAudioSettingsBottomSheet(context),
+                    icon: const Icon(Icons.shuffle_rounded, color: AppTheme.onSurface, size: 22),
+                    tooltip: 'Trộn ngẫu nhiên thẻ',
+                    onPressed: _shuffleCards,
+                  ),
+                  const SizedBox(width: 2),
+
+                  // Nút Cài đặt toàn diện (Tune / Settings)
+                  IconButton(
+                    icon: const Icon(Icons.tune_rounded, color: AppTheme.onSurface, size: 22),
+                    tooltip: 'Cài đặt học tập',
+                    onPressed: () => _showStudySettingsBottomSheet(context),
                   ),
                 ],
               ),
@@ -583,299 +645,87 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
     );
   }
 
-  void _showAudioSettingsBottomSheet(BuildContext context) {
-    showModalBottomSheet(
-      context: context,
-      backgroundColor: AppTheme.surfaceContainerLowest,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-      ),
-      builder: (ctx) {
-        return ValueListenableBuilder<int>(
-          valueListenable: _ttsService.settingsVersionNotifier,
-          builder: (context, _, child) {
-            final currentVoice = _ttsService.voice;
-            final isAutoPlay = _ttsService.autoPlay;
-            final currentRate = _ttsService.speechRate;
-
-            return SafeArea(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Handle Bar
-                    Center(
-                      child: Container(
-                        width: 40,
-                        height: 4,
-                        decoration: BoxDecoration(
-                          color: AppTheme.outlineVariant.withValues(alpha: 0.6),
-                          borderRadius: BorderRadius.circular(2),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-
-                    // Header Title
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text(
-                          'Cài đặt phát âm Flashcard',
-                          style: TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                            color: AppTheme.onSurface,
-                          ),
-                        ),
-                        IconButton(
-                          icon: const Icon(Icons.close, size: 20, color: AppTheme.outline),
-                          onPressed: () => Navigator.pop(ctx),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 14),
-
-                    // 1. CHỌN GIỌNG ĐỌC (UK / US)
-                    const Text(
-                      'GIỌNG ĐỌC PHÁT ÂM',
-                      style: TextStyle(
-                        fontSize: 11,
-                        fontWeight: FontWeight.bold,
-                        color: AppTheme.outline,
-                        letterSpacing: 0.5,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-
-                    // Voice options matching reference design
-                    Container(
-                      decoration: BoxDecoration(
-                        color: AppTheme.surfaceContainerLow,
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: AppTheme.outlineVariant.withValues(alpha: 0.3)),
-                      ),
-                      child: Column(
-                        children: [
-                          _buildVoiceOptionItem(
-                            title: 'Giọng Anh (UK)',
-                            subtitle: 'British English (en-GB)',
-                            isSelected: currentVoice == TtsVoice.uk,
-                            onTap: () {
-                              _ttsService.setVoice(TtsVoice.uk);
-                              if (_words.isNotEmpty && _currentIndex < _words.length) {
-                                _ttsService.speak(_words[_currentIndex].title);
-                              }
-                            },
-                          ),
-                          const Divider(height: 1, indent: 16, endIndent: 16),
-                          _buildVoiceOptionItem(
-                            title: 'Giọng Mỹ (US)',
-                            subtitle: 'American English (en-US)',
-                            isSelected: currentVoice == TtsVoice.us,
-                            onTap: () {
-                              _ttsService.setVoice(TtsVoice.us);
-                              if (_words.isNotEmpty && _currentIndex < _words.length) {
-                                _ttsService.speak(_words[_currentIndex].title);
-                              }
-                            },
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 18),
-
-                    // 2. TỰ ĐỘNG ĐỌC (Auto-play)
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-                      decoration: BoxDecoration(
-                        color: AppTheme.surfaceContainerLow,
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: AppTheme.outlineVariant.withValues(alpha: 0.3)),
-                      ),
-                      child: Row(
-                        children: [
-                          const Icon(Icons.play_circle_outline, color: AppTheme.brandPrimary, size: 22),
-                          const SizedBox(width: 12),
-                          const Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Tự động đọc khi chuyển thẻ',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    color: AppTheme.brandTextPrimary,
-                                  ),
-                                ),
-                                SizedBox(height: 2),
-                                Text(
-                                  'Phát âm từ vựng ngay khi xuất hiện',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: AppTheme.brandTextSecondary,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Switch.adaptive(
-                            value: isAutoPlay,
-                            activeTrackColor: AppTheme.brandPrimary,
-                            onChanged: (val) {
-                              _ttsService.setAutoPlay(val);
-                            },
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 18),
-
-                    // 3. TỐC ĐỘ ĐỌC (Thanh kéo âm Slider)
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text(
-                          'TỐC ĐỘ ĐỌC',
-                          style: TextStyle(
-                            fontSize: 11,
-                            fontWeight: FontWeight.bold,
-                            color: AppTheme.brandTextSecondary,
-                            letterSpacing: 0.5,
-                          ),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                          decoration: BoxDecoration(
-                            color: AppTheme.chipIndigoBg,
-                            borderRadius: BorderRadius.circular(4),
-                          ),
-                          child: Text(
-                            '${(currentRate * 2).toStringAsFixed(1)}x',
-                            style: const TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold,
-                              color: AppTheme.brandPrimary,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 8),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 10),
-                      decoration: BoxDecoration(
-                        color: AppTheme.brandSurface,
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: AppTheme.brandBorder),
-                      ),
-                      child: Column(
-                        children: [
-                          SliderTheme(
-                            data: SliderTheme.of(context).copyWith(
-                              activeTrackColor: AppTheme.brandPrimary,
-                              inactiveTrackColor: AppTheme.brandBorder,
-                              thumbColor: AppTheme.brandPrimary,
-                              overlayColor: AppTheme.brandPrimary.withValues(alpha: 0.15),
-                              trackHeight: 5,
-                              thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 8),
-                            ),
-                            child: Slider(
-                              value: currentRate.clamp(0.25, 0.8),
-                              min: 0.25,
-                              max: 0.8,
-                              divisions: 11,
-                              onChanged: (val) {
-                                _ttsService.setSpeechRate(val);
-                              },
-                              onChangeEnd: (val) {
-                                if (_words.isNotEmpty && _currentIndex < _words.length) {
-                                  _ttsService.speak(_words[_currentIndex].title);
-                                }
-                              },
-                            ),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 14.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Chậm (0.5x)',
-                                  style: TextStyle(fontSize: 11, color: AppTheme.onSurfaceVariant),
-                                ),
-                                Text(
-                                  'Chuẩn (1.0x)',
-                                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppTheme.brandPrimary),
-                                ),
-                                Text(
-                                  'Nhanh (1.6x)',
-                                  style: TextStyle(fontSize: 11, color: AppTheme.onSurfaceVariant),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            );
-          },
-        );
-      },
-    );
+  Future<void> _savePreference(String key, bool value) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(key, value);
   }
 
-  Widget _buildVoiceOptionItem({
-    required String title,
-    required String subtitle,
-    required bool isSelected,
-    required VoidCallback onTap,
-  }) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(8),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-        decoration: BoxDecoration(
-          color: isSelected ? AppTheme.chipIndigoBg : Colors.transparent,
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Row(
-          children: [
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
-                      color: isSelected ? AppTheme.brandPrimary : AppTheme.brandTextPrimary,
-                    ),
-                  ),
-                  const SizedBox(height: 2),
-                  Text(
-                    subtitle,
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: isSelected ? AppTheme.brandPrimary : AppTheme.brandTextSecondary,
-                    ),
-                  ),
-                ],
-              ),
+  void _shuffleCards() {
+    if (_words.length <= 1) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).hideCurrentSnackBar();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: const Text(
+              'Bộ thẻ cần ít nhất 2 từ để xáo trộn',
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 13),
             ),
-            if (isSelected)
-              const Icon(Icons.check, color: AppTheme.brandPrimary, size: 20),
-          ],
+            behavior: SnackBarBehavior.floating,
+            duration: const Duration(seconds: 2),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppTheme.radiusSm)),
+          ),
+        );
+      }
+      return;
+    }
+
+    setState(() {
+      _words.shuffle(Random());
+      _currentIndex = 0;
+      _mixedModeOffset = Random().nextInt(_mixedEligibleModes.length);
+      if (_isFlipped) {
+        _flipController.reset();
+        _isFlipped = false;
+      }
+    });
+
+    if (mounted) {
+      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: const Text(
+            '🔀 Đã trộn ngẫu nhiên thứ tự các thẻ học',
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 13),
+          ),
+          behavior: SnackBarBehavior.floating,
+          duration: const Duration(seconds: 2),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppTheme.radiusSm)),
         ),
-      ),
+      );
+    }
+  }
+
+  void _showStudySettingsBottomSheet(BuildContext context) {
+    FlashcardSettingsBottomSheet.show(
+      context,
+      onShuffle: _shuffleCards,
+      isFrontVietnamese: _isFrontVietnamese,
+      onChangeFrontLanguage: (val) {
+        setState(() {
+          _isFrontVietnamese = val;
+        });
+        _savePreference('flashcard_front_vietnamese', val);
+      },
+      showIpa: _showIpa,
+      onToggleShowIpa: (val) {
+        setState(() {
+          _showIpa = val;
+        });
+        _savePreference('flashcard_show_ipa', val);
+      },
+      showExample: _showExample,
+      onToggleShowExample: (val) {
+        setState(() {
+          _showExample = val;
+        });
+        _savePreference('flashcard_show_example', val);
+      },
+      ttsService: _ttsService,
+      onSampleSpeak: () {
+        if (_words.isNotEmpty && _currentIndex < _words.length) {
+          _playAudio(_words[_currentIndex].title);
+        }
+      },
     );
   }
 
@@ -883,141 +733,276 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
     final currentWord = _words[_currentIndex];
     final isStarred = _starredWordIds.contains(currentWord.id);
     final total = _words.length;
+    final effectiveMode = _getEffectiveStudyMode(_currentIndex);
+    final isKeyboardOpen = MediaQuery.viewInsetsOf(context).bottom > 50;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10.0),
       child: Column(
         children: [
-          // 1. The Interactive Flashcard Box
+          // 1. Thẻ học động theo chế độ đang chọn (có hiệu ứng chuyển cảnh mượt)
           Expanded(
-            child: GestureDetector(
-              onTap: _flipCard,
-              child: AnimatedBuilder(
-                animation: _flipAnimation,
-                builder: (context, child) {
-                  final angle = _flipAnimation.value * pi;
-                  final transform = Matrix4.identity()
-                    ..setEntry(3, 2, 0.001)
-                    ..rotateY(angle);
-
-                  return Transform(
-                    transform: transform,
-                    alignment: Alignment.center,
-                    child: angle >= pi / 2
-                        ? Transform(
-                            transform: Matrix4.identity()..rotateY(pi),
-                            alignment: Alignment.center,
-                            child: _buildCardBack(currentWord, isStarred, levelColor),
-                          )
-                        : _buildCardFront(currentWord, isStarred, levelColor),
-                  );
-                },
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 250),
+              switchInCurve: Curves.easeOutCubic,
+              switchOutCurve: Curves.easeInCubic,
+              transitionBuilder: (child, animation) {
+                return FadeTransition(
+                  opacity: animation,
+                  child: SlideTransition(
+                    position: Tween<Offset>(
+                      begin: const Offset(0.04, 0),
+                      end: Offset.zero,
+                    ).animate(animation),
+                    child: child,
+                  ),
+                );
+              },
+              child: KeyedSubtree(
+                key: ValueKey('${currentWord.id}_${_currentStudyMode.name}_${effectiveMode.name}'),
+                child: _buildStudyModeContent(currentWord, isStarred, levelColor, effectiveMode),
               ),
             ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 14),
 
-          // 2. Control & Rating Buttons Section
-          // Row 1: Left Arrow, "Chưa nhớ" (Pink/Red), "Đã nhớ" (Blue), Right Arrow
-          Row(
-            children: [
-              // Previous Arrow Button
-              Container(
-                width: 48,
-                height: 48,
-                decoration: BoxDecoration(
-                  color: AppTheme.surfaceContainerHigh.withValues(alpha: 0.5),
-                  borderRadius: BorderRadius.circular(8),
+          // 2. Thao tác điều hướng & Đánh giá (chỉ dùng cho chế độ Lật thẻ SRS)
+          if (effectiveMode == FlashcardStudyMode.flipCard) ...[
+            // Row 1: Mũi tên trái, "Chưa nhớ" (Hồng/Đỏ), "Đã nhớ" (Tím), Mũi tên phải
+            Row(
+              children: [
+                // Previous Arrow Button
+                Container(
+                  width: 48,
+                  height: 48,
+                  decoration: BoxDecoration(
+                    color: AppTheme.surfaceContainerHigh.withValues(alpha: 0.5),
+                    borderRadius: BorderRadius.circular(AppTheme.radiusSm), // 8px
+                  ),
+                  child: IconButton(
+                    icon: const Icon(Icons.arrow_back, color: AppTheme.onSurface, size: 20),
+                    onPressed: _currentIndex > 0 ? _goToPreviousCard : null,
+                  ),
                 ),
-                child: IconButton(
-                  icon: const Icon(Icons.arrow_back, color: AppTheme.onSurface, size: 20),
+                const SizedBox(width: 10),
+
+                // "Chưa nhớ" Button
+                Expanded(
+                  child: InkWell(
+                    onTap: () => _answerCard(false),
+                    borderRadius: BorderRadius.circular(AppTheme.radiusSm), // 8px
+                    child: Container(
+                      height: 48,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFEBEA), // Soft pinkish red
+                        borderRadius: BorderRadius.circular(AppTheme.radiusSm),
+                      ),
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'Chưa nhớ',
+                        style: TextStyle(
+                          color: Color(0xFFD32F2F),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 10),
+
+                // "Đã nhớ" Button
+                Expanded(
+                  child: InkWell(
+                    onTap: () => _answerCard(true),
+                    borderRadius: BorderRadius.circular(AppTheme.radiusSm), // 8px
+                    child: Container(
+                      height: 48,
+                      decoration: BoxDecoration(
+                        color: AppTheme.brandPrimary,
+                        borderRadius: BorderRadius.circular(AppTheme.radiusSm),
+                      ),
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'Đã nhớ',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 10),
+
+                // Next Arrow Button
+                Container(
+                  width: 48,
+                  height: 48,
+                  decoration: BoxDecoration(
+                    color: AppTheme.surfaceContainerHigh.withValues(alpha: 0.5),
+                    borderRadius: BorderRadius.circular(AppTheme.radiusSm), // 8px
+                  ),
+                  child: IconButton(
+                    icon: const Icon(Icons.arrow_forward, color: AppTheme.onSurface, size: 20),
+                    onPressed: _currentIndex + 1 < total ? _goToNextCard : null,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+
+            // Row 2: SM-2 Spaced Repetition Interval Options (4 boxes bo 6px)
+            Row(
+              children: [
+                _buildSm2Box('Lặp lại', '< 1 ngày', const Color(0xFFD32F2F), () => _answerCard(false)),
+                const SizedBox(width: 8),
+                _buildSm2Box('Khó', '3 ngày', AppTheme.onSurface, () => _answerCard(false)),
+                const SizedBox(width: 8),
+                _buildSm2Box('Tốt', '5 ngày', AppTheme.brandPrimary, () => _answerCard(true)),
+                const SizedBox(width: 8),
+                _buildSm2Box('Dễ', '8 ngày', AppTheme.onSurface, () => _answerCard(true)),
+              ],
+            ),
+          ] else ...[
+            // Thanh chuyển câu đơn giản cho các chế độ Quiz, Typing, Listening, Cloze
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                OutlinedButton.icon(
                   onPressed: _currentIndex > 0 ? _goToPreviousCard : null,
-                ),
-              ),
-              const SizedBox(width: 10),
-
-              // "Chưa nhớ" Button
-              Expanded(
-                child: InkWell(
-                  onTap: () => _answerCard(false),
-                  borderRadius: BorderRadius.circular(8),
-                  child: Container(
-                    height: 48,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFFFEBEA), // Soft pinkish red
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    alignment: Alignment.center,
-                    child: const Text(
-                      'Chưa nhớ',
-                      style: TextStyle(
-                        color: Color(0xFFD32F2F),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                      ),
+                  icon: const Icon(Icons.arrow_back, size: 16),
+                  label: const Text('Trước'),
+                  style: OutlinedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(AppTheme.radiusSm),
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(width: 10),
-
-              // "Đã nhớ" Button
-              Expanded(
-                child: InkWell(
-                  onTap: () => _answerCard(true),
-                  borderRadius: BorderRadius.circular(8),
-                  child: Container(
-                    height: 48,
-                    decoration: BoxDecoration(
-                      color: AppTheme.brandPrimary,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    alignment: Alignment.center,
-                    child: const Text(
-                      'Đã nhớ',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                      ),
-                    ),
+                Text(
+                  '${_currentIndex + 1} / $total',
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: AppTheme.brandTextSecondary,
                   ),
                 ),
-              ),
-              const SizedBox(width: 10),
-
-              // Next Arrow Button
-              Container(
-                width: 48,
-                height: 48,
-                decoration: BoxDecoration(
-                  color: AppTheme.surfaceContainerHigh.withValues(alpha: 0.5),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: IconButton(
-                  icon: const Icon(Icons.arrow_forward, color: AppTheme.onSurface, size: 20),
+                OutlinedButton.icon(
                   onPressed: _currentIndex + 1 < total ? _goToNextCard : null,
+                  icon: const Icon(Icons.arrow_forward, size: 16),
+                  label: const Text('Sau'),
+                  style: OutlinedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(AppTheme.radiusSm),
+                    ),
+                  ),
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-
-          // Row 2: SM-2 Spaced Repetition Interval Options (4 boxes)
-          Row(
-            children: [
-              _buildSm2Box('Lặp lại', '< 1 ngày', const Color(0xFFD32F2F), () => _answerCard(false)),
-              const SizedBox(width: 8),
-              _buildSm2Box('Khó', '3 ngày', AppTheme.onSurface, () => _answerCard(false)),
-              const SizedBox(width: 8),
-              _buildSm2Box('Tốt', '5 ngày', AppTheme.brandPrimary, () => _answerCard(true)),
-              const SizedBox(width: 8),
-              _buildSm2Box('Dễ', '8 ngày', AppTheme.onSurface, () => _answerCard(true)),
-            ],
-          ),
+              ],
+            ),
           ],
-        ),
-      );
+
+          // 3. Card cố định ở đáy: Chế độ luyện tập + Nút Đổi chế độ (Tự động ẩn khi mở bàn phím để không bị cấn giao diện)
+          if (!isKeyboardOpen) ...[
+            const SizedBox(height: 14),
+            FlashcardModeBottomBar(
+              currentMode: _currentStudyMode,
+              currentSubMode: _currentStudyMode == FlashcardStudyMode.mixed ? effectiveMode : null,
+              onChangeMode: () {
+                FlashcardStudyModesModal.show(
+                  context: context,
+                  currentMode: _currentStudyMode,
+                  onSelectMode: (mode) {
+                    setState(() {
+                      _currentStudyMode = mode;
+                    });
+                  },
+                );
+              },
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  Widget _buildStudyModeContent(
+    EduWord currentWord,
+    bool isStarred,
+    Color levelColor,
+    FlashcardStudyMode mode,
+  ) {
+    switch (mode) {
+      case FlashcardStudyMode.flipCard:
+        return FlashcardStudyCard(
+          word: currentWord,
+          isStarred: isStarred,
+          isFlipped: _isFlipped,
+          flipAnimation: _flipAnimation,
+          onFlip: _flipCard,
+          onSpeak: () => _playAudio(currentWord.title),
+          onToggleStar: () => _toggleStar(currentWord.id),
+          levelBadgeText: '• Từ vựng - ${currentWord.level}',
+          isFrontVietnamese: _isFrontVietnamese,
+          showIpa: _showIpa,
+          showExample: _showExample,
+        );
+
+      case FlashcardStudyMode.mixed:
+        return _buildStudyModeContent(
+          currentWord,
+          isStarred,
+          levelColor,
+          _getEffectiveStudyMode(_currentIndex),
+        );
+
+      case FlashcardStudyMode.typing:
+        return FlashcardTypingView(
+          word: currentWord,
+          onAnswer: (correct) => _answerCard(correct),
+          onSpeak: () => _playAudio(currentWord.title),
+        );
+
+      case FlashcardStudyMode.quiz:
+        return FlashcardQuizView(
+          currentWord: currentWord,
+          allWords: _words,
+          onAnswer: (correct) => _answerCard(correct),
+          onSpeak: () => _playAudio(currentWord.title),
+        );
+
+      case FlashcardStudyMode.listening:
+        return FlashcardListeningView(
+          word: currentWord,
+          onAnswer: (correct) => _answerCard(correct),
+          onPlayAudio: (rate) {
+            _ttsService.setSpeechRate(rate);
+            _playAudio(currentWord.title);
+          },
+        );
+
+      case FlashcardStudyMode.cloze:
+        return FlashcardClozeView(
+          word: currentWord,
+          onAnswer: (correct) => _answerCard(correct),
+          onSpeak: () => _playAudio(currentWord.title),
+        );
+
+      case FlashcardStudyMode.pronunciation:
+        return FlashcardPronunciationView(
+          word: currentWord,
+          onAnswer: (correct) => _answerCard(correct),
+          onSpeak: () => _playAudio(currentWord.title),
+        );
+
+      case FlashcardStudyMode.cardBlast:
+        return FlashcardCardBlastView(
+          currentWord: currentWord,
+          allWords: _words.isNotEmpty ? _words : _originalDeckWords,
+          onAnswer: (correct) => _answerCard(correct),
+          onSpeak: () => _playAudio(currentWord.title),
+        );
+    }
   }
 
   Widget _buildSm2Box(String label, String time, Color timeColor, VoidCallback onTap) {
@@ -1050,330 +1035,5 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
     );
   }
 
-  // MẶT TRƯỚC THẺ (FRONT SIDE)
-  Widget _buildCardFront(EduWord word, bool isStarred, Color levelColor) {
-    final ipa = word.formattedTranscription;
-
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(22),
-      decoration: BoxDecoration(
-        color: AppTheme.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: AppTheme.outlineVariant.withValues(alpha: 0.3), width: 1.2),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.04),
-            blurRadius: 16,
-            offset: const Offset(0, 4),
-          ),
-        ],
-      ),
-      child: Column(
-        children: [
-          // Top Row: Pill Badge & Speaker + Star Icons
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF3E8FF),
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                child: Text(
-                  '• Từ vựng - ${word.level}',
-                  style: const TextStyle(
-                    color: Color(0xFF6B21A8),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              Row(
-                children: [
-                  ValueListenableBuilder<bool>(
-                    valueListenable: _ttsService.isSpeakingNotifier,
-                    builder: (context, isSpeaking, _) {
-                      return IconButton(
-                        icon: Icon(
-                          isSpeaking ? Icons.volume_up : Icons.volume_up_outlined,
-                          color: isSpeaking ? AppTheme.brandPrimary : AppTheme.brandTextMuted,
-                          size: 24,
-                        ),
-                        onPressed: () => _playAudio(word.title),
-                        tooltip: 'Phát âm từ vựng',
-                      );
-                    },
-                  ),
-                  IconButton(
-                    icon: Icon(
-                      isStarred ? Icons.star : Icons.star_border_rounded,
-                      color: isStarred ? const Color(0xFFFFB300) : AppTheme.onSurfaceVariant,
-                      size: 24,
-                    ),
-                    onPressed: () => _toggleStar(word.id),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          const Spacer(),
-
-          // Main English Word
-          Text(
-            word.title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 34,
-              fontWeight: FontWeight.bold,
-              color: AppTheme.onSurface,
-              letterSpacing: -0.5,
-            ),
-          ),
-          if (ipa.isNotEmpty) ...[
-            const SizedBox(height: 8),
-            Text(
-              ipa,
-              style: AppTheme.ipaStyle(
-                fontSize: 18,
-                color: AppTheme.onSurfaceVariant,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ],
-          const SizedBox(height: 20),
-
-          // Tag Prompt
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-            decoration: BoxDecoration(
-              color: const Color(0xFFF6F2FF),
-              borderRadius: BorderRadius.circular(6),
-            ),
-            child: const Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(Icons.touch_app_outlined, size: 16, color: Color(0xFF4F46E5)),
-                SizedBox(width: 6),
-                Text(
-                  'Chạm thẻ để xem giải nghĩa',
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xFF4F46E5),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const Spacer(),
-
-          // Bottom Divider & Caption
-          const Divider(color: AppTheme.outlineVariant, height: 1),
-          const SizedBox(height: 12),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.swap_horiz, size: 16, color: AppTheme.outline),
-              SizedBox(width: 6),
-              Text(
-                'Chạm bất kỳ đâu trên thẻ để lật',
-                style: TextStyle(fontSize: 12, color: AppTheme.outline),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
-  // MẶT SAU THẺ (BACK SIDE)
-  Widget _buildCardBack(EduWord word, bool isStarred, Color levelColor) {
-    final ipa = word.formattedTranscription;
-
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(22),
-      decoration: BoxDecoration(
-        color: AppTheme.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: AppTheme.primaryContainer.withValues(alpha: 0.4), width: 1.2),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.04),
-            blurRadius: 16,
-            offset: const Offset(0, 4),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Top Row: Pill Badge & Speaker + Star Icons
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF3E8FF),
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                child: Text(
-                  '• Nghĩa & Giải thích - ${word.level}',
-                  style: const TextStyle(
-                    color: Color(0xFF6B21A8),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              Row(
-                children: [
-                  ValueListenableBuilder<bool>(
-                    valueListenable: _ttsService.isSpeakingNotifier,
-                    builder: (context, isSpeaking, _) {
-                      return IconButton(
-                        icon: Icon(
-                          isSpeaking ? Icons.volume_up : Icons.volume_up_outlined,
-                          color: isSpeaking ? AppTheme.brandPrimary : AppTheme.brandTextMuted,
-                          size: 24,
-                        ),
-                        onPressed: () => _playAudio(word.title),
-                        tooltip: 'Phát âm từ vựng',
-                      );
-                    },
-                  ),
-                  IconButton(
-                    icon: Icon(
-                      isStarred ? Icons.star : Icons.star_border_rounded,
-                      color: isStarred ? const Color(0xFFFFB300) : AppTheme.onSurfaceVariant,
-                      size: 24,
-                    ),
-                    onPressed: () => _toggleStar(word.id),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          const SizedBox(height: 14),
-
-          // Scrollable Body Content
-          Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Vietnamese Word / Meaning
-                  Text(
-                    word.viword.isNotEmpty ? word.viword : 'Chưa có nghĩa',
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: AppTheme.brandPrimary,
-                    ),
-                  ),
-                  if (ipa.isNotEmpty) ...[
-                    const SizedBox(height: 4),
-                    Text(
-                      ipa,
-                      style: AppTheme.ipaStyle(fontSize: 14, color: AppTheme.onSurfaceVariant),
-                    ),
-                  ],
-                  const SizedBox(height: 16),
-
-                  // English Definition
-                  if (word.description.isNotEmpty) ...[
-                    const Text(
-                      'Định nghĩa (English):',
-                      style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppTheme.outline),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      word.description,
-                      style: const TextStyle(fontSize: 14, height: 1.4, color: AppTheme.onSurface),
-                    ),
-                    const SizedBox(height: 14),
-                  ],
-
-                  // Vietnamese Description
-                  if (word.videscription.isNotEmpty) ...[
-                    const Text(
-                      'Giải thích chi tiết:',
-                      style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppTheme.outline),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      word.videscription,
-                      style: const TextStyle(fontSize: 13, height: 1.4, color: AppTheme.onSurfaceVariant),
-                    ),
-                    const SizedBox(height: 14),
-                  ],
-
-                  // Example Sentence with Pronounce Button
-                  if (word.example.isNotEmpty) ...[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text(
-                          'Ví dụ câu mẫu:',
-                          style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppTheme.outline),
-                        ),
-                        InkWell(
-                          onTap: () => _playAudio(word.example),
-                          borderRadius: BorderRadius.circular(4),
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                            child: Row(
-                              children: [
-                                Icon(Icons.volume_up_outlined, size: 16, color: AppTheme.brandPrimary),
-                                SizedBox(width: 4),
-                                Text(
-                                  'Nghe câu',
-                                  style: TextStyle(fontSize: 11, color: AppTheme.brandPrimary, fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 4),
-                    Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: AppTheme.surfaceContainerLow,
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      child: Text(
-                        '"${word.example}"',
-                        style: const TextStyle(fontSize: 13, fontStyle: FontStyle.italic, height: 1.4),
-                      ),
-                    ),
-                  ],
-                ],
-              ),
-            ),
-          ),
-
-          // Bottom Divider & Caption
-          const Divider(color: AppTheme.outlineVariant, height: 1),
-          const SizedBox(height: 12),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.swap_horiz, size: 16, color: AppTheme.outline),
-              SizedBox(width: 6),
-              Text(
-                'Chạm bất kỳ đâu trên thẻ để lật',
-                style: TextStyle(fontSize: 12, color: AppTheme.outline),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
 }
+

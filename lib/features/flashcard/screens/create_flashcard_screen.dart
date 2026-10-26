@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import '../../../app/theme.dart';
 import '../../../models/user_custom_deck.dart';
 import '../../../services/flashcard_progress_service.dart';
+import '../../../shared/widgets/app_back_button.dart';
 
 class CreateFlashcardScreen extends StatefulWidget {
   final String? preselectedDeckId;
@@ -174,6 +175,7 @@ class _CreateFlashcardScreenState extends State<CreateFlashcardScreen> {
       appBar: AppBar(
         backgroundColor: AppTheme.brandSurface,
         elevation: 0,
+        leading: const AppBackButton(),
         foregroundColor: AppTheme.brandTextPrimary,
         title: const Text(
           'Thêm Từ Vựng Mới',

@@ -27,6 +27,13 @@ class AuthService {
     if (token != null && token.isNotEmpty) {
       return true;
     }
+    final email = prefs.getString('user_email');
+    if (email != null && email.isNotEmpty) {
+      return true;
+    }
+    if (prefs.getBool('is_logged_in') == true) {
+      return true;
+    }
     return isAuthenticated;
   }
 
@@ -130,7 +137,12 @@ class AuthService {
         final dataMap = responseData['data'] is Map
             ? Map<String, dynamic>.from(responseData['data'] as Map)
             : null;
-        final accessToken = (dataMap?['access_token'] as String?) ?? (dataMap?['token'] as String?);
+        final accessToken = (dataMap?['access_token'] as String?) ??
+            (dataMap?['token'] as String?) ??
+            (dataMap?['accessToken'] as String?) ??
+            (responseData['access_token'] as String?) ??
+            (responseData['token'] as String?) ??
+            (responseData['accessToken'] as String?);
 
         Map<String, dynamic>? userData;
         if (dataMap != null) {
@@ -142,6 +154,7 @@ class AuthService {
         }
 
         final prefs = await SharedPreferences.getInstance();
+        await prefs.setBool('is_logged_in', true);
         if (accessToken != null && accessToken.isNotEmpty) {
           await prefs.setString('nks_access_token', accessToken);
         }
@@ -276,6 +289,7 @@ class AuthService {
   // Sign Out (Clear active session token & user info)
   Future<void> signOut() async {
     final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('is_logged_in');
     await prefs.remove('nks_access_token');
     await prefs.remove('user_name');
     await prefs.remove('user_email');

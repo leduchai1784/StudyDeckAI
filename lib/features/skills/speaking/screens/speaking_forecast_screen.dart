@@ -48,11 +48,7 @@ class _SpeakingForecastScreenState extends State<SpeakingForecastScreen> {
       setState(() {
         _topics = loaded;
         _isLoading = false;
-        // Mặc định mở rộng chủ đề bắt buộc đầu tiên để người dùng thấy ngay câu hỏi
-        final firstCompulsory = loaded.where((t) => t.isCompulsory && t.partNumber == 1).firstOrNull;
-        if (firstCompulsory != null) {
-          _expandedTopicIds.add(firstCompulsory.id);
-        }
+        // Không tự động mở bất kỳ thẻ nào khi vào màn hình
       });
     }
   }
@@ -377,9 +373,9 @@ class _SpeakingForecastScreenState extends State<SpeakingForecastScreen> {
                         _buildPartFilterButton(
                           key: 'compulsory',
                           label: 'PART 1 BẮT BUỘC ($countCompulsory)',
-                          activeBgColor: const Color(0xFFFBBF24), // Màu vàng nổi bật như ảnh
-                          activeTextColor: const Color(0xFF1E293B),
-                          activeBorderColor: const Color(0xFFD97706),
+                          activeBgColor: AppTheme.brandPrimary,
+                          activeTextColor: Colors.white,
+                          activeBorderColor: AppTheme.brandPrimary,
                         ),
                         const SizedBox(width: 8),
 
@@ -433,7 +429,7 @@ class _SpeakingForecastScreenState extends State<SpeakingForecastScreen> {
                                   'THI THẬT CỰC CĂNG',
                                   style: TextStyle(
                                     fontSize: 12.5,
-                                    fontWeight: FontWeight.w800,
+                                    fontWeight: FontWeight.w600,
                                     color: Colors.white,
                                     letterSpacing: 0.3,
                                   ),
@@ -614,7 +610,7 @@ class _SpeakingForecastScreenState extends State<SpeakingForecastScreen> {
           label,
           style: TextStyle(
             fontSize: 12.5,
-            fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
+            fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
             color: isSelected ? activeTextColor : const Color(0xFF334155),
             letterSpacing: 0.2,
           ),
@@ -632,10 +628,10 @@ class _SpeakingForecastScreenState extends State<SpeakingForecastScreen> {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: isCompulsory ? const Color(0xFFFCD34D) : const Color(0xFFE2E8F0),
-          width: isCompulsory ? 1.5 : 1,
+          color: const Color(0xFFE2E8F0),
+          width: 1.0,
         ),
         boxShadow: [
           BoxShadow(
@@ -662,16 +658,16 @@ class _SpeakingForecastScreenState extends State<SpeakingForecastScreen> {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFFEF3C7),
-                          borderRadius: BorderRadius.circular(6),
-                          border: Border.all(color: const Color(0xFFFDE68A)),
+                          color: const Color(0xFFEEF2FF),
+                          borderRadius: BorderRadius.circular(4),
+                          border: Border.all(color: const Color(0xFFC7D2FE)),
                         ),
                         child: const Text(
                           '📌 BẮT BUỘC THI',
                           style: TextStyle(
                             fontSize: 10,
-                            fontWeight: FontWeight.w800,
-                            color: Color(0xFFB45309),
+                            fontWeight: FontWeight.w700,
+                            color: AppTheme.brandPrimary,
                           ),
                         ),
                       ),
@@ -688,7 +684,7 @@ class _SpeakingForecastScreenState extends State<SpeakingForecastScreen> {
                           '🎯 PART 2 & 3',
                           style: TextStyle(
                             fontSize: 10,
-                            fontWeight: FontWeight.w800,
+                            fontWeight: FontWeight.w600,
                             color: Color(0xFF6D28D9),
                           ),
                         ),
@@ -812,24 +808,24 @@ class _SpeakingForecastScreenState extends State<SpeakingForecastScreen> {
                               ),
                             );
                           },
-                          icon: const Icon(Icons.play_arrow_rounded, size: 14, color: Color(0xFF1E293B)),
+                          icon: const Icon(Icons.play_arrow_rounded, size: 15, color: Colors.white),
                           label: const Text(
                             'Luyện tập',
                             style: TextStyle(
-                              fontSize: 11.5,
-                              fontWeight: FontWeight.w800,
-                              color: Color(0xFF1E293B),
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFFFBBF24),
+                            backgroundColor: AppTheme.brandPrimary,
+                            foregroundColor: Colors.white,
                             elevation: 0,
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
                             minimumSize: Size.zero,
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
-                              side: const BorderSide(color: Color(0xFFD97706), width: 1),
                             ),
                           ),
                         ),
@@ -933,7 +929,10 @@ class _SpeakingForecastScreenState extends State<SpeakingForecastScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          Wrap(
+            spacing: 8,
+            runSpacing: 4,
+            crossAxisAlignment: WrapCrossAlignment.center,
             children: [
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
@@ -942,14 +941,13 @@ class _SpeakingForecastScreenState extends State<SpeakingForecastScreen> {
                   borderRadius: BorderRadius.circular(4),
                 ),
                 child: const Text(
-                  'PART 2 CUE CARD',
+                  'CUE CARD',
                   style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: Colors.white),
                 ),
               ),
-              const SizedBox(width: 6),
               const Text(
-                'Thời gian chuẩn bị: 1 phút • Trình bày: 2 phút',
-                style: TextStyle(fontSize: 11, color: Color(0xFF78350F)),
+                'Chuẩn bị: 1 phút • Trình bày: 2 phút',
+                style: TextStyle(fontSize: 11, color: Color(0xFF78350F), fontWeight: FontWeight.w500),
               ),
             ],
           ),
@@ -1054,13 +1052,12 @@ class _SpeakingForecastScreenState extends State<SpeakingForecastScreen> {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Tiền tố Q. màu cam nổi bật đúng như The IELTS Dictionary
                 const Text(
                   'Q. ',
                   style: TextStyle(
                     fontSize: 13.5,
                     fontWeight: FontWeight.bold,
-                    color: Color(0xFFEA580C), // Cam đậm
+                    color: AppTheme.brandPrimary,
                   ),
                 ),
                 Expanded(

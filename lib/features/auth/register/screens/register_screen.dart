@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../app/theme.dart';
 import '../../../../shared/widgets/studydeck_logo_header.dart';
 import '../../../../shared/widgets/app_back_button.dart';
@@ -26,7 +27,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
     super.dispose();
   }
 
-  void _handleRegister() {
+  Future<void> _handleRegister() async {
+    final email = _emailController.text.trim();
+    final name = _nameController.text.trim();
+    if (email.isNotEmpty) {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('user_email', email);
+      await prefs.setString('user_name', name.isNotEmpty ? name : 'Thành viên StudyDeck');
+      await prefs.setBool('is_logged_in', true);
+    }
+    if (!mounted) return;
     final fromSurvey = GoRouterState.of(context).uri.queryParameters['fromSurvey'] == 'true';
     if (fromSurvey) {
       context.go('/survey-start');

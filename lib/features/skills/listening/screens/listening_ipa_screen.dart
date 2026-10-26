@@ -279,7 +279,7 @@ class _ListeningIpaScreenState extends State<ListeningIpaScreen> {
             'LUYỆN TAI PHÂN BIỆT ÂM',
             style: TextStyle(
               fontSize: 17,
-              fontWeight: FontWeight.w900,
+              fontWeight: FontWeight.bold,
               color: Color(0xFF0F172A),
               letterSpacing: 0.2,
             ),
@@ -325,7 +325,7 @@ class _ListeningIpaScreenState extends State<ListeningIpaScreen> {
         children: [
           Text(
             number,
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Color(0xFF0F172A)),
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
           ),
           const SizedBox(height: 2),
           Text(
@@ -421,7 +421,7 @@ class _ListeningIpaScreenState extends State<ListeningIpaScreen> {
               pair.wordPairLabel,
               style: const TextStyle(
                 fontSize: 15,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.bold,
                 color: Color(0xFF0F172A),
               ),
             ),
@@ -465,7 +465,7 @@ class _ListeningIpaScreenState extends State<ListeningIpaScreen> {
         leading: AppBackButton(onPressed: _backToOverview),
         title: Text(
           _activePair!.soundPairTitle,
-          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: Color(0xFF0F172A)),
+          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
         ),
         centerTitle: true,
       ),
@@ -484,7 +484,7 @@ class _ListeningIpaScreenState extends State<ListeningIpaScreen> {
                       'CÂU ${_currentQuestionIndex + 1} / $totalQ',
                       style: const TextStyle(
                         fontSize: 12,
-                        fontWeight: FontWeight.w800,
+                        fontWeight: FontWeight.w600,
                         color: Color(0xFF475569),
                         letterSpacing: 0.5,
                       ),
@@ -633,7 +633,7 @@ class _ListeningIpaScreenState extends State<ListeningIpaScreen> {
             'BẤM ĐỂ NGHE · RỒI CHỌN TỪ BẠN NGHE ĐƯỢC',
             style: TextStyle(
               fontSize: 11.5,
-              fontWeight: FontWeight.w800,
+              fontWeight: FontWeight.w600,
               color: Color(0xFF475569),
               letterSpacing: 0.5,
             ),
@@ -699,7 +699,7 @@ class _ListeningIpaScreenState extends State<ListeningIpaScreen> {
                   word,
                   style: TextStyle(
                     fontSize: 22,
-                    fontWeight: FontWeight.w900,
+                    fontWeight: FontWeight.bold,
                     color: textColor,
                   ),
                 ),
@@ -791,7 +791,7 @@ class _ListeningIpaScreenState extends State<ListeningIpaScreen> {
                         isCorrect ? 'CHÍNH XÁC!' : 'CHƯA ĐÚNG!',
                         style: TextStyle(
                           fontSize: 12.5,
-                          fontWeight: FontWeight.w900,
+                          fontWeight: FontWeight.bold,
                           color: isCorrect ? const Color(0xFF166534) : const Color(0xFF991B1B),
                         ),
                       ),
@@ -852,7 +852,7 @@ class _ListeningIpaScreenState extends State<ListeningIpaScreen> {
         leading: AppBackButton(onPressed: _backToOverview),
         title: Text(
           'KẾT QUẢ · ${_activePair!.soundPairTitle.toUpperCase()}',
-          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: Color(0xFF0F172A)),
+          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
         ),
       ),
       body: SingleChildScrollView(
@@ -881,7 +881,7 @@ class _ListeningIpaScreenState extends State<ListeningIpaScreen> {
                     '$_correctCount / $totalQ',
                     style: const TextStyle(
                       fontSize: 36,
-                      fontWeight: FontWeight.w900,
+                      fontWeight: FontWeight.bold,
                       color: Color(0xFF0F172A),
                     ),
                   ),
@@ -914,7 +914,7 @@ class _ListeningIpaScreenState extends State<ListeningIpaScreen> {
                 'CÂU CÒN NHẦM',
                 style: TextStyle(
                   fontSize: 13,
-                  fontWeight: FontWeight.w900,
+                  fontWeight: FontWeight.bold,
                   color: Color(0xFF0F172A),
                   letterSpacing: 0.5,
                 ),

@@ -210,7 +210,7 @@ class _ListeningResultScreenState extends State<ListeningResultScreen>
               'BÁO CÁO KẾT QUẢ',
               style: TextStyle(
                 fontSize: 14,
-                fontWeight: FontWeight.w800,
+                fontWeight: FontWeight.w700,
                 color: Color(0xFF1E293B),
                 letterSpacing: 0.5,
               ),
@@ -371,7 +371,7 @@ class _ListeningResultScreenState extends State<ListeningResultScreen>
                       style: TextStyle(
                         color: Colors.white70,
                         fontSize: 9.5,
-                        fontWeight: FontWeight.w800,
+                        fontWeight: FontWeight.w600,
                         letterSpacing: 0.8,
                       ),
                     ),
@@ -381,7 +381,7 @@ class _ListeningResultScreenState extends State<ListeningResultScreen>
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: 28,
-                        fontWeight: FontWeight.w900,
+                        fontWeight: FontWeight.w700,
                         height: 1.1,
                       ),
                     ),
@@ -537,7 +537,7 @@ class _ListeningResultScreenState extends State<ListeningResultScreen>
                 'DẠNG BẠN ĐANG YẾU',
                 style: TextStyle(
                   fontSize: 13,
-                  fontWeight: FontWeight.w800,
+                  fontWeight: FontWeight.w700,
                   color: Color(0xFF1E293B),
                   letterSpacing: 0.5,
                 ),
@@ -668,12 +668,12 @@ class _ListeningResultScreenState extends State<ListeningResultScreen>
 
     return InkWell(
       onTap: () => setState(() => _currentFilter = filter),
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(8),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         decoration: BoxDecoration(
           color: isSelected ? activeColor : Colors.white,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: isSelected ? activeColor : const Color(0xFFCBD5E1),
           ),
@@ -971,7 +971,7 @@ class _ListeningResultScreenState extends State<ListeningResultScreen>
                   'PART ${sec.partNumber}',
                   style: const TextStyle(
                     fontSize: 11.5,
-                    fontWeight: FontWeight.w800,
+                    fontWeight: FontWeight.w600,
                     color: Color(0xFF4F46E5),
                     letterSpacing: 0.5,
                   ),

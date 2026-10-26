@@ -177,7 +177,268 @@ class WritingMockData {
       ],
     ),
 
-    // 4. Task 1: Pie Chart - Percentage of volunteers by organisation type
+    // 4. Task 2: Cooking as a Popular Hobby (Positive / Negative Development)
+    WritingPrompt(
+      id: 'task2_118',
+      taskType: WritingTaskType.task2,
+      category: WritingCategory.opinion,
+      categoryLabel: 'Opinion Essay',
+      title: 'Cooking as a Popular Hobby',
+      promptText:
+          'In recent years, many people have become interested in cooking as a hobby. Is this a positive or negative development?',
+      minWords: 250,
+      timeMinutes: 40,
+      targetBand: 'Band 7.5 - 8.5',
+      viewsCount: 3120,
+      aiBrainstorm: WritingAiBrainstorm(
+        strategy:
+          'Khẳng định rõ đây là một xu hướng tích cực (positive development) mang lại nhiều lợi ích vượt trội về sức khỏe thể chất (kiểm soát dinh dưỡng, tránh đồ ăn nhanh), giá trị tinh thần (giảm stress, gắn kết gia đình) và hiệu quả tài chính cá nhân.',
+        sections: [
+          BrainstormSection(
+            title: 'LỢI ÍCH SỨC KHỎE & KINH TẾ (HEALTH & ECONOMIC)',
+            points: [
+              'Chủ động kiểm soát nguyên liệu, hạn chế dầu mỡ, đường tinh luyện và chất bảo quản (Enables strict control over ingredients, drastically curtailing saturated fats and synthetic preservatives).',
+              'Tiết kiệm chi phí đáng kể so với việc thường xuyên ăn nhà hàng hoặc gọi đồ ăn nhanh (Substantially less costly than dining out frequently or ordering commercial takeout).',
+            ],
+          ),
+          BrainstormSection(
+            title: 'GIÁ TRỊ TÂM LÝ & GẮN KẾT (PSYCHOLOGICAL & SOCIAL)',
+            points: [
+              'Liệu pháp tinh thần giúp giải tỏa căng thẳng công việc qua việc sáng tạo ẩm thực (Culinary preparation serves as a therapeutic outlet to decompress from workplace stress).',
+              'Bữa cơm tự nấu tạo cơ hội gắn kết các thành viên gia đình và bạn bè (Home-cooked meals facilitate meaningful interpersonal bonding and strengthen familial ties).',
+            ],
+          ),
+        ],
+      ),
+      sampleEssayBand8:
+          'In contemporary society, an increasing proportion of individuals have embraced culinary preparation not merely as a domestic chore, but as an engaging recreational pastime. From my perspective, this burgeoning phenomenon represents an overwhelmingly positive development, as it promotes holistic physical wellbeing, fosters financial mindfulness, and serves as an effective therapeutic outlet.\n\nFirst and foremost, the resurgence of cooking at home delivers profound physical health advantages. Unlike restaurant fare and ultra-processed convenience meals—which are notoriously saturated with sodium, refined sugars, and hydrogenated fats to enhance shelf-life and palatability—home cooking affords complete sovereignty over dietary ingredients. Culinary hobbyists are empowered to select wholesome, nutrient-dense produce and regulate portion sizes, thereby mitigating the risk of diet-induced ailments such as hypertension, obesity, and cardiovascular diseases. Moreover, preparing meals from scratch represents an economical alternative to frequent dining out, enabling households to allocate fiscal resources toward other constructive long-term endeavors.\n\nBeyond physiological and economic dividends, cooking confers significant psychological and interpersonal benefits. In an era dominated by relentless digital screens and cognitive exhaustion, engaging the senses through chopping, seasoning, and tasting acts as a grounding form of mindful therapy. Many find the creative experimentation inherent in culinary arts to be an invigorating antidote to occupational stress. Furthermore, food has historically served as a universal social glue; gathering loved ones to savor home-cooked dishes nurtures deeper familial bonds and reinforces authentic human connections in an increasingly fragmented world.\n\nIn conclusion, the contemporary transition toward adopting cooking as an enjoyable hobby is unequivocally beneficial. It not only fortifies personal health and economic resilience, but also enhances mental equilibrium and social cohesion.',
+      usefulVocab: [
+        WritingVocabItem(
+          word: 'Culinary preparation',
+          ipa: '/ˈkʌlɪnəri ˌprepəˈreɪʃn/',
+          type: 'Noun phrase',
+          meaning: 'Hoạt động nấu nướng ẩm thực',
+          example: 'Culinary preparation has transformed from a mundane task into a mindful hobby.',
+        ),
+        WritingVocabItem(
+          word: 'Ultra-processed convenience meals',
+          ipa: '/ˌʌltrə ˈprəʊsest kənˈviːniəns miːlz/',
+          type: 'Noun phrase',
+          meaning: 'Bữa ăn tiện lợi siêu chế biến',
+          example: 'Frequent reliance on ultra-processed convenience meals fuels metabolic diseases.',
+        ),
+        WritingVocabItem(
+          word: 'Diet-induced ailments',
+          ipa: '/ˈdaɪət ɪnˈdjuːst ˈeɪlmənts/',
+          type: 'Noun phrase',
+          meaning: 'Các chứng bệnh do chế độ ăn uống gây ra',
+          example: 'Home-cooked nutrition sharply lowers the prevalence of diet-induced ailments.',
+        ),
+        WritingVocabItem(
+          word: 'Mindful therapy',
+          ipa: '/ˈmaɪndfl ˈθerəpi/',
+          type: 'Noun phrase',
+          meaning: 'Liệu pháp chánh niệm giải tỏa tâm lý',
+          example: 'Preparing fresh recipes after office hours acts as a restorative mindful therapy.',
+        ),
+      ],
+    ),
+
+    // 5. Task 2: Popularity of Extreme Sports (Two-part Question)
+    WritingPrompt(
+      id: 'task2_119',
+      taskType: WritingTaskType.task2,
+      category: WritingCategory.twoPart,
+      categoryLabel: 'Two-part Question',
+      title: 'Popularity of Extreme Sports',
+      promptText:
+          'Extreme sports such as skydiving and car racing have become increasingly popular. What are the reasons for this? What can be done to make these sports safer?',
+      minWords: 250,
+      timeMinutes: 40,
+      targetBand: 'Band 7.5 - 8.5',
+      viewsCount: 2780,
+      aiBrainstorm: WritingAiBrainstorm(
+        strategy:
+          'Bài viết cấu trúc 4 đoạn: Đoạn 1 nêu lý do thể thao mạo hiểm thu hút (tìm kiếm cảm giác mạnh adrenaline giải thoát lối sống đơn điệu, ảnh hưởng của mạng xã hội). Đoạn 2 nêu giải pháp an toàn (quy định chứng nhận thiết bị nghiêm ngặt, huấn luyện bắt buộc và kiểm tra sức khỏe).',
+        sections: [
+          BrainstormSection(
+            title: 'NGUYÊN NHÂN ƯA CHUỘNG (REASONS)',
+            points: [
+              'Nhu cầu kích thích cảm giác mạnh để thoát khỏi lối sống văn phòng ít vận động (The pursuit of intense adrenaline rushes to counteract sedentary monotony).',
+              'Sự lan tỏa của các video thể thao hành động góc nhìn thứ nhất trên mạng xã hội (Widespread dissemination of high-definition POV footage on viral digital platforms).',
+            ],
+          ),
+          BrainstormSection(
+            title: 'GIẢI PHÁP AN TOÀN (SAFETY MEASURES)',
+            points: [
+              'Ban hành tiêu chuẩn chứng nhận bắt buộc đối với trang thiết bị kỹ thuật (Enforce stringent certification standards for safety equipment and gear).',
+              'Yêu cầu kiểm tra sức khỏe và hoàn thành khóa huấn luyện chuyên nghiệp trước khi tham gia (Mandate rigorous physical assessments and accredited training before granting permits).',
+            ],
+          ),
+        ],
+      ),
+      sampleEssayBand8:
+          'In recent years, adrenaline-fueled pursuits such as skydiving, white-water rafting, and motorsport racing have captured the fascination of millions worldwide. This growing allure stems fundamentally from a psychological yearning for escapism and the amplifying power of digital media, though concerted institutional safeguards must be instituted to curtail catastrophic risks.\n\nThe primary driver behind the popularity of extreme sports is the modern urbanite’s craving for sensory stimulation. In contemporary society, countless individuals lead highly predictable, sedentary lifestyles confined to cubicles and computer monitors. Participating in perilous activities triggers an instantaneous surge of adrenaline and endorphins, providing an intense sensation of euphoria and vitality that mundane routines fail to offer. Additionally, the proliferation of social media platforms has propelled this trend into the cultural mainstream. Content creators frequently broadcast exhilarating high-definition first-person footage of daring exploits, inspiring impressionable audiences to test their own thresholds of courage.\n\nTo safeguard enthusiasts without dampening their passion, comprehensive regulatory measures are indispensable. Foremost, governing bodies must establish non-negotiable safety protocols and enforce rigorous quality checks on all mechanical equipment, such as reserve parachutes, braking systems, and protective armor. Unlicensed operators utilizing substandard gear must face severe punitive fines or criminal prosecution. Furthermore, participants ought to undergo mandatory medical screenings and accredited competency training prior to engaging in high-risk ventures, ensuring they possess the physiological stamina and emergency protocols necessary to handle perilous contingencies.\n\nTo conclude, while the allure of extreme sports is driven by the desire to transcend monotonous routines and the influence of viral media, their lethal hazards can be effectively contained through uncompromising equipment standards and compulsory professional training.',
+      usefulVocab: [
+        WritingVocabItem(
+          word: 'Adrenaline-fueled pursuits',
+          ipa: '/əˈdrenəlɪn fjuːəld pəˈsjuːts/',
+          type: 'Noun phrase',
+          meaning: 'Các hoạt động kích thích cảm giác mạnh',
+          example: 'Young adults increasingly spend weekends engaging in adrenaline-fueled pursuits.',
+        ),
+        WritingVocabItem(
+          word: 'Sedentary monotony',
+          ipa: '/ˈsedntri məˈnɒtəni/',
+          type: 'Noun phrase',
+          meaning: 'Sự đơn điệu của lối sống ít vận động',
+          example: 'Extreme adventures offer a psychological escape from corporate sedentary monotony.',
+        ),
+        WritingVocabItem(
+          word: 'Non-negotiable safety protocols',
+          ipa: '/nɒn nɪˈɡəʊʃiəbl ˈseɪfti ˈprəʊtəkɒlz/',
+          type: 'Noun phrase',
+          meaning: 'Các quy chuẩn an toàn không thể thương lượng',
+          example: 'Commercial operators must adhere strictly to non-negotiable safety protocols.',
+        ),
+        WritingVocabItem(
+          word: 'Perilous contingencies',
+          ipa: '/ˈperələs kənˈtɪndʒənsiz/',
+          type: 'Noun phrase',
+          meaning: 'Các sự cố bất ngờ đầy nguy hiểm',
+          example: 'Skydivers undergo extensive drills to navigate perilous contingencies at high altitudes.',
+        ),
+      ],
+    ),
+
+    // 6. Task 2: Dangers of Scientific Discoveries (Opinion Essay)
+    WritingPrompt(
+      id: 'task2_120',
+      taskType: WritingTaskType.task2,
+      category: WritingCategory.opinion,
+      categoryLabel: 'Opinion Essay',
+      title: 'Dangers of Scientific Discoveries',
+      promptText:
+          'Some people think that scientific discoveries have made our world more dangerous. To what extent do you agree or disagree?',
+      minWords: 250,
+      timeMinutes: 40,
+      targetBand: 'Band 7.5 - 8.5',
+      viewsCount: 2450,
+      aiBrainstorm: WritingAiBrainstorm(
+        strategy:
+          'Bày tỏ quan điểm không đồng tình (disagree). Thừa nhận những rủi ro quân sự hóa và ô nhiễm công nghiệp. Tuy nhiên khẳng định mạnh mẽ khoa học giúp nhân loại an toàn hơn nhờ xóa bỏ dịch bệnh hiểm nghèo, cảnh báo sớm thiên tai và nâng cao tuổi thọ trung bình.',
+        sections: [
+          BrainstormSection(
+            title: 'RỦI RO ĐANG TỒN TẠI (EXISTING PERILS)',
+            points: [
+              'Vũ khí hủy diệt hàng loạt và chiến tranh mạng (Militarization of breakthroughs, including thermonuclear warheads and autonomous cyber weaponry).',
+              'Ô nhiễm môi trường và biến đổi khí hậu từ công nghiệp hóa (Anthropogenic environmental degradation and global warming).',
+            ],
+          ),
+          BrainstormSection(
+            title: 'LỢI ÍCH BẢO VỆ VƯỢT TRỘI (LIFE-SAVING POWER)',
+            points: [
+              'Y học và kháng sinh đẩy lùi dịch bệnh, nhân đôi tuổi thọ con người (Pharmacology, sanitation, and vaccines doubling human life expectancy).',
+              'Vệ tinh và AI dự báo sớm thiên tai, bảo vệ hàng triệu người (Meteorology and seismic sensors enabling timely evacuations).',
+            ],
+          ),
+        ],
+      ),
+      sampleEssayBand8:
+          'A faction of critics asserts that the relentless progression of scientific inquiry has rendered our planet a substantially more precarious habitat. While catastrophic technologies like weapons of mass destruction certainly validate these anxieties, I largely dispute this premise, as scientific innovation has universally elevated human longevity, eradicated existential diseases, and enhanced global security against natural perils.\n\nAdmittedly, scientific discovery has occasionally amplified the scale of existential threats. The most palpable manifestation is the proliferation of military technologies, notably thermonuclear warheads, chemical agents, and autonomous cyber weaponry, which possess the harrowing capacity to obliterate civilizations in minutes. Furthermore, unregulated scientific exploitation of fossil fuels and chemical engineering has precipitated planetary crises, including global warming, microplastic contamination, and biodiversity collapse. These disastrous ramifications demonstrate that when detached from ethical oversight, scientific prowess can indeed engender unprecedented vulnerabilities.\n\nNevertheless, the overwhelmingly dominant trajectory of science has been life-preserving rather than destructive. Before the advent of modern biomedical science, everyday bacterial infections, smallpox, and tuberculosis routinely decimated populations, resulting in an average global life expectancy below forty years. The development of sanitation systems, broad-spectrum antibiotics, and revolutionary mRNA vaccines has effectively subdued infectious scourges, saving billions of lives. Moreover, modern meteorology and seismology, powered by satellite observation networks and artificial intelligence, provide accurate early warnings for typhoons and tsunamis, enabling timely evacuations that prevent catastrophic death tolls. Without these scientific tools, human existence would remain profoundly fragile and exposed to the brutal caprices of nature.\n\nIn conclusion, although the misapplication of scientific breakthroughs has produced menacing hazards, science on the whole has served as humanity\'s most formidable shield, delivering unprecedented safety, longevity, and stability to modern civilization.',
+      usefulVocab: [
+        WritingVocabItem(
+          word: 'Existential threats',
+          ipa: '/ˌeɡzɪˈstenʃl θrets/',
+          type: 'Noun phrase',
+          meaning: 'Hiểm họa mang tính sống còn đối với nhân loại',
+          example: 'Thermonuclear proliferation remains one of the gravest existential threats.',
+        ),
+        WritingVocabItem(
+          word: 'Subdued infectious scourges',
+          ipa: '/səbˈdjuːd ɪnˈfekʃəs ˈskɜːdʒɪz/',
+          type: 'Verb phrase',
+          meaning: 'Đẩy lùi và dập tắt các đại dịch truyền nhiễm',
+          example: 'Mass vaccination campaigns have largely subdued infectious scourges worldwide.',
+        ),
+        WritingVocabItem(
+          word: 'Precipitated planetary crises',
+          ipa: '/prɪˈsɪpɪteɪtɪd ˈplænətri ˈkraɪsiːz/',
+          type: 'Verb phrase',
+          meaning: 'Châm ngòi cho các cuộc khủng hoảng quy mô hành tinh',
+          example: 'Unrestrained carbon emissions have precipitated planetary crises in climate systems.',
+        ),
+      ],
+    ),
+
+    // 7. Task 2: Celebrity Support for Charities (Discuss Both Views)
+    WritingPrompt(
+      id: 'task2_121',
+      taskType: WritingTaskType.task2,
+      category: WritingCategory.discussBoth,
+      categoryLabel: 'Discuss Both Views',
+      title: 'Celebrity Support for Charities',
+      promptText:
+          'Some people think famous people\'s support can help raise money for charities. Others think celebrities should not be involved in charities. Discuss both views and give your opinion.',
+      minWords: 250,
+      timeMinutes: 40,
+      targetBand: 'Band 7.5 - 8.5',
+      viewsCount: 2630,
+      aiBrainstorm: WritingAiBrainstorm(
+        strategy:
+          'Thảo luận 2 mặt: Đoạn 1 phân tích rủi ro khi người nổi tiếng làm từ thiện (nghi ngờ chiêu trò PR, làm lu mờ thông điệp tổ chức, bê bối cá nhân gây tổn hại uy tín quỹ). Đoạn 2 làm rõ sức mạnh huy động tài chính (độ phủ sóng truyền thông, thu hút người trẻ quyên góp). Kết luận khẳng định giá trị to lớn của nghệ sĩ khi có sự giám sát tài chính minh bạch.',
+        sections: [
+          BrainstormSection(
+            title: 'MẶT TRÁI & QUAN ĐIỂM HOÀI NGHI (SKEPTICAL VIEW)',
+            points: [
+              'Từ thiện bị biến tướng thành công cụ PR đánh bóng tên tuổi (Charitable advocacy being co-opted as a superficial public relations stunt).',
+              'Bê bối cá nhân của nghệ sĩ làm sụp đổ uy tín của quỹ từ thiện liên đới (Celebrity scandals can irreparably tarnish donor trust in nonprofit organizations).',
+            ],
+          ),
+          BrainstormSection(
+            title: 'SỨC MẠNH HUY ĐỘNG TÀI CHÍNH (PHILANTHROPIC REACH)',
+            points: [
+              'Tận dụng lượng người theo dõi khổng lồ để kích hoạt làn sóng quyên góp (Vast social media followings mobilize substantial micro-donations from youth demographics).',
+              'Đưa các cuộc khủng hoảng bị lãng quên lên tâm điểm báo chí chính thống (Catapults neglected humanitarian crises onto mainstream news agendas).',
+            ],
+          ),
+        ],
+      ),
+      sampleEssayBand8:
+          'The involvement of high-profile personalities in philanthropic endeavors has sparked continuous debate. While skeptics assert that celebrity patronage often degenerates into self-serving publicity maneuvers, advocates maintain that their star power is vital for mobilizing resources. This essay analyzes both perspectives before arguing that famous individuals offer invaluable contributions to charitable initiatives provided rigorous financial accountability is upheld.\n\nOn the one hand, reservations regarding celebrity philanthropy are not without merit. Foremost among these is the perception of insincerity; critics frequently suspect that public figures exploit altruistic causes as calculated marketing gimmicks to rehabilitate tarnished reputations or burnish their public profiles. Furthermore, the celebrity often overshadows the cause itself, drawing media scrutiny toward their attire or lifestyle rather than the systemic struggles of the disadvantaged. Worse still, if a celebrity ambassador becomes entangled in a high-profile personal scandal, the associated charity risks severe reputational collateral damage, precipitating a collapse in donor trust.\n\nConversely, the tangible benefits of celebrity endorsement are undeniable and frequently irreplaceable. In an era saturated with information, charitable organizations face fierce competition for public attention. Celebrities possess vast followings across social media platforms, allowing them to instantaneously catapult neglected humanitarian crises onto mainstream news agendas. By leveraging their emotional resonance, they can motivate hundreds of thousands of ordinary fans—particularly younger demographics who might otherwise remain disengaged—to contribute micro-donations that cumulatively total millions of dollars. For instance, global relief campaigns championed by international stars during humanitarian disasters have repeatedly secured life-saving supplies far quicker than conventional bureaucratic fundraising.\n\nTo conclude, although concerns over superficiality and reputational risks are justifiable, I firmly believe that the immense advocacy reach and fundraising capacity of celebrities are overwhelmingly beneficial, so long as charity operations remain transparent and professionally audited.',
+      usefulVocab: [
+        WritingVocabItem(
+          word: 'Philanthropic endeavors',
+          ipa: '/ˌfɪlənˈθrɒpɪk ɪnˈdevəz/',
+          type: 'Noun phrase',
+          meaning: 'Các nỗ lực từ thiện, nhân đạo',
+          example: 'Major celebrities often donate millions to global philanthropic endeavors.',
+        ),
+        WritingVocabItem(
+          word: 'Public relations stunt',
+          ipa: '/ˌpʌblɪk rɪˈleɪʃnz stʌnt/',
+          type: 'Noun phrase',
+          meaning: 'Chiêu trò PR đánh bóng tên tuổi',
+          example: 'Cynics dismiss celebrity fundraisers as a calculated public relations stunt.',
+        ),
+        WritingVocabItem(
+          word: 'Catapult onto mainstream news',
+          ipa: '/ˈkætəpʌlt ˈɒntuː ˈmeɪnstriːm njuːz/',
+          type: 'Verb phrase',
+          meaning: 'Đưa sự việc lập tức lên tâm điểm báo chí',
+          example: 'Star endorsements can catapult obscure causes onto mainstream news agendas.',
+        ),
+        WritingVocabItem(
+          word: 'Reputational collateral damage',
+          ipa: '/ˌrepjuˈteɪʃənl kəˈlætərəl ˈdæmɪdʒ/',
+          type: 'Noun phrase',
+          meaning: 'Thiệt hại uy tín liên đới',
+          example: 'Ambassador controversies often inflict reputational collateral damage on charities.',
+        ),
+      ],
+    ),
+
+    // 8. Task 1: Pie Chart - Percentage of volunteers by organisation type
     WritingPrompt(
       id: 'task1_001',
       taskType: WritingTaskType.task1,

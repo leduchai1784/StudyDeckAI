@@ -154,85 +154,91 @@ class _WritingTranslationPracticeScreenState
   void _showSentencePickerBottomSheet() {
     showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       backgroundColor: Colors.white,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       builder: (ctx) {
         return SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(16, 16, 16, 20),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Danh Sách Câu Hỏi (${widget.exercise.sentences.length} câu)',
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: AppTheme.brandTextPrimary,
-                      ),
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.close, size: 20),
-                      onPressed: () => Navigator.pop(ctx),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 12),
-                Wrap(
-                  spacing: 8,
-                  runSpacing: 8,
-                  children: List.generate(widget.exercise.sentences.length, (idx) {
-                    final isCurrent = idx == _currentIndex;
-                    final isCompleted = _completedSentenceIndices.contains(idx);
-
-                    Color bg = const Color(0xFFF1F5F9);
-                    Color textCol = const Color(0xFF475569);
-                    Border? border;
-
-                    if (isCompleted) {
-                      bg = const Color(0xFFDCFCE7);
-                      textCol = const Color(0xFF15803D);
-                    }
-                    if (isCurrent) {
-                      bg = AppTheme.brandPrimary;
-                      textCol = Colors.white;
-                      border = Border.all(color: AppTheme.brandPrimary, width: 2);
-                    }
-
-                    return InkWell(
-                      onTap: () {
-                        Navigator.pop(ctx);
-                        _goToSentence(idx);
-                      },
-                      borderRadius: BorderRadius.circular(8),
-                      child: Container(
-                        width: 44,
-                        height: 44,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: bg,
-                          borderRadius: BorderRadius.circular(8),
-                          border: border,
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxHeight: MediaQuery.of(ctx).size.height * 0.75,
+            ),
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 20),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Danh Sách ${widget.exercise.step == 5 ? 'Đoạn' : 'Câu'} (${widget.exercise.sentences.length} ${widget.exercise.step == 5 ? 'đoạn' : 'câu'})',
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: AppTheme.brandTextPrimary,
                         ),
-                        child: Text(
-                          '${idx + 1}',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            color: textCol,
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.close, size: 20),
+                        onPressed: () => Navigator.pop(ctx),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: List.generate(widget.exercise.sentences.length, (idx) {
+                      final isCurrent = idx == _currentIndex;
+                      final isCompleted = _completedSentenceIndices.contains(idx);
+
+                      Color bg = const Color(0xFFF1F5F9);
+                      Color textCol = const Color(0xFF475569);
+                      Border? border;
+
+                      if (isCompleted) {
+                        bg = const Color(0xFFDCFCE7);
+                        textCol = const Color(0xFF15803D);
+                      }
+                      if (isCurrent) {
+                        bg = AppTheme.brandPrimary;
+                        textCol = Colors.white;
+                        border = Border.all(color: AppTheme.brandPrimary, width: 2);
+                      }
+
+                      return InkWell(
+                        onTap: () {
+                          Navigator.pop(ctx);
+                          _goToSentence(idx);
+                        },
+                        borderRadius: BorderRadius.circular(8),
+                        child: Container(
+                          width: 44,
+                          height: 44,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: bg,
+                            borderRadius: BorderRadius.circular(8),
+                            border: border,
+                          ),
+                          child: Text(
+                            '${idx + 1}',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: textCol,
+                            ),
                           ),
                         ),
-                      ),
-                    );
-                  }),
-                ),
-              ],
+                      );
+                    }),
+                  ),
+                ],
+              ),
             ),
           ),
         );
@@ -343,7 +349,9 @@ class _WritingTranslationPracticeScreenState
                                 borderRadius: BorderRadius.circular(6),
                               ),
                               child: Text(
-                                'CÂU ${_currentIndex + 1} / $total',
+                                widget.exercise.step == 5
+                                    ? 'ĐOẠN ${_currentIndex + 1} / $total'
+                                    : 'CÂU ${_currentIndex + 1} / $total',
                                 style: const TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.bold,
@@ -481,14 +489,17 @@ class _WritingTranslationPracticeScreenState
                         TextField(
                           controller: _inputController,
                           focusNode: _focusNode,
-                          maxLines: 3,
+                          minLines: 2,
+                          maxLines: 5,
                           textInputAction: TextInputAction.done,
                           onSubmitted: (_) => _handleSubmit(),
                           style: const TextStyle(fontSize: 14, height: 1.4),
-                          decoration: const InputDecoration(
-                            hintText: 'Nhập câu tiếng Anh dịch của bạn tại đây...',
-                            hintStyle: TextStyle(fontSize: 13, color: Color(0xFF94A3B8)),
-                            contentPadding: EdgeInsets.all(12),
+                          decoration: InputDecoration(
+                            hintText: widget.exercise.step == 5
+                                ? 'Nhập đoạn văn tiếng Anh dịch của bạn tại đây...'
+                                : 'Nhập câu tiếng Anh dịch của bạn tại đây...',
+                            hintStyle: const TextStyle(fontSize: 13, color: Color(0xFF94A3B8)),
+                            contentPadding: const EdgeInsets.all(12),
                             border: InputBorder.none,
                           ),
                         ),
@@ -609,37 +620,59 @@ class _WritingTranslationPracticeScreenState
 
           // Bottom Navigation Controls
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             decoration: const BoxDecoration(
               color: Colors.white,
               border: Border(top: BorderSide(color: Color(0xFFE2E8F0))),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                OutlinedButton.icon(
-                  onPressed: _currentIndex > 0 ? () => _goToSentence(_currentIndex - 1) : null,
-                  icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 14),
-                  label: const Text('Câu trước'),
-                  style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                Expanded(
+                  flex: 4,
+                  child: OutlinedButton.icon(
+                    onPressed: _currentIndex > 0 ? () => _goToSentence(_currentIndex - 1) : null,
+                    icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 13),
+                    label: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(widget.exercise.step == 5 ? 'Đoạn trước' : 'Câu trước'),
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    ),
                   ),
                 ),
-                TextButton.icon(
-                  onPressed: _showSentencePickerBottomSheet,
-                  icon: const Icon(Icons.format_list_numbered_rounded, size: 18),
-                  label: Text('Câu ${_currentIndex + 1}/$total'),
+                const SizedBox(width: 8),
+                Expanded(
+                  flex: 3,
+                  child: TextButton.icon(
+                    onPressed: _showSentencePickerBottomSheet,
+                    icon: const Icon(Icons.format_list_numbered_rounded, size: 16),
+                    label: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text('${_currentIndex + 1}/$total'),
+                    ),
+                    style: TextButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 10),
+                    ),
+                  ),
                 ),
-                ElevatedButton.icon(
-                  onPressed: _currentIndex < total - 1 ? () => _goToSentence(_currentIndex + 1) : null,
-                  icon: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
-                  label: const Text('Câu sau'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: AppTheme.brandPrimary,
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                const SizedBox(width: 8),
+                Expanded(
+                  flex: 4,
+                  child: ElevatedButton.icon(
+                    onPressed: _currentIndex < total - 1 ? () => _goToSentence(_currentIndex + 1) : null,
+                    icon: const Icon(Icons.arrow_forward_ios_rounded, size: 13),
+                    label: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(widget.exercise.step == 5 ? 'Đoạn sau' : 'Câu sau'),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppTheme.brandPrimary,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    ),
                   ),
                 ),
               ],

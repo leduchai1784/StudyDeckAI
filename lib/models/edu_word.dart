@@ -44,15 +44,29 @@ class EduWord {
 
   factory EduWord.fromJson(Map<String, dynamic> json) {
     final acf = json['acf'] as Map<String, dynamic>? ?? {};
+
+    String getString(String key) {
+      if (json[key] != null && json[key].toString().trim().isNotEmpty) {
+        return json[key].toString().trim();
+      }
+      if (acf[key] != null && acf[key].toString().trim().isNotEmpty) {
+        return acf[key].toString().trim();
+      }
+      return '';
+    }
+
+    final rawLevel = getString('level');
+    final level = rawLevel.isNotEmpty ? rawLevel.toUpperCase() : 'A1';
+
     return EduWord(
       id: json['id'] is int ? json['id'] as int : int.tryParse(json['id'].toString()) ?? 0,
       title: (json['title'] as String? ?? '').trim(),
-      viword: (acf['viword'] as String? ?? '').trim(),
-      description: (acf['description'] as String? ?? '').trim(),
-      videscription: (acf['videscription'] as String? ?? '').trim(),
-      transcription: (acf['transcription'] as String? ?? '').trim(),
-      example: (acf['example'] as String? ?? '').trim(),
-      level: (acf['level'] as String?)?.toUpperCase().trim() ?? 'A1',
+      viword: getString('viword'),
+      description: getString('description'),
+      videscription: getString('videscription'),
+      transcription: getString('transcription'),
+      example: getString('example'),
+      level: level,
       customDeckId: (json['custom_deck_id'] ?? acf['custom_deck_id']) as String?,
     );
   }

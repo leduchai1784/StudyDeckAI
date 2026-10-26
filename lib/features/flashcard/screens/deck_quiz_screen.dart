@@ -447,10 +447,10 @@ class _DeckQuizScreenState extends State<DeckQuizScreen> {
                     foregroundColor: Colors.white,
                     elevation: 0,
                     padding: const EdgeInsets.symmetric(vertical: 14),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                   ),
                   child: Text(
-                    _currentIndex + 1 < _questions.length ? 'Câu tiếp theo →' : 'Xem kết quả kiểm tra',
+                    _currentIndex + 1 < _questions.length ? 'Câu tiếp theo' : 'Xem kết quả kiểm tra',
                     style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                   ),
                 ),

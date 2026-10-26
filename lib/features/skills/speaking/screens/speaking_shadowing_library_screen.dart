@@ -192,7 +192,7 @@ class _SpeakingShadowingLibraryScreenState
                       'BÀI TẬP SHADOWING',
                       style: TextStyle(
                         fontSize: 13,
-                        fontWeight: FontWeight.w800,
+                        fontWeight: FontWeight.w700,
                         color: Color(0xFF475569),
                         letterSpacing: 0.6,
                       ),

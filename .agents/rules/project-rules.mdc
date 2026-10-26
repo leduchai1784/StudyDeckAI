@@ -19,4 +19,14 @@ Core rules:
 - Keep the UI clean, consistent, modern, and demo-ready.
 - For Cambridge exam practice modules (Reading, Listening), always follow the hierarchical pattern: outer hub displays Cambridge volume cards; tapping a volume opens tests list screen.
 - Avoid cognitive overload: keep text minimal, banners compact, and limit competing colored badges.
+- Mobile Hub & Dashboard Navigation Cards:
+  * Khi mở rộng kích thước thẻ để cân đối màn hình, LUÔN điều chỉnh qua padding (vertical: 16-18), kích thước icon (44-48px) và khoảng cách bố cục, TUYỆT ĐỐI KHÔNG tăng kích thước bằng cách nhồi nhét đoạn văn bản dài.
+  * Tiêu đề (Title) phải ngắn gọn (<= 3-4 từ) để không bao giờ bị cắt cụt ba chấm (...) trên màn hình di động hẹp.
+  * Tag/Badge đính kèm tối đa 1-2 từ (ví dụ: '2 đề', 'Phản xạ', 'Chấm thi').
+  * Mô tả (Subtitle) giới hạn đúng 1 dòng ngắn gọn (<= 40 ký tự) để giữ giao diện thoáng đãng, tinh tế và không rối mắt.
 - Run build/test after code changes when possible.
+- Flutter Soft Keyboard & Custom Input Slots (IME Handling):
+  * Khi xây dựng các widget nhập liệu tùy biến dạng ô (như OTP, PIN code, Letter Slots) dùng `TextField` ẩn và `FocusNode`:
+    - BẮT BUỘC thêm `WidgetsBindingObserver` lắng nghe `didChangeMetrics()`: khi `viewInsets.bottom == 0` (bàn phím bị ẩn bởi phím Back/Down của Android), gọi `_focusNode.unfocus()` để đồng bộ trạng thái focus.
+    - Trong các sự kiện chạm (`onTapSlot`), luôn gọi `SystemChannels.textInput.invokeMethod('TextInput.show')` kèm `_focusNode.requestFocus()` để đảm bảo bàn phím ảo luôn được kích hoạt mở lại.
+

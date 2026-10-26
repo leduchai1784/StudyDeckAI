@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../app/theme.dart';
-import '../data/writing_mock_data.dart';
-import '../models/writing_model.dart';
 import 'writing_tests_list_screen.dart';
-import 'writing_practice_screen.dart';
 import 'writing_translation_hub_screen.dart';
 import '../../../../shared/widgets/app_back_button.dart';
 
@@ -28,11 +25,11 @@ class WritingHubScreen extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(16, 14, 16, 32),
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 1. Section Title
+            // Section Title
             const Text(
               'CHẾ ĐỘ LUYỆN TẬP',
               style: TextStyle(
@@ -44,19 +41,19 @@ class WritingHubScreen extends StatelessWidget {
             ),
             const SizedBox(height: 12),
 
-            // 2. Bento Card 1: Kho Đề Thi Viết
+            // Card 1: Luyện Viết IELTS
             _buildBentoCard(
               context: context,
-              icon: Icons.menu_book_rounded,
+              icon: Icons.edit_note_rounded,
               iconBgColor: const Color(0xFFFEE2E2),
               iconColor: const Color(0xFFDC2626),
               badgeText: 'TASK 1 & TASK 2',
               badgeBgColor: const Color(0xFFFEF2F2),
               badgeTextColor: const Color(0xFFB91C1C),
-              title: 'Kho Đề Thi Viết',
-              subtitle: 'Bộ đề thi thật Task 1 và Task 2 phân loại theo từng dạng bài chuẩn Cambridge.',
-              footerInfo: 'Đề thi thật • Chấm chữa AI',
-              buttonLabel: 'Luyện đề',
+              title: 'Luyện Viết IELTS',
+              subtitle: 'Đề thi thật Cambridge Task 1 & 2, hỗ trợ dàn ý và chấm chữa 4 tiêu chí AI.',
+              footerInfo: 'Đề thi thật • Chấm AI',
+              buttonLabel: 'Luyện viết',
               onTap: () {
                 Navigator.push(
                   context,
@@ -66,61 +63,7 @@ class WritingHubScreen extends StatelessWidget {
             ),
             const SizedBox(height: 14),
 
-            // 3. Bento Card 2: Luyện Viết Task 2 (Essay)
-            _buildBentoCard(
-              context: context,
-              icon: Icons.edit_note_rounded,
-              iconBgColor: const Color(0xFFFFFBEB),
-              iconColor: const Color(0xFFD97706),
-              badgeText: 'NGHỊ LUẬN XÃ HỘI',
-              badgeBgColor: const Color(0xFFFEF3C7),
-              badgeTextColor: const Color(0xFF92400E),
-              title: 'Phòng Viết Task 2',
-              subtitle: 'Luyện viết bài luận tối thiểu 250 từ, gợi ý ý tưởng AI Brainstorm và sửa lỗi tức thì.',
-              footerInfo: 'Dàn ý • Chấm 4 tiêu chí',
-              buttonLabel: 'Vào viết',
-              onTap: () {
-                final task2Prompt = WritingMockData.prompts.firstWhere(
-                  (p) => p.taskType == WritingTaskType.task2,
-                );
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => WritingPracticeScreen(prompt: task2Prompt),
-                  ),
-                );
-              },
-            ),
-            const SizedBox(height: 14),
-
-            // 4. Bento Card 3: Luyện Viết Task 1 (Report)
-            _buildBentoCard(
-              context: context,
-              icon: Icons.pie_chart_rounded,
-              iconBgColor: const Color(0xFFEEF2FF),
-              iconColor: const Color(0xFF4F46E5),
-              badgeText: 'MÔ TẢ BIỂU ĐỒ',
-              badgeBgColor: const Color(0xFFEEF2FF),
-              badgeTextColor: const Color(0xFF4338CA),
-              title: 'Phòng Viết Task 1',
-              subtitle: 'Mô tả biểu đồ tròn, cột, đường, bảng và bản đồ tối thiểu 150 từ.',
-              footerInfo: 'Từ vựng miêu tả số liệu',
-              buttonLabel: 'Vào viết',
-              onTap: () {
-                final task1Prompt = WritingMockData.prompts.firstWhere(
-                  (p) => p.taskType == WritingTaskType.task1,
-                );
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => WritingPracticeScreen(prompt: task1Prompt),
-                  ),
-                );
-              },
-            ),
-            const SizedBox(height: 14),
-
-            // 5. Bento Card 4: Tập Dịch IELTS
+            // Card 2: Luyện Dịch IELTS
             _buildBentoCard(
               context: context,
               icon: Icons.translate_rounded,
@@ -129,9 +72,9 @@ class WritingHubScreen extends StatelessWidget {
               badgeText: 'DỊCH VIỆT - ANH',
               badgeBgColor: const Color(0xFFDCFCE7),
               badgeTextColor: const Color(0xFF15803D),
-              title: 'Tập Dịch IELTS (Song Ngữ)',
-              subtitle: 'Lộ trình 5 bước dịch câu, collocations, ghép đoạn và hoàn thiện bài Essay.',
-              footerInfo: '5 Bước • 51 Chủ đề • 1.700+ câu',
+              title: 'Luyện Dịch IELTS',
+              subtitle: 'Lộ trình 5 bước rèn tư duy câu và từ vựng học thuật từ câu đến bài hoàn chỉnh.',
+              footerInfo: '51 Chủ đề • 1.700+ câu',
               buttonLabel: 'Luyện dịch',
               onTap: () {
                 Navigator.push(
@@ -140,7 +83,6 @@ class WritingHubScreen extends StatelessWidget {
                 );
               },
             ),
-            const SizedBox(height: 36),
           ],
         ),
       ),
@@ -164,7 +106,7 @@ class WritingHubScreen extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(14),
         border: Border.all(color: const Color(0xFFE2E8F0)),
         boxShadow: [
           BoxShadow(
@@ -177,7 +119,7 @@ class WritingHubScreen extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(14),
           onTap: onTap,
           child: Padding(
             padding: const EdgeInsets.all(16),
@@ -224,12 +166,12 @@ class WritingHubScreen extends StatelessWidget {
                 Text(
                   title,
                   style: const TextStyle(
-                    fontSize: 16,
+                    fontSize: 16.5,
                     fontWeight: FontWeight.bold,
                     color: AppTheme.brandTextPrimary,
                   ),
                 ),
-                const SizedBox(height: 4),
+                const SizedBox(height: 5),
 
                 // Subtitle
                 Text(
@@ -237,7 +179,7 @@ class WritingHubScreen extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 12.5,
                     color: Color(0xFF64748B),
-                    height: 1.35,
+                    height: 1.4,
                   ),
                 ),
                 const SizedBox(height: 14),

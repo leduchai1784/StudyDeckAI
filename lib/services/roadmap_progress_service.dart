@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../features/grammar/data/grammar_lessons_data.dart';
+import '../features/grammar/data/grammar_lessons_repository.dart';
 import 'flashcard_progress_service.dart';
 import 'survey_service.dart';
 
@@ -100,7 +100,7 @@ class RoadmapProgressService {
 
     // Determine next roadmap lesson
     final allCompleted = await getAllCompletedLessonIds();
-    final grammarLessons = GrammarLessonsData.getAllLessons();
+    final grammarLessons = await GrammarLessonsRepository.instance.getAllLessons();
 
     String nextId = 'grm_word_forms';
     String nextTitle = 'Word Forms — Dạng thức từ';
