@@ -47,8 +47,9 @@ app.*.map.json
 /scratch/
 **/ios/Flutter/ephemeral/
 
-# AI Agent Skills (Do not push to git)
-.agents/skills/
+# AI Agent (Keep local, do not push to git)
+.agents/
+AGENTS.md
 
 # Local text dumps and scratch files
 srs_content_dump.txt
