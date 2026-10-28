@@ -92,9 +92,9 @@ extension FlashcardStudyModeExt on FlashcardStudyMode {
       case FlashcardStudyMode.pronunciation:
         return Icons.mic_rounded;
       case FlashcardStudyMode.cardBlast:
-        return Icons.local_fire_department_rounded;
+        return Icons.track_changes_rounded;
       case FlashcardStudyMode.mixed:
-        return Icons.shuffle_rounded;
+        return Icons.category_rounded;
     }
   }
 
@@ -113,9 +113,9 @@ extension FlashcardStudyModeExt on FlashcardStudyMode {
       case FlashcardStudyMode.pronunciation:
         return const Color(0xFFE11D48); // Rose/Red
       case FlashcardStudyMode.cardBlast:
-        return const Color(0xFFEA580C); // Orange Flame
+        return const Color(0xFF3F86E0); // Blue Target (theo ảnh)
       case FlashcardStudyMode.mixed:
-        return const Color(0xFF6366F1); // Indigo sáng / Violet
+        return const Color(0xFFD4549C); // Pink Category (theo ảnh)
     }
   }
 
@@ -153,16 +153,33 @@ class FlashcardModeBottomBar extends StatelessWidget {
     required this.onChangeMode,
   });
 
+  String _getSubModeName(FlashcardStudyMode mode) {
+    switch (mode) {
+      case FlashcardStudyMode.flipCard:
+        return 'Lật thẻ';
+      case FlashcardStudyMode.typing:
+        return 'Gõ từ';
+      case FlashcardStudyMode.quiz:
+        return 'Quiz';
+      case FlashcardStudyMode.listening:
+        return 'Luyện nghe';
+      case FlashcardStudyMode.cloze:
+        return 'Điền từ';
+      case FlashcardStudyMode.pronunciation:
+        return 'Phát âm AI';
+      case FlashcardStudyMode.cardBlast:
+        return 'Card Blast';
+      case FlashcardStudyMode.mixed:
+        return 'Tổng hợp';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    final effectiveColor = (currentMode == FlashcardStudyMode.mixed && currentSubMode != null)
-        ? currentSubMode!.color
-        : currentMode.color;
-    final effectiveIcon = (currentMode == FlashcardStudyMode.mixed && currentSubMode != null)
-        ? currentSubMode!.icon
-        : currentMode.icon;
+    final effectiveColor = currentMode.color;
+    final effectiveIcon = currentMode.icon;
     final labelText = (currentMode == FlashcardStudyMode.mixed && currentSubMode != null)
-        ? 'Đang học: Tổng hợp • ${currentSubMode!.shortLabel}'
+        ? 'Đang học: Tổng hợp • ${_getSubModeName(currentSubMode!)}'
         : 'Đang học: ${currentMode.shortLabel}';
 
     return InkWell(
@@ -170,6 +187,8 @@ class FlashcardModeBottomBar extends StatelessWidget {
       borderRadius: BorderRadius.circular(AppTheme.radiusMd), // 12px
       child: Container(
         width: double.infinity,
+        height: 68,
+        alignment: Alignment.center,
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
         decoration: BoxDecoration(
           color: AppTheme.brandSurface,
@@ -187,6 +206,7 @@ class FlashcardModeBottomBar extends StatelessWidget {
           ],
         ),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Icon chế độ trong ô vuông bo góc
             Container(
@@ -208,10 +228,13 @@ class FlashcardModeBottomBar extends StatelessWidget {
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const Text(
                     'Chế độ luyện tập',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
@@ -221,6 +244,8 @@ class FlashcardModeBottomBar extends StatelessWidget {
                   const SizedBox(height: 2),
                   Text(
                     labelText,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w600,
@@ -230,6 +255,8 @@ class FlashcardModeBottomBar extends StatelessWidget {
                 ],
               ),
             ),
+
+            const SizedBox(width: 8),
 
             // Nút "Đổi chế độ ^"
             Container(

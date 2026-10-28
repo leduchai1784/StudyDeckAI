@@ -735,4 +735,336 @@ Return ONLY a valid JSON object:
       return null;
     }
   }
+
+  /// Đánh giá chẩn đoán thính giác khi người học chép chính tả (Dictation)
+  Future<ListeningDiagnosticResult> evaluateListeningDiagnostic({
+    required String targetText,
+    required String userTranscription,
+    String? topicTitle,
+  }) async {
+    final prompt = '''
+Bạn là Chuyên gia Ngữ âm học và Giám khảo IELTS Listening. Hãy phân tích lỗi nghe của học viên trong bài luyện chép chính tả (Dictation):
+Chủ đề bài nghe: "${topicTitle ?? 'IELTS Listening Dictation'}"
+Câu gốc chuẩn xác: "$targetText"
+Nội dung học viên nghe và gõ lại: "$userTranscription"
+
+YÊU CẦU CHẨN ĐOÁN LỖI THÍNH GIÁC VÀ TRẢ VỀ DUY NHẤT MỘT KHỐI JSON (không thêm text ngoài JSON) THEO SCHEMA SAU:
+```json
+{
+  "accuracy_rate": 75.0,
+  "missed_endings": ["Bỏ quên âm đuôi /t/ trong từ 'part'"],
+  "connected_speech_traps": ["Nhầm hiện tượng nối âm 'pick it up' thành 'picket up'"],
+  "weak_forms_missed": ["Bỏ sót mạo từ hoặc trợ động từ 'have' phát âm lướt nhẹ"],
+  "homophone_confusions": ["Viết nhầm từ đồng âm 'there' thành 'their'"],
+  "ear_training_tip": "Lời khuyên luyện tai cụ thể bằng tiếng Việt để cải thiện...",
+  "key_phonetic_focus": "Trọng tâm luyện âm (ví dụ: Final consonants /s/, /ed/)"
+}
+```
+Lưu ý: Nếu không có lỗi ở danh mục nào thì trả về mảng rỗng []. accuracy_rate từ 0.0 đến 100.0.
+''';
+
+    for (final model in _models) {
+      try {
+        final url = 'https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent';
+        final response = await _dio.post(
+          url,
+          options: Options(headers: {'x-goog-api-key': _apiKey}),
+          data: {
+            'contents': [
+              {
+                'role': 'user',
+                'parts': [{'text': prompt}]
+              }
+            ],
+            'generationConfig': {
+              'temperature': 0.2,
+              'topP': 0.8,
+              'maxOutputTokens': 1000,
+            },
+          },
+        );
+
+        if (response.statusCode == 200 && response.data != null) {
+          final data = response.data is Map<String, dynamic>
+              ? response.data as Map<String, dynamic>
+              : jsonDecode(response.data.toString()) as Map<String, dynamic>;
+          final candidates = data['candidates'] as List?;
+          if (candidates != null && candidates.isNotEmpty) {
+            final parts = candidates[0]?['content']?['parts'] as List?;
+            if (parts != null && parts.isNotEmpty) {
+              final rawText = parts[0]?['text'] as String?;
+              if (rawText != null && rawText.trim().isNotEmpty) {
+                String jsonStr = rawText.trim();
+                final jsonMatch = RegExp(r'```(?:json)?\s*([\s\S]*?)\s*```').firstMatch(jsonStr);
+                if (jsonMatch != null) jsonStr = jsonMatch.group(1)!;
+
+                final Map<String, dynamic> parsed = jsonDecode(jsonStr);
+                return ListeningDiagnosticResult(
+                  accuracyRate: (parsed['accuracy_rate'] as num?)?.toDouble() ?? 80.0,
+                  missedEndings: (parsed['missed_endings'] as List?)?.map((e) => e.toString()).toList() ?? [],
+                  connectedSpeechTraps: (parsed['connected_speech_traps'] as List?)?.map((e) => e.toString()).toList() ?? [],
+                  weakFormsMissed: (parsed['weak_forms_missed'] as List?)?.map((e) => e.toString()).toList() ?? [],
+                  homophoneConfusions: (parsed['homophone_confusions'] as List?)?.map((e) => e.toString()).toList() ?? [],
+                  earTrainingTip: parsed['ear_training_tip'] as String? ?? 'Hãy chú ý lắng nghe kỹ các âm đuôi và hiện tượng nối âm.',
+                  keyPhoneticFocus: parsed['key_phonetic_focus'] as String? ?? 'Âm đuôi & Nối âm',
+                );
+              }
+            }
+          }
+        }
+      } catch (_) {}
+    }
+
+    // Heuristic Fallback
+    return const ListeningDiagnosticResult(
+      accuracyRate: 75.0,
+      missedEndings: ['Chú ý các âm đuôi /-s/, /-ed/, /-t/ thường bị nuốt trong câu.'],
+      connectedSpeechTraps: ['Hiện tượng nối âm giữa phụ âm cuối và nguyên âm đầu câu tiếp theo.'],
+      weakFormsMissed: ['Các từ phụ trợ (of, to, have) thường phát âm lướt nhẹ dạng âm yếu (schwa /ə/).'],
+      earTrainingTip: 'Tập trung nghe lặp lại câu ở tốc độ 0.75x và đối chiếu với văn bản để bắt nhịp nối âm.',
+      keyPhoneticFocus: 'Âm đuôi & Nhận diện từ nối',
+    );
+  }
+
+  /// Đánh giá phân tích kết quả bài thi đọc (Reading Result Diagnostic)
+  Future<ReadingDiagnosticResult> evaluateReadingDiagnostic({
+    required String testTitle,
+    required int correctCount,
+    required int totalCount,
+    required double bandScore,
+    required List<Map<String, dynamic>> questionSummaries,
+  }) async {
+    final prompt = '''
+Bạn là Giám khảo IELTS Reading Band 9.0 chấm thi chính thức của Cambridge. Hãy phân tích kết quả làm bài đọc sau:
+Đề thi: "$testTitle"
+Kết quả: $correctCount/$totalCount câu đúng (Band IELTS: $bandScore)
+Danh sách câu hỏi và trạng thái:
+${jsonEncode(questionSummaries.take(15).toList())}
+
+YÊU CẦU PHÂN TÍCH CHUYÊN SÂU VÀ TRẢ VỀ DUY NHẤT MỘT KHỐI JSON (không thêm text ngoài JSON) THEO SCHEMA SAU:
+```json
+{
+  "overall_assessment": "Nhận xét tổng quan về độ chính xác và tốc độ đọc hiểu...",
+  "question_type_analysis": [
+    {"type": "True / False / Not Given", "accuracy": "60%", "diagnosis": "Dễ bị bẫy nhầm lẫn giữa False và Not Given do suy đoán ngoài bài..."},
+    {"type": "Matching Headings", "accuracy": "80%", "diagnosis": "Nắm ý chính của các đoạn văn rất tốt."}
+  ],
+  "cognitive_pitfalls": [
+    "Dính bẫy từ chỉ mức độ tuyệt đối (Extreme words: 'always', 'only').",
+    "Bỏ sót từ khóa phủ định làm đảo ngược nghĩa câu."
+  ],
+  "valuable_paraphrases": [
+    {"keyword": "decline rapidly", "evidence": "plummeted dramatically", "meaning": "sụt giảm nghiêm trọng"}
+  ],
+  "personalized_strategy": "Nên phân bổ thời gian: Skimming 3 phút nắm bố cục, sau đó dùng Scanning định vị từ khóa cho từng câu."
+}
+```
+''';
+
+    for (final model in _models) {
+      try {
+        final url = 'https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent';
+        final response = await _dio.post(
+          url,
+          options: Options(headers: {'x-goog-api-key': _apiKey}),
+          data: {
+            'contents': [
+              {
+                'role': 'user',
+                'parts': [{'text': prompt}]
+              }
+            ],
+            'generationConfig': {
+              'temperature': 0.2,
+              'topP': 0.8,
+              'maxOutputTokens': 1200,
+            },
+          },
+        );
+
+        if (response.statusCode == 200 && response.data != null) {
+          final data = response.data is Map<String, dynamic>
+              ? response.data as Map<String, dynamic>
+              : jsonDecode(response.data.toString()) as Map<String, dynamic>;
+          final candidates = data['candidates'] as List?;
+          if (candidates != null && candidates.isNotEmpty) {
+            final parts = candidates[0]?['content']?['parts'] as List?;
+            if (parts != null && parts.isNotEmpty) {
+              final rawText = parts[0]?['text'] as String?;
+              if (rawText != null && rawText.trim().isNotEmpty) {
+                String jsonStr = rawText.trim();
+                final jsonMatch = RegExp(r'```(?:json)?\s*([\s\S]*?)\s*```').firstMatch(jsonStr);
+                if (jsonMatch != null) jsonStr = jsonMatch.group(1)!;
+
+                final Map<String, dynamic> parsed = jsonDecode(jsonStr);
+                return ReadingDiagnosticResult(
+                  overallAssessment: parsed['overall_assessment'] as String? ?? 'Kết quả làm bài phản ánh tốt khả năng đọc hiểu học thuật.',
+                  questionTypeAnalysis: (parsed['question_type_analysis'] as List?)
+                          ?.map((e) => Map<String, String>.from(e as Map))
+                          .toList() ??
+                      [],
+                  cognitivePitfalls: (parsed['cognitive_pitfalls'] as List?)?.map((e) => e.toString()).toList() ?? [],
+                  valuableParaphrases: (parsed['valuable_paraphrases'] as List?)
+                          ?.map((e) => Map<String, String>.from(e as Map))
+                          .toList() ??
+                      [],
+                  personalizedStrategy: parsed['personalized_strategy'] as String? ?? 'Rèn luyện Skimming và Scanning kết hợp tra cứu từ đồng nghĩa.',
+                );
+              }
+            }
+          }
+        }
+      } catch (_) {}
+    }
+
+    // Heuristic Fallback
+    return const ReadingDiagnosticResult(
+      overallAssessment: 'Bạn đã hoàn thành tốt các câu hỏi thông tin trực tiếp. Cần chú ý thêm ở các câu suy luận logic.',
+      questionTypeAnalysis: [
+        {'type': 'True / False / Not Given', 'accuracy': '70%', 'diagnosis': 'Cần lưu ý không suy diễn thông tin khi bài đọc không khẳng định rõ ràng.'},
+        {'type': 'Matching Headings / Multiple Choice', 'accuracy': '75%', 'diagnosis': 'Nắm bắt ý tưởng đoạn văn khá vững vàng.'},
+      ],
+      cognitivePitfalls: [
+        'Bẫy từ chỉ mức độ tuyệt đối (always, all, completely) thường là dấu hiệu nhận biết câu FALSE.',
+        'Nhầm lẫn giữa NOT GIVEN (không nhắc tới) và FALSE (thông tin trái ngược).',
+      ],
+      valuableParaphrases: [
+        {'keyword': 'significant change', 'evidence': 'substantial transformation', 'meaning': 'sự thay đổi đáng kể'},
+        {'keyword': 'mitigate problem', 'evidence': 'alleviate the issue', 'meaning': 'giảm thiểu vấn đề'},
+      ],
+      personalizedStrategy: 'Áp dụng quy tắc 20 phút/passage, gạch chân từ khóa câu hỏi trước khi đọc lướt bài đọc.',
+    );
+  }
+}
+
+class ListeningPhoneticItem {
+  final String word;
+  final String ipa;
+  final String auditoryPhenomenon;
+  final String explanation;
+
+  const ListeningPhoneticItem({
+    required this.word,
+    this.ipa = '',
+    required this.auditoryPhenomenon,
+    required this.explanation,
+  });
+}
+
+class ReadingTypeAccuracy {
+  final String type;
+  final int correct;
+  final int total;
+  final int percentage;
+
+  const ReadingTypeAccuracy({
+    required this.type,
+    required this.correct,
+    required this.total,
+    required this.percentage,
+  });
+}
+
+class ReadingParaphraseItem {
+  final String questionSnippet;
+  final String passageSnippet;
+  final String meaning;
+
+  const ReadingParaphraseItem({
+    required this.questionSnippet,
+    required this.passageSnippet,
+    required this.meaning,
+  });
+}
+
+class ListeningDiagnosticResult {
+  final double accuracyRate;
+  final List<String> missedEndings;
+  final List<String> connectedSpeechTraps;
+  final List<String> weakFormsMissed;
+  final List<String> homophoneConfusions;
+  final String earTrainingTip;
+  final String keyPhoneticFocus;
+
+  const ListeningDiagnosticResult({
+    required this.accuracyRate,
+    this.missedEndings = const [],
+    this.connectedSpeechTraps = const [],
+    this.weakFormsMissed = const [],
+    this.homophoneConfusions = const [],
+    required this.earTrainingTip,
+    required this.keyPhoneticFocus,
+  });
+
+  String get diagnosticReason => missedEndings.isNotEmpty || connectedSpeechTraps.isNotEmpty
+      ? 'Bạn có thể đã bị lướt qua các âm đuôi hoặc hiện tượng nối âm nhanh trong câu.'
+      : 'Khả năng nhận diện âm thanh khá tốt, hãy tập trung vào các từ ngữ âm yếu hoặc từ đồng âm.';
+
+  List<ListeningPhoneticItem> get phoneticBreakdown {
+    final list = <ListeningPhoneticItem>[];
+    for (final e in missedEndings) {
+      list.add(ListeningPhoneticItem(word: 'Âm cuối', auditoryPhenomenon: 'Nuốt âm đuôi', explanation: e));
+    }
+    for (final e in connectedSpeechTraps) {
+      list.add(ListeningPhoneticItem(word: 'Nối âm', auditoryPhenomenon: 'Linking sound', explanation: e));
+    }
+    for (final e in weakFormsMissed) {
+      list.add(ListeningPhoneticItem(word: 'Âm yếu', auditoryPhenomenon: 'Weak form', explanation: e));
+    }
+    for (final e in homophoneConfusions) {
+      list.add(ListeningPhoneticItem(word: 'Đồng âm', auditoryPhenomenon: 'Homophone', explanation: e));
+    }
+    return list;
+  }
+
+  List<String> get earTrainingTips => [
+    earTrainingTip,
+    'Nghe lặp lại ở tốc độ 0.75x để xác định chính xác vị trí nối âm.',
+    'Đối chiếu mặt chữ và nhại lại (shadowing) để rèn phản xạ cho tai.',
+  ];
+
+  String get encouragement => accuracyRate >= 80
+      ? 'Kỹ năng nghe của bạn rất sắc bén! Tiếp tục duy trì phong độ nhé.'
+      : 'Đừng lo lắng! Luyện nghe chép chính tả mỗi ngày 15 phút sẽ giúp tai bạn bắt nhịp cực nhanh.';
+}
+
+class ReadingDiagnosticResult {
+  final String overallAssessment;
+  final List<Map<String, String>> questionTypeAnalysis;
+  final List<String> cognitivePitfalls;
+  final List<Map<String, String>> valuableParaphrases;
+  final String personalizedStrategy;
+
+  const ReadingDiagnosticResult({
+    required this.overallAssessment,
+    required this.questionTypeAnalysis,
+    required this.cognitivePitfalls,
+    required this.valuableParaphrases,
+    required this.personalizedStrategy,
+  });
+
+  List<ReadingTypeAccuracy> get accuracyByType => questionTypeAnalysis.map((m) {
+    final accStr = m['accuracy']?.replaceAll('%', '') ?? '70';
+    final acc = int.tryParse(accStr) ?? 70;
+    return ReadingTypeAccuracy(
+      type: m['type'] ?? 'General',
+      correct: (acc * 10) ~/ 100,
+      total: 10,
+      percentage: acc,
+    );
+  }).toList();
+
+  List<ReadingParaphraseItem> get valuableParaphrasesItems => valuableParaphrases.map((m) {
+    return ReadingParaphraseItem(
+      questionSnippet: m['keyword'] ?? '',
+      passageSnippet: m['evidence'] ?? '',
+      meaning: m['meaning'] ?? '',
+    );
+  }).toList();
+
+  List<String> get actionableAdvice => [
+    personalizedStrategy,
+    'Luôn gạch chân từ khóa trong câu hỏi trước khi rà soát bài đọc.',
+    'Cảnh giác với các từ chỉ mức độ tuyệt đối (always, never, only).',
+  ];
 }

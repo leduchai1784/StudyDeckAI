@@ -46,3 +46,9 @@ app.*.map.json
 /android/build/
 /scratch/
 **/ios/Flutter/ephemeral/
+
+# AI Agent Skills (Do not push to git)
+.agents/skills/
+
+# Local text dumps and scratch files
+srs_content_dump.txt

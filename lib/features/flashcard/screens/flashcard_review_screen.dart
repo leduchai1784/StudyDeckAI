@@ -55,14 +55,13 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
   final Set<int> _starredWordIds = {};
   FlashcardStudyMode _currentStudyMode = FlashcardStudyMode.flipCard;
 
-  // Danh sách các chế độ bài tập tương tác dùng cho chế độ "Tổng hợp" (loại trừ flipCard)
+  // Danh sách các chế độ bài tập tương tác dùng cho chế độ "Tổng hợp" (loại trừ flipCard và cardBlast)
   static const List<FlashcardStudyMode> _mixedEligibleModes = [
     FlashcardStudyMode.quiz,
     FlashcardStudyMode.typing,
     FlashcardStudyMode.listening,
     FlashcardStudyMode.cloze,
     FlashcardStudyMode.pronunciation,
-    FlashcardStudyMode.cardBlast,
   ];
 
   int _mixedModeOffset = 0;
@@ -265,6 +264,41 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
     }
   }
 
+  void _recordWordResult(EduWord word, bool isMastered) {
+    final targetDeckId = (word.customDeckId != null && word.customDeckId!.isNotEmpty)
+        ? word.customDeckId!
+        : (word.level.isNotEmpty ? word.level : widget.level);
+
+    _progressService.updateCardAnswerGlobal(
+      word.id,
+      isMastered,
+      targetDeckId: targetDeckId,
+    );
+
+    if (widget.level != targetDeckId && widget.level != 'SM2_REVIEW') {
+      _progressService.updateCardAnswer(widget.level, word.id, isMastered);
+    }
+
+    if (widget.mode == 'study') {
+      _progressService.recordDeckCardStudied(
+        widget.level,
+        _originalDeckWords.length,
+        _currentIndex,
+        isMastered,
+      );
+    }
+
+    if (!isMastered) {
+      if (!_unmasteredWords.any((w) => w.id == word.id)) {
+        _unmasteredWords.add(word);
+      }
+      _reviewCount++;
+    } else {
+      _unmasteredWords.removeWhere((w) => w.id == word.id);
+      _masteredCount++;
+    }
+  }
+
   void _goToPreviousCard() {
     if (_currentIndex > 0) {
       _ttsService.stop();
@@ -370,7 +404,7 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
   Widget build(BuildContext context) {
     if (_isLoading) {
       return const Scaffold(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.brandBackground,
         body: Center(
           child: CircularProgressIndicator(),
         ),
@@ -401,6 +435,40 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
                 child: _buildCompletionState(levelColor),
               ),
             ],
+          ),
+        ),
+      );
+    }
+
+    // Khi đang trong chế độ Card Blast: Hiển thị toàn màn hình không gian vũ trụ chuyên biệt
+    if (_currentStudyMode == FlashcardStudyMode.cardBlast) {
+      final currentWord = _words.isNotEmpty ? _words[_currentIndex] : null;
+      return Scaffold(
+        backgroundColor: const Color(0xFF070C1D),
+        body: SafeArea(
+          child: FlashcardCardBlastView(
+            currentWord: currentWord,
+            allWords: _words.isNotEmpty ? _words : _originalDeckWords,
+            onWordResult: (word, isMastered) => _recordWordResult(word, isMastered),
+            onAnswer: (correct) => _answerCard(correct),
+            onSpeakWord: (title) => _playAudio(title),
+            onSpeak: () => _playAudio(currentWord?.title ?? ''),
+            onChangeMode: () {
+              FlashcardStudyModesModal.show(
+                context: context,
+                currentMode: _currentStudyMode,
+                onSelectMode: (mode) {
+                  setState(() {
+                    _currentStudyMode = mode;
+                  });
+                },
+              );
+            },
+            onExit: () {
+              setState(() {
+                _currentStudyMode = FlashcardStudyMode.flipCard;
+              });
+            },
           ),
         ),
       );
@@ -865,7 +933,7 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
                 _buildSm2Box('Dễ', '8 ngày', AppTheme.onSurface, () => _answerCard(true)),
               ],
             ),
-          ] else ...[
+          ] else if (effectiveMode != FlashcardStudyMode.cardBlast) ...[
             // Thanh chuyển câu đơn giản cho các chế độ Quiz, Typing, Listening, Cloze
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -902,8 +970,8 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
             ),
           ],
 
-          // 3. Card cố định ở đáy: Chế độ luyện tập + Nút Đổi chế độ (Tự động ẩn khi mở bàn phím để không bị cấn giao diện)
-          if (!isKeyboardOpen) ...[
+          // 3. Card cố định ở đáy: Chế độ luyện tập + Nút Đổi chế độ (Tự động ẩn khi mở bàn phím hoặc trong chế độ Card Blast)
+          if (!isKeyboardOpen && effectiveMode != FlashcardStudyMode.cardBlast) ...[
             const SizedBox(height: 14),
             FlashcardModeBottomBar(
               currentMode: _currentStudyMode,
@@ -999,8 +1067,22 @@ class _FlashcardReviewScreenState extends State<FlashcardReviewScreen>
         return FlashcardCardBlastView(
           currentWord: currentWord,
           allWords: _words.isNotEmpty ? _words : _originalDeckWords,
+          onWordResult: (word, isMastered) => _recordWordResult(word, isMastered),
           onAnswer: (correct) => _answerCard(correct),
+          onSpeakWord: (title) => _playAudio(title),
           onSpeak: () => _playAudio(currentWord.title),
+          onChangeMode: () {
+            FlashcardStudyModesModal.show(
+              context: context,
+              currentMode: _currentStudyMode,
+              onSelectMode: (mode) {
+                setState(() {
+                  _currentStudyMode = mode;
+                });
+              },
+            );
+          },
+          onExit: () => context.pop(),
         );
     }
   }

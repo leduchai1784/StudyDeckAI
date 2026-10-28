@@ -1588,6 +1588,15 @@ class _DeckListScreenState extends State<DeckListScreen> {
 
   @override
   Widget build(BuildContext context) {
+    if (_isLoading) {
+      return const Scaffold(
+        backgroundColor: AppTheme.brandBackground,
+        body: Center(
+          child: CircularProgressIndicator(),
+        ),
+      );
+    }
+
     final filteredDecks = _getFilteredDecks();
     final filteredWords = _getFilteredWords();
     final hasActiveCustomFilters = (_selectedLevelFilter != null && _selectedLevelFilter != 'ALL') ||
@@ -1764,15 +1773,8 @@ class _DeckListScreenState extends State<DeckListScreen> {
               ],
               const SizedBox(height: 16),
 
-              // 4. Content Area: Loading / Filtered Content
-              if (_isLoading)
-                const Center(
-                  child: Padding(
-                    padding: EdgeInsets.all(40.0),
-                    child: CircularProgressIndicator(),
-                  ),
-                )
-              else if (_filterType == 'decks')
+              // 4. Content Area: Filtered Content
+              if (_filterType == 'decks')
                 _buildDecksOnlyView(filteredDecks)
               else if (_filterType == 'words')
                 _buildWordsOnlyView(filteredWords)

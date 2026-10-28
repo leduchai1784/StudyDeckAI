@@ -8,6 +8,7 @@ import '../models/dictation_model.dart';
 import '../data/listening_mock_data.dart';
 import '../data/dictation_archive_repository.dart';
 import '../../../../shared/widgets/app_back_button.dart';
+import '../../../ai_tutor/services/gemini_ai_tutor_service.dart';
 
 class ListeningDictationScreen extends StatefulWidget {
   final DictationExercise? exercise;
@@ -36,6 +37,9 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
   bool _isRevealed = false;
   double _lastAccuracy = 0.0;
   bool _isFinished = false;
+
+  bool _isDiagnosing = false;
+  ListeningDiagnosticResult? _currentSentenceDiagnostic;
 
   String _selectedAccent = 'en-GB'; // 'en-GB' (UK) or 'en-US' (US)
 
@@ -223,6 +227,7 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
       _lastAccuracy = 0.0;
       _inputController.clear();
       _userAnswers[_currentIndex] = '';
+      _currentSentenceDiagnostic = null;
     });
     _playCurrentSentence(isSlow: false);
     _unfocus();
@@ -276,11 +281,262 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
     _isChecked = _completedMap[_currentIndex] == true;
     _isRevealed = false;
     _showHint = false;
+    _currentSentenceDiagnostic = null;
     if (existingAnswer.isNotEmpty) {
       _lastAccuracy = _exercise.sentences[_currentIndex].calculateAccuracy(existingAnswer);
     } else {
       _lastAccuracy = 0.0;
     }
+  }
+
+  Future<void> _diagnoseListeningErrors() async {
+    final currentSentence = _exercise.sentences[_currentIndex];
+    final userText = _inputController.text.trim();
+    if (_isDiagnosing) return;
+
+    if (_currentSentenceDiagnostic != null) {
+      _showAiEarDiagnosticModal(_currentSentenceDiagnostic!);
+      return;
+    }
+
+    setState(() => _isDiagnosing = true);
+    try {
+      final diag = await GeminiAiTutorService().evaluateListeningDiagnostic(
+        targetText: currentSentence.targetText,
+        userTranscription: userText.isEmpty ? '(Chưa nghe kịp/Để trống)' : userText,
+        topicTitle: _exercise.title,
+      );
+      if (!mounted) return;
+      setState(() {
+        _currentSentenceDiagnostic = diag;
+        _isDiagnosing = false;
+      });
+      _showAiEarDiagnosticModal(diag);
+    } catch (e) {
+      if (!mounted) return;
+      setState(() => _isDiagnosing = false);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Không thể kết nối AI chẩn đoán: $e'),
+          backgroundColor: const Color(0xFFEF4444),
+        ),
+      );
+    }
+  }
+
+  void _showAiEarDiagnosticModal(ListeningDiagnosticResult diagnostic) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (ctx) {
+        return Container(
+          height: MediaQuery.of(ctx).size.height * 0.82,
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+          ),
+          child: Column(
+            children: [
+              // Modal Header
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                decoration: const BoxDecoration(
+                  border: Border(bottom: BorderSide(color: Color(0xFFE2E8F0))),
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFEEF2FF),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Icon(Icons.auto_awesome_rounded, color: Color(0xFF4F46E5), size: 20),
+                    ),
+                    const SizedBox(width: 10),
+                    const Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'AI Chẩn Đoán Lỗi Nghe',
+                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF1E293B)),
+                          ),
+                          Text(
+                            'Phân tích hiện tượng thính giác & nối âm Cambridge',
+                            style: TextStyle(fontSize: 12, color: Color(0xFF64748B)),
+                          ),
+                        ],
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.close_rounded, color: Color(0xFF64748B)),
+                      onPressed: () => Navigator.of(ctx).pop(),
+                    ),
+                  ],
+                ),
+              ),
+              // Body
+              Expanded(
+                child: ListView(
+                  padding: const EdgeInsets.all(16),
+                  children: [
+                    // Nguyên nhân không nghe được
+                    Container(
+                      padding: const EdgeInsets.all(14),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFF8FAFC),
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: const Color(0xFFE2E8F0)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Row(
+                            children: [
+                              Icon(Icons.hearing_rounded, size: 18, color: Color(0xFF4F46E5)),
+                              SizedBox(width: 6),
+                              Text(
+                                'Tại sao tai bạn nghe nhầm hoặc bị lướt qua?',
+                                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF1E293B)),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            diagnostic.diagnosticReason,
+                            style: const TextStyle(fontSize: 13, height: 1.45, color: Color(0xFF334155)),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 14),
+
+                    // Hiện tượng ngữ âm & từ vựng bẫy tai
+                    if (diagnostic.phoneticBreakdown.isNotEmpty) ...[
+                      const Text(
+                        'Từ vựng & Hiện tượng ngữ âm cản trở tai nghe:',
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: Color(0xFF1E293B)),
+                      ),
+                      const SizedBox(height: 8),
+                      ...diagnostic.phoneticBreakdown.map((item) {
+                        return Container(
+                          margin: const EdgeInsets.only(bottom: 8),
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFF1F5F9),
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: const Color(0xFFCBD5E1)),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    item.word,
+                                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFF0F172A)),
+                                  ),
+                                  if (item.ipa.isNotEmpty) ...[
+                                    const SizedBox(width: 8),
+                                    Text(
+                                      '/${item.ipa}/',
+                                      style: const TextStyle(fontSize: 12.5, fontStyle: FontStyle.italic, color: Color(0xFF64748B)),
+                                    ),
+                                  ],
+                                  const Spacer(),
+                                  if (item.auditoryPhenomenon.isNotEmpty)
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFFE0E7FF),
+                                        borderRadius: BorderRadius.circular(6),
+                                      ),
+                                      child: Text(
+                                        item.auditoryPhenomenon,
+                                        style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFF4338CA)),
+                                      ),
+                                    ),
+                                ],
+                              ),
+                              const SizedBox(height: 6),
+                              Text(
+                                item.explanation,
+                                style: const TextStyle(fontSize: 12.5, color: Color(0xFF475569)),
+                              ),
+                            ],
+                          ),
+                        );
+                      }),
+                      const SizedBox(height: 10),
+                    ],
+
+                    // Bí quyết luyện tai (Ear-training Tips)
+                    if (diagnostic.earTrainingTips.isNotEmpty) ...[
+                      const Text(
+                        'Bí quyết luyện tai cho lần nghe tới:',
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: Color(0xFF1E293B)),
+                      ),
+                      const SizedBox(height: 8),
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFECFDF5),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: const Color(0xFFA7F3D0)),
+                        ),
+                        child: Column(
+                          children: diagnostic.earTrainingTips.map((tip) {
+                            return Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 4),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Icon(Icons.check_circle_outline_rounded, size: 16, color: Color(0xFF059669)),
+                                  const SizedBox(width: 8),
+                                  Expanded(
+                                    child: Text(tip, style: const TextStyle(fontSize: 12.5, color: Color(0xFF065F46))),
+                                  ),
+                                ],
+                              ),
+                            );
+                          }).toList(),
+                        ),
+                      ),
+                      const SizedBox(height: 14),
+                    ],
+
+                    // Lời động viên
+                    if (diagnostic.encouragement.isNotEmpty)
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFFFFBEB),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: const Color(0xFFFDE68A)),
+                        ),
+                        child: Row(
+                          children: [
+                            const Icon(Icons.emoji_events_rounded, size: 18, color: Color(0xFFD97706)),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: Text(
+                                diagnostic.encouragement,
+                                style: const TextStyle(fontSize: 12.5, fontStyle: FontStyle.italic, color: Color(0xFF92400E)),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
   }
 
   DictationExercise? _getNextExercise() {
@@ -878,6 +1134,27 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
                       currentSentence.translationVi,
                       style: const TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Color(0xFF64748B)),
                     ),
+                    const SizedBox(height: 10),
+                    OutlinedButton.icon(
+                      onPressed: _isDiagnosing ? null : _diagnoseListeningErrors,
+                      icon: _isDiagnosing
+                          ? const SizedBox(
+                              width: 14,
+                              height: 14,
+                              child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF4F46E5)),
+                            )
+                          : const Icon(Icons.auto_awesome_rounded, size: 15, color: Color(0xFF4F46E5)),
+                      label: Text(
+                        _isDiagnosing ? 'Đang phân tích...' : 'AI giải thích vì sao câu này khó nghe',
+                        style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF4F46E5)),
+                      ),
+                      style: OutlinedButton.styleFrom(
+                        minimumSize: const Size(double.infinity, 38),
+                        side: const BorderSide(color: Color(0xFFC7D2FE)),
+                        backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -940,6 +1217,30 @@ class _ListeningDictationScreenState extends State<ListeningDictationScreen> {
                       style: const TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Color(0xFF475569)),
                     ),
                   ],
+                ),
+              ),
+              const SizedBox(height: 10),
+              OutlinedButton.icon(
+                onPressed: _isDiagnosing ? null : _diagnoseListeningErrors,
+                icon: _isDiagnosing
+                    ? const SizedBox(
+                        width: 14,
+                        height: 14,
+                        child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF4F46E5)),
+                      )
+                    : const Icon(Icons.auto_awesome_rounded, size: 16, color: Color(0xFF4F46E5)),
+                label: Text(
+                  _isDiagnosing
+                      ? 'Đang phân tích tai nghe...'
+                      : (_currentSentenceDiagnostic != null ? 'Xem lại phân tích lỗi nghe (AI)' : 'AI Chẩn đoán lỗi nghe 🤖'),
+                  style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Color(0xFF4F46E5)),
+                ),
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 42),
+                  side: const BorderSide(color: Color(0xFFC7D2FE)),
+                  backgroundColor: const Color(0xFFEEF2FF),
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                 ),
               ),
               const SizedBox(height: 10),

@@ -302,30 +302,8 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
   }
 
   Future<void> _evaluateAnswerWithAI() async {
-    // Speaking requires voice recording or uploaded audio
-    if (_userAudioPath == null) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Row(
-              children: [
-                Icon(Icons.mic_off_rounded, color: Colors.white, size: 20),
-                SizedBox(width: 8),
-                Expanded(
-                  child: Text('Vui lòng ghi âm hoặc tải file âm thanh câu trả lời trước khi nộp!'),
-                ),
-              ],
-            ),
-            backgroundColor: Color(0xFFEF4444),
-            behavior: SnackBarBehavior.floating,
-          ),
-        );
-      }
-      return;
-    }
-
-    // If text is empty but user recorded/uploaded audio, auto-transcribe first
-    if (_inputController.text.trim().isEmpty) {
+    // If text is empty and user recorded/uploaded audio, auto-transcribe first
+    if (_inputController.text.trim().isEmpty && _userAudioPath != null) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
@@ -344,7 +322,15 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('Chưa nhận diện được nội dung nói. Vui lòng thử ghi âm lại rõ hơn!'),
+            content: Row(
+              children: [
+                Icon(Icons.mic_off_rounded, color: Colors.white, size: 20),
+                SizedBox(width: 8),
+                Expanded(
+                  child: Text('Vui lòng ghi âm giọng nói hoặc chọn câu trả lời mẫu trước khi nộp!'),
+                ),
+              ],
+            ),
             backgroundColor: Color(0xFFEF4444),
             behavior: SnackBarBehavior.floating,
           ),
@@ -1208,9 +1194,27 @@ Band score từ 1.0 đến 9.0 (bước nhảy 0.5, ví dụ 5.0, 5.5, 6.0, 6.5,
     );
   }
 
+  void _pasteDemoAnswerBand6() {
+    final currentQ = widget.topic.questions[_currentIndex];
+    setState(() {
+      _inputController.text =
+          'Well, to be honest, I think ${currentQ.questionText.toLowerCase().replaceAll('?', '')} is quite common in my country. Most people really enjoy it because it is relaxing and convenient. For example, my friends and I usually spend time doing this on weekends when we have free time after studying.';
+      _isEditingTranscript = false;
+    });
+  }
+
+  void _pasteDemoAnswerBand85() {
+    final currentQ = widget.topic.questions[_currentIndex];
+    setState(() {
+      _inputController.text =
+          'From my perspective, regarding ${currentQ.questionText.toLowerCase().replaceAll('?', '')}, it plays an indispensable role in contemporary lifestyle. Not only does it provide a therapeutic escape from fast-paced urban pressures, but it also cultivates deeper interpersonal connections. In fact, empirical studies consistently demonstrate that individuals engaging in such pursuits report significantly higher life satisfaction.';
+      _isEditingTranscript = false;
+    });
+  }
+
   // Speech Transcript Section (Read-only by default + edit button to fix misheard words)
   Widget _buildTranscriptSection() {
-    if (_userAudioPath == null) {
+    if (_userAudioPath == null && _inputController.text.trim().isEmpty) {
       return Container(
         width: double.infinity,
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
@@ -1219,19 +1223,57 @@ Band score từ 1.0 đến 9.0 (bước nhảy 0.5, ví dụ 5.0, 5.5, 6.0, 6.5,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: const Color(0xFFE2E8F0)),
         ),
-        child: const Row(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(Icons.mic_none_rounded, color: Color(0xFF94A3B8), size: 20),
-            SizedBox(width: 10),
-            Expanded(
-              child: Text(
-                'Ghi âm hoặc tải file âm thanh câu trả lời để AI nhận diện giọng nói và chấm điểm.',
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Color(0xFF64748B),
-                  height: 1.35,
+            const Row(
+              children: [
+                Icon(Icons.mic_none_rounded, color: Color(0xFF94A3B8), size: 18),
+                SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    'Ghi âm giọng nói, hoặc chạm nút mẫu demo bên dưới để chấm điểm thử với AI:',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color(0xFF64748B),
+                      height: 1.35,
+                    ),
+                  ),
                 ),
-              ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Wrap(
+              spacing: 8,
+              runSpacing: 6,
+              children: [
+                ActionChip(
+                  avatar: const Icon(Icons.bolt_rounded, size: 14, color: Color(0xFFD97706)),
+                  label: const Text('Thử câu mẫu Band 6.0', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF92400E))),
+                  backgroundColor: const Color(0xFFFEF3C7),
+                  side: const BorderSide(color: Color(0xFFFDE68A)),
+                  onPressed: _pasteDemoAnswerBand6,
+                ),
+                ActionChip(
+                  avatar: const Icon(Icons.auto_awesome_rounded, size: 14, color: AppTheme.brandPrimary),
+                  label: const Text('Thử câu mẫu Band 8.5', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: AppTheme.brandPrimary)),
+                  backgroundColor: const Color(0xFFEEF2FF),
+                  side: const BorderSide(color: Color(0xFFC7D2FE)),
+                  onPressed: _pasteDemoAnswerBand85,
+                ),
+                ActionChip(
+                  avatar: const Icon(Icons.edit_note_rounded, size: 14, color: Color(0xFF475569)),
+                  label: const Text('Tự gõ câu trả lời', style: TextStyle(fontSize: 11.5, color: Color(0xFF475569))),
+                  backgroundColor: Colors.white,
+                  side: const BorderSide(color: Color(0xFFCBD5E1)),
+                  onPressed: () {
+                    setState(() {
+                      _isEditingTranscript = true;
+                      _inputController.text = ' ';
+                    });
+                  },
+                ),
+              ],
             ),
           ],
         ),

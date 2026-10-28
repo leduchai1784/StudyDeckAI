@@ -96,7 +96,7 @@ void main() {
       );
 
       expect(find.text('Chế độ luyện tập'), findsOneWidget);
-      expect(find.text('Đang học: Tổng hợp • Quiz 4 đáp án'), findsOneWidget);
+      expect(find.text('Đang học: Tổng hợp • Quiz'), findsOneWidget);
     });
   });
 
@@ -153,7 +153,7 @@ void main() {
   });
 
   group('Flashcard Typing View Tests', () {
-    testWidgets('Gives hint and checks correct answer', (tester) async {
+    testWidgets('Gives hint and checks correct answer with 3D flip to back face', (tester) async {
       bool? isCorrect;
       bool spoke = false;
 
@@ -171,32 +171,111 @@ void main() {
 
       expect(find.text('Mùa xuân'), findsOneWidget);
 
-      // Bấm nút Gợi ý
+      // Bấm nút Gợi ý: Hiển thị mờ chữ đầu ('S') và chữ cuối ('g')
       await tester.tap(find.text('Gợi ý'));
       await tester.pump();
       expect(find.widgetWithText(AnimatedContainer, 'S'), findsOneWidget);
+      expect(find.widgetWithText(AnimatedContainer, 'g'), findsOneWidget);
 
-      // Gõ đáp án đúng
+      // Thử chạm vào ô bất kỳ: vẫn nhập tuần tự
+      await tester.tap(find.widgetWithText(AnimatedContainer, 'g'));
+      await tester.pump();
+
+      // Gõ đáp án đúng theo thứ tự
       await tester.enterText(find.byType(TextField), 'spring');
       await tester.pump();
 
+      // Bấm Kiểm tra và chờ animation lật thẻ 3D hoàn tất
       await tester.tap(find.text('Kiểm tra'));
       await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
 
       expect(spoke, isTrue);
-      expect(find.text('Chính xác! Xuất sắc 🎉'), findsOneWidget);
+      expect(find.text('Chính xác!'), findsOneWidget);
       expect(find.text('Tiếp tục'), findsOneWidget);
+
+      // Kiểm tra các thành phần trên Mặt Sau
+      expect(find.text('TIẾNG ANH'), findsOneWidget);
+      expect(find.text('Spring'), findsOneWidget);
+      expect(find.text('Sửa'), findsNothing);
+      expect(find.text('Thêm ảnh'), findsNothing);
+      expect(find.text('Thêm ghi chú'), findsNothing);
+      expect(find.text('Chạm để lật lại'), findsNothing);
+
+      // Thử chạm vào thẻ để lật lại mặt trước (không còn focus ô nhập)
+      await tester.tap(find.byKey(const ValueKey('flashcard_typing_card')));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
+      expect(find.text('Mùa xuân'), findsOneWidget);
+      expect(find.byType(TextField), findsNothing);
+
+      // Chạm vào thẻ lần nữa để lật lại mặt sau
+      await tester.tap(find.byKey(const ValueKey('flashcard_typing_card')));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
+      expect(find.text('Spring'), findsOneWidget);
 
       // Bấm nút Tiếp tục để hoàn tất và chuyển thẻ
       await tester.tap(find.text('Tiếp tục'));
       await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
       expect(isCorrect, isTrue);
+    });
+
+    testWidgets('Checks incorrect answer flips to back with correct word info and highlights per-letter match', (tester) async {
+      bool? isCorrect;
+      bool spoke = false;
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: FlashcardTypingView(
+              word: sampleWord,
+              onAnswer: (correct) => isCorrect = correct,
+              onSpeak: () => spoke = true,
+            ),
+          ),
+        ),
+      );
+
+      // Gõ đáp án: 'sxxxx' ('s' đúng, các chữ sau sai)
+      await tester.enterText(find.byType(TextField), 'sxxxx');
+      await tester.pump();
+
+      // Bấm Kiểm tra: Lật thẻ sang mặt sau ngay lập tức
+      await tester.tap(find.text('Kiểm tra'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
+
+      expect(spoke, isTrue);
+      expect(find.text('Đáp án: Spring'), findsOneWidget);
+      expect(find.text('Tiếp tục'), findsOneWidget);
+
+      // Mặt sau hiển thị kiến thức chi tiết của từ đúng
+      expect(find.text('TIẾNG ANH'), findsOneWidget);
+      expect(find.text('Spring'), findsOneWidget);
+      expect(find.text('"Flowers bloom in spring."'), findsOneWidget);
+
+      // Lật lại mặt trước để kiểm tra: chữ cái 's' đúng và 'x' sai
+      await tester.tap(find.byKey(const ValueKey('flashcard_typing_card')));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
+
+      expect(find.text('Mùa xuân'), findsOneWidget);
+      expect(find.widgetWithText(AnimatedContainer, 's'), findsOneWidget);
+
+      // Bấm Tiếp tục
+      await tester.tap(find.text('Tiếp tục'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
+      expect(isCorrect, isFalse);
     });
   });
 
   group('Flashcard Quiz View Tests', () {
-    testWidgets('Generates 4 options and accepts correct answer', (tester) async {
+    testWidgets('Selects correct option directly and flips to back with success banner', (tester) async {
       bool? isCorrect;
+      bool spoke = false;
 
       await tester.pumpWidget(
         MaterialApp(
@@ -205,7 +284,7 @@ void main() {
               currentWord: sampleWord,
               allWords: [sampleWord, ...otherWords],
               onAnswer: (correct) => isCorrect = correct,
-              onSpeak: () {},
+              onSpeak: () => spoke = true,
             ),
           ),
         ),
@@ -217,13 +296,58 @@ void main() {
       // Bấm vào đáp án đúng "Mùa xuân"
       await tester.tap(find.text('Mùa xuân'));
       await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
 
+      expect(spoke, isTrue);
+      expect(find.text('Chính xác!'), findsOneWidget);
+      expect(find.text('Tiếp tục'), findsOneWidget);
+
+      // Mặt sau hiển thị chi tiết từ vựng
+      expect(find.text('TIẾNG ANH'), findsOneWidget);
+      expect(find.text('"Flowers bloom in spring."'), findsOneWidget);
+
+      // Bấm Tiếp tục
+      await tester.tap(find.text('Tiếp tục'));
+      await tester.pump();
       expect(isCorrect, isTrue);
+    });
+
+    testWidgets('Selects wrong option, marks red and green, flips to back with correct answer banner', (tester) async {
+      bool? isCorrect;
+      bool spoke = false;
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: FlashcardQuizView(
+              currentWord: sampleWord, // correctAnswer = 'Mùa xuân'
+              allWords: [sampleWord, ...otherWords], // otherWords: 'Mùa hè', 'Mùa thu', 'Mùa đông'
+              onAnswer: (correct) => isCorrect = correct,
+              onSpeak: () => spoke = true,
+            ),
+          ),
+        ),
+      );
+
+      // Bấm vào một đáp án sai ('Mùa hè')
+      await tester.tap(find.text('Mùa hè'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
+
+      // Lập tức phát âm, lật thẻ sang mặt sau với banner đáp án đúng tiếng Việt
+      expect(spoke, isTrue);
+      expect(find.text('Đáp án: Mùa xuân'), findsOneWidget);
+      expect(find.text('Tiếp tục'), findsOneWidget);
+
+      // Bấm Tiếp tục -> isCorrect là false do đã trả lời sai
+      await tester.tap(find.text('Tiếp tục'));
+      await tester.pump();
+      expect(isCorrect, isFalse);
     });
   });
 
   group('Flashcard Listening View Tests', () {
-    testWidgets('Plays audio and validates listening input', (tester) async {
+    testWidgets('Plays audio and validates listening input with 3D flip and continue button', (tester) async {
       bool? isCorrect;
       double? playedRate;
 
@@ -248,8 +372,8 @@ void main() {
       await tester.pump();
       expect(playedRate, equals(0.35));
 
-      // Bấm nút gợi ý nghĩa
-      await tester.tap(find.text('Gợi ý nghĩa'));
+      // Bấm nút gợi ý
+      await tester.tap(find.text('Gợi ý'));
       await tester.pump();
       expect(find.text('Mùa xuân'), findsOneWidget);
 
@@ -257,15 +381,20 @@ void main() {
       await tester.enterText(find.byType(TextField), 'spring');
       await tester.pump();
       await tester.tap(find.text('Kiểm tra'));
-      await tester.pumpAndSettle();
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
 
+      expect(find.text('Chính xác!'), findsOneWidget);
+      expect(find.text('Tiếp tục'), findsOneWidget);
+
+      await tester.tap(find.text('Tiếp tục'));
+      await tester.pump();
       expect(isCorrect, isTrue);
-      expect(find.textContaining('Chính xác!'), findsOneWidget);
     });
   });
 
   group('Flashcard Cloze View Tests', () {
-    testWidgets('Generates cloze sentence and checks answer', (tester) async {
+    testWidgets('Generates cloze sentence and checks answer with 3D flip and continue button', (tester) async {
       bool? isCorrect;
 
       await tester.pumpWidget(
@@ -281,16 +410,26 @@ void main() {
       );
 
       expect(find.text('Điền vào chỗ trống'), findsOneWidget);
-      expect(find.textContaining('[ ______ ]'), findsOneWidget);
+      expect(find.textContaining('[ _ _ _ _ _ _ ]'), findsOneWidget);
+
+      // Bấm nút gợi ý
+      await tester.tap(find.text('Gợi ý'));
+      await tester.pump();
+      expect(find.text('Gợi ý: Mùa xuân'), findsOneWidget);
 
       // Nhập đáp án
       await tester.enterText(find.byType(TextField), 'spring');
       await tester.pump();
       await tester.tap(find.text('Kiểm tra'));
-      await tester.pumpAndSettle();
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
 
+      expect(find.text('Chính xác!'), findsOneWidget);
+      expect(find.text('Tiếp tục'), findsOneWidget);
+
+      await tester.tap(find.text('Tiếp tục'));
+      await tester.pump();
       expect(isCorrect, isTrue);
-      expect(find.textContaining('Chính xác!'), findsOneWidget);
     });
   });
 
@@ -520,8 +659,10 @@ void main() {
   });
 
   group('Flashcard Card Blast View Tests', () {
-    testWidgets('Renders options, selects correct answer and triggers blast combo', (tester) async {
+    testWidgets('Renders HUD, falling card meaning, and blasts card when typing English word and submitting', (tester) async {
       bool? isCorrect;
+      EduWord? reportedWord;
+      bool? reportedMastered;
       bool spoke = false;
 
       await tester.pumpWidget(
@@ -530,30 +671,86 @@ void main() {
             body: FlashcardCardBlastView(
               currentWord: sampleWord,
               allWords: [sampleWord, ...otherWords],
+              onWordResult: (word, mastered) {
+                reportedWord = word;
+                reportedMastered = mastered;
+              },
               onAnswer: (correct) => isCorrect = correct,
+              onSpeakWord: (title) => spoke = true,
               onSpeak: () => spoke = true,
             ),
           ),
         ),
       );
       await tester.pump();
+      await tester.pump(const Duration(milliseconds: 100));
 
-      expect(spoke, isTrue);
-      expect(find.text('Card Blast'), findsOneWidget);
-      expect(find.text('Spring'), findsOneWidget);
+      // Kiểm tra giao diện HUD chuẩn ảnh mẫu
+      expect(find.text('ĐIỂM'), findsOneWidget);
+      expect(find.text('CẤP'), findsOneWidget);
+      expect(find.text('CHUỖI'), findsOneWidget);
+      expect(find.text('BÌNH THƯỜNG - TỐC ĐỘ 1'), findsOneWidget);
+      expect(find.byIcon(Icons.favorite_rounded), findsNWidgets(3)); // 3 trái tim
 
-      // Nhấn chọn đáp án đúng "Mùa xuân"
-      final correctOption = find.text('Mùa xuân');
-      expect(correctOption, findsOneWidget);
-      await tester.tap(correctOption);
+      // Kiểm tra thẻ capsule rơi mang nghĩa tiếng Việt và chữ cái đầu "s"
+      expect(find.text('Mùa xuân'), findsOneWidget);
+      expect(find.text('s'), findsOneWidget);
+
+      // Kiểm tra bàn phím phụ chữ cái hiển thị ở đáy
+      expect(find.text('Q'), findsOneWidget);
+      expect(find.text('A'), findsOneWidget);
+      expect(find.text('Z'), findsOneWidget);
+
+      // Nhập từ tiếng Anh "spring" trực tiếp từ bàn phím vào các ô ký tự
+      final inputFinder = find.byType(TextField);
+      expect(inputFinder, findsOneWidget);
+      await tester.enterText(inputFinder, 'spring');
       await tester.pump();
 
       expect(isCorrect, isTrue);
-      expect(find.text('BLAST! +100 Điểm phản xạ cực nhanh! ⚡'), findsOneWidget);
+      expect(reportedMastered, isTrue);
+      expect(reportedWord?.title, 'Spring');
+      expect(spoke, isTrue);
     });
 
-    testWidgets('Handles timeout when no answer is selected within 7s', (tester) async {
+    testWidgets('Loses a life and marks word as unmastered when card reaches bottom', (tester) async {
       bool? isCorrect;
+      bool? reportedMastered;
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: FlashcardCardBlastView(
+              currentWord: sampleWord,
+              allWords: [sampleWord],
+              onWordResult: (word, mastered) {
+                reportedMastered = mastered;
+              },
+              onAnswer: (correct) => isCorrect = correct,
+            ),
+          ),
+        ),
+      );
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 100));
+
+      expect(find.text('Mùa xuân'), findsOneWidget);
+
+      // Cho thời gian trôi qua từng frame để thẻ rơi chạm vạch nguy hiểm
+      for (int i = 0; i < 200; i++) {
+        await tester.pump(const Duration(milliseconds: 50));
+      }
+      await tester.pump();
+
+      expect(isCorrect, isFalse);
+      expect(reportedMastered, isFalse);
+    });
+
+    testWidgets('Shows Game Over overlay without overflow on compact screen and allows replay', (tester) async {
+      tester.view.physicalSize = const Size(360, 600);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(tester.view.resetPhysicalSize);
+      addTearDown(tester.view.resetDevicePixelRatio);
 
       await tester.pumpWidget(
         MaterialApp(
@@ -561,20 +758,27 @@ void main() {
             body: FlashcardCardBlastView(
               currentWord: sampleWord,
               allWords: [sampleWord, ...otherWords],
-              onAnswer: (correct) => isCorrect = correct,
-              onSpeak: () {},
             ),
           ),
         ),
       );
       await tester.pump();
 
-      // Cho thời gian trôi 8 giây để kích hoạt hết giờ (Blast fuse nổ)
-      await tester.pump(const Duration(seconds: 8));
+      // Cho thẻ rơi chạm vạch 3 lần (hết 3 mạng -> Game Over)
+      for (int i = 0; i < 400; i++) {
+        await tester.pump(const Duration(milliseconds: 50));
+      }
+      await tester.pumpAndSettle();
+
+      // Kiểm tra Game Over overlay xuất hiện không bị RenderFlex overflow
+      expect(find.text('HẾT MẠNG! (GAME OVER)'), findsOneWidget);
+      expect(find.text('Chơi lại'), findsOneWidget);
+
+      // Nhấn chơi lại
+      await tester.tap(find.text('Chơi lại'));
       await tester.pump();
 
-      expect(isCorrect, isFalse);
-      expect(find.text('💥 Hết giờ! Cố gắng phản xạ nhanh hơn ở thẻ sau nhé!'), findsOneWidget);
+      expect(find.text('HẾT MẠNG! (GAME OVER)'), findsNothing);
     });
   });
 }

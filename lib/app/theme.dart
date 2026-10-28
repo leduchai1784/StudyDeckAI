@@ -275,6 +275,9 @@ class AppTheme {
           color: brandTextPrimary,
         ),
       ),
+      progressIndicatorTheme: const ProgressIndicatorThemeData(
+        color: brandPrimary,
+      ),
       actionIconTheme: ActionIconThemeData(
         backButtonIconBuilder: (BuildContext context) => const Icon(
           Icons.chevron_left_rounded,
